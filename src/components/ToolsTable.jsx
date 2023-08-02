@@ -26,47 +26,62 @@ function ToolsTable({
         <tr>
           <td className="pt-5 px-5">Miner</td>
           <td className="pt-5">
-            <div className="flex items-center gap-2">
+            <a
+              href={minerMaterialOne.wiki}
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+            >
               <img
                 className="w-[24px]"
                 src={minerMaterialOne.icon}
               />
               {minerMaterialOne.name}
-            </div>
+            </a>
           </td>
           <td className="pt-5">
-            <div className="flex items-center gap-2">
+            <a className="flex items-center gap-2">
               <img
                 className="w-[24px]"
                 src={minerMaterialTwo.icon}
               />
               {minerMaterialTwo.name}
-            </div>
+            </a>
           </td>
           <td className="pt-5">1000</td>
         </tr>
         <tr className="border-b">
           <td></td>
           <td className="pt-5 pb-5">
-            <div className="flex items-center gap-2">
+            <a
+              href={minerMaterialThree.wiki}
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+            >
               <img
                 className="w-[24px]"
                 src={minerMaterialThree.icon}
               />
               {minerMaterialThree.name}
-            </div>
+            </a>
           </td>
         </tr>
         <tr>
           <td className="pt-5 px-5">Botanist</td>
           <td className="pt-5">
-            <div className="flex items-center gap-2">
+            <a
+              href={botanistMaterialOne.wiki}
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+            >
               <img
                 className="w-[24px]"
                 src={botanistMaterialOne.icon}
               />
               {botanistMaterialOne.name}
-            </div>
+            </a>
           </td>
 
           <td className="pt-5">
@@ -83,25 +98,35 @@ function ToolsTable({
         <tr className="border-b">
           <td></td>
           <td className="pb-5 pt-5">
-            <div className="flex items-center gap-2">
+            <a
+              href={botanistMaterialThree.wiki}
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+            >
               <img
                 className="w-[24px]"
                 src={botanistMaterialThree.icon}
               />
               {botanistMaterialThree.name}
-            </div>
+            </a>
           </td>
         </tr>
         <tr>
           <td className="pt-5 px-5">Fisher</td>
           <td className="pt-5">
-            <div className="flex items-center gap-2">
+            <a
+              href={fisherMaterialOne.wiki}
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+            >
               <img
                 className="w-[24px]"
                 src={fisherMaterialOne.icon}
               />
               {fisherMaterialOne.name}
-            </div>
+            </a>
           </td>
 
           <td className="pt-5">
@@ -118,13 +143,18 @@ function ToolsTable({
         <tr>
           <td></td>
           <td className="pb-5 pt-5">
-            <div className="flex items-center gap-2">
+            <a
+              href={fisherMaterialThree.wiki}
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+            >
               <img
                 className="w-[24px]"
                 src={fisherMaterialThree.icon}
               />
               {fisherMaterialThree.name}
-            </div>
+            </a>
           </td>
           <td className="pb-5 pt-5">
             <div className="flex items-center gap-2">
