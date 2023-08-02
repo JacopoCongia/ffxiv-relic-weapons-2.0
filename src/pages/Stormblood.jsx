@@ -1,7 +1,7 @@
 import data from "../../data";
 import useWeaponsData from "../hooks/use-weapons-data";
 import Header from "../components/Header";
-import useWeaponsCounter from "../hooks/use-weapons-counter";
+import { useWeaponsCounter } from "../hooks/use-weapons-counter";
 import WeaponsSection from "../components/WeaponsSection";
 
 function Stormblood() {

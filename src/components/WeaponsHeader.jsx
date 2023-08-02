@@ -1,5 +1,6 @@
 import { useContext } from "react";
-import { GoChevronDown, GoChevronUp, GoCheck } from "react-icons/go";
+import { GoChevronDown, GoChevronUp } from "react-icons/go";
+import { BsCheckLg } from "react-icons/bs";
 import { WeaponsSectionContext } from "./WeaponsSection";
 
 function WeaponsHeader({ totalWeapons, weaponsCounter, name, patchInfo }) {
@@ -7,7 +8,7 @@ function WeaponsHeader({ totalWeapons, weaponsCounter, name, patchInfo }) {
 
   const check =
     totalWeapons - weaponsCounter === totalWeapons ? (
-      <GoCheck className="mr-2 text-[20px] text-green-500 sm:text-[28px]" />
+      <BsCheckLg className="mr-2 text-[20px] text-green-500 sm:text-[28px]" />
     ) : null;
 
   return (

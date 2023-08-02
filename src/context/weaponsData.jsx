@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useState, useEffect } from "react";
 import data from "../../data";
 
 const WeaponsDataContext = createContext();
@@ -34,17 +34,17 @@ function WeaponsDataProvider({ children }) {
     });
   }
 
-  // useEffect(() => {
-  //   let storedWeapons = JSON.parse(localStorage.getItem("weapons")) || data;
+  useEffect(() => {
+    let storedWeapons = JSON.parse(localStorage.getItem("weapons")) || data;
 
-  //   setWeapons(storedWeapons);
-  // }, []);
+    setWeapons(storedWeapons);
+  }, []);
 
-  // useEffect(() => {
-  //   if (weapons !== data) {
-  //     localStorage.setItem("weapons", JSON.stringify(weapons));
-  //   }
-  // }, [weapons]);
+  useEffect(() => {
+    if (weapons !== data) {
+      localStorage.setItem("weapons", JSON.stringify(weapons));
+    }
+  }, [weapons]);
 
   const valuesToShare = {
     weapons,

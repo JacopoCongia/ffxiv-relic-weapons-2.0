@@ -283,6 +283,246 @@ const data = {
       reqTotal: 30,
       reqPerWeapon: 30,
       type: "augmentedSplendorous"
+    },
+    {
+      id: 34,
+      name: "Adaptive Miner's Component",
+      icon: "/icons/endwalker-icons/materials/adaptive_crafters_component.png",
+      reqTotal: 210,
+      reqPerWeapon: 70,
+      type: "crystalline"
+    },
+    {
+      id: 35,
+      name: "Adaptive Botanist's Component",
+      icon: "/icons/endwalker-icons/materials/adaptive_crafters_component.png",
+      reqTotal: 210,
+      reqPerWeapon: 70,
+      type: "crystalline"
+    },
+    {
+      id: 36,
+      name: "Adaptive Fishing Rod Component",
+      icon: "/icons/endwalker-icons/materials/adaptive_crafters_component.png",
+      reqTotal: 80,
+      reqPerWeapon: 80,
+      type: "crystalline"
+    },
+    {
+      id: 37,
+      name: "Adaptive Fishing Reel Component",
+      icon: "/icons/endwalker-icons/materials/adaptive_crafters_component.png",
+      reqTotal: 80,
+      reqPerWeapon: 80,
+      type: "crystalline"
+    },
+    {
+      id: 38,
+      name: "Connoisseur's Red Malachite",
+      icon: "/icons/endwalker-icons/materials/connoisseurs_red_malachite.png",
+      reqTotal: 210,
+      reqPerWeapon: 70,
+      type: "crystalline"
+    },
+    {
+      id: 39,
+      name: "Connoisseur's Levin Mint",
+      icon: "/icons/endwalker-icons/materials/connoisseurs_levin_mint.png",
+      reqTotal: 210,
+      reqPerWeapon: 70,
+      type: "crystalline"
+    },
+    {
+      id: 40,
+      name: "Adaptive Fire Crystal",
+      icon: "/icons/endwalker-icons/materials/adaptive_fire_crystal.png",
+      reqTotal: 210,
+      reqPerWeapon: 210,
+      type: "crystalline"
+    },
+    {
+      id: 41,
+      name: "Adaptive Lightning Crystal",
+      icon: "/icons/endwalker-icons/materials/adaptive_lightning_crystal.png",
+      reqTotal: 210,
+      reqPerWeapon: 210,
+      type: "crystalline"
+    },
+    {
+      id: 42,
+      name: "Mirror Image",
+      icon: "/icons/endwalker-icons/materials/mirror_image.png",
+      reqTotal: 40,
+      reqPerWeapon: 40,
+      type: "crystalline"
+    },
+    {
+      id: 43,
+      name: "Spangled Pirarucu",
+      icon: "/icons/endwalker-icons/materials/spangled_pirarucu.png",
+      reqTotal: 40,
+      reqPerWeapon: 40,
+      type: "crystalline"
+    },
+    {
+      id: 44,
+      name: "Customized Miner's Component",
+      icon: "/icons/endwalker-icons/materials/customized_miners_component.png",
+      reqTotal: 210,
+      reqPerWeapon: 70,
+      type: "choraZoisCrystalline"
+    },
+    {
+      id: 45,
+      name: "Customized Botanist's Component",
+      icon: "/icons/endwalker-icons/materials/customized_botanists_component.png",
+      reqTotal: 210,
+      reqPerWeapon: 70,
+      type: "choraZoisCrystalline"
+    },
+    {
+      id: 46,
+      name: "Customized Fishing Rod Component",
+      icon: "/icons/endwalker-icons/materials/customized_fishing_rod_component.png",
+      reqTotal: 80,
+      reqPerWeapon: 80,
+      type: "choraZoisCrystalline"
+    },
+    {
+      id: 47,
+      name: "Customized Fishing Reel Component",
+      icon: "/icons/endwalker-icons/materials/customized_fishing_reel_component.png",
+      reqTotal: 80,
+      reqPerWeapon: 80,
+      type: "choraZoisCrystalline"
+    },
+    {
+      id: 48,
+      name: "Connoisseur's Soiled Femur",
+      icon: "/icons/endwalker-icons/materials/connoisseurs_soiled_femur.png",
+      reqTotal: 210,
+      reqPerWeapon: 70,
+      type: "choraZoisCrystalline"
+    },
+    {
+      id: 49,
+      name: "Connoisseur's Miracle Apple",
+      icon: "/icons/endwalker-icons/materials/connoisseurs_miracle_apple.png",
+      reqTotal: 210,
+      reqPerWeapon: 70,
+      type: "choraZoisCrystalline"
+    },
+    {
+      id: 50,
+      name: "Custom Ice Crystal",
+      icon: "/icons/endwalker-icons/materials/custom_ice_crystal.png",
+      reqTotal: 210,
+      reqPerWeapon: 210,
+      type: "choraZoisCrystalline"
+    },
+    {
+      id: 51,
+      name: "Custom Wind Crystal",
+      icon: "/icons/endwalker-icons/materials/custom_wind_crystal.png",
+      reqTotal: 210,
+      reqPerWeapon: 210,
+      type: "choraZoisCrystalline"
+    },
+    {
+      id: 52,
+      name: "Gold Dustfish",
+      icon: "/icons/endwalker-icons/materials/gold_dustfish.png",
+      reqTotal: 40,
+      reqPerWeapon: 40,
+      type: "choraZoisCrystalline"
+    },
+    {
+      id: 53,
+      name: "Forgiven Melancholy",
+      icon: "/icons/endwalker-icons/materials/forgiven_melancholy.png",
+      reqTotal: 40,
+      reqPerWeapon: 40,
+      type: "choraZoisCrystalline"
+    },
+    {
+      id: 54,
+      name: "Brilliant Miner's Component",
+      icon: "/icons/endwalker-icons/materials/brilliant_miners_component.png",
+      reqTotal: 210,
+      reqPerWeapon: 70,
+      type: "brilliant"
+    },
+    {
+      id: 55,
+      name: "Brilliant Botanist's Component",
+      icon: "/icons/endwalker-icons/materials/brilliant_botanists_component.png",
+      reqTotal: 210,
+      reqPerWeapon: 70,
+      type: "brilliant"
+    },
+    {
+      id: 56,
+      name: "Brilliant Fishing Rod Component",
+      icon: "/icons/endwalker-icons/materials/brilliant_fishing_rod_component.png",
+      reqTotal: 80,
+      reqPerWeapon: 80,
+      type: "brilliant"
+    },
+    {
+      id: 57,
+      name: "Brilliant Fishing Reel Component",
+      icon: "/icons/endwalker-icons/materials/brilliant_fishing_reel_component.png",
+      reqTotal: 80,
+      reqPerWeapon: 80,
+      type: "brilliant"
+    },
+    {
+      id: 58,
+      name: "Connoisseur's Aurum Regis Ore",
+      icon: "/icons/endwalker-icons/materials/connoisseurs_aurum_regis_ore.png",
+      reqTotal: 210,
+      reqPerWeapon: 70,
+      type: "brilliant"
+    },
+    {
+      id: 59,
+      name: "Connoisseur's Cloves",
+      icon: "/icons/endwalker-icons/materials/connoisseurs_cloves.png",
+      reqTotal: 210,
+      reqPerWeapon: 70,
+      type: "brilliant"
+    },
+    {
+      id: 60,
+      name: "Brilliant Lightning Cluster",
+      icon: "/icons/endwalker-icons/materials/brilliant_lightning_cluster.png",
+      reqTotal: 210,
+      reqPerWeapon: 210,
+      type: "brilliant"
+    },
+    {
+      id: 61,
+      name: "Brilliant Earth Cluster",
+      icon: "/icons/endwalker-icons/materials/brilliant_earth_cluster.png",
+      reqTotal: 210,
+      reqPerWeapon: 210,
+      type: "brilliant"
+    },
+    {
+      id: 62,
+      name: "Oil Slick",
+      icon: "/icons/endwalker-icons/materials/oil_slick.png",
+      reqTotal: 40,
+      reqPerWeapon: 40,
+      type: "brilliant"
+    },
+    {
+      id: 63,
+      name: "Gonzalo's Grace",
+      icon: "/icons/endwalker-icons/materials/gonzalos_grace.png",
+      reqTotal: 40,
+      reqPerWeapon: 40,
+      type: "brilliant"
     }
   ],
   manderville: [
@@ -2606,6 +2846,282 @@ const data = {
       wpnJob: "Fisher",
       wpnJobShort: "FSH",
       icon: "/icons/endwalker-icons/splendorous/splendorous_fishing_rod.png",
+      isSelected: false
+    }
+  ],
+  crystallineDoH: [
+    {
+      id: 0,
+      wpnName: "Crystalline Saw",
+      wpnJob: "Carpenter",
+      wpnJobShort: "CRP",
+      icon: "/icons/endwalker-icons/crystalline/crystalline_saw.png",
+      isSelected: false
+    },
+    {
+      id: 1,
+      wpnName: "Crystalline Cross-pein Hammer",
+      wpnJob: "Blacksmith",
+      wpnJobShort: "BSM",
+      icon: "/icons/endwalker-icons/crystalline/crystalline_cross_pein_hammer.png",
+      isSelected: false
+    },
+    {
+      id: 2,
+      wpnName: "Crystalline Raising Hammer",
+      wpnJob: "Armorer",
+      wpnJobShort: "ARM",
+      icon: "/icons/endwalker-icons/crystalline/crystalline_raising_hammer.png",
+      isSelected: false
+    },
+    {
+      id: 3,
+      wpnName: "Crystalline Mallet",
+      wpnJob: "Goldsmith",
+      wpnJobShort: "GSM",
+      icon: "/icons/endwalker-icons/crystalline/crystalline_mallet.png",
+      isSelected: false
+    },
+    {
+      id: 4,
+      wpnName: "Crystalline Round Knife",
+      wpnJob: "Leatherworker",
+      wpnJobShort: "LTW",
+      icon: "/icons/endwalker-icons/crystalline/crystalline_round_knife.png",
+      isSelected: false
+    },
+    {
+      id: 5,
+      wpnName: "Crystalline Needle",
+      wpnJob: "Weaver",
+      wpnJobShort: "WVR",
+      icon: "/icons/endwalker-icons/crystalline/crystalline_needle.png",
+      isSelected: false
+    },
+    {
+      id: 6,
+      wpnName: "Crystalline Alembic",
+      wpnJob: "Alchemist",
+      wpnJobShort: "ALC",
+      icon: "/icons/endwalker-icons/crystalline/crystalline_alembic.png",
+      isSelected: false
+    },
+    {
+      id: 7,
+      wpnName: "Crystalline Frypan",
+      wpnJob: "Culinarian",
+      wpnJobShort: "CUL",
+      icon: "/icons/endwalker-icons/crystalline/crystalline_frypan.png",
+      isSelected: false
+    }
+  ],
+  crystallineDoL: [
+    {
+      id: 8,
+      wpnName: "Crystalline Pickaxe",
+      wpnJob: "Miner",
+      wpnJobShort: "MIN",
+      icon: "/icons/endwalker-icons/crystalline/crystalline_pickaxe.png",
+      isSelected: false
+    },
+    {
+      id: 9,
+      wpnName: "Crystalline Hatchet",
+      wpnJob: "Botanist",
+      wpnJobShort: "BTN",
+      icon: "/icons/endwalker-icons/crystalline/crystalline_hatchet.png",
+      isSelected: false
+    },
+    {
+      id: 10,
+      wpnName: "Crystalline Fishing Rod",
+      wpnJob: "Fisher",
+      wpnJobShort: "FSH",
+      icon: "/icons/endwalker-icons/crystalline/crystalline_fishing_rod.png",
+      isSelected: false
+    }
+  ],
+  choraZoisCrystallineDoH: [
+    {
+      id: 0,
+      wpnName: "Chora Zoi's Crystalline Saw",
+      wpnJob: "Carpenter",
+      wpnJobShort: "CRP",
+      icon: "/icons/endwalker-icons/chora-zois-crystalline/chora_zois_crystalline_saw.png",
+      isSelected: false
+    },
+    {
+      id: 1,
+      wpnName: "Chora Zoi's Crystalline Cross-pein Hammer",
+      wpnJob: "Blacksmith",
+      wpnJobShort: "BSM",
+      icon: "/icons/endwalker-icons/chora-zois-crystalline/chora_zois_crystalline_cross_pein_hammer.png",
+      isSelected: false
+    },
+    {
+      id: 2,
+      wpnName: "Chora Zoi's Crystalline Raising Hammer",
+      wpnJob: "Armorer",
+      wpnJobShort: "ARM",
+      icon: "/icons/endwalker-icons/chora-zois-crystalline/chora_zois_crystalline_raising_hammer.png",
+      isSelected: false
+    },
+    {
+      id: 3,
+      wpnName: "Chora Zoi's Crystalline Mallet",
+      wpnJob: "Goldsmith",
+      wpnJobShort: "GSM",
+      icon: "/icons/endwalker-icons/chora-zois-crystalline/chora_zois_crystalline_mallet.png",
+      isSelected: false
+    },
+    {
+      id: 4,
+      wpnName: "Chora Zoi's Crystalline Round Knife",
+      wpnJob: "Leatherworker",
+      wpnJobShort: "LTW",
+      icon: "/icons/endwalker-icons/chora-zois-crystalline/chora_zois_crystalline_round_knife.png",
+      isSelected: false
+    },
+    {
+      id: 5,
+      wpnName: "Chora Zoi's Crystalline Needle",
+      wpnJob: "Weaver",
+      wpnJobShort: "WVR",
+      icon: "/icons/endwalker-icons/chora-zois-crystalline/chora_zois_crystalline_needle.png",
+      isSelected: false
+    },
+    {
+      id: 6,
+      wpnName: "Chora Zoi's Crystalline Alembic",
+      wpnJob: "Alchemist",
+      wpnJobShort: "ALC",
+      icon: "/icons/endwalker-icons/chora-zois-crystalline/chora_zois_crystalline_alembic.png",
+      isSelected: false
+    },
+    {
+      id: 7,
+      wpnName: "Chora Zoi's Crystalline Frypan",
+      wpnJob: "Culinarian",
+      wpnJobShort: "CUL",
+      icon: "/icons/endwalker-icons/chora-zois-crystalline/chora_zois_crystalline_frypan.png",
+      isSelected: false
+    }
+  ],
+  choraZoisCrystallineDoL: [
+    {
+      id: 8,
+      wpnName: "Chora Zoi's Crystalline Pickaxe",
+      wpnJob: "Miner",
+      wpnJobShort: "MIN",
+      icon: "/icons/endwalker-icons/chora-zois-crystalline/chora_zois_crystalline_pickaxe.png",
+      isSelected: false
+    },
+    {
+      id: 9,
+      wpnName: "Chora Zoi's Crystalline Hatchet",
+      wpnJob: "Botanist",
+      wpnJobShort: "BTN",
+      icon: "/icons/endwalker-icons/chora-zois-crystalline/chora_zois_crystalline_hatchet.png",
+      isSelected: false
+    },
+    {
+      id: 10,
+      wpnName: "Chora Zoi's Crystalline Fishing Rod",
+      wpnJob: "Fisher",
+      wpnJobShort: "FSH",
+      icon: "/icons/endwalker-icons/chora-zois-crystalline/chora_zois_crystalline_fishing_rod.png",
+      isSelected: false
+    }
+  ],
+  brilliantDoH: [
+    {
+      id: 0,
+      wpnName: "Brilliant Saw",
+      wpnJob: "Carpenter",
+      wpnJobShort: "CRP",
+      icon: "/icons/endwalker-icons/brilliant/brilliant_saw.png",
+      isSelected: false
+    },
+    {
+      id: 1,
+      wpnName: "Brilliant Cross-pein Hammer",
+      wpnJob: "Blacksmith",
+      wpnJobShort: "BSM",
+      icon: "/icons/endwalker-icons/brilliant/brilliant_cross_pein_hammer.png",
+      isSelected: false
+    },
+    {
+      id: 2,
+      wpnName: "Brilliant Raising Hammer",
+      wpnJob: "Armorer",
+      wpnJobShort: "ARM",
+      icon: "/icons/endwalker-icons/brilliant/brilliant_raising_hammer.png",
+      isSelected: false
+    },
+    {
+      id: 3,
+      wpnName: "Brilliant Mallet",
+      wpnJob: "Goldsmith",
+      wpnJobShort: "GSM",
+      icon: "/icons/endwalker-icons/brilliant/brilliant_mallet.png",
+      isSelected: false
+    },
+    {
+      id: 4,
+      wpnName: "Brilliant Round Knife",
+      wpnJob: "Leatherworker",
+      wpnJobShort: "LTW",
+      icon: "/icons/endwalker-icons/brilliant/brilliant_round_knife.png",
+      isSelected: false
+    },
+    {
+      id: 5,
+      wpnName: "Brilliant Needle",
+      wpnJob: "Weaver",
+      wpnJobShort: "WVR",
+      icon: "/icons/endwalker-icons/brilliant/brilliant_needle.png",
+      isSelected: false
+    },
+    {
+      id: 6,
+      wpnName: "Brilliant Alembic",
+      wpnJob: "Alchemist",
+      wpnJobShort: "ALC",
+      icon: "/icons/endwalker-icons/brilliant/brilliant_alembic.png",
+      isSelected: false
+    },
+    {
+      id: 7,
+      wpnName: "Brilliant Frypan",
+      wpnJob: "Culinarian",
+      wpnJobShort: "CUL",
+      icon: "/icons/endwalker-icons/brilliant/brilliant_frypan.png",
+      isSelected: false
+    }
+  ],
+  brilliantDoL: [
+    {
+      id: 8,
+      wpnName: "Brilliant Pickaxe",
+      wpnJob: "Miner",
+      wpnJobShort: "MIN",
+      icon: "/icons/endwalker-icons/brilliant/brilliant_pickaxe.png",
+      isSelected: false
+    },
+    {
+      id: 9,
+      wpnName: "Brilliant Hatchet",
+      wpnJob: "Botanist",
+      wpnJobShort: "BTN",
+      icon: "/icons/endwalker-icons/brilliant/brilliant_hatchet.png",
+      isSelected: false
+    },
+    {
+      id: 10,
+      wpnName: "Brilliant Fishing Rod",
+      wpnJob: "Fisher",
+      wpnJobShort: "FSH",
+      icon: "/icons/endwalker-icons/brilliant/brilliant_fishing_rod.png",
       isSelected: false
     }
   ]

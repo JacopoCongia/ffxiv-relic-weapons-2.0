@@ -12,7 +12,10 @@ function Layout() {
         isVisible={isVisible}
         setIsVisible={setIsVisible}
       />
-      <Sidebar isVisible={isVisible} />
+      <Sidebar
+        isVisible={isVisible}
+        setIsVisible={setIsVisible}
+      />
       <Outlet />
     </>
   );
