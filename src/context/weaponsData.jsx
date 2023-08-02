@@ -35,13 +35,7 @@ function WeaponsDataProvider({ children }) {
   }
 
   useEffect(() => {
-    let storedWeapons = JSON.parse(localStorage.getItem("weapons")) || data;
-
-    setWeapons(storedWeapons);
-  }, []);
-
-  useEffect(() => {
-    const APP_VERSION = "1.0.0";
+    const APP_VERSION = "1.0.1";
 
     if (
       typeof localStorage.APP_VERSION === "undefined" ||
@@ -54,6 +48,12 @@ function WeaponsDataProvider({ children }) {
       localStorage.clear();
     }
 
+    let storedWeapons = JSON.parse(localStorage.getItem("weapons")) || data;
+
+    setWeapons(storedWeapons);
+  }, []);
+
+  useEffect(() => {
     if (weapons !== data) {
       localStorage.setItem("weapons", JSON.stringify(weapons));
     }
