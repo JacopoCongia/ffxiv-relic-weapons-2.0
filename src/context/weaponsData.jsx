@@ -41,6 +41,19 @@ function WeaponsDataProvider({ children }) {
   }, []);
 
   useEffect(() => {
+    const APP_VERSION = "1.0.0";
+
+    if (
+      typeof localStorage.APP_VERSION === "undefined" ||
+      localStorage.APP_VERSION === null
+    ) {
+      localStorage.setItem("APP_VERSION", APP_VERSION);
+    }
+
+    if (localStorage.APP_VERSION != APP_VERSION) {
+      localStorage.clear();
+    }
+
     if (weapons !== data) {
       localStorage.setItem("weapons", JSON.stringify(weapons));
     }
