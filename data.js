@@ -242,7 +242,8 @@ const data = {
       icon: "/icons/endwalker-icons/materials/connoisseurs_prismstone.png",
       reqTotal: 60,
       reqPerWeapon: 60,
-      type: "augmentedSplendorous"
+      type: "augmentedSplendorous",
+      wiki: "https://ffxiv.consolegameswiki.com/wiki/Connoisseur%27s_Prismstone"
     },
     {
       id: 29,
@@ -250,7 +251,8 @@ const data = {
       icon: "/icons/endwalker-icons/materials/connoisseurs_wattle_petribark.png",
       reqTotal: 60,
       reqPerWeapon: 60,
-      type: "augmentedSplendorous"
+      type: "augmentedSplendorous",
+      wiki: "https://ffxiv.consolegameswiki.com/wiki/Connoisseur%27s_Wattle_Petribark"
     },
     {
       id: 30,
@@ -258,7 +260,8 @@ const data = {
       icon: "/icons/endwalker-icons/materials/splendorous_water_shard.png",
       reqTotal: 180,
       reqPerWeapon: 180,
-      type: "augmentedSplendorous"
+      type: "augmentedSplendorous",
+      wiki: "https://ffxiv.consolegameswiki.com/wiki/Splendorous_Water_Shard"
     },
     {
       id: 31,
@@ -266,7 +269,8 @@ const data = {
       icon: "/icons/endwalker-icons/materials/splendorous_earth_shard.png",
       reqTotal: 180,
       reqPerWeapon: 180,
-      type: "augmentedSplendorous"
+      type: "augmentedSplendorous",
+      wiki: "https://ffxiv.consolegameswiki.com/wiki/Splendorous_Earth_Shard"
     },
     {
       id: 32,
@@ -274,7 +278,8 @@ const data = {
       icon: "/icons/endwalker-icons/materials/platinum_seahorse.png",
       reqTotal: 30,
       reqPerWeapon: 30,
-      type: "augmentedSplendorous"
+      type: "augmentedSplendorous",
+      wiki: "https://ffxiv.consolegameswiki.com/wiki/Platinum_Seahorse"
     },
     {
       id: 33,
@@ -282,7 +287,8 @@ const data = {
       icon: "/icons/endwalker-icons/materials/clavekeeper.png",
       reqTotal: 30,
       reqPerWeapon: 30,
-      type: "augmentedSplendorous"
+      type: "augmentedSplendorous",
+      wiki: "https://ffxiv.consolegameswiki.com/wiki/Clavekeeper"
     },
     {
       id: 34,
@@ -322,7 +328,8 @@ const data = {
       icon: "/icons/endwalker-icons/materials/connoisseurs_red_malachite.png",
       reqTotal: 210,
       reqPerWeapon: 70,
-      type: "crystalline"
+      type: "crystalline",
+      wiki: "https://ffxiv.consolegameswiki.com/wiki/Connoisseur%27s_Red_Malachite"
     },
     {
       id: 39,
@@ -330,7 +337,8 @@ const data = {
       icon: "/icons/endwalker-icons/materials/connoisseurs_levin_mint.png",
       reqTotal: 210,
       reqPerWeapon: 70,
-      type: "crystalline"
+      type: "crystalline",
+      wiki: "https://ffxiv.consolegameswiki.com/wiki/Connoisseur%27s_Levin_Mint"
     },
     {
       id: 40,
@@ -338,7 +346,8 @@ const data = {
       icon: "/icons/endwalker-icons/materials/adaptive_fire_crystal.png",
       reqTotal: 210,
       reqPerWeapon: 210,
-      type: "crystalline"
+      type: "crystalline",
+      wiki: "https://ffxiv.consolegameswiki.com/wiki/Adaptive_Fire_Crystal"
     },
     {
       id: 41,
@@ -346,7 +355,8 @@ const data = {
       icon: "/icons/endwalker-icons/materials/adaptive_lightning_crystal.png",
       reqTotal: 210,
       reqPerWeapon: 210,
-      type: "crystalline"
+      type: "crystalline",
+      wiki: "https://ffxiv.consolegameswiki.com/wiki/Adaptive_Lightning_Crystal"
     },
     {
       id: 42,
@@ -354,7 +364,8 @@ const data = {
       icon: "/icons/endwalker-icons/materials/mirror_image.png",
       reqTotal: 40,
       reqPerWeapon: 40,
-      type: "crystalline"
+      type: "crystalline",
+      wiki: "https://ffxiv.consolegameswiki.com/wiki/Mirror_Image"
     },
     {
       id: 43,
@@ -362,7 +373,8 @@ const data = {
       icon: "/icons/endwalker-icons/materials/spangled_pirarucu.png",
       reqTotal: 40,
       reqPerWeapon: 40,
-      type: "crystalline"
+      type: "crystalline",
+      wiki: "https://ffxiv.consolegameswiki.com/wiki/Spangled_Pirarucu"
     },
     {
       id: 44,
@@ -402,7 +414,8 @@ const data = {
       icon: "/icons/endwalker-icons/materials/connoisseurs_soiled_femur.png",
       reqTotal: 210,
       reqPerWeapon: 70,
-      type: "choraZoisCrystalline"
+      type: "choraZoisCrystalline",
+      wiki: "https://ffxiv.consolegameswiki.com/wiki/Connoisseur%27s_Soiled_Femur"
     },
     {
       id: 49,
@@ -410,7 +423,8 @@ const data = {
       icon: "/icons/endwalker-icons/materials/connoisseurs_miracle_apple.png",
       reqTotal: 210,
       reqPerWeapon: 70,
-      type: "choraZoisCrystalline"
+      type: "choraZoisCrystalline",
+      wiki: "https://ffxiv.consolegameswiki.com/wiki/Connoisseur%27s_Miracle_Apple"
     },
     {
       id: 50,
@@ -418,7 +432,8 @@ const data = {
       icon: "/icons/endwalker-icons/materials/custom_ice_crystal.png",
       reqTotal: 210,
       reqPerWeapon: 210,
-      type: "choraZoisCrystalline"
+      type: "choraZoisCrystalline",
+      wiki: "https://ffxiv.consolegameswiki.com/wiki/Custom_Ice_Crystal"
     },
     {
       id: 51,
@@ -426,7 +441,8 @@ const data = {
       icon: "/icons/endwalker-icons/materials/custom_wind_crystal.png",
       reqTotal: 210,
       reqPerWeapon: 210,
-      type: "choraZoisCrystalline"
+      type: "choraZoisCrystalline",
+      wiki: "https://ffxiv.consolegameswiki.com/wiki/Custom_Wind_Crystal"
     },
     {
       id: 52,
@@ -434,7 +450,8 @@ const data = {
       icon: "/icons/endwalker-icons/materials/gold_dustfish.png",
       reqTotal: 40,
       reqPerWeapon: 40,
-      type: "choraZoisCrystalline"
+      type: "choraZoisCrystalline",
+      wiki: "https://ffxiv.consolegameswiki.com/wiki/Gold_Dustfish"
     },
     {
       id: 53,
@@ -442,7 +459,8 @@ const data = {
       icon: "/icons/endwalker-icons/materials/forgiven_melancholy.png",
       reqTotal: 40,
       reqPerWeapon: 40,
-      type: "choraZoisCrystalline"
+      type: "choraZoisCrystalline",
+      wiki: "https://ffxiv.consolegameswiki.com/wiki/Forgiven_Melancholy"
     },
     {
       id: 54,
@@ -482,7 +500,8 @@ const data = {
       icon: "/icons/endwalker-icons/materials/connoisseurs_aurum_regis_ore.png",
       reqTotal: 210,
       reqPerWeapon: 70,
-      type: "brilliant"
+      type: "brilliant",
+      wiki: "https://ffxiv.consolegameswiki.com/wiki/Connoisseur%27s_Aurum_Regis_Ore"
     },
     {
       id: 59,
@@ -490,7 +509,8 @@ const data = {
       icon: "/icons/endwalker-icons/materials/connoisseurs_cloves.png",
       reqTotal: 210,
       reqPerWeapon: 70,
-      type: "brilliant"
+      type: "brilliant",
+      wiki: "https://ffxiv.consolegameswiki.com/wiki/Connoisseur%27s_Cloves"
     },
     {
       id: 60,
@@ -498,7 +518,8 @@ const data = {
       icon: "/icons/endwalker-icons/materials/brilliant_lightning_cluster.png",
       reqTotal: 210,
       reqPerWeapon: 210,
-      type: "brilliant"
+      type: "brilliant",
+      wiki: "https://ffxiv.consolegameswiki.com/wiki/Brilliant_Lightning_Cluster"
     },
     {
       id: 61,
@@ -506,7 +527,8 @@ const data = {
       icon: "/icons/endwalker-icons/materials/brilliant_earth_cluster.png",
       reqTotal: 210,
       reqPerWeapon: 210,
-      type: "brilliant"
+      type: "brilliant",
+      wiki: "https://ffxiv.consolegameswiki.com/wiki/Brilliant_Earth_Cluster"
     },
     {
       id: 62,
@@ -514,7 +536,8 @@ const data = {
       icon: "/icons/endwalker-icons/materials/oil_slick.png",
       reqTotal: 40,
       reqPerWeapon: 40,
-      type: "brilliant"
+      type: "brilliant",
+      wiki: "https://ffxiv.consolegameswiki.com/wiki/Oil_Slick"
     },
     {
       id: 63,
@@ -522,7 +545,8 @@ const data = {
       icon: "/icons/endwalker-icons/materials/gonzalos_grace.png",
       reqTotal: 40,
       reqPerWeapon: 40,
-      type: "brilliant"
+      type: "brilliant",
+      wiki: "https://ffxiv.consolegameswiki.com/wiki/Gonzalo%27s_Grace"
     }
   ],
   manderville: [
@@ -2667,7 +2691,7 @@ const data = {
       isSelected: false
     }
   ],
-  splendorous: [
+  splendorousDoH: [
     {
       id: 0,
       wpnName: "Splendorous Saw",
@@ -2731,7 +2755,9 @@ const data = {
       wpnJobShort: "CUL",
       icon: "/icons/endwalker-icons/splendorous/splendorous_frypan.png",
       isSelected: false
-    },
+    }
+  ],
+  splendorousDoL: [
     {
       id: 8,
       wpnName: "Splendorous Pickaxe",

@@ -25,7 +25,8 @@ function Sidebar({ isVisible, setIsVisible }) {
     {
       name: "Endwalker",
       to: "/endwalker",
-      crafterTo: "/endwalkerdoldoh"
+      craftersTo: "/crafters",
+      gatherersTo: "/gatherers"
     },
     {
       name: "Shadowbringers",
@@ -40,7 +41,7 @@ function Sidebar({ isVisible, setIsVisible }) {
   ];
 
   const linksEl = links.map((link) => {
-    const { name, to, crafterTo } = link;
+    const { name, to, craftersTo, gatherersTo } = link;
     return (
       <div
         key={name}
@@ -53,14 +54,24 @@ function Sidebar({ isVisible, setIsVisible }) {
         >
           <h2 className="font-bold text-[#e7e7e7]">DoW / DoM</h2>
         </NavLink>
-        {crafterTo && (
+        {craftersTo && (
           <NavLink
-            to={crafterTo}
+            to={craftersTo}
             className={({ isActive }) =>
               isActive ? activeStyle : inactiveStyle
             }
           >
-            <h2 className="font-bold text-[#e7e7e7]">DoH / DoL</h2>
+            <h2 className="font-bold text-[#e7e7e7]">DoH</h2>
+          </NavLink>
+        )}
+        {gatherersTo && (
+          <NavLink
+            to={gatherersTo}
+            className={({ isActive }) =>
+              isActive ? activeStyle : inactiveStyle
+            }
+          >
+            <h2 className="font-bold text-[#e7e7e7]">DoL</h2>
           </NavLink>
         )}
       </div>

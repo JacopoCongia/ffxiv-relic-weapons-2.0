@@ -10,7 +10,8 @@ import Layout from "./components/Layout";
 import Endwalker from "./pages/Endwalker";
 import Shadowbringers from "./pages/Shadowbringers";
 import Stormblood from "./pages/Stormblood";
-import EndwalkerDolDoh from "./pages/EndwalkerDolDoh";
+import EndwalkerCrafters from "./pages/EndwalkerCrafters";
+import EndwalkerGatherers from "./pages/EndwalkerGatherers";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -23,19 +24,23 @@ const router = createBrowserRouter(
         element={<Home />}
       />
       <Route
-        path="/endwalker"
+        path="endwalker"
         element={<Endwalker />}
       />
       <Route
-        path="/endwalkerdoldoh"
-        element={<EndwalkerDolDoh />}
+        path="crafters"
+        element={<EndwalkerCrafters />}
       />
       <Route
-        path="/shadowbringers"
+        path="gatherers"
+        element={<EndwalkerGatherers />}
+      />
+      <Route
+        path="shadowbringers"
         element={<Shadowbringers />}
       />
       <Route
-        path="/stormblood"
+        path="stormblood"
         element={<Stormblood />}
       />
     </Route>
