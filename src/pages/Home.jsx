@@ -1,53 +1,21 @@
-import { Link } from "react-router-dom";
-
 export default function Home() {
-  const data = [
-    {
-      id: 0,
-      title: "Endwalker - Manderville Weapons",
-      url: "/Endwalker"
-    },
-    {
-      id: 1,
-      title: "Shadowbringers - Resistance Weapon",
-      url: "/Shadowbringers"
-    },
-    {
-      id: 2,
-      title: "Stormblood - Eurekan Weapons",
-      url: "/Stormblood"
-    },
-    {
-      id: 3,
-      title: "Heavensward - Anima Weapons - (Coming Soon)",
-      url: "/"
-    },
-    {
-      id: 4,
-      title: "A Realm Reborn - Zodiac Weapons - (Coming Soon)",
-      url: "/"
-    }
-  ];
-
-  const renderedElements = data.map((element) => {
-    return (
-      <Link
-        key={element.id}
-        href={element.url}
-      >
-        <div className="text-5 text-10 mb-[1px] cursor-pointer bg-teal-700 p-7 text-2xl hover:opacity-90">
-          <h2>{element.title}</h2>
-        </div>
-      </Link>
-    );
-  });
-
   return (
     <div className="min-[1000px]:pl-[250px] duration-[0.5s] flex flex-col text-center font-bold text-white">
-      <div className="text-5 text-10 bg-emerald-900 p-10 text-3xl">
-        <h1>Final Fantasy XIV - Relic Weapons</h1>
+      <img
+        className="max-w-[800px] w-[100%] m-auto p-[0.8em]"
+        src="/final_fantasy_xiv_logo.png"
+        alt="the original game logo depicting the different game races and the text saying Final Fantasy XIV Online"
+      />
+      <div className="px-[2em] font-normal text-[2rem] flex flex-col gap-[1em]">
+        <p>
+          Welcome to the{" "}
+          <span className="text-emerald-400 text-[2.2rem] font-bold">
+            Final Fantasy XIV Relic Weapons
+          </span>{" "}
+          checklist website!
+        </p>
+        <p>Use the links in the sidebar to start exploring!</p>
       </div>
-      {renderedElements}
     </div>
   );
 }
