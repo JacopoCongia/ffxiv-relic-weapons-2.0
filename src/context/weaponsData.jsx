@@ -35,7 +35,7 @@ function WeaponsDataProvider({ children }) {
   }
 
   useEffect(() => {
-    const APP_VERSION = "1.0.1";
+    const APP_VERSION = "1.0.2";
 
     if (
       typeof localStorage.APP_VERSION === "undefined" ||
