@@ -13,7 +13,7 @@ function EndwalkerCrafters() {
         category={"Crafters"}
         type={"splendorousDoH"}
       >
-        <div className="text-white flex flex-col gap-3 mb-[2em]">
+        <div className="text-white flex flex-col gap-3 mb-[2em] px-[2em] text-center">
           <p className="flex gap-2 justify-center flex-wrap">
             You will get your first tool by completing the quest
             <a
@@ -46,7 +46,7 @@ function EndwalkerCrafters() {
         category={"Crafters"}
         type={"augmentedSplendorousDoH"}
       >
-        <div className="text-white flex flex-col gap-3 mb-[2em]">
+        <div className="text-white flex flex-col gap-3 mb-[2em] px-[2em] text-center">
           <p className="flex gap-2 justify-center flex-wrap">
             You will need <span className="font-bold">60</span>
             <img
@@ -65,7 +65,7 @@ function EndwalkerCrafters() {
         category={"Crafters"}
         type={"crystallineDoH"}
       >
-        <div className="text-white flex flex-col gap-3 mb-[2em]">
+        <div className="text-white flex flex-col gap-3 mb-[2em] px-[2em] text-center">
           <p className="flex gap-2 justify-center flex-wrap">
             You will need <span className="font-bold">90</span>
             <img
@@ -84,7 +84,7 @@ function EndwalkerCrafters() {
         category={"Crafters"}
         type={"choraZoisCrystallineDoH"}
       >
-        <div className="text-white flex flex-col gap-3 mb-[2em]">
+        <div className="text-white flex flex-col gap-3 mb-[2em] px-[2em] text-center">
           <p className="flex gap-2 justify-center flex-wrap">
             You will need <span className="font-bold">90</span>
             <img
@@ -103,7 +103,7 @@ function EndwalkerCrafters() {
         category={"Crafters"}
         type={"brilliantDoH"}
       >
-        <div className="text-white flex flex-col gap-3 mb-[2em]">
+        <div className="text-white flex flex-col gap-3 mb-[2em] px-[2em] text-center">
           <p className="flex gap-2 justify-center flex-wrap">
             You will need <span className="font-bold">90</span>
             <img

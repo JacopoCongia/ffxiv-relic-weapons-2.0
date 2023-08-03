@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <div className="min-[1000px]:pl-[250px] duration-[0.5s] flex flex-col text-center font-bold text-white">
+    <div className="min-[1000px]:pl-[250px] duration-[0.5s] pb-[3em] flex flex-col text-center font-bold text-white">
       <img
         className="max-w-[800px] w-[100%] m-auto p-[0.8em]"
         src="/final_fantasy_xiv_logo.png"

@@ -208,40 +208,36 @@ const data = {
       id: 24,
       name: "Splendorous Miner's Component",
       icon: "/icons/endwalker-icons/materials/splendorous_crafters_component.png",
-      reqTotal: 180,
-      reqPerWeapon: 180,
+
       type: "augmentedSplendorous"
     },
     {
       id: 25,
       name: "Splendorous Botanist's Component",
       icon: "/icons/endwalker-icons/materials/splendorous_crafters_component.png",
-      reqTotal: 180,
-      reqPerWeapon: 180,
+
       type: "augmentedSplendorous"
     },
     {
       id: 26,
       name: "Splendorous Fishing Rod Component",
       icon: "/icons/endwalker-icons/materials/splendorous_crafters_component.png",
-      reqTotal: 60,
-      reqPerWeapon: 60,
+
       type: "augmentedSplendorous"
     },
     {
       id: 27,
       name: "Splendorous Fishing Reel Component",
       icon: "/icons/endwalker-icons/materials/splendorous_crafters_component.png",
-      reqTotal: 60,
-      reqPerWeapon: 60,
+
       type: "augmentedSplendorous"
     },
     {
       id: 28,
       name: "Connoisseur's Prismstone",
       icon: "/icons/endwalker-icons/materials/connoisseurs_prismstone.png",
-      reqTotal: 60,
-      reqPerWeapon: 60,
+      minCollectability: "570-999",
+      maxCollectability: "1000",
       type: "augmentedSplendorous",
       wiki: "https://ffxiv.consolegameswiki.com/wiki/Connoisseur%27s_Prismstone"
     },
@@ -249,8 +245,8 @@ const data = {
       id: 29,
       name: "Connoisseur's Wattle Petribark",
       icon: "/icons/endwalker-icons/materials/connoisseurs_wattle_petribark.png",
-      reqTotal: 60,
-      reqPerWeapon: 60,
+      minCollectability: "570-999",
+      maxCollectability: "1000",
       type: "augmentedSplendorous",
       wiki: "https://ffxiv.consolegameswiki.com/wiki/Connoisseur%27s_Wattle_Petribark"
     },
@@ -258,8 +254,6 @@ const data = {
       id: 30,
       name: "Splendorous Water Shard",
       icon: "/icons/endwalker-icons/materials/splendorous_water_shard.png",
-      reqTotal: 180,
-      reqPerWeapon: 180,
       type: "augmentedSplendorous",
       wiki: "https://ffxiv.consolegameswiki.com/wiki/Splendorous_Water_Shard"
     },
@@ -267,8 +261,6 @@ const data = {
       id: 31,
       name: "Splendorous Earth Shard",
       icon: "/icons/endwalker-icons/materials/splendorous_earth_shard.png",
-      reqTotal: 180,
-      reqPerWeapon: 180,
       type: "augmentedSplendorous",
       wiki: "https://ffxiv.consolegameswiki.com/wiki/Splendorous_Earth_Shard"
     },
@@ -276,8 +268,8 @@ const data = {
       id: 32,
       name: "Platinum Seahorse",
       icon: "/icons/endwalker-icons/materials/platinum_seahorse.png",
-      reqTotal: 30,
-      reqPerWeapon: 30,
+      minCollectability: "47-109",
+      maxCollectability: "110+",
       type: "augmentedSplendorous",
       wiki: "https://ffxiv.consolegameswiki.com/wiki/Platinum_Seahorse"
     },
@@ -285,8 +277,8 @@ const data = {
       id: 33,
       name: "Clavekeeper",
       icon: "/icons/endwalker-icons/materials/clavekeeper.png",
-      reqTotal: 30,
-      reqPerWeapon: 30,
+      minCollectability: "283-664",
+      maxCollectability: "665+",
       type: "augmentedSplendorous",
       wiki: "https://ffxiv.consolegameswiki.com/wiki/Clavekeeper"
     },
@@ -294,40 +286,32 @@ const data = {
       id: 34,
       name: "Adaptive Miner's Component",
       icon: "/icons/endwalker-icons/materials/adaptive_crafters_component.png",
-      reqTotal: 210,
-      reqPerWeapon: 70,
       type: "crystalline"
     },
     {
       id: 35,
       name: "Adaptive Botanist's Component",
       icon: "/icons/endwalker-icons/materials/adaptive_crafters_component.png",
-      reqTotal: 210,
-      reqPerWeapon: 70,
       type: "crystalline"
     },
     {
       id: 36,
       name: "Adaptive Fishing Rod Component",
       icon: "/icons/endwalker-icons/materials/adaptive_crafters_component.png",
-      reqTotal: 80,
-      reqPerWeapon: 80,
       type: "crystalline"
     },
     {
       id: 37,
       name: "Adaptive Fishing Reel Component",
       icon: "/icons/endwalker-icons/materials/adaptive_crafters_component.png",
-      reqTotal: 80,
-      reqPerWeapon: 80,
       type: "crystalline"
     },
     {
       id: 38,
       name: "Connoisseur's Red Malachite",
       icon: "/icons/endwalker-icons/materials/connoisseurs_red_malachite.png",
-      reqTotal: 210,
-      reqPerWeapon: 70,
+      minCollectability: "570-999",
+      maxCollectability: "1000",
       type: "crystalline",
       wiki: "https://ffxiv.consolegameswiki.com/wiki/Connoisseur%27s_Red_Malachite"
     },
@@ -335,8 +319,8 @@ const data = {
       id: 39,
       name: "Connoisseur's Levin Mint",
       icon: "/icons/endwalker-icons/materials/connoisseurs_levin_mint.png",
-      reqTotal: 210,
-      reqPerWeapon: 70,
+      minCollectability: "570-999",
+      maxCollectability: "1000",
       type: "crystalline",
       wiki: "https://ffxiv.consolegameswiki.com/wiki/Connoisseur%27s_Levin_Mint"
     },
@@ -344,8 +328,6 @@ const data = {
       id: 40,
       name: "Adaptive Fire Crystal",
       icon: "/icons/endwalker-icons/materials/adaptive_fire_crystal.png",
-      reqTotal: 210,
-      reqPerWeapon: 210,
       type: "crystalline",
       wiki: "https://ffxiv.consolegameswiki.com/wiki/Adaptive_Fire_Crystal"
     },
@@ -353,8 +335,6 @@ const data = {
       id: 41,
       name: "Adaptive Lightning Crystal",
       icon: "/icons/endwalker-icons/materials/adaptive_lightning_crystal.png",
-      reqTotal: 210,
-      reqPerWeapon: 210,
       type: "crystalline",
       wiki: "https://ffxiv.consolegameswiki.com/wiki/Adaptive_Lightning_Crystal"
     },
@@ -362,8 +342,8 @@ const data = {
       id: 42,
       name: "Mirror Image",
       icon: "/icons/endwalker-icons/materials/mirror_image.png",
-      reqTotal: 40,
-      reqPerWeapon: 40,
+      minCollectability: "9-20",
+      maxCollectability: "21+",
       type: "crystalline",
       wiki: "https://ffxiv.consolegameswiki.com/wiki/Mirror_Image"
     },
@@ -371,8 +351,8 @@ const data = {
       id: 43,
       name: "Spangled Pirarucu",
       icon: "/icons/endwalker-icons/materials/spangled_pirarucu.png",
-      reqTotal: 40,
-      reqPerWeapon: 40,
+      minCollectability: "425-997",
+      maxCollectability: "998+",
       type: "crystalline",
       wiki: "https://ffxiv.consolegameswiki.com/wiki/Spangled_Pirarucu"
     },
@@ -380,40 +360,32 @@ const data = {
       id: 44,
       name: "Customized Miner's Component",
       icon: "/icons/endwalker-icons/materials/customized_miners_component.png",
-      reqTotal: 210,
-      reqPerWeapon: 70,
       type: "choraZoisCrystalline"
     },
     {
       id: 45,
       name: "Customized Botanist's Component",
       icon: "/icons/endwalker-icons/materials/customized_botanists_component.png",
-      reqTotal: 210,
-      reqPerWeapon: 70,
       type: "choraZoisCrystalline"
     },
     {
       id: 46,
       name: "Customized Fishing Rod Component",
       icon: "/icons/endwalker-icons/materials/customized_fishing_rod_component.png",
-      reqTotal: 80,
-      reqPerWeapon: 80,
       type: "choraZoisCrystalline"
     },
     {
       id: 47,
       name: "Customized Fishing Reel Component",
       icon: "/icons/endwalker-icons/materials/customized_fishing_reel_component.png",
-      reqTotal: 80,
-      reqPerWeapon: 80,
       type: "choraZoisCrystalline"
     },
     {
       id: 48,
       name: "Connoisseur's Soiled Femur",
       icon: "/icons/endwalker-icons/materials/connoisseurs_soiled_femur.png",
-      reqTotal: 210,
-      reqPerWeapon: 70,
+      minCollectability: "570-999",
+      maxCollectability: "1000",
       type: "choraZoisCrystalline",
       wiki: "https://ffxiv.consolegameswiki.com/wiki/Connoisseur%27s_Soiled_Femur"
     },
@@ -421,8 +393,8 @@ const data = {
       id: 49,
       name: "Connoisseur's Miracle Apple",
       icon: "/icons/endwalker-icons/materials/connoisseurs_miracle_apple.png",
-      reqTotal: 210,
-      reqPerWeapon: 70,
+      minCollectability: "570-999",
+      maxCollectability: "1000",
       type: "choraZoisCrystalline",
       wiki: "https://ffxiv.consolegameswiki.com/wiki/Connoisseur%27s_Miracle_Apple"
     },
@@ -430,8 +402,6 @@ const data = {
       id: 50,
       name: "Custom Ice Crystal",
       icon: "/icons/endwalker-icons/materials/custom_ice_crystal.png",
-      reqTotal: 210,
-      reqPerWeapon: 210,
       type: "choraZoisCrystalline",
       wiki: "https://ffxiv.consolegameswiki.com/wiki/Custom_Ice_Crystal"
     },
@@ -439,8 +409,6 @@ const data = {
       id: 51,
       name: "Custom Wind Crystal",
       icon: "/icons/endwalker-icons/materials/custom_wind_crystal.png",
-      reqTotal: 210,
-      reqPerWeapon: 210,
       type: "choraZoisCrystalline",
       wiki: "https://ffxiv.consolegameswiki.com/wiki/Custom_Wind_Crystal"
     },
@@ -448,8 +416,8 @@ const data = {
       id: 52,
       name: "Gold Dustfish",
       icon: "/icons/endwalker-icons/materials/gold_dustfish.png",
-      reqTotal: 40,
-      reqPerWeapon: 40,
+      minCollectability: "82-192",
+      maxCollectability: "193+",
       type: "choraZoisCrystalline",
       wiki: "https://ffxiv.consolegameswiki.com/wiki/Gold_Dustfish"
     },
@@ -457,8 +425,8 @@ const data = {
       id: 53,
       name: "Forgiven Melancholy",
       icon: "/icons/endwalker-icons/materials/forgiven_melancholy.png",
-      reqTotal: 40,
-      reqPerWeapon: 40,
+      minCollectability: "322-757",
+      maxCollectability: "758+",
       type: "choraZoisCrystalline",
       wiki: "https://ffxiv.consolegameswiki.com/wiki/Forgiven_Melancholy"
     },
@@ -466,40 +434,32 @@ const data = {
       id: 54,
       name: "Brilliant Miner's Component",
       icon: "/icons/endwalker-icons/materials/brilliant_miners_component.png",
-      reqTotal: 210,
-      reqPerWeapon: 70,
       type: "brilliant"
     },
     {
       id: 55,
       name: "Brilliant Botanist's Component",
       icon: "/icons/endwalker-icons/materials/brilliant_botanists_component.png",
-      reqTotal: 210,
-      reqPerWeapon: 70,
       type: "brilliant"
     },
     {
       id: 56,
       name: "Brilliant Fishing Rod Component",
       icon: "/icons/endwalker-icons/materials/brilliant_fishing_rod_component.png",
-      reqTotal: 80,
-      reqPerWeapon: 80,
       type: "brilliant"
     },
     {
       id: 57,
       name: "Brilliant Fishing Reel Component",
       icon: "/icons/endwalker-icons/materials/brilliant_fishing_reel_component.png",
-      reqTotal: 80,
-      reqPerWeapon: 80,
       type: "brilliant"
     },
     {
       id: 58,
       name: "Connoisseur's Aurum Regis Ore",
       icon: "/icons/endwalker-icons/materials/connoisseurs_aurum_regis_ore.png",
-      reqTotal: 210,
-      reqPerWeapon: 70,
+      minCollectability: "570-999",
+      maxCollectability: "1000",
       type: "brilliant",
       wiki: "https://ffxiv.consolegameswiki.com/wiki/Connoisseur%27s_Aurum_Regis_Ore"
     },
@@ -507,8 +467,8 @@ const data = {
       id: 59,
       name: "Connoisseur's Cloves",
       icon: "/icons/endwalker-icons/materials/connoisseurs_cloves.png",
-      reqTotal: 210,
-      reqPerWeapon: 70,
+      minCollectability: "570-999",
+      maxCollectability: "1000",
       type: "brilliant",
       wiki: "https://ffxiv.consolegameswiki.com/wiki/Connoisseur%27s_Cloves"
     },
@@ -516,8 +476,6 @@ const data = {
       id: 60,
       name: "Brilliant Lightning Cluster",
       icon: "/icons/endwalker-icons/materials/brilliant_lightning_cluster.png",
-      reqTotal: 210,
-      reqPerWeapon: 210,
       type: "brilliant",
       wiki: "https://ffxiv.consolegameswiki.com/wiki/Brilliant_Lightning_Cluster"
     },
@@ -525,8 +483,6 @@ const data = {
       id: 61,
       name: "Brilliant Earth Cluster",
       icon: "/icons/endwalker-icons/materials/brilliant_earth_cluster.png",
-      reqTotal: 210,
-      reqPerWeapon: 210,
       type: "brilliant",
       wiki: "https://ffxiv.consolegameswiki.com/wiki/Brilliant_Earth_Cluster"
     },
@@ -534,8 +490,8 @@ const data = {
       id: 62,
       name: "Oil Slick",
       icon: "/icons/endwalker-icons/materials/oil_slick.png",
-      reqTotal: 40,
-      reqPerWeapon: 40,
+      minCollectability: "94-219",
+      maxCollectability: "220+",
       type: "brilliant",
       wiki: "https://ffxiv.consolegameswiki.com/wiki/Oil_Slick"
     },
@@ -543,8 +499,8 @@ const data = {
       id: 63,
       name: "Gonzalo's Grace",
       icon: "/icons/endwalker-icons/materials/gonzalos_grace.png",
-      reqTotal: 40,
-      reqPerWeapon: 40,
+      minCollectability: "47-109",
+      maxCollectability: "110+",
       type: "brilliant",
       wiki: "https://ffxiv.consolegameswiki.com/wiki/Gonzalo%27s_Grace"
     }

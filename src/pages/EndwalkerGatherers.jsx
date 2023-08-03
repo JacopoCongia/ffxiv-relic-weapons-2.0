@@ -14,7 +14,7 @@ function EndwalkerGatherers() {
         category={"Gatherers"}
         type={"splendorousDoL"}
       >
-        <div className="text-white flex flex-col gap-3 mb-[2em]">
+        <div className="text-white flex flex-col gap-3 mb-[2em] px-[2em] text-center">
           <p className="flex gap-2 justify-center flex-wrap">
             You will get your first tool by completing the quest
             <a
@@ -47,7 +47,7 @@ function EndwalkerGatherers() {
         category={"Gatherers"}
         type={"augmentedSplendorousDoL"}
       >
-        <div className="text-white flex flex-col gap-3 mb-[2em]">
+        <div className="text-white flex flex-col gap-3 mb-[2em] px-[2em] text-center">
           <p className="flex gap-2 justify-center flex-wrap">
             Miner and Botanist need <span className="font-bold">180</span>
             <img
@@ -79,8 +79,6 @@ function EndwalkerGatherers() {
             fisherMaterialTwo={tools.materials[26]}
             fisherMaterialThree={tools.materials[33]}
             fisherMaterialFour={tools.materials[27]}
-            fishOneCollectability={"110+"}
-            fishTwoCollectability={"665+"}
           />
         </div>
       </ToolsContainer>
@@ -90,7 +88,7 @@ function EndwalkerGatherers() {
         category={"Gatherers"}
         type={"crystallineDoL"}
       >
-        <div className="text-white flex flex-col gap-3 mb-[2em]">
+        <div className="text-white flex flex-col gap-3 mb-[2em] px-[2em] text-center">
           <p className="flex gap-2 justify-center flex-wrap">
             Miner and Botanist need <span className="font-bold">210</span>
             <img
@@ -128,8 +126,6 @@ function EndwalkerGatherers() {
             fisherMaterialTwo={tools.materials[36]}
             fisherMaterialThree={tools.materials[43]}
             fisherMaterialFour={tools.materials[37]}
-            fishOneCollectability={"21+"}
-            fishTwoCollectability={"998+"}
           />
         </div>
       </ToolsContainer>
@@ -139,7 +135,7 @@ function EndwalkerGatherers() {
         category={"Gatherers"}
         type={"choraZoisCrystallineDoL"}
       >
-        <div className="text-white flex flex-col gap-3 mb-[2em]">
+        <div className="text-white flex flex-col gap-3 mb-[2em] px-[2em] text-center">
           <p className="flex gap-2 justify-center flex-wrap">
             Miner and Botanist need <span className="font-bold">210</span>
             <img
@@ -177,8 +173,6 @@ function EndwalkerGatherers() {
             fisherMaterialTwo={tools.materials[46]}
             fisherMaterialThree={tools.materials[53]}
             fisherMaterialFour={tools.materials[47]}
-            fishOneCollectability={"193+"}
-            fishTwoCollectability={"758+"}
           />
         </div>
       </ToolsContainer>
@@ -188,7 +182,7 @@ function EndwalkerGatherers() {
         category={"Gatherers"}
         type={"brilliantDoL"}
       >
-        <div className="text-white flex flex-col gap-3 mb-[2em]">
+        <div className="text-white flex flex-col gap-3 mb-[2em] px-[2em] text-center">
           <p className="flex gap-2 justify-center flex-wrap">
             Miner and Botanist need <span className="font-bold">210</span>
             <img
@@ -226,8 +220,6 @@ function EndwalkerGatherers() {
             fisherMaterialTwo={tools.materials[56]}
             fisherMaterialThree={tools.materials[63]}
             fisherMaterialFour={tools.materials[57]}
-            fishOneCollectability={"220+"}
-            fishTwoCollectability={"110+"}
           />
         </div>
       </ToolsContainer>
