@@ -11,15 +11,7 @@ function WeaponsContainer({ weapons, type }) {
   ));
 
   return (
-    <div
-      className="
-        grid 
-        grid-cols-3 
-        gap-5 
-        sm:grid-cols-4 
-        md:grid-cols-6
-      "
-    >
+    <div className="flex flex-row flex-wrap gap-5 items-center justify-center">
       {weaponElements}
     </div>
   );

@@ -36,7 +36,7 @@ function WeaponsSection({
         />
       </WeaponsSectionContext.Provider>
       {open && (
-        <div className="flex flex-col items-center bg-stone-800 p-10 text-white">
+        <div className="flex flex-col items-center justify-center m-auto bg-stone-800 py-10 px-[3em] text-white max-w-[1000px]">
           <WeaponsContainer
             weapons={weapons}
             type={type}
