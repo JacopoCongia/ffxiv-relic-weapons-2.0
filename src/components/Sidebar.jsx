@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { useEffect, useRef } from "react";
+import { BiUserCircle } from "react-icons/bi";
 
 function Sidebar({ isVisible, setIsVisible }) {
   const activeStyle = "bg-teal-700 rounded py-1 drop-shadow-sm";
@@ -95,6 +96,14 @@ function Sidebar({ isVisible, setIsVisible }) {
         <h1 className="text-[1.2rem] tracking-wider opacity-50 cursor-not-allowed">
           A Realm Reborn
         </h1>
+        <div className="border my-[0.5em]"></div>
+        <NavLink
+          to="/account"
+          className="flex items-center gap-[0.5em] justify-center text-[1.1rem] hover:text-[#e6e6e6]"
+        >
+          <BiUserCircle className="text-[1.8rem]" />
+          My Account
+        </NavLink>
       </div>
     </div>
   );
