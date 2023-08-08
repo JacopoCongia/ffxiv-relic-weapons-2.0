@@ -12,6 +12,8 @@ import Shadowbringers from "./pages/Shadowbringers";
 import Stormblood from "./pages/Stormblood";
 import EndwalkerCrafters from "./pages/EndwalkerCrafters";
 import EndwalkerGatherers from "./pages/EndwalkerGatherers";
+import Account from "./pages/Account";
+import Register from "./pages/Register";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -42,6 +44,14 @@ const router = createBrowserRouter(
       <Route
         path="stormblood"
         element={<Stormblood />}
+      />
+      <Route
+        path="account"
+        element={<Account />}
+      />
+      <Route
+        path="register"
+        element={<Register />}
       />
     </Route>
   )

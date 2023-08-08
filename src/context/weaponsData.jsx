@@ -1,10 +1,13 @@
 import { createContext, useState, useEffect } from "react";
 import data from "../../data";
+import useAuth from "../hooks/use-auth";
+import { addToDb, getWeapons } from "../../firebase";
 
 const WeaponsDataContext = createContext();
 
 function WeaponsDataProvider({ children }) {
   const [weapons, setWeapons] = useState(data);
+  const { currentUser } = useAuth();
 
   function selectWeapon(name, key, wpnCategory) {
     setWeapons((oldWeapons) => ({
@@ -35,27 +38,44 @@ function WeaponsDataProvider({ children }) {
   }
 
   useEffect(() => {
-    const APP_VERSION = "1.0.2";
+    // const APP_VERSION = "1.0.2";
 
-    if (
-      typeof localStorage.APP_VERSION === "undefined" ||
-      localStorage.APP_VERSION === null
-    ) {
-      localStorage.setItem("APP_VERSION", APP_VERSION);
+    // if (
+    //   typeof localStorage.APP_VERSION === "undefined" ||
+    //   localStorage.APP_VERSION === null
+    // ) {
+    //   localStorage.setItem("APP_VERSION", APP_VERSION);
+    // }
+
+    // if (localStorage.APP_VERSION != APP_VERSION) {
+    //   localStorage.clear();
+    // }
+
+    // let storedWeapons = JSON.parse(localStorage.getItem("weapons")) || data;
+
+    // setWeapons(storedWeapons);
+    async function getWeaponsFromDb() {
+      const weaponsFromDb = await getWeapons(currentUser);
+
+      if (weaponsFromDb) {
+        setWeapons(weaponsFromDb);
+      }
     }
 
-    if (localStorage.APP_VERSION != APP_VERSION) {
-      localStorage.clear();
+    if (currentUser?.emailVerified) {
+      getWeaponsFromDb();
+    } else {
+      setWeapons(data);
     }
-
-    let storedWeapons = JSON.parse(localStorage.getItem("weapons")) || data;
-
-    setWeapons(storedWeapons);
-  }, []);
+  }, [currentUser]);
 
   useEffect(() => {
-    if (weapons !== data) {
-      localStorage.setItem("weapons", JSON.stringify(weapons));
+    // if (weapons !== data) {
+    //   localStorage.setItem("weapons", JSON.stringify(weapons));
+    // }
+
+    if (currentUser?.emailVerified) {
+      addToDb(weapons, currentUser);
     }
   }, [weapons]);
 

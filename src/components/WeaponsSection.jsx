@@ -4,6 +4,7 @@ import WeaponsHeader from "./WeaponsHeader";
 import MaterialsContainer from "./MaterialsContainer";
 import CheckUncheck from "./CheckUncheck";
 import useToggle from "../hooks/use-toggle";
+import useAuth from "../hooks/use-auth";
 
 const WeaponsSectionContext = createContext();
 
@@ -23,6 +24,7 @@ function WeaponsSection({
   notes
 }) {
   const [open, setOpen] = useToggle(true);
+  const { currentUser } = useAuth();
 
   return (
     <>
@@ -50,12 +52,14 @@ function WeaponsSection({
             weaponsCounter={weaponsCounter}
             notes={notes || null}
           />
-          <CheckUncheck
-            weapons={weapons}
-            type={type}
-            checkAll={checkAll}
-            uncheckAll={uncheckAll}
-          />
+          {currentUser?.emailVerified && (
+            <CheckUncheck
+              weapons={weapons}
+              type={type}
+              checkAll={checkAll}
+              uncheckAll={uncheckAll}
+            />
+          )}
         </div>
       )}
     </>
