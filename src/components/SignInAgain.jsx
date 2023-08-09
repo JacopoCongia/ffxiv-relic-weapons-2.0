@@ -3,7 +3,7 @@ import useAuth from "../hooks/use-auth";
 
 function SignInAgain() {
   const [formData, setFormData] = useState({ password: "" });
-  const { logInAgain } = useAuth();
+  const { logInAgain, error } = useAuth();
 
   function handleFormChange(e) {
     e.preventDefault();
@@ -50,6 +50,11 @@ function SignInAgain() {
           Delete Account
         </button>
       </form>
+      {error && (
+        <h1 className="text-[#ddd] rounded px-[1.5em] py-[0.4em] font-semibold bg-red-800">
+          Error: {error?.code.replace("auth/", "").replaceAll("-", " ")}
+        </h1>
+      )}
     </div>
   );
 }

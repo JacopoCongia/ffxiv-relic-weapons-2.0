@@ -67,8 +67,8 @@ function SignIn() {
         </p>
       </form>
       {error && (
-        <h1 className="text-red-500">
-          Error: {error?.code.replace("auth/", "")}
+        <h1 className="text-[#ddd] rounded px-[1.5em] py-[0.4em] font-semibold bg-red-800">
+          Error: {error?.code.replace("auth/", "").replaceAll("-", " ")}
         </h1>
       )}
     </div>
