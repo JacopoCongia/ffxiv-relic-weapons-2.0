@@ -25,6 +25,8 @@ function Account() {
 
     if (!currentUser?.emailVerified) {
       verifyEmail(currentUser);
+    } else {
+      location.reload();
     }
   }
 
@@ -33,7 +35,7 @@ function Account() {
       {currentUser ? (
         <div className="mt-[5em] flex flex-col items-center duration-[0.5s] min-[1000px]:pl-[250px] min-[650px]:w-[66%] min-[650px]:mx-auto">
           <h1 className="text-[#dbdbdb] text-center bg-neutral-700 p-5 w-full text-[1rem] mb-1 min-[650px]:rounded">
-            Logged in as: {currentUser.email}
+            <span className="font-bold">Logged in as:</span> {currentUser.email}
           </h1>
           {!currentUser?.emailVerified ? (
             <button
@@ -46,7 +48,7 @@ function Account() {
                 : "Click to send a new verification email."}
             </button>
           ) : (
-            <h1 className="text-center w-full bg-neutral-700 text-green-500 p-5 text-[1rem] mb-[5em] min-[650px]:rounded">
+            <h1 className="text-center w-full font-semibold bg-neutral-700 text-green-500 p-5 mb-[5em] min-[650px]:rounded">
               Email Verified
             </h1>
           )}
