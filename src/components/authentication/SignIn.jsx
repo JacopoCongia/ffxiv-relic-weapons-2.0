@@ -31,14 +31,11 @@ function SignIn() {
     <div className="flex flex-col items-center gap-5 text-white">
       <h1 className="text-[1.7rem] font-[600]">Sign In</h1>
       <button
-        className="relative py-[0.7em] text-center rounded hover:opacity-90 w-[66%] bg-[#4285F4] flex items-center justify-center"
+        className="text-center rounded hover:opacity-90 w-[66%] bg-[#4285F4] flex items-center justify-between"
         onClick={() => logInWithGoogle()}
       >
-        <img
-          src="/google-sign-in.svg"
-          className="absolute left-0"
-        />
-        <p className="font-medium ">Sign in With Google</p>
+        <img src="/google-sign-in.svg" />
+        <p className="font-medium m-auto">Sign in With Google</p>
       </button>
       <form
         onSubmit={handleFormSubmit}
