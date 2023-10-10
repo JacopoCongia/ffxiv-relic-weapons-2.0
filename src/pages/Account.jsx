@@ -1,6 +1,8 @@
 import { reload } from "firebase/auth";
-import SignIn from "../components/SignIn";
-import SignInAgain from "../components/SignInAgain";
+
+import SignIn from "../components/authentication/SignIn";
+import SignInAgain from "../components/authentication/SignInAgain";
+
 import useAuth from "../hooks/use-auth";
 
 function Account() {

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import useAuth from "../hooks/use-auth";
+import useAuth from "../../hooks/use-auth";
 
 function SignInAgain() {
   const [formData, setFormData] = useState({ password: "" });

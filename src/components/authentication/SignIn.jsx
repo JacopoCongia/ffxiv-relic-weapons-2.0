@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import useAuth from "../hooks/use-auth";
+import useAuth from "../../hooks/use-auth";
 
 function SignIn() {
   const [formData, setFormData] = useState({ email: "", password: "" });
-  const { logIn, error } = useAuth();
+  const { logIn, logInWithGoogle, error } = useAuth();
 
   function handleFormChange(e) {
     e.preventDefault();
@@ -30,6 +30,16 @@ function SignIn() {
   return (
     <div className="flex flex-col items-center gap-5 text-white">
       <h1 className="text-[1.7rem] font-[600]">Sign In</h1>
+      <button
+        className="relative py-[0.7em] text-center rounded hover:opacity-90 w-[66%] bg-[#4285F4] flex items-center justify-center"
+        onClick={() => logInWithGoogle()}
+      >
+        <img
+          src="/google-sign-in.svg"
+          className="absolute left-0"
+        />
+        <p className="font-medium ">Sign in With Google</p>
+      </button>
       <form
         onSubmit={handleFormSubmit}
         className="flex flex-col m-auto gap-3 text-center w-[66%]"

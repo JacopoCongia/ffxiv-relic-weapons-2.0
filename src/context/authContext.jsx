@@ -3,6 +3,8 @@ import { addUserToDb, auth } from "../../firebase";
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  GoogleAuthProvider,
+  signInWithPopup,
   sendEmailVerification,
   onAuthStateChanged,
   signOut,
@@ -12,6 +14,7 @@ import {
 } from "firebase/auth";
 
 const AuthContext = createContext();
+const provider = new GoogleAuthProvider();
 
 function AuthContextProvider({ children }) {
   const [error, setError] = useState(null);
@@ -33,6 +36,7 @@ function AuthContextProvider({ children }) {
         userData.email,
         userData.password
       );
+
       setEmailSent(true);
       sendEmailVerification(credential.user);
       addUserToDb(credential.user);
@@ -63,6 +67,15 @@ function AuthContextProvider({ children }) {
       await signInWithEmailAndPassword(auth, userData.email, userData.password);
     } catch (error) {
       setError(error);
+    }
+  }
+
+  async function logInWithGoogle() {
+    try {
+      const result = signInWithPopup(auth, provider);
+      console.log("Signed in with Google");
+    } catch (error) {
+      console.error(error.message);
     }
   }
 
@@ -113,6 +126,7 @@ function AuthContextProvider({ children }) {
         emailSent,
         setEmailSent,
         logIn,
+        logInWithGoogle,
         logInAgain,
         logOut,
         deleteAccount,

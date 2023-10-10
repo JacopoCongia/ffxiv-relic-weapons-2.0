@@ -41,7 +41,6 @@ export async function getWeapons(currentUser) {
     const weaponsFromDb = snapshot.docs.map((doc) => {
       return doc.data();
     });
-
     return weaponsFromDb[0];
   }
 }
