@@ -1,7 +1,9 @@
 import { createContext, useState, useEffect } from "react";
-import data from "../../data";
-import useAuth from "../hooks/use-auth";
 import { addToDb, getWeapons } from "../../firebase";
+
+import data from "../../data";
+
+import useAuth from "../hooks/use-auth";
 
 const WeaponsDataContext = createContext();
 
