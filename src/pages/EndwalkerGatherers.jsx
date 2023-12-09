@@ -2,9 +2,12 @@ import ToolsContainer from "../components/ToolsContainer";
 import ToolsTable from "../components/ToolsTable";
 import ToolsHeader from "../components/ToolsHeader";
 import useWeaponsData from "../hooks/use-weapons-data";
+import data from "../../data";
 
 function EndwalkerGatherers() {
   const { weapons: tools } = useWeaponsData();
+
+  console.log(data.materials);
 
   return (
     <div className="min-[1000px]:pl-[250px] duration-[0.5s]">
@@ -69,16 +72,16 @@ function EndwalkerGatherers() {
             collectability.
           </p>
           <ToolsTable
-            minerMaterialOne={tools.materials[28]}
-            minerMaterialTwo={tools.materials[24]}
-            minerMaterialThree={tools.materials[30]}
-            botanistMaterialOne={tools.materials[29]}
-            botanistMaterialTwo={tools.materials[25]}
-            botanistMaterialThree={tools.materials[31]}
-            fisherMaterialOne={tools.materials[32]}
-            fisherMaterialTwo={tools.materials[26]}
-            fisherMaterialThree={tools.materials[33]}
-            fisherMaterialFour={tools.materials[27]}
+            minerMaterialOne={data.materials[28]}
+            minerMaterialTwo={data.materials[24]}
+            minerMaterialThree={data.materials[30]}
+            botanistMaterialOne={data.materials[29]}
+            botanistMaterialTwo={data.materials[25]}
+            botanistMaterialThree={data.materials[31]}
+            fisherMaterialOne={data.materials[32]}
+            fisherMaterialTwo={data.materials[26]}
+            fisherMaterialThree={data.materials[33]}
+            fisherMaterialFour={data.materials[27]}
           />
         </div>
       </ToolsContainer>
@@ -116,16 +119,16 @@ function EndwalkerGatherers() {
             collectability.
           </p>
           <ToolsTable
-            minerMaterialOne={tools.materials[38]}
-            minerMaterialTwo={tools.materials[34]}
-            minerMaterialThree={tools.materials[40]}
-            botanistMaterialOne={tools.materials[39]}
-            botanistMaterialTwo={tools.materials[35]}
-            botanistMaterialThree={tools.materials[41]}
-            fisherMaterialOne={tools.materials[42]}
-            fisherMaterialTwo={tools.materials[36]}
-            fisherMaterialThree={tools.materials[43]}
-            fisherMaterialFour={tools.materials[37]}
+            minerMaterialOne={data.materials[38]}
+            minerMaterialTwo={data.materials[34]}
+            minerMaterialThree={data.materials[40]}
+            botanistMaterialOne={data.materials[39]}
+            botanistMaterialTwo={data.materials[35]}
+            botanistMaterialThree={data.materials[41]}
+            fisherMaterialOne={data.materials[42]}
+            fisherMaterialTwo={data.materials[36]}
+            fisherMaterialThree={data.materials[43]}
+            fisherMaterialFour={data.materials[37]}
           />
         </div>
       </ToolsContainer>
@@ -163,16 +166,16 @@ function EndwalkerGatherers() {
             collectability.
           </p>
           <ToolsTable
-            minerMaterialOne={tools.materials[48]}
-            minerMaterialTwo={tools.materials[44]}
-            minerMaterialThree={tools.materials[50]}
-            botanistMaterialOne={tools.materials[49]}
-            botanistMaterialTwo={tools.materials[45]}
-            botanistMaterialThree={tools.materials[51]}
-            fisherMaterialOne={tools.materials[52]}
-            fisherMaterialTwo={tools.materials[46]}
-            fisherMaterialThree={tools.materials[53]}
-            fisherMaterialFour={tools.materials[47]}
+            minerMaterialOne={data.materials[48]}
+            minerMaterialTwo={data.materials[44]}
+            minerMaterialThree={data.materials[50]}
+            botanistMaterialOne={data.materials[49]}
+            botanistMaterialTwo={data.materials[45]}
+            botanistMaterialThree={data.materials[51]}
+            fisherMaterialOne={data.materials[52]}
+            fisherMaterialTwo={data.materials[46]}
+            fisherMaterialThree={data.materials[53]}
+            fisherMaterialFour={data.materials[47]}
           />
         </div>
       </ToolsContainer>
@@ -210,16 +213,98 @@ function EndwalkerGatherers() {
             collectability.
           </p>
           <ToolsTable
-            minerMaterialOne={tools.materials[58]}
-            minerMaterialTwo={tools.materials[54]}
-            minerMaterialThree={tools.materials[60]}
-            botanistMaterialOne={tools.materials[59]}
-            botanistMaterialTwo={tools.materials[55]}
-            botanistMaterialThree={tools.materials[61]}
-            fisherMaterialOne={tools.materials[62]}
-            fisherMaterialTwo={tools.materials[56]}
-            fisherMaterialThree={tools.materials[63]}
-            fisherMaterialFour={tools.materials[57]}
+            minerMaterialOne={data.materials[58]}
+            minerMaterialTwo={data.materials[54]}
+            minerMaterialThree={data.materials[60]}
+            botanistMaterialOne={data.materials[59]}
+            botanistMaterialTwo={data.materials[55]}
+            botanistMaterialThree={data.materials[61]}
+            fisherMaterialOne={data.materials[62]}
+            fisherMaterialTwo={data.materials[56]}
+            fisherMaterialThree={data.materials[63]}
+            fisherMaterialFour={data.materials[57]}
+          />
+        </div>
+      </ToolsContainer>
+      <ToolsHeader name={"Vrandtic Visionary's"} />
+      <ToolsContainer
+        tools={tools.vrandticVisionarysDoL}
+        category={"Gatherers"}
+        type={"vrandticVisionarys"}
+      >
+        <div className="text-white flex flex-col gap-3 mb-[2em] px-[2em] text-center">
+          <p className="flex gap-2 justify-center flex-wrap">
+            Miner and Botanist need <span className="font-bold">220</span>
+            <img
+              className="w-[22px]"
+              src="/icons/endwalker-icons/materials/inspirational_miners_component.png"
+            />
+            Inspirational Components per Tool which means
+            <span className="font-bold">110</span> Collectables at maximum
+            collectability.
+          </p>
+          <p className="flex gap-2 justify-center flex-wrap">
+            Fisher needs <span className="font-bold">170</span>
+            <img
+              className="w-[22px]"
+              src="/icons/endwalker-icons/materials/inspirational_fishers_component.png"
+            />
+            Inspirational Fisher's Components per tool which means
+            <span className="font-bold">22-43</span> Collectables at maximum
+            collectability.
+          </p>
+          <ToolsTable
+            minerMaterialOne={data.materials[64]}
+            minerMaterialTwo={data.materials[65]}
+            minerMaterialThree={data.materials[66]}
+            botanistMaterialOne={data.materials[67]}
+            botanistMaterialTwo={data.materials[68]}
+            botanistMaterialThree={data.materials[69]}
+            fisherMaterialOne={data.materials[70]}
+            fisherMaterialTwo={data.materials[72]}
+            fisherMaterialThree={data.materials[71]}
+            fisherMaterialFour={data.materials[72]}
+          />
+        </div>
+      </ToolsContainer>
+      <ToolsHeader name={"Lodestone"} />
+      <ToolsContainer
+        tools={tools.brilliantDoL}
+        category={"Gatherers"}
+        type={"lodestone"}
+      >
+        <div className="text-white flex flex-col gap-3 mb-[2em] px-[2em] text-center">
+          <p className="flex gap-2 justify-center flex-wrap">
+            Miner and Botanist need <span className="font-bold">220</span>
+            <img
+              className="w-[22px]"
+              src="/icons/endwalker-icons/materials/nightforged_miners_component.png"
+            />
+            Nightforged Components per Tool which means
+            <span className="font-bold">110</span> Collectables at maximum
+            collectability.
+          </p>
+          <p className="flex gap-2 justify-center flex-wrap">
+            Fisher needs <span className="font-bold">170</span>
+            <img
+              className="w-[22px]"
+              src="/icons/endwalker-icons/materials/nightforged_fishers_component.png"
+            />
+            Nightforged Fisher's Components per tool which means
+            <span className="font-bold">68</span> Collectables at maximum
+            collectability.
+          </p>
+          <ToolsTable
+            minerMaterialOne={data.materials[73]}
+            minerMaterialTwo={data.materials[74]}
+            minerMaterialThree={data.materials[75]}
+            botanistMaterialOne={data.materials[76]}
+            botanistMaterialTwo={data.materials[77]}
+            botanistMaterialThree={data.materials[78]}
+            fisherMaterialOne={data.materials[79]}
+            fisherMaterialTwo={data.materials[81]}
+            fisherMaterialThree={data.materials[80]}
+            fisherMaterialFour={data.materials[81]}
           />
         </div>
       </ToolsContainer>

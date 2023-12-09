@@ -503,6 +503,148 @@ const data = {
       maxCollectability: "110+",
       type: "brilliant",
       wiki: "https://ffxiv.consolegameswiki.com/wiki/Gonzalo%27s_Grace"
+    },
+    {
+      id: 64,
+      name: "Connoisseur's Asphaltum",
+      icon: "/icons/endwalker-icons/materials/connoisseurs_asphaltum.png",
+      minCollectability: "570-999",
+      maxCollectability: "1000",
+      type: "vrandticVisionarys",
+      wiki: "https://ffxiv.consolegameswiki.com/wiki/Connoisseur%27s_Asphaltum"
+    },
+    {
+      id: 65,
+      name: "Inspirational Miner's Component",
+      icon: "/icons/endwalker-icons/materials/inspirational_miners_component.png",
+      type: "vrandticVisionarys",
+      wiki: "https://ffxiv.consolegameswiki.com/wiki/Inspirational_Miner%27s_Component"
+    },
+    {
+      id: 66,
+      name: "Inspirational Wind Cluster",
+      icon: "/icons/endwalker-icons/materials/inspirational_wind_cluster.png",
+      type: "vrandticVisionarys",
+      wiki: "https://ffxiv.consolegameswiki.com/wiki/Inspirational_Wind_Cluster"
+    },
+    {
+      id: 67,
+      name: "Connoisseur's Gianthive Chip",
+      icon: "/icons/endwalker-icons/materials/connoisseurs_gianthive_chip.png",
+      minCollectability: "570-999",
+      maxCollectability: "1000",
+      type: "vrandticVisionarys",
+      wiki: "https://ffxiv.consolegameswiki.com/wiki/Connoisseur%27s_Gianthive_Chip"
+    },
+    {
+      id: 68,
+      name: "Inspirational Botanist's Component",
+      icon: "/icons/endwalker-icons/materials/inspirational_botanists_component.png",
+      type: "vrandticVisionarys",
+      wiki: "https://ffxiv.consolegameswiki.com/wiki/Inspirational_Botanist%27s_Component"
+    },
+    {
+      id: 69,
+      name: "Inspirational Fire Cluster",
+      icon: "/icons/endwalker-icons/materials/inspirational_fire_cluster.png",
+      type: "vrandticVisionarys",
+      wiki: "https://ffxiv.consolegameswiki.com/wiki/Inspirational_Fire_Cluster"
+    },
+    {
+      id: 70,
+      name: "Deadwood Shadow",
+      icon: "/icons/endwalker-icons/materials/deadwood_shadow.png",
+      minCollectability: "501-1176",
+      maxCollectability: "1177+",
+      type: "vrandticVisionarys",
+      wiki: "https://ffxiv.consolegameswiki.com/wiki/Deadwood_Shadow"
+    },
+    {
+      id: 71,
+      name: "Ronkan Bullion",
+      icon: "/icons/endwalker-icons/materials/ronkan_bullion.png",
+      minCollectability: "501-1176",
+      maxCollectability: "1177+",
+      type: "vrandticVisionarys",
+      wiki: "https://ffxiv.consolegameswiki.com/wiki/Ronkan_Bullion"
+    },
+    {
+      id: 72,
+      name: "Inspirational Fisher's Component",
+      icon: "/icons/endwalker-icons/materials/inspirational_fishers_component.png",
+      type: "vrandticVisionarys",
+      wiki: "https://ffxiv.consolegameswiki.com/wiki/Inspirational_Fisher%27s_Component"
+    },
+    {
+      id: 73,
+      name: "Connoisseur's Raw Onyx",
+      icon: "/icons/endwalker-icons/materials/connoisseurs_raw_onyx.png",
+      minCollectability: "580-999",
+      maxCollectability: "1000",
+      type: "lodestar",
+      wiki: "https://ffxiv.consolegameswiki.com/wiki/Connoisseur%27s_Raw_Onyx"
+    },
+    {
+      id: 74,
+      name: "Nightforged Miner's Component",
+      icon: "/icons/endwalker-icons/materials/nightforged_miners_component.png",
+      type: "lodestar",
+      wiki: "https://ffxiv.consolegameswiki.com/wiki/Nightforged_Miner%27s_Component"
+    },
+    {
+      id: 75,
+      name: "Nightforged Ice Cluster",
+      icon: "/icons/endwalker-icons/materials/nightforged_ice_cluster.png",
+      type: "lodestar",
+      wiki: "https://ffxiv.consolegameswiki.com/wiki/Nightforged_Ice_Cluster"
+    },
+    {
+      id: 76,
+      name: "Connoisseur's Glimshroom",
+      icon: "/icons/endwalker-icons/materials/connoisseurs_glimshroom.png",
+      minCollectability: "570-999",
+      maxCollectability: "1000",
+      type: "lodestar",
+      wiki: "https://ffxiv.consolegameswiki.com/wiki/Connoisseur%27s_Glimshroom"
+    },
+    {
+      id: 77,
+      name: "Nightforged Botanist's Component",
+      icon: "/icons/endwalker-icons/materials/nightforged_botanists_component.png",
+      type: "lodestar",
+      wiki: "https://ffxiv.consolegameswiki.com/wiki/Nightforged_Botanist%27s_Component"
+    },
+    {
+      id: 78,
+      name: "Nightforged Water Cluster",
+      icon: "/icons/endwalker-icons/materials/nightforged_water_cluster.png",
+      type: "lodestar",
+      wiki: "https://ffxiv.consolegameswiki.com/wiki/Nightforged_Water_Cluster"
+    },
+    {
+      id: 79,
+      name: "Little Bounty",
+      icon: "/icons/endwalker-icons/materials/little_bounty.png",
+      minCollectability: "9-20",
+      maxCollectability: "21+",
+      type: "lodestar",
+      wiki: "https://ffxiv.consolegameswiki.com/wiki/Little_Bounty"
+    },
+    {
+      id: 80,
+      name: "Saint Fathric's Face",
+      icon: "/icons/endwalker-icons/materials/saint_fathrics_face.png",
+      minCollectability: "384-901",
+      maxCollectability: "902+",
+      type: "lodestar",
+      wiki: "https://ffxiv.consolegameswiki.com/wiki/Saint_Fathric%27s_Face"
+    },
+    {
+      id: 81,
+      name: "Nightforged Fisher's Component",
+      icon: "/icons/endwalker-icons/materials/nightforged_fishers_component.png",
+      type: "lodestar",
+      wiki: "https://ffxiv.consolegameswiki.com/wiki/Nightforged_Fisher%27s_Component"
     }
   ],
   manderville: [
@@ -3104,6 +3246,98 @@ const data = {
       wpnJob: "Fisher",
       wpnJobShort: "FSH",
       icon: "/icons/endwalker-icons/brilliant/brilliant_fishing_rod.png",
+      isSelected: false
+    }
+  ],
+  vrandticVisionarysDoH: [
+    {
+      id: 0,
+      wpnName: "Vrandtic Visionary's Saw",
+      wpnJob: "Carpenter",
+      wpnJobShort: "CRP",
+      icon: "/icons/endwalker-icons/vrandtic-visionarys/vrandtic_visionarys_saw.png",
+      isSelected: false
+    },
+    {
+      id: 1,
+      wpnName: "Vrandtic Visionary's Cross-pein Hammer",
+      wpnJob: "Blacksmith",
+      wpnJobShort: "BSM",
+      icon: "/icons/endwalker-icons/vrandtic-visionarys/vrandtic_visionarys_cross_pein_hammer.png",
+      isSelected: false
+    },
+    {
+      id: 2,
+      wpnName: "Vrandtic Visionary's Raising Hammer",
+      wpnJob: "Armorer",
+      wpnJobShort: "ARM",
+      icon: "/icons/endwalker-icons/vrandtic-visionarys/vrandtic_visionarys_raising_hammer.png",
+      isSelected: false
+    },
+    {
+      id: 3,
+      wpnName: "Vrandtic Visionary's Mallet",
+      wpnJob: "Goldsmith",
+      wpnJobShort: "GSM",
+      icon: "/icons/endwalker-icons/vrandtic-visionarys/vrandtic_visionarys_mallet.png",
+      isSelected: false
+    },
+    {
+      id: 4,
+      wpnName: "Vrandtic Visionary's Round Knife",
+      wpnJob: "Leatherworker",
+      wpnJobShort: "LTW",
+      icon: "/icons/endwalker-icons/vrandtic-visionarys/vrandtic_visionarys_round_knife.png",
+      isSelected: false
+    },
+    {
+      id: 5,
+      wpnName: "Vrandtic Visionary's Needle",
+      wpnJob: "Weaver",
+      wpnJobShort: "WVR",
+      icon: "/icons/endwalker-icons/vrandtic-visionarys/vrandtic_visionarys_needle.png",
+      isSelected: false
+    },
+    {
+      id: 6,
+      wpnName: "Vrandtic Visionary's Alembic",
+      wpnJob: "Alchemist",
+      wpnJobShort: "ALC",
+      icon: "/icons/endwalker-icons/vrandtic-visionarys/vrandtic_visionarys_alembic.png",
+      isSelected: false
+    },
+    {
+      id: 7,
+      wpnName: "Vrandtic Visionary's Frypan",
+      wpnJob: "Culinarian",
+      wpnJobShort: "CUL",
+      icon: "/icons/endwalker-icons/vrandtic-visionarys/vrandtic_visionarys_frypan.png",
+      isSelected: false
+    }
+  ],
+  vrandticVisionarysDoL: [
+    {
+      id: 8,
+      wpnName: "Vrandtic Visionary's Pickaxe",
+      wpnJob: "Miner",
+      wpnJobShort: "MIN",
+      icon: "/icons/endwalker-icons/vrandtic-visionarys/vrandtic_visionarys_pickaxe.png",
+      isSelected: false
+    },
+    {
+      id: 9,
+      wpnName: "Vrandtic Visionary's Hatchet",
+      wpnJob: "Botanist",
+      wpnJobShort: "BTN",
+      icon: "/icons/endwalker-icons/vrandtic-visionarys/vrandtic_visionarys_hatchet.png",
+      isSelected: false
+    },
+    {
+      id: 10,
+      wpnName: "Vrandtic Visionary's Fishing Rod",
+      wpnJob: "Fisher",
+      wpnJobShort: "FSH",
+      icon: "/icons/endwalker-icons/vrandtic-visionarys/vrandtic_visionarys_fishing_rod.png",
       isSelected: false
     }
   ]
