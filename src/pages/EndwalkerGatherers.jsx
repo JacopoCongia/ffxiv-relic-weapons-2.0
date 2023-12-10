@@ -7,8 +7,6 @@ import data from "../../data";
 function EndwalkerGatherers() {
   const { weapons: tools } = useWeaponsData();
 
-  console.log(data.materials);
-
   return (
     <div className="min-[1000px]:pl-[250px] duration-[0.5s]">
       <ToolsHeader name={"Splendorous"} />
@@ -249,7 +247,7 @@ function EndwalkerGatherers() {
               className="w-[22px]"
               src="/icons/endwalker-icons/materials/inspirational_fishers_component.png"
             />
-            Inspirational Fisher's Components per tool which means
+            Inspirational Fisher&apos;s Components per tool which means
             <span className="font-bold">22-43</span> Collectables at maximum
             collectability.
           </p>
@@ -267,11 +265,11 @@ function EndwalkerGatherers() {
           />
         </div>
       </ToolsContainer>
-      <ToolsHeader name={"Lodestone"} />
+      <ToolsHeader name={"Lodestar"} />
       <ToolsContainer
-        tools={tools.brilliantDoL}
+        tools={tools.lodestarDoL}
         category={"Gatherers"}
-        type={"lodestone"}
+        type={"lodestar"}
       >
         <div className="text-white flex flex-col gap-3 mb-[2em] px-[2em] text-center">
           <p className="flex gap-2 justify-center flex-wrap">
@@ -290,7 +288,7 @@ function EndwalkerGatherers() {
               className="w-[22px]"
               src="/icons/endwalker-icons/materials/nightforged_fishers_component.png"
             />
-            Nightforged Fisher's Components per tool which means
+            Nightforged Fisher&apos;s Components per tool which means
             <span className="font-bold">68</span> Collectables at maximum
             collectability.
           </p>

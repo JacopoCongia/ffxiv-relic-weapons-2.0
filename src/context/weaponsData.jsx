@@ -9,34 +9,64 @@ const WeaponsDataContext = createContext();
 
 function WeaponsDataProvider({ children }) {
   const [weapons, setWeapons] = useState(data);
+  const [test, setTest] = useState([]);
   const { currentUser } = useAuth();
 
-  function selectWeapon(name, key, wpnCategory) {
-    setWeapons((oldWeapons) => ({
-      ...oldWeapons,
-      [key]: wpnCategory.map((weapon) => {
-        return weapon.wpnName === name
-          ? {
-              ...weapon,
-              isSelected: !weapon.isSelected
-            }
-          : weapon;
-      })
-    }));
+  // function selectWeapon(name, key, wpnCategory) {
+  //   setWeapons((oldWeapons) => ({
+  //     ...oldWeapons,
+  //     [key]: wpnCategory.map((weapon) => {
+  //       return weapon.wpnName === name
+  //         ? {
+  //             ...weapon,
+  //             isSelected: !weapon.isSelected
+  //           }
+  //         : weapon;
+  //     })
+  //   }));
+  // }
+
+  // Testing new method to select weapons
+
+  function selectWeapon(id) {
+    const isItInArray = test.some((el) => el === id);
+
+    console.log(test);
+
+    if (!isItInArray) {
+      setTest((prevTest) => {
+        return [...prevTest, id];
+      });
+    } else {
+      const removedWeapon = test.filter((element) => element !== id);
+      setTest(removedWeapon);
+    }
   }
 
-  function checkAll(allChecked, type) {
-    setWeapons({
-      ...weapons,
-      [type]: allChecked
+  ////////////////////////////////////////////
+
+  function checkAll(allChecked) {
+    const checkedWeapons = allChecked.map((el) => {
+      return el.id;
+    });
+
+    const filteredWeapons = checkedWeapons.filter((el) => {
+      return !test.includes(el);
+    });
+
+    setTest((prevTest) => {
+      return [...prevTest, ...filteredWeapons];
     });
   }
 
-  function uncheckAll(allUnchecked, type) {
-    setWeapons({
-      ...weapons,
-      [type]: allUnchecked
+  function uncheckAll(allUnchecked) {
+    const uncheckedWeapons = allUnchecked.map((el) => {
+      return el.id;
     });
+
+    const filteredWeapons = test.filter((el) => !uncheckedWeapons.includes(el));
+
+    setTest(filteredWeapons);
   }
 
   useEffect(() => {
@@ -86,7 +116,8 @@ function WeaponsDataProvider({ children }) {
     setWeapons,
     selectWeapon,
     checkAll,
-    uncheckAll
+    uncheckAll,
+    test // Testing new weapon sorting
   };
 
   return (

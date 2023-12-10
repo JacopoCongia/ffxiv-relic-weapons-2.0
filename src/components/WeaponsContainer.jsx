@@ -18,3 +18,4 @@ function WeaponsContainer({ weapons, type }) {
 }
 
 export default WeaponsContainer;
+

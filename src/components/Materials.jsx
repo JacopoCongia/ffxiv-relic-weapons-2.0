@@ -1,4 +1,4 @@
-function Materials({ materials, weaponsCounter }) {
+function Materials({ materials }) {
   const materialsElements = materials.map((material) => {
     return (
       <div
@@ -10,9 +10,9 @@ function Materials({ materials, weaponsCounter }) {
           alt={material.name}
           src={material.icon}
         />
-        <p>
+        {/* <p>
           {material.name}: {material.reqPerWeapon * weaponsCounter.length}
-        </p>
+        </p> */}
       </div>
     );
   });

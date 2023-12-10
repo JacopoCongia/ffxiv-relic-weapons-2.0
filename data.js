@@ -811,7 +811,7 @@ const data = {
   ],
   amazingManderville: [
     {
-      id: 0,
+      id: 20,
       wpnName: "Amazing Manderville Sword",
       wpnJob: "Paladin",
       wpnJobShort: "PLD",
@@ -819,7 +819,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 1,
+      id: 21,
       wpnName: "Amazing Manderville Kite Shield",
       wpnJob: "Paladin",
       wpnJobShort: "PLD",
@@ -827,7 +827,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 2,
+      id: 22,
       wpnName: "Amazing Manderville Axe",
       wpnJob: "Warrior",
       wpnJobShort: "WAR",
@@ -835,7 +835,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 3,
+      id: 23,
       wpnName: "Amazing Manderville Zweihander",
       wpnJob: "Dark Knight",
       wpnJobShort: "DRK",
@@ -843,7 +843,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 4,
+      id: 24,
       wpnName: "Amazing Manderville Gunblade",
       wpnJob: "Gunbreaker",
       wpnJobShort: "GNB",
@@ -851,7 +851,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 5,
+      id: 25,
       wpnName: "Amazing Manderville Spear",
       wpnJob: "Dragoon",
       wpnJobShort: "DRG",
@@ -859,7 +859,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 6,
+      id: 26,
       wpnName: "Amazing Manderville Scythe",
       wpnJob: "Reaper",
       wpnJobShort: "RPR",
@@ -867,7 +867,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 7,
+      id: 27,
       wpnName: "Amazing Manderville Knuckles",
       wpnJob: "Monk",
       wpnJobShort: "MNK",
@@ -875,7 +875,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 8,
+      id: 28,
       wpnName: "Amazing Manderville Samurai Blade",
       wpnJob: "Samurai",
       wpnJobShort: "SAM",
@@ -883,7 +883,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 9,
+      id: 29,
       wpnName: "Amazing Manderville Knives",
       wpnJob: "Ninja",
       wpnJobShort: "NIN",
@@ -891,7 +891,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 10,
+      id: 30,
       wpnName: "Amazing Manderville Harp Bow",
       wpnJob: "Bard",
       wpnJobShort: "BRD",
@@ -899,7 +899,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 11,
+      id: 31,
       wpnName: "Amazing Manderville Revolver",
       wpnJob: "Machinist",
       wpnJobShort: "MCH",
@@ -907,7 +907,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 12,
+      id: 32,
       wpnName: "Amazing Manderville Chakrams",
       wpnJob: "Dancer",
       wpnJobShort: "DNC",
@@ -915,7 +915,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 13,
+      id: 33,
       wpnName: "Amazing Manderville Rod",
       wpnJob: "Black Mage",
       wpnJobShort: "BLM",
@@ -923,7 +923,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 14,
+      id: 34,
       wpnName: "Amazing Manderville Index",
       wpnJob: "Summoner",
       wpnJobShort: "SMN",
@@ -931,7 +931,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 15,
+      id: 35,
       wpnName: "Amazing Manderville Rapier",
       wpnJob: "Red Mage",
       wpnJobShort: "RDM",
@@ -939,7 +939,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 16,
+      id: 36,
       wpnName: "Amazing Manderville Cane",
       wpnJob: "White Mage",
       wpnJobShort: "WHM",
@@ -947,7 +947,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 17,
+      id: 37,
       wpnName: "Amazing Manderville Codex",
       wpnJob: "Scholar",
       wpnJobShort: "SCH",
@@ -955,7 +955,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 18,
+      id: 38,
       wpnName: "Amazing Manderville Torquetum",
       wpnJob: "Astrologian",
       wpnJobShort: "AST",
@@ -963,7 +963,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 19,
+      id: 39,
       wpnName: "Amazing Manderville Milpreves",
       wpnJob: "Sage",
       wpnJobShort: "SGE",
@@ -973,7 +973,7 @@ const data = {
   ],
   majesticManderville: [
     {
-      id: 0,
+      id: 40,
       wpnName: "Majestic Manderville Sword",
       wpnJob: "Paladin",
       wpnJobShort: "PLD",
@@ -981,7 +981,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 1,
+      id: 41,
       wpnName: "Majestic Manderville Kite Shield",
       wpnJob: "Paladin",
       wpnJobShort: "PLD",
@@ -989,7 +989,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 2,
+      id: 42,
       wpnName: "Majestic Manderville Bardiche",
       wpnJob: "Warrior",
       wpnJobShort: "WAR",
@@ -997,7 +997,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 3,
+      id: 43,
       wpnName: "Majestic Manderville Greatsword",
       wpnJob: "Dark Knight",
       wpnJobShort: "DRK",
@@ -1005,7 +1005,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 4,
+      id: 44,
       wpnName: "Majestic Manderville Bayonet",
       wpnJob: "Gunbreaker",
       wpnJobShort: "GNB",
@@ -1013,7 +1013,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 5,
+      id: 45,
       wpnName: "Majestic Manderville Spear",
       wpnJob: "Dragoon",
       wpnJobShort: "DRG",
@@ -1021,7 +1021,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 6,
+      id: 46,
       wpnName: "Majestic Manderville War Scythe",
       wpnJob: "Reaper",
       wpnJobShort: "RPR",
@@ -1029,7 +1029,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 7,
+      id: 47,
       wpnName: "Majestic Manderville Fists",
       wpnJob: "Monk",
       wpnJobShort: "MNK",
@@ -1037,7 +1037,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 8,
+      id: 48,
       wpnName: "Majestic Manderville Samurai Blade",
       wpnJob: "Samurai",
       wpnJobShort: "SAM",
@@ -1045,7 +1045,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 9,
+      id: 49,
       wpnName: "Majestic Manderville Knives",
       wpnJob: "Ninja",
       wpnJobShort: "NIN",
@@ -1053,7 +1053,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 10,
+      id: 50,
       wpnName: "Majestic Manderville Harp Bow",
       wpnJob: "Bard",
       wpnJobShort: "BRD",
@@ -1061,7 +1061,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 11,
+      id: 51,
       wpnName: "Majestic Manderville Pistol",
       wpnJob: "Machinist",
       wpnJobShort: "MCH",
@@ -1069,7 +1069,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 12,
+      id: 52,
       wpnName: "Majestic Manderville Chakrams",
       wpnJob: "Dancer",
       wpnJobShort: "DNC",
@@ -1077,7 +1077,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 13,
+      id: 53,
       wpnName: "Majestic Manderville Staff",
       wpnJob: "Black Mage",
       wpnJobShort: "BLM",
@@ -1085,7 +1085,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 14,
+      id: 54,
       wpnName: "Majestic Manderville Index",
       wpnJob: "Summoner",
       wpnJobShort: "SMN",
@@ -1093,7 +1093,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 15,
+      id: 55,
       wpnName: "Majestic Manderville Degen",
       wpnJob: "Red Mage",
       wpnJobShort: "RDM",
@@ -1101,7 +1101,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 16,
+      id: 56,
       wpnName: "Majestic Manderville Wand",
       wpnJob: "White Mage",
       wpnJobShort: "WHM",
@@ -1109,7 +1109,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 17,
+      id: 57,
       wpnName: "Majestic Manderville Codex",
       wpnJob: "Scholar",
       wpnJobShort: "SCH",
@@ -1117,7 +1117,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 18,
+      id: 58,
       wpnName: "Majestic Manderville Orrery",
       wpnJob: "Astrologian",
       wpnJobShort: "AST",
@@ -1125,7 +1125,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 19,
+      id: 59,
       wpnName: "Majestic Manderville Wings",
       wpnJob: "Sage",
       wpnJobShort: "SGE",
@@ -1135,7 +1135,7 @@ const data = {
   ],
   resistance: [
     {
-      id: 0,
+      id: 60,
       wpnName: "Honorbound",
       wpnJob: "Paladin",
       wpnJobShort: "PLD",
@@ -1143,7 +1143,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 1,
+      id: 61,
       wpnName: "Tenacity",
       wpnJob: "Paladin",
       wpnJobShort: "PLD",
@@ -1151,7 +1151,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 2,
+      id: 62,
       wpnName: "Skullrender",
       wpnJob: "Warrior",
       wpnJobShort: "WAR",
@@ -1159,7 +1159,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 3,
+      id: 63,
       wpnName: "Woeborn",
       wpnJob: "Dark Knight",
       wpnJobShort: "DRK",
@@ -1167,7 +1167,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 4,
+      id: 64,
       wpnName: "Crownsblade",
       wpnJob: "Gunbreaker",
       wpnJobShort: "GNB",
@@ -1175,7 +1175,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 5,
+      id: 65,
       wpnName: "Dreizack",
       wpnJob: "Dragoon",
       wpnJobShort: "DRG",
@@ -1183,7 +1183,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 6,
+      id: 66,
       wpnName: "Samsara",
       wpnJob: "Monk",
       wpnJobShort: "MNK",
@@ -1191,7 +1191,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 7,
+      id: 67,
       wpnName: "Hoshikiri",
       wpnJob: "Samurai",
       wpnJobShort: "SAM",
@@ -1199,7 +1199,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 8,
+      id: 68,
       wpnName: "Honeshirazu",
       wpnJob: "Ninja",
       wpnJobShort: "NIN",
@@ -1207,7 +1207,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 9,
+      id: 69,
       wpnName: "Brilliance",
       wpnJob: "Bard",
       wpnJobShort: "BRD",
@@ -1215,7 +1215,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 10,
+      id: 70,
       wpnName: "Lawman",
       wpnJob: "Machinist",
       wpnJobShort: "MCH",
@@ -1223,7 +1223,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 11,
+      id: 71,
       wpnName: "Enchufla",
       wpnJob: "Dancer",
       wpnJobShort: "DNC",
@@ -1231,7 +1231,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 12,
+      id: 72,
       wpnName: "Soulscourge",
       wpnJob: "Black Mage",
       wpnJobShort: "BLM",
@@ -1239,7 +1239,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 13,
+      id: 73,
       wpnName: "Espiritus",
       wpnJob: "Summoner",
       wpnJobShort: "SMN",
@@ -1247,7 +1247,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 14,
+      id: 74,
       wpnName: "Talekeeper",
       wpnJob: "Red Mage",
       wpnJobShort: "RDM",
@@ -1255,7 +1255,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 15,
+      id: 75,
       wpnName: "Ingrimm",
       wpnJob: "White Mage",
       wpnJobShort: "WHM",
@@ -1263,7 +1263,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 16,
+      id: 76,
       wpnName: "Akademos",
       wpnJob: "Scholar",
       wpnJobShort: "SCH",
@@ -1271,7 +1271,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 17,
+      id: 77,
       wpnName: "Solstice",
       wpnJob: "Astrologian",
       wpnJobShort: "AST",
@@ -1281,7 +1281,7 @@ const data = {
   ],
   augmentedResistance: [
     {
-      id: 0,
+      id: 78,
       wpnName: "Augmented Honorbound",
       wpnJob: "Paladin",
       wpnJobShort: "PLD",
@@ -1289,7 +1289,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 1,
+      id: 79,
       wpnName: "Augmented Tenacity",
       wpnJob: "Paladin",
       wpnJobShort: "PLD",
@@ -1297,7 +1297,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 2,
+      id: 80,
       wpnName: "Augmented Skullrender",
       wpnJob: "Warrior",
       wpnJobShort: "WAR",
@@ -1305,7 +1305,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 3,
+      id: 81,
       wpnName: "Augmented Woeborn",
       wpnJob: "Dark Knight",
       wpnJobShort: "DRK",
@@ -1313,7 +1313,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 4,
+      id: 82,
       wpnName: "Augmented Crownsblade",
       wpnJob: "Gunbreaker",
       wpnJobShort: "GNB",
@@ -1321,7 +1321,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 5,
+      id: 83,
       wpnName: "Augmented Dreizack",
       wpnJob: "Dragoon",
       wpnJobShort: "DRG",
@@ -1329,7 +1329,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 6,
+      id: 84,
       wpnName: "Augmented Samsara",
       wpnJob: "Monk",
       wpnJobShort: "MNK",
@@ -1337,7 +1337,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 7,
+      id: 85,
       wpnName: "Augmented Hoshikiri",
       wpnJob: "Samurai",
       wpnJobShort: "SAM",
@@ -1345,7 +1345,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 8,
+      id: 86,
       wpnName: "Augmented Honeshirazu",
       wpnJob: "Ninja",
       wpnJobShort: "NIN",
@@ -1353,7 +1353,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 9,
+      id: 87,
       wpnName: "Augmented Brilliance",
       wpnJob: "Bard",
       wpnJobShort: "BRD",
@@ -1361,7 +1361,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 10,
+      id: 88,
       wpnName: "Augmented Lawman",
       wpnJob: "Machinist",
       wpnJobShort: "MCH",
@@ -1369,7 +1369,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 11,
+      id: 89,
       wpnName: "Augmented Enchufla",
       wpnJob: "Dancer",
       wpnJobShort: "DNC",
@@ -1377,7 +1377,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 12,
+      id: 90,
       wpnName: "Augmented Soulscourge",
       wpnJob: "Black Mage",
       wpnJobShort: "BLM",
@@ -1385,7 +1385,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 13,
+      id: 91,
       wpnName: "Augmented Espiritus",
       wpnJob: "Summoner",
       wpnJobShort: "SMN",
@@ -1393,7 +1393,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 14,
+      id: 92,
       wpnName: "Augmented Talekeeper",
       wpnJob: "Red Mage",
       wpnJobShort: "RDM",
@@ -1401,7 +1401,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 15,
+      id: 93,
       wpnName: "Augmented Ingrimm",
       wpnJob: "White Mage",
       wpnJobShort: "WHM",
@@ -1409,7 +1409,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 16,
+      id: 94,
       wpnName: "Augmented Akademos",
       wpnJob: "Scholar",
       wpnJobShort: "SCH",
@@ -1417,7 +1417,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 17,
+      id: 95,
       wpnName: "Augmented Solstice",
       wpnJob: "Astrologian",
       wpnJobShort: "AST",
@@ -1427,7 +1427,7 @@ const data = {
   ],
   recollection: [
     {
-      id: 0,
+      id: 96,
       wpnName: "Honorbound Recollection",
       wpnJob: "Paladin",
       wpnJobShort: "PLD",
@@ -1435,7 +1435,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 1,
+      id: 97,
       wpnName: "Tenacity Recollection",
       wpnJob: "Paladin",
       wpnJobShort: "PLD",
@@ -1443,7 +1443,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 2,
+      id: 98,
       wpnName: "Skullrender Recollection",
       wpnJob: "Warrior",
       wpnJobShort: "WAR",
@@ -1451,7 +1451,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 3,
+      id: 99,
       wpnName: "Woeborn Recollection",
       wpnJob: "Dark Knight",
       wpnJobShort: "DRK",
@@ -1459,7 +1459,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 4,
+      id: 100,
       wpnName: "Crownsblade Recollection",
       wpnJob: "Gunbreaker",
       wpnJobShort: "GNB",
@@ -1467,7 +1467,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 5,
+      id: 101,
       wpnName: "Dreizack Recollection",
       wpnJob: "Dragoon",
       wpnJobShort: "DRG",
@@ -1475,7 +1475,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 6,
+      id: 102,
       wpnName: "Samsara Recollection",
       wpnJob: "Monk",
       wpnJobShort: "MNK",
@@ -1483,7 +1483,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 7,
+      id: 103,
       wpnName: "Hoshikiri Recollection",
       wpnJob: "Samurai",
       wpnJobShort: "SAM",
@@ -1491,7 +1491,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 8,
+      id: 104,
       wpnName: "Honeshirazu Recollection",
       wpnJob: "Ninja",
       wpnJobShort: "NIN",
@@ -1499,7 +1499,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 9,
+      id: 105,
       wpnName: "Brilliance Recollection",
       wpnJob: "Bard",
       wpnJobShort: "BRD",
@@ -1507,7 +1507,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 10,
+      id: 106,
       wpnName: "Lawman Recollection",
       wpnJob: "Machinist",
       wpnJobShort: "MCH",
@@ -1515,7 +1515,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 11,
+      id: 107,
       wpnName: "Enchufla Recollection",
       wpnJob: "Dancer",
       wpnJobShort: "DNC",
@@ -1523,7 +1523,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 12,
+      id: 108,
       wpnName: "Soulscourge Recollection",
       wpnJob: "Black Mage",
       wpnJobShort: "BLM",
@@ -1531,7 +1531,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 13,
+      id: 109,
       wpnName: "Espiritus Recollection",
       wpnJob: "Summoner",
       wpnJobShort: "SMN",
@@ -1539,7 +1539,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 14,
+      id: 110,
       wpnName: "Talekeeper Recollection",
       wpnJob: "Red Mage",
       wpnJobShort: "RDM",
@@ -1547,7 +1547,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 15,
+      id: 111,
       wpnName: "Ingrimm Recollection",
       wpnJob: "White Mage",
       wpnJobShort: "WHM",
@@ -1555,7 +1555,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 16,
+      id: 112,
       wpnName: "Akademos Recollection",
       wpnJob: "Scholar",
       wpnJobShort: "SCH",
@@ -1563,7 +1563,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 17,
+      id: 113,
       wpnName: "Solstice Recollection",
       wpnJob: "Astrologian",
       wpnJobShort: "AST",
@@ -1573,7 +1573,7 @@ const data = {
   ],
   lawsOrder: [
     {
-      id: 0,
+      id: 114,
       wpnName: "Law's Order Bastard Sword",
       wpnJob: "Paladin",
       wpnJobShort: "PLD",
@@ -1581,7 +1581,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 1,
+      id: 115,
       wpnName: "Law's Order Kite Shield",
       wpnJob: "Paladin",
       wpnJobShort: "PLD",
@@ -1589,7 +1589,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 2,
+      id: 116,
       wpnName: "Law's Order Labrys",
       wpnJob: "Warrior",
       wpnJobShort: "WAR",
@@ -1597,7 +1597,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 3,
+      id: 117,
       wpnName: "Law's Order Zweihander",
       wpnJob: "Dark Knight",
       wpnJobShort: "DRK",
@@ -1605,7 +1605,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 4,
+      id: 118,
       wpnName: "Law's Order Manatrigger",
       wpnJob: "Gunbreaker",
       wpnJobShort: "GNB",
@@ -1613,7 +1613,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 5,
+      id: 119,
       wpnName: "Law's Order Spear",
       wpnJob: "Dragoon",
       wpnJobShort: "DRG",
@@ -1621,7 +1621,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 6,
+      id: 120,
       wpnName: "Law's Order Knuckles",
       wpnJob: "Monk",
       wpnJobShort: "MNK",
@@ -1629,7 +1629,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 7,
+      id: 121,
       wpnName: "Law's Order Samurai Blade",
       wpnJob: "Samurai",
       wpnJobShort: "SAM",
@@ -1637,7 +1637,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 8,
+      id: 122,
       wpnName: "Law's Order Knives",
       wpnJob: "Ninja",
       wpnJobShort: "NIN",
@@ -1645,7 +1645,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 9,
+      id: 123,
       wpnName: "Law's Order Composite Bow",
       wpnJob: "Bard",
       wpnJobShort: "BRD",
@@ -1653,7 +1653,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 10,
+      id: 124,
       wpnName: "Law's Order Revolver",
       wpnJob: "Machinist",
       wpnJobShort: "MCH",
@@ -1661,7 +1661,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 11,
+      id: 125,
       wpnName: "Law's Order Chakrams",
       wpnJob: "Dancer",
       wpnJobShort: "DNC",
@@ -1669,7 +1669,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 12,
+      id: 126,
       wpnName: "Law's Order Rod",
       wpnJob: "Black Mage",
       wpnJobShort: "BLM",
@@ -1677,7 +1677,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 13,
+      id: 127,
       wpnName: "Law's Order Index",
       wpnJob: "Summoner",
       wpnJobShort: "SMN",
@@ -1685,7 +1685,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 14,
+      id: 128,
       wpnName: "Law's Order Rapier",
       wpnJob: "Red Mage",
       wpnJobShort: "RDM",
@@ -1693,7 +1693,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 15,
+      id: 129,
       wpnName: "Law's Order Cane",
       wpnJob: "White Mage",
       wpnJobShort: "WHM",
@@ -1701,7 +1701,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 16,
+      id: 130,
       wpnName: "Law's Order Codex",
       wpnJob: "Scholar",
       wpnJobShort: "SCH",
@@ -1709,7 +1709,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 17,
+      id: 131,
       wpnName: "Law's Order Astrometer",
       wpnJob: "Astrologian",
       wpnJobShort: "AST",
@@ -1719,7 +1719,7 @@ const data = {
   ],
   augmentedLawsOrder: [
     {
-      id: 0,
+      id: 132,
       wpnName: "Augmented Law's Order Bastard Sword",
       wpnJob: "Paladin",
       wpnJobShort: "PLD",
@@ -1727,7 +1727,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 1,
+      id: 133,
       wpnName: "Augmented Law's Order Kite Shield",
       wpnJob: "Paladin",
       wpnJobShort: "PLD",
@@ -1735,7 +1735,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 2,
+      id: 134,
       wpnName: "Augmented Law's Order Labrys",
       wpnJob: "Warrior",
       wpnJobShort: "WAR",
@@ -1743,7 +1743,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 3,
+      id: 135,
       wpnName: "Augmented Law's Order Zweihander",
       wpnJob: "Dark Knight",
       wpnJobShort: "DRK",
@@ -1751,7 +1751,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 4,
+      id: 136,
       wpnName: "Augmented Law's Order Manatrigger",
       wpnJob: "Gunbreaker",
       wpnJobShort: "GNB",
@@ -1759,7 +1759,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 5,
+      id: 137,
       wpnName: "Augmented Law's Order Spear",
       wpnJob: "Dragoon",
       wpnJobShort: "DRG",
@@ -1767,7 +1767,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 6,
+      id: 138,
       wpnName: "Augmented Law's Order Knuckles",
       wpnJob: "Monk",
       wpnJobShort: "MNK",
@@ -1775,7 +1775,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 7,
+      id: 139,
       wpnName: "Augmented Law's Order Samurai Blade",
       wpnJob: "Samurai",
       wpnJobShort: "SAM",
@@ -1783,7 +1783,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 8,
+      id: 140,
       wpnName: "Augmented Law's Order Knives",
       wpnJob: "Ninja",
       wpnJobShort: "NIN",
@@ -1791,7 +1791,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 9,
+      id: 141,
       wpnName: "Augmented Law's Order Composite Bow",
       wpnJob: "Bard",
       wpnJobShort: "BRD",
@@ -1799,7 +1799,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 10,
+      id: 142,
       wpnName: "Augmented Law's Order Revolver",
       wpnJob: "Machinist",
       wpnJobShort: "MCH",
@@ -1807,7 +1807,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 11,
+      id: 143,
       wpnName: "Augmented Law's Order Chakrams",
       wpnJob: "Dancer",
       wpnJobShort: "DNC",
@@ -1815,7 +1815,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 12,
+      id: 144,
       wpnName: "Augmented Law's Order Rod",
       wpnJob: "Black Mage",
       wpnJobShort: "BLM",
@@ -1823,7 +1823,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 13,
+      id: 145,
       wpnName: "Augmented Law's Order Index",
       wpnJob: "Summoner",
       wpnJobShort: "SMN",
@@ -1831,7 +1831,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 14,
+      id: 146,
       wpnName: "Augmented Law's Order Rapier",
       wpnJob: "Red Mage",
       wpnJobShort: "RDM",
@@ -1839,7 +1839,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 15,
+      id: 147,
       wpnName: "Augmented Law's Order Cane",
       wpnJob: "White Mage",
       wpnJobShort: "WHM",
@@ -1847,7 +1847,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 16,
+      id: 148,
       wpnName: "Augmented Law's Order Codex",
       wpnJob: "Scholar",
       wpnJobShort: "SCH",
@@ -1855,7 +1855,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 17,
+      id: 149,
       wpnName: "Augmented Law's Order Astrometer",
       wpnJob: "Astrologian",
       wpnJobShort: "AST",
@@ -1865,7 +1865,7 @@ const data = {
   ],
   blades: [
     {
-      id: 0,
+      id: 150,
       wpnName: "Blade's Honor",
       wpnJob: "Paladin",
       wpnJobShort: "PLD",
@@ -1873,7 +1873,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 1,
+      id: 151,
       wpnName: "Blade's Fortitude",
       wpnJob: "Paladin",
       wpnJobShort: "PLD",
@@ -1881,7 +1881,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 2,
+      id: 152,
       wpnName: "Blade's Valor",
       wpnJob: "Warrior",
       wpnJobShort: "WAR",
@@ -1889,7 +1889,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 3,
+      id: 153,
       wpnName: "Blade's Justice",
       wpnJob: "Dark Knight",
       wpnJobShort: "DRK",
@@ -1897,7 +1897,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 4,
+      id: 154,
       wpnName: "Blade's Resolve",
       wpnJob: "Gunbreaker",
       wpnJobShort: "GNB",
@@ -1905,7 +1905,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 5,
+      id: 155,
       wpnName: "Blade's Glory",
       wpnJob: "Dragoon",
       wpnJobShort: "DRG",
@@ -1913,7 +1913,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 6,
+      id: 156,
       wpnName: "Blade's Serenity",
       wpnJob: "Monk",
       wpnJobShort: "MNK",
@@ -1921,7 +1921,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 7,
+      id: 157,
       wpnName: "Blade's Fealty",
       wpnJob: "Samurai",
       wpnJobShort: "SAM",
@@ -1929,7 +1929,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 8,
+      id: 158,
       wpnName: "Blade's Subtlety",
       wpnJob: "Ninja",
       wpnJobShort: "NIN",
@@ -1937,7 +1937,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 9,
+      id: 159,
       wpnName: "Blade's Muse",
       wpnJob: "Bard",
       wpnJobShort: "BRD",
@@ -1945,7 +1945,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 10,
+      id: 160,
       wpnName: "Blade's Ingenuity",
       wpnJob: "Machinist",
       wpnJobShort: "MCH",
@@ -1953,7 +1953,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 11,
+      id: 161,
       wpnName: "Blade's Euphoria",
       wpnJob: "Dancer",
       wpnJobShort: "DNC",
@@ -1961,7 +1961,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 12,
+      id: 162,
       wpnName: "Blade's Fury",
       wpnJob: "Black Mage",
       wpnJobShort: "BLM",
@@ -1969,7 +1969,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 13,
+      id: 163,
       wpnName: "Blade's Acumen",
       wpnJob: "Summoner",
       wpnJobShort: "SMN",
@@ -1977,7 +1977,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 14,
+      id: 164,
       wpnName: "Blade's Temperance",
       wpnJob: "Red Mage",
       wpnJobShort: "RDM",
@@ -1985,7 +1985,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 15,
+      id: 165,
       wpnName: "Blade's Mercy",
       wpnJob: "White Mage",
       wpnJobShort: "WHM",
@@ -1993,7 +1993,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 16,
+      id: 166,
       wpnName: "Blade's Wisdom",
       wpnJob: "Scholar",
       wpnJobShort: "SCH",
@@ -2001,7 +2001,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 17,
+      id: 167,
       wpnName: "Blade's Providence",
       wpnJob: "Astrologian",
       wpnJobShort: "AST",
@@ -2011,7 +2011,7 @@ const data = {
   ],
   antiquated: [
     {
-      id: 0,
+      id: 168,
       wpnName: "Antiquated Galatyn",
       wpnJob: "Paladin",
       wpnJobShort: "PLD",
@@ -2019,7 +2019,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 1,
+      id: 169,
       wpnName: "Antiquated Evalach",
       wpnJob: "Paladin",
       wpnJobShort: "PLD",
@@ -2027,7 +2027,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 2,
+      id: 170,
       wpnName: "Antiquated Farsha",
       wpnJob: "Warrior",
       wpnJobShort: "WAR",
@@ -2035,7 +2035,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 3,
+      id: 171,
       wpnName: "Antiquated Caladbolg",
       wpnJob: "Dark Knight",
       wpnJobShort: "DRK",
@@ -2043,7 +2043,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 4,
+      id: 172,
       wpnName: "Antiquated Ryunohige",
       wpnJob: "Dragoon",
       wpnJobShort: "DRG",
@@ -2051,7 +2051,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 5,
+      id: 173,
       wpnName: "Antiquated Sudarshana Chakra",
       wpnJob: "Monk",
       wpnJobShort: "MNK",
@@ -2059,7 +2059,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 6,
+      id: 174,
       wpnName: "Antiquated Kiku-ichimonji",
       wpnJob: "Samurai",
       wpnJobShort: "SAM",
@@ -2067,7 +2067,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 7,
+      id: 175,
       wpnName: "Antiquated Nagi",
       wpnJob: "Ninja",
       wpnJobShort: "NIN",
@@ -2075,7 +2075,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 8,
+      id: 176,
       wpnName: "Antiquated Failnaught",
       wpnJob: "Bard",
       wpnJobShort: "BRD",
@@ -2083,7 +2083,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 9,
+      id: 177,
       wpnName: "Antiquated Outsider",
       wpnJob: "Machinist",
       wpnJobShort: "MCH",
@@ -2091,7 +2091,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 10,
+      id: 178,
       wpnName: "Antiquated Vanargand",
       wpnJob: "Black Mage",
       wpnJobShort: "BLM",
@@ -2099,7 +2099,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 11,
+      id: 179,
       wpnName: "Antiquated Lemegeton",
       wpnJob: "Summoner",
       wpnJobShort: "SMN",
@@ -2107,7 +2107,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 12,
+      id: 180,
       wpnName: "Antiquated Murgleis",
       wpnJob: "Red Mage",
       wpnJobShort: "RDM",
@@ -2115,7 +2115,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 13,
+      id: 181,
       wpnName: "Antiquated Aymur",
       wpnJob: "White Mage",
       wpnJobShort: "WHM",
@@ -2123,7 +2123,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 14,
+      id: 182,
       wpnName: "Antiquated Organum",
       wpnJob: "Scholar",
       wpnJobShort: "SCH",
@@ -2131,7 +2131,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 15,
+      id: 183,
       wpnName: "Antiquated Pleiades",
       wpnJob: "Astrologian",
       wpnJobShort: "AST",
@@ -2141,7 +2141,7 @@ const data = {
   ],
   anemos: [
     {
-      id: 0,
+      id: 184,
       wpnName: "Galatyn Anemos",
       wpnJob: "Paladin",
       wpnJobShort: "PLD",
@@ -2149,7 +2149,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 1,
+      id: 185,
       wpnName: "Evalach Anemos",
       wpnJob: "Paladin",
       wpnJobShort: "PLD",
@@ -2157,7 +2157,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 2,
+      id: 186,
       wpnName: "Farsha Anemos",
       wpnJob: "Warrior",
       wpnJobShort: "WAR",
@@ -2165,7 +2165,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 3,
+      id: 187,
       wpnName: "Caladbolg Anemos",
       wpnJob: "Dark Knight",
       wpnJobShort: "DRK",
@@ -2173,7 +2173,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 4,
+      id: 188,
       wpnName: "Ryunohige Anemos",
       wpnJob: "Dragoon",
       wpnJobShort: "DRG",
@@ -2181,7 +2181,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 5,
+      id: 189,
       wpnName: "Sudarshana Chakra Anemos",
       wpnJob: "Monk",
       wpnJobShort: "MNK",
@@ -2189,7 +2189,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 6,
+      id: 190,
       wpnName: "Kiku-ichimonji Anemos",
       wpnJob: "Samurai",
       wpnJobShort: "SAM",
@@ -2197,7 +2197,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 7,
+      id: 191,
       wpnName: "Nagi Anemos",
       wpnJob: "Ninja",
       wpnJobShort: "NIN",
@@ -2205,7 +2205,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 8,
+      id: 192,
       wpnName: "Failnaught Anemos",
       wpnJob: "Bard",
       wpnJobShort: "BRD",
@@ -2213,7 +2213,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 9,
+      id: 193,
       wpnName: "Outsider Anemos",
       wpnJob: "Machinist",
       wpnJobShort: "MCH",
@@ -2221,7 +2221,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 10,
+      id: 194,
       wpnName: "Vanargand Anemos",
       wpnJob: "Black Mage",
       wpnJobShort: "BLM",
@@ -2229,7 +2229,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 11,
+      id: 195,
       wpnName: "Lemegeton Anemos",
       wpnJob: "Summoner",
       wpnJobShort: "SMN",
@@ -2237,7 +2237,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 12,
+      id: 196,
       wpnName: "Murgleis Anemos",
       wpnJob: "Red Mage",
       wpnJobShort: "RDM",
@@ -2245,7 +2245,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 13,
+      id: 197,
       wpnName: "Aymur Anemos",
       wpnJob: "White Mage",
       wpnJobShort: "WHM",
@@ -2253,7 +2253,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 14,
+      id: 198,
       wpnName: "Organum Anemos",
       wpnJob: "Scholar",
       wpnJobShort: "SCH",
@@ -2261,7 +2261,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 15,
+      id: 199,
       wpnName: "Pleiades Anemos",
       wpnJob: "Astrologian",
       wpnJobShort: "AST",
@@ -2271,7 +2271,7 @@ const data = {
   ],
   elemental: [
     {
-      id: 0,
+      id: 200,
       wpnName: "Elemental Sword",
       wpnJob: "Paladin",
       wpnJobShort: "PLD",
@@ -2279,7 +2279,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 1,
+      id: 201,
       wpnName: "Elemental Shield",
       wpnJob: "Paladin",
       wpnJobShort: "PLD",
@@ -2287,7 +2287,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 2,
+      id: 202,
       wpnName: "Elemental Battleaxe",
       wpnJob: "Warrior",
       wpnJobShort: "WAR",
@@ -2295,7 +2295,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 3,
+      id: 203,
       wpnName: "Elemental Guillotine",
       wpnJob: "Dark Knight",
       wpnJobShort: "DRK",
@@ -2303,7 +2303,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 4,
+      id: 204,
       wpnName: "Elemental Lance",
       wpnJob: "Dragoon",
       wpnJobShort: "DRG",
@@ -2311,7 +2311,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 5,
+      id: 205,
       wpnName: "Elemental Knuckles",
       wpnJob: "Monk",
       wpnJobShort: "MNK",
@@ -2319,7 +2319,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 6,
+      id: 206,
       wpnName: "Elemental Blade",
       wpnJob: "Samurai",
       wpnJobShort: "SAM",
@@ -2327,7 +2327,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 7,
+      id: 207,
       wpnName: "Elemental Knives",
       wpnJob: "Ninja",
       wpnJobShort: "NIN",
@@ -2335,7 +2335,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 8,
+      id: 208,
       wpnName: "Elemental Harp Bow",
       wpnJob: "Bard",
       wpnJobShort: "BRD",
@@ -2343,7 +2343,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 9,
+      id: 209,
       wpnName: "Elemental Handgonne",
       wpnJob: "Machinist",
       wpnJobShort: "MCH",
@@ -2351,7 +2351,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 10,
+      id: 210,
       wpnName: "Elemental Rod",
       wpnJob: "Black Mage",
       wpnJobShort: "BLM",
@@ -2359,7 +2359,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 11,
+      id: 211,
       wpnName: "Elemental Grimoire",
       wpnJob: "Summoner",
       wpnJobShort: "SMN",
@@ -2367,7 +2367,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 12,
+      id: 212,
       wpnName: "Elemental Tuck",
       wpnJob: "Red Mage",
       wpnJobShort: "RDM",
@@ -2375,7 +2375,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 13,
+      id: 213,
       wpnName: "Elemental Cane",
       wpnJob: "White Mage",
       wpnJobShort: "WHM",
@@ -2383,7 +2383,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 14,
+      id: 214,
       wpnName: "Elemental Codex",
       wpnJob: "Scholar",
       wpnJobShort: "SCH",
@@ -2391,7 +2391,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 15,
+      id: 215,
       wpnName: "Elemental Astrometer",
       wpnJob: "Astrologian",
       wpnJobShort: "AST",
@@ -2401,7 +2401,7 @@ const data = {
   ],
   pyros: [
     {
-      id: 0,
+      id: 216,
       wpnName: "Pyros Sword",
       wpnJob: "Paladin",
       wpnJobShort: "PLD",
@@ -2409,7 +2409,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 1,
+      id: 217,
       wpnName: "Pyros Shield",
       wpnJob: "Paladin",
       wpnJobShort: "PLD",
@@ -2417,7 +2417,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 2,
+      id: 218,
       wpnName: "Pyros Battleaxe",
       wpnJob: "Warrior",
       wpnJobShort: "WAR",
@@ -2425,7 +2425,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 3,
+      id: 219,
       wpnName: "Pyros Guillotine",
       wpnJob: "Dark Knight",
       wpnJobShort: "DRK",
@@ -2433,7 +2433,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 4,
+      id: 220,
       wpnName: "Pyros Lance",
       wpnJob: "Dragoon",
       wpnJobShort: "DRG",
@@ -2441,7 +2441,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 5,
+      id: 221,
       wpnName: "Pyros Knuckles",
       wpnJob: "Monk",
       wpnJobShort: "MNK",
@@ -2449,7 +2449,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 6,
+      id: 222,
       wpnName: "Pyros Blade",
       wpnJob: "Samurai",
       wpnJobShort: "SAM",
@@ -2457,7 +2457,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 7,
+      id: 223,
       wpnName: "Pyros Knives",
       wpnJob: "Ninja",
       wpnJobShort: "NIN",
@@ -2465,7 +2465,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 8,
+      id: 224,
       wpnName: "Pyros Harp Bow",
       wpnJob: "Bard",
       wpnJobShort: "BRD",
@@ -2473,7 +2473,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 9,
+      id: 225,
       wpnName: "Pyros Handgonne",
       wpnJob: "Machinist",
       wpnJobShort: "MCH",
@@ -2481,7 +2481,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 10,
+      id: 226,
       wpnName: "Pyros Rod",
       wpnJob: "Black Mage",
       wpnJobShort: "BLM",
@@ -2489,7 +2489,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 11,
+      id: 227,
       wpnName: "Pyros Grimoire",
       wpnJob: "Summoner",
       wpnJobShort: "SMN",
@@ -2497,7 +2497,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 12,
+      id: 228,
       wpnName: "Pyros Tuck",
       wpnJob: "Red Mage",
       wpnJobShort: "RDM",
@@ -2505,7 +2505,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 13,
+      id: 229,
       wpnName: "Pyros Cane",
       wpnJob: "White Mage",
       wpnJobShort: "WHM",
@@ -2513,7 +2513,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 14,
+      id: 230,
       wpnName: "Pyros Codex",
       wpnJob: "Scholar",
       wpnJobShort: "SCH",
@@ -2521,7 +2521,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 15,
+      id: 231,
       wpnName: "Pyros Astrometer",
       wpnJob: "Astrologian",
       wpnJobShort: "AST",
@@ -2531,7 +2531,7 @@ const data = {
   ],
   eureka: [
     {
-      id: 0,
+      id: 232,
       wpnName: "Antea Eureka",
       wpnJob: "Paladin",
       wpnJobShort: "PLD",
@@ -2539,7 +2539,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 1,
+      id: 233,
       wpnName: "Bellerophon Eureka",
       wpnJob: "Paladin",
       wpnJobShort: "PLD",
@@ -2547,7 +2547,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 2,
+      id: 234,
       wpnName: "Shamash Eureka",
       wpnJob: "Warrior",
       wpnJobShort: "WAR",
@@ -2555,7 +2555,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 3,
+      id: 235,
       wpnName: "Xiphias Eureka",
       wpnJob: "Dark Knight",
       wpnJobShort: "DRK",
@@ -2563,7 +2563,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 4,
+      id: 236,
       wpnName: "Daboya Eureka",
       wpnJob: "Dragoon",
       wpnJobShort: "DRG",
@@ -2571,7 +2571,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 5,
+      id: 237,
       wpnName: "Dumuzis Eureka",
       wpnJob: "Monk",
       wpnJobShort: "MNK",
@@ -2579,7 +2579,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 6,
+      id: 238,
       wpnName: "Torigashira Eureka",
       wpnJob: "Samurai",
       wpnJobShort: "SAM",
@@ -2587,7 +2587,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 7,
+      id: 239,
       wpnName: "Kasasagi Eureka",
       wpnJob: "Ninja",
       wpnJobShort: "NIN",
@@ -2595,7 +2595,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 8,
+      id: 240,
       wpnName: "Circinae Eureka",
       wpnJob: "Bard",
       wpnJobShort: "BRD",
@@ -2603,7 +2603,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 9,
+      id: 241,
       wpnName: "Mollfrith Eureka",
       wpnJob: "Machinist",
       wpnJobShort: "MCH",
@@ -2611,7 +2611,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 10,
+      id: 242,
       wpnName: "Paikea Eureka",
       wpnJob: "Black Mage",
       wpnJobShort: "BLM",
@@ -2619,7 +2619,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 11,
+      id: 243,
       wpnName: "Tuah Eureka",
       wpnJob: "Summoner",
       wpnJobShort: "SMN",
@@ -2627,7 +2627,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 12,
+      id: 244,
       wpnName: "Brunello Eureka",
       wpnJob: "Red Mage",
       wpnJobShort: "RDM",
@@ -2635,7 +2635,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 13,
+      id: 245,
       wpnName: "Rose Couverte Eureka",
       wpnJob: "White Mage",
       wpnJobShort: "WHM",
@@ -2643,7 +2643,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 14,
+      id: 246,
       wpnName: "Jebat Eureka",
       wpnJob: "Scholar",
       wpnJobShort: "SCH",
@@ -2651,7 +2651,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 15,
+      id: 247,
       wpnName: "Albireo Eureka",
       wpnJob: "Astrologian",
       wpnJobShort: "AST",
@@ -2661,7 +2661,7 @@ const data = {
   ],
   physeos: [
     {
-      id: 0,
+      id: 248,
       wpnName: "Antea Physeos",
       wpnJob: "Paladin",
       wpnJobShort: "PLD",
@@ -2669,7 +2669,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 1,
+      id: 249,
       wpnName: "Bellerophon Physeos",
       wpnJob: "Paladin",
       wpnJobShort: "PLD",
@@ -2677,7 +2677,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 2,
+      id: 250,
       wpnName: "Shamash Physeos",
       wpnJob: "Warrior",
       wpnJobShort: "WAR",
@@ -2685,7 +2685,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 3,
+      id: 251,
       wpnName: "Xiphias Physeos",
       wpnJob: "Dark Knight",
       wpnJobShort: "DRK",
@@ -2693,7 +2693,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 4,
+      id: 252,
       wpnName: "Daboya Physeos",
       wpnJob: "Dragoon",
       wpnJobShort: "DRG",
@@ -2701,7 +2701,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 5,
+      id: 253,
       wpnName: "Dumuzis Physeos",
       wpnJob: "Monk",
       wpnJobShort: "MNK",
@@ -2709,7 +2709,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 6,
+      id: 254,
       wpnName: "Torigashira Physeos",
       wpnJob: "Samurai",
       wpnJobShort: "SAM",
@@ -2717,7 +2717,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 7,
+      id: 255,
       wpnName: "Kasasagi Physeos",
       wpnJob: "Ninja",
       wpnJobShort: "NIN",
@@ -2725,7 +2725,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 8,
+      id: 256,
       wpnName: "Circinae Physeos",
       wpnJob: "Bard",
       wpnJobShort: "BRD",
@@ -2733,7 +2733,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 9,
+      id: 257,
       wpnName: "Mollfrith Physeos",
       wpnJob: "Machinist",
       wpnJobShort: "MCH",
@@ -2741,7 +2741,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 10,
+      id: 258,
       wpnName: "Paikea Physeos",
       wpnJob: "Black Mage",
       wpnJobShort: "BLM",
@@ -2749,7 +2749,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 11,
+      id: 259,
       wpnName: "Tuah Physeos",
       wpnJob: "Summoner",
       wpnJobShort: "SMN",
@@ -2757,7 +2757,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 12,
+      id: 260,
       wpnName: "Brunello Physeos",
       wpnJob: "Red Mage",
       wpnJobShort: "RDM",
@@ -2765,7 +2765,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 13,
+      id: 261,
       wpnName: "Rose Couverte Physeos",
       wpnJob: "White Mage",
       wpnJobShort: "WHM",
@@ -2773,7 +2773,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 14,
+      id: 262,
       wpnName: "Jebat Physeos",
       wpnJob: "Scholar",
       wpnJobShort: "SCH",
@@ -2781,7 +2781,7 @@ const data = {
       isSelected: false
     },
     {
-      id: 15,
+      id: 263,
       wpnName: "Albireo Physeos",
       wpnJob: "Astrologian",
       wpnJobShort: "AST",
@@ -3338,6 +3338,98 @@ const data = {
       wpnJob: "Fisher",
       wpnJobShort: "FSH",
       icon: "/icons/endwalker-icons/vrandtic-visionarys/vrandtic_visionarys_fishing_rod.png",
+      isSelected: false
+    }
+  ],
+  lodestarDoH: [
+    {
+      id: 0,
+      wpnName: "Lodestar Saw",
+      wpnJob: "Carpenter",
+      wpnJobShort: "CRP",
+      icon: "/icons/endwalker-icons/lodestar/lodestar_saw.png",
+      isSelected: false
+    },
+    {
+      id: 1,
+      wpnName: "Lodestar Cross-pein Hammer",
+      wpnJob: "Blacksmith",
+      wpnJobShort: "BSM",
+      icon: "/icons/endwalker-icons/lodestar/lodestar_cross_pein_hammer.png",
+      isSelected: false
+    },
+    {
+      id: 2,
+      wpnName: "Lodestar Raising Hammer",
+      wpnJob: "Armorer",
+      wpnJobShort: "ARM",
+      icon: "/icons/endwalker-icons/lodestar/lodestar_raising_hammer.png",
+      isSelected: false
+    },
+    {
+      id: 3,
+      wpnName: "Lodestar Mallet",
+      wpnJob: "Goldsmith",
+      wpnJobShort: "GSM",
+      icon: "/icons/endwalker-icons/lodestar/lodestar_mallet.png",
+      isSelected: false
+    },
+    {
+      id: 4,
+      wpnName: "Lodestar Round Knife",
+      wpnJob: "Leatherworker",
+      wpnJobShort: "LTW",
+      icon: "/icons/endwalker-icons/lodestar/lodestar_round_knife.png",
+      isSelected: false
+    },
+    {
+      id: 5,
+      wpnName: "Lodestar Needle",
+      wpnJob: "Weaver",
+      wpnJobShort: "WVR",
+      icon: "/icons/endwalker-icons/lodestar/lodestar_needle.png",
+      isSelected: false
+    },
+    {
+      id: 6,
+      wpnName: "Lodestar Alembic",
+      wpnJob: "Alchemist",
+      wpnJobShort: "ALC",
+      icon: "/icons/endwalker-icons/lodestar/lodestar_alembic.png",
+      isSelected: false
+    },
+    {
+      id: 7,
+      wpnName: "Lodestar Frypan",
+      wpnJob: "Culinarian",
+      wpnJobShort: "CUL",
+      icon: "/icons/endwalker-icons/lodestar/lodestar_frypan.png",
+      isSelected: false
+    }
+  ],
+  lodestarDoL: [
+    {
+      id: 8,
+      wpnName: "Lodestar Pickaxe",
+      wpnJob: "Miner",
+      wpnJobShort: "MIN",
+      icon: "/icons/endwalker-icons/lodestar/lodestar_pickaxe.png",
+      isSelected: false
+    },
+    {
+      id: 9,
+      wpnName: "Lodestar Hatchet",
+      wpnJob: "Botanist",
+      wpnJobShort: "BTN",
+      icon: "/icons/endwalker-icons/lodestar/lodestar_hatchet.png",
+      isSelected: false
+    },
+    {
+      id: 10,
+      wpnName: "Lodestar Fishing Rod",
+      wpnJob: "Fisher",
+      wpnJobShort: "FSH",
+      icon: "/icons/endwalker-icons/lodestar/lodestar_fishing_rod.png",
       isSelected: false
     }
   ]

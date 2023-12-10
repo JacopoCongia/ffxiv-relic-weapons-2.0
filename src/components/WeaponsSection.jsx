@@ -9,8 +9,8 @@ import useAuth from "../hooks/use-auth";
 const WeaponsSectionContext = createContext();
 
 function WeaponsSection({
-  weaponsCounter,
   weapons,
+  test,
   totalWeapons,
   name,
   patchInfo,
@@ -30,7 +30,7 @@ function WeaponsSection({
     <>
       <WeaponsSectionContext.Provider value={{ open, setOpen }}>
         <WeaponsHeader
-          weaponsCounter={weaponsCounter.length}
+          test={test}
           weapons={weapons}
           totalWeapons={totalWeapons}
           name={name}
@@ -49,7 +49,6 @@ function WeaponsSection({
             type={type}
             tomestones={tomestones}
             tomestoneAmount={tomestoneAmount}
-            weaponsCounter={weaponsCounter}
             notes={notes || null}
           />
           {currentUser?.emailVerified && (

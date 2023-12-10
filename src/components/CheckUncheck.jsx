@@ -1,16 +1,6 @@
 import Button from "./Button";
 
-function CheckUncheck({ checkAll, uncheckAll, weapons, type }) {
-  const allChecked = weapons.map((weapon) => ({
-    ...weapon,
-    isSelected: true
-  }));
-
-  const allUnchecked = weapons.map((weapon) => ({
-    ...weapon,
-    isSelected: false
-  }));
-
+function CheckUncheck({ checkAll, uncheckAll, weapons }) {
   return (
     <div
       className="
@@ -23,13 +13,13 @@ function CheckUncheck({ checkAll, uncheckAll, weapons, type }) {
       sm:gap-4"
     >
       <Button
-        onClick={() => checkAll(allChecked, type)}
+        onClick={() => checkAll(weapons)}
         check
       >
         Check All
       </Button>
       <Button
-        onClick={() => uncheckAll(allUnchecked, type)}
+        onClick={() => uncheckAll(weapons)}
         uncheck
       >
         Uncheck All

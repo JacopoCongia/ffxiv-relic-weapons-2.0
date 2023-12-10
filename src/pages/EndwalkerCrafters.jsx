@@ -116,6 +116,44 @@ function EndwalkerCrafters() {
           </p>
         </div>
       </ToolsContainer>
+      <ToolsHeader name={"Vrandtic Visionary's"} />
+      <ToolsContainer
+        tools={tools.vrandticVisionarysDoH}
+        category={"Crafters"}
+        type={"vrandticVisionarysDoH"}
+      >
+        <div className="text-white flex flex-col gap-3 mb-[2em] px-[2em] text-center">
+          <p className="flex gap-2 justify-center flex-wrap">
+            You will need <span className="font-bold">60</span>
+            <img
+              className="w-[22px]"
+              src="/icons/endwalker-icons/materials/customized_crafters_component.png"
+            />
+            Inspirational Components per Tool which means{" "}
+            <span className="font-bold">20</span> Collectables at maximum
+            collectability.
+          </p>
+        </div>
+      </ToolsContainer>
+      <ToolsHeader name={"Lodestar"} />
+      <ToolsContainer
+        tools={tools.lodestarDoH}
+        category={"Crafters"}
+        type={"lodestarDoH"}
+      >
+        <div className="text-white flex flex-col gap-3 mb-[2em] px-[2em] text-center">
+          <p className="flex gap-2 justify-center flex-wrap">
+            You will need <span className="font-bold">60</span>
+            <img
+              className="w-[22px]"
+              src="/icons/endwalker-icons/materials/nightforged_carpenters_component.png"
+            />
+            Nightforged Components per Tool which means{" "}
+            <span className="font-bold">20</span> Collectables at maximum
+            collectability.
+          </p>
+        </div>
+      </ToolsContainer>
     </div>
   );
 }

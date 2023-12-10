@@ -5,7 +5,6 @@ function MaterialsContainer({
   tomestoneAmount,
   materials,
   type,
-  weaponsCounter,
   notes
 }) {
   const updatedMaterials = materials.filter(
@@ -33,13 +32,10 @@ function MaterialsContainer({
               alt={tomestones.name}
               src={tomestones.icon}
             />
-            {tomestones.name}: {weaponsCounter.length * tomestoneAmount}
+            {/* {tomestones.name}: {weaponsCounter.length * tomestoneAmount} */}
           </p>
         )}
-        <Materials
-          materials={updatedMaterials}
-          weaponsCounter={weaponsCounter}
-        />
+        <Materials materials={updatedMaterials} />
       </div>
       {notes && (
         <p className="max-w-[400px] pb-6">
