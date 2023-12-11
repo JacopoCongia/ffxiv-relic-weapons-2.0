@@ -2,10 +2,10 @@ import useWeaponsData from "../hooks/use-weapons-data";
 import useAuth from "../hooks/use-auth";
 
 function Tool({ tool }) {
-  const { selectWeapon, test } = useWeaponsData();
+  const { selectWeapon, ownedWeapons } = useWeaponsData();
   const { currentUser } = useAuth();
 
-  const isSelected = test.some((el) => el === tool.id); // Testing new weapon method
+  const isSelected = ownedWeapons.some((el) => el === tool.id); // Testing new weapon method
 
   const styles = {
     opacity: isSelected ? "25%" : "100%"

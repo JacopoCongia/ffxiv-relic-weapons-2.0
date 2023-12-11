@@ -9,7 +9,7 @@ const WeaponsDataContext = createContext();
 
 function WeaponsDataProvider({ children }) {
   const [weapons, setWeapons] = useState(data);
-  const [test, setTest] = useState([]);
+  const [ownedWeapons, setOwnedWeapons] = useState([]);
   const { currentUser } = useAuth();
 
   // function selectWeapon(name, key, wpnCategory) {
@@ -28,45 +28,62 @@ function WeaponsDataProvider({ children }) {
 
   // Testing new method to select weapons
 
-  function selectWeapon(id) {
-    const isItInArray = test.some((el) => el === id);
+  console.log(ownedWeapons);
 
-    console.log(test);
+  function selectWeapon(weapon) {
+    const isItInArray = ownedWeapons.some((el) => el.id === weapon.id);
 
     if (!isItInArray) {
-      setTest((prevTest) => {
-        return [...prevTest, id];
+      setOwnedWeapons((prevOwnedWeapons) => {
+        return [
+          ...prevOwnedWeapons,
+          {
+            id: weapon.id,
+            name: weapon.wpnName,
+            category: weapon.category,
+            shield: weapon.shield
+          }
+        ];
       });
     } else {
-      const removedWeapon = test.filter((element) => element !== id);
-      setTest(removedWeapon);
+      const removedWeapon = ownedWeapons.filter(
+        (element) => element.id !== weapon.id
+      );
+      setOwnedWeapons(removedWeapon);
     }
   }
 
   ////////////////////////////////////////////
 
-  function checkAll(allChecked) {
-    const checkedWeapons = allChecked.map((el) => {
-      return el.id;
+  function checkAll(weapons) {
+    const checkedWeapons = weapons.map((el) => {
+      return {
+        id: el.id,
+        name: el.wpnName,
+        category: el.category,
+        shield: el.shield
+      };
     });
 
     const filteredWeapons = checkedWeapons.filter((el) => {
-      return !test.includes(el);
+      return !ownedWeapons.some((element) => element.id === el.id);
     });
 
-    setTest((prevTest) => {
-      return [...prevTest, ...filteredWeapons];
+    setOwnedWeapons((prevOwnedWeapons) => {
+      return [...prevOwnedWeapons, ...filteredWeapons];
     });
   }
 
-  function uncheckAll(allUnchecked) {
-    const uncheckedWeapons = allUnchecked.map((el) => {
+  function uncheckAll(weapons) {
+    const uncheckedWeapons = weapons.map((el) => {
       return el.id;
     });
 
-    const filteredWeapons = test.filter((el) => !uncheckedWeapons.includes(el));
+    const filteredWeapons = ownedWeapons.filter(
+      (el) => !uncheckedWeapons.includes(el.id)
+    );
 
-    setTest(filteredWeapons);
+    setOwnedWeapons(filteredWeapons);
   }
 
   useEffect(() => {
@@ -117,7 +134,7 @@ function WeaponsDataProvider({ children }) {
     selectWeapon,
     checkAll,
     uncheckAll,
-    test // Testing new weapon sorting
+    ownedWeapons // Testing new weapon sorting
   };
 
   return (
