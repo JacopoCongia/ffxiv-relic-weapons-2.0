@@ -29,7 +29,9 @@ export async function addUserToDb(user) {
 }
 
 export async function addToDb(weapons, currentUser) {
-  await setDoc(doc(db, "users", currentUser.uid, "data", "weapons"), weapons);
+  await setDoc(doc(db, "users", currentUser.uid, "data", "ownedWeapons"), {
+    ownedWeapons: weapons
+  });
 }
 
 export async function getWeapons(currentUser) {
@@ -41,6 +43,6 @@ export async function getWeapons(currentUser) {
     const weaponsFromDb = snapshot.docs.map((doc) => {
       return doc.data();
     });
-    return weaponsFromDb[0];
+    return weaponsFromDb[0].ownedWeapons;
   }
 }

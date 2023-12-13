@@ -18,7 +18,7 @@ const data = {
       icon: "/icons/endwalker-icons/materials/manderium_meteorite.png",
       reqTotal: 57,
       reqPerWeapon: 3,
-      type: "manderville"
+      category: "manderville"
     },
     {
       id: 1,
@@ -26,7 +26,7 @@ const data = {
       icon: "/icons/endwalker-icons/materials/complementary_chondrite.png",
       reqTotal: 57,
       reqPerWeapon: 3,
-      type: "amazingManderville"
+      category: "amazingManderville"
     },
     {
       id: 2,
@@ -34,7 +34,7 @@ const data = {
       icon: "/icons/endwalker-icons/materials/amplifying_achondrite.png",
       reqTotal: 57,
       reqPerWeapon: 3,
-      type: "majesticManderville"
+      category: "majesticManderville"
     },
     {
       id: 3,
@@ -42,7 +42,7 @@ const data = {
       icon: "/icons/shadowbringers-icons/materials/thavnairian_scalepowder.png",
       reqTotal: 68,
       reqPerWeapon: 4,
-      type: "resistance"
+      category: "resistance"
     },
     {
       id: 4,
@@ -50,7 +50,7 @@ const data = {
       icon: "/icons/shadowbringers-icons/materials/harrowing_memory_of_the_dying.png",
       reqTotal: 340,
       reqPerWeapon: 20,
-      type: "augmentedResistance"
+      category: "augmentedResistance"
     },
     {
       id: 5,
@@ -58,7 +58,7 @@ const data = {
       icon: "/icons/shadowbringers-icons/materials/sorrowful_memory_of_the_dying.png",
       reqTotal: 340,
       reqPerWeapon: 20,
-      type: "augmentedResistance"
+      category: "augmentedResistance"
     },
     {
       id: 6,
@@ -66,7 +66,7 @@ const data = {
       icon: "/icons/shadowbringers-icons/materials/tortured_memory_of_the_dying.png",
       reqTotal: 340,
       reqPerWeapon: 20,
-      type: "augmentedResistance"
+      category: "augmentedResistance"
     },
     {
       id: 7,
@@ -74,7 +74,7 @@ const data = {
       icon: "/icons/shadowbringers-icons/materials/bitter_memory_of_the_dying.png",
       reqTotal: 102,
       reqPerWeapon: 6,
-      type: "recollection"
+      category: "recollection"
     },
     {
       id: 8,
@@ -82,7 +82,7 @@ const data = {
       icon: "/icons/shadowbringers-icons/materials/loathsome_memory_of_the_dying.png",
       reqTotal: 255,
       reqPerWeapon: 15,
-      type: "lawsOrder"
+      category: "lawsOrder"
     },
     {
       id: 9,
@@ -90,7 +90,7 @@ const data = {
       icon: "/icons/shadowbringers-icons/materials/timeworn_artifact.png",
       reqTotal: 255,
       reqPerWeapon: 15,
-      type: "augmentedLawsOrder"
+      category: "augmentedLawsOrder"
     },
     {
       id: 10,
@@ -98,7 +98,7 @@ const data = {
       icon: "/icons/shadowbringers-icons/materials/raw_emotion.png",
       reqTotal: 255,
       reqPerWeapon: 15,
-      type: "blades"
+      category: "blades"
     },
     {
       id: 11,
@@ -106,7 +106,7 @@ const data = {
       icon: "/icons/stormblood-icons/materials/gil.png",
       reqTotal: 15000,
       reqPerWeapon: 1000,
-      type: "antiquated"
+      category: "antiquated"
     },
     {
       id: 12,
@@ -114,7 +114,7 @@ const data = {
       icon: "/icons/stormblood-icons/materials/protean_crystal.png",
       reqTotal: 19500,
       reqPerWeapon: 1300,
-      type: "anemos"
+      category: "anemos"
     },
     {
       id: 13,
@@ -122,7 +122,7 @@ const data = {
       icon: "/icons/stormblood-icons/materials/pazuzus_feather.png",
       reqTotal: 45,
       reqPerWeapon: 3,
-      type: "anemos"
+      category: "anemos"
     },
     {
       id: 14,
@@ -130,7 +130,7 @@ const data = {
       icon: "/icons/stormblood-icons/materials/pagos_crystal.png",
       reqTotal: 7500,
       reqPerWeapon: 500,
-      type: "elemental"
+      category: "elemental"
     },
     {
       id: 15,
@@ -138,7 +138,7 @@ const data = {
       icon: "/icons/stormblood-icons/materials/frosted_protean_crystal.png",
       reqTotal: 465,
       reqPerWeapon: 31,
-      type: "elemental"
+      category: "elemental"
     },
     {
       id: 16,
@@ -146,7 +146,7 @@ const data = {
       icon: "/icons/stormblood-icons/materials/louhis_ice.png",
       reqTotal: 75,
       reqPerWeapon: 5,
-      type: "elemental"
+      category: "elemental"
     },
     {
       id: 17,
@@ -154,7 +154,7 @@ const data = {
       icon: "/icons/stormblood-icons/materials/pyros_crystal.png",
       reqTotal: 9750,
       reqPerWeapon: 650,
-      type: "pyros"
+      category: "pyros"
     },
     {
       id: 18,
@@ -162,7 +162,7 @@ const data = {
       icon: "/icons/stormblood-icons/materials/penthesileas_flame.png",
       reqTotal: 75,
       reqPerWeapon: 5,
-      type: "pyros"
+      category: "pyros"
     },
     {
       id: 19,
@@ -170,7 +170,7 @@ const data = {
       icon: "/icons/stormblood-icons/materials/hydatos_crystal.png",
       reqTotal: 5250,
       reqPerWeapon: 350,
-      type: "eureka"
+      category: "eureka"
     },
     {
       id: 20,
@@ -178,7 +178,7 @@ const data = {
       icon: "/icons/stormblood-icons/materials/crystalline_scale.png",
       reqTotal: 75,
       reqPerWeapon: 5,
-      type: "eureka"
+      category: "eureka"
     },
     {
       id: 21,
@@ -186,7 +186,7 @@ const data = {
       icon: "/icons/stormblood-icons/materials/eureka_fragment.png",
       reqTotal: 1500,
       reqPerWeapon: 100,
-      type: "physeos"
+      category: "physeos"
     },
     {
       id: 22,
@@ -194,7 +194,7 @@ const data = {
       icon: "/icons/white_crafters_scrip.png",
       reqTotal: 10500,
       reqPerWeapon: 1500,
-      type: "splendorous"
+      category: "splendorous"
     },
     {
       id: 23,
@@ -202,35 +202,35 @@ const data = {
       icon: "/icons/white_gatherers_scrip.png",
       reqTotal: 3000,
       reqPerWeapon: 1500,
-      type: "splendorous"
+      category: "splendorous"
     },
     {
       id: 24,
       name: "Splendorous Miner's Component",
       icon: "/icons/endwalker-icons/materials/splendorous_crafters_component.png",
 
-      type: "augmentedSplendorous"
+      category: "augmentedSplendorous"
     },
     {
       id: 25,
       name: "Splendorous Botanist's Component",
       icon: "/icons/endwalker-icons/materials/splendorous_crafters_component.png",
 
-      type: "augmentedSplendorous"
+      category: "augmentedSplendorous"
     },
     {
       id: 26,
       name: "Splendorous Fishing Rod Component",
       icon: "/icons/endwalker-icons/materials/splendorous_crafters_component.png",
 
-      type: "augmentedSplendorous"
+      category: "augmentedSplendorous"
     },
     {
       id: 27,
       name: "Splendorous Fishing Reel Component",
       icon: "/icons/endwalker-icons/materials/splendorous_crafters_component.png",
 
-      type: "augmentedSplendorous"
+      category: "augmentedSplendorous"
     },
     {
       id: 28,
@@ -238,7 +238,7 @@ const data = {
       icon: "/icons/endwalker-icons/materials/connoisseurs_prismstone.png",
       minCollectability: "570-999",
       maxCollectability: "1000",
-      type: "augmentedSplendorous",
+      category: "augmentedSplendorous",
       wiki: "https://ffxiv.consolegameswiki.com/wiki/Connoisseur%27s_Prismstone"
     },
     {
@@ -247,21 +247,21 @@ const data = {
       icon: "/icons/endwalker-icons/materials/connoisseurs_wattle_petribark.png",
       minCollectability: "570-999",
       maxCollectability: "1000",
-      type: "augmentedSplendorous",
+      category: "augmentedSplendorous",
       wiki: "https://ffxiv.consolegameswiki.com/wiki/Connoisseur%27s_Wattle_Petribark"
     },
     {
       id: 30,
       name: "Splendorous Water Shard",
       icon: "/icons/endwalker-icons/materials/splendorous_water_shard.png",
-      type: "augmentedSplendorous",
+      category: "augmentedSplendorous",
       wiki: "https://ffxiv.consolegameswiki.com/wiki/Splendorous_Water_Shard"
     },
     {
       id: 31,
       name: "Splendorous Earth Shard",
       icon: "/icons/endwalker-icons/materials/splendorous_earth_shard.png",
-      type: "augmentedSplendorous",
+      category: "augmentedSplendorous",
       wiki: "https://ffxiv.consolegameswiki.com/wiki/Splendorous_Earth_Shard"
     },
     {
@@ -270,7 +270,7 @@ const data = {
       icon: "/icons/endwalker-icons/materials/platinum_seahorse.png",
       minCollectability: "47-109",
       maxCollectability: "110+",
-      type: "augmentedSplendorous",
+      category: "augmentedSplendorous",
       wiki: "https://ffxiv.consolegameswiki.com/wiki/Platinum_Seahorse"
     },
     {
@@ -279,32 +279,32 @@ const data = {
       icon: "/icons/endwalker-icons/materials/clavekeeper.png",
       minCollectability: "283-664",
       maxCollectability: "665+",
-      type: "augmentedSplendorous",
+      category: "augmentedSplendorous",
       wiki: "https://ffxiv.consolegameswiki.com/wiki/Clavekeeper"
     },
     {
       id: 34,
       name: "Adaptive Miner's Component",
       icon: "/icons/endwalker-icons/materials/adaptive_crafters_component.png",
-      type: "crystalline"
+      category: "crystalline"
     },
     {
       id: 35,
       name: "Adaptive Botanist's Component",
       icon: "/icons/endwalker-icons/materials/adaptive_crafters_component.png",
-      type: "crystalline"
+      category: "crystalline"
     },
     {
       id: 36,
       name: "Adaptive Fishing Rod Component",
       icon: "/icons/endwalker-icons/materials/adaptive_crafters_component.png",
-      type: "crystalline"
+      category: "crystalline"
     },
     {
       id: 37,
       name: "Adaptive Fishing Reel Component",
       icon: "/icons/endwalker-icons/materials/adaptive_crafters_component.png",
-      type: "crystalline"
+      category: "crystalline"
     },
     {
       id: 38,
@@ -312,7 +312,7 @@ const data = {
       icon: "/icons/endwalker-icons/materials/connoisseurs_red_malachite.png",
       minCollectability: "570-999",
       maxCollectability: "1000",
-      type: "crystalline",
+      category: "crystalline",
       wiki: "https://ffxiv.consolegameswiki.com/wiki/Connoisseur%27s_Red_Malachite"
     },
     {
@@ -321,21 +321,21 @@ const data = {
       icon: "/icons/endwalker-icons/materials/connoisseurs_levin_mint.png",
       minCollectability: "570-999",
       maxCollectability: "1000",
-      type: "crystalline",
+      category: "crystalline",
       wiki: "https://ffxiv.consolegameswiki.com/wiki/Connoisseur%27s_Levin_Mint"
     },
     {
       id: 40,
       name: "Adaptive Fire Crystal",
       icon: "/icons/endwalker-icons/materials/adaptive_fire_crystal.png",
-      type: "crystalline",
+      category: "crystalline",
       wiki: "https://ffxiv.consolegameswiki.com/wiki/Adaptive_Fire_Crystal"
     },
     {
       id: 41,
       name: "Adaptive Lightning Crystal",
       icon: "/icons/endwalker-icons/materials/adaptive_lightning_crystal.png",
-      type: "crystalline",
+      category: "crystalline",
       wiki: "https://ffxiv.consolegameswiki.com/wiki/Adaptive_Lightning_Crystal"
     },
     {
@@ -344,7 +344,7 @@ const data = {
       icon: "/icons/endwalker-icons/materials/mirror_image.png",
       minCollectability: "9-20",
       maxCollectability: "21+",
-      type: "crystalline",
+      category: "crystalline",
       wiki: "https://ffxiv.consolegameswiki.com/wiki/Mirror_Image"
     },
     {
@@ -353,32 +353,32 @@ const data = {
       icon: "/icons/endwalker-icons/materials/spangled_pirarucu.png",
       minCollectability: "425-997",
       maxCollectability: "998+",
-      type: "crystalline",
+      category: "crystalline",
       wiki: "https://ffxiv.consolegameswiki.com/wiki/Spangled_Pirarucu"
     },
     {
       id: 44,
       name: "Customized Miner's Component",
       icon: "/icons/endwalker-icons/materials/customized_miners_component.png",
-      type: "choraZoisCrystalline"
+      category: "choraZoisCrystalline"
     },
     {
       id: 45,
       name: "Customized Botanist's Component",
       icon: "/icons/endwalker-icons/materials/customized_botanists_component.png",
-      type: "choraZoisCrystalline"
+      category: "choraZoisCrystalline"
     },
     {
       id: 46,
       name: "Customized Fishing Rod Component",
       icon: "/icons/endwalker-icons/materials/customized_fishing_rod_component.png",
-      type: "choraZoisCrystalline"
+      category: "choraZoisCrystalline"
     },
     {
       id: 47,
       name: "Customized Fishing Reel Component",
       icon: "/icons/endwalker-icons/materials/customized_fishing_reel_component.png",
-      type: "choraZoisCrystalline"
+      category: "choraZoisCrystalline"
     },
     {
       id: 48,
@@ -386,7 +386,7 @@ const data = {
       icon: "/icons/endwalker-icons/materials/connoisseurs_soiled_femur.png",
       minCollectability: "570-999",
       maxCollectability: "1000",
-      type: "choraZoisCrystalline",
+      category: "choraZoisCrystalline",
       wiki: "https://ffxiv.consolegameswiki.com/wiki/Connoisseur%27s_Soiled_Femur"
     },
     {
@@ -395,21 +395,21 @@ const data = {
       icon: "/icons/endwalker-icons/materials/connoisseurs_miracle_apple.png",
       minCollectability: "570-999",
       maxCollectability: "1000",
-      type: "choraZoisCrystalline",
+      category: "choraZoisCrystalline",
       wiki: "https://ffxiv.consolegameswiki.com/wiki/Connoisseur%27s_Miracle_Apple"
     },
     {
       id: 50,
       name: "Custom Ice Crystal",
       icon: "/icons/endwalker-icons/materials/custom_ice_crystal.png",
-      type: "choraZoisCrystalline",
+      category: "choraZoisCrystalline",
       wiki: "https://ffxiv.consolegameswiki.com/wiki/Custom_Ice_Crystal"
     },
     {
       id: 51,
       name: "Custom Wind Crystal",
       icon: "/icons/endwalker-icons/materials/custom_wind_crystal.png",
-      type: "choraZoisCrystalline",
+      category: "choraZoisCrystalline",
       wiki: "https://ffxiv.consolegameswiki.com/wiki/Custom_Wind_Crystal"
     },
     {
@@ -418,7 +418,7 @@ const data = {
       icon: "/icons/endwalker-icons/materials/gold_dustfish.png",
       minCollectability: "82-192",
       maxCollectability: "193+",
-      type: "choraZoisCrystalline",
+      category: "choraZoisCrystalline",
       wiki: "https://ffxiv.consolegameswiki.com/wiki/Gold_Dustfish"
     },
     {
@@ -427,32 +427,32 @@ const data = {
       icon: "/icons/endwalker-icons/materials/forgiven_melancholy.png",
       minCollectability: "322-757",
       maxCollectability: "758+",
-      type: "choraZoisCrystalline",
+      category: "choraZoisCrystalline",
       wiki: "https://ffxiv.consolegameswiki.com/wiki/Forgiven_Melancholy"
     },
     {
       id: 54,
       name: "Brilliant Miner's Component",
       icon: "/icons/endwalker-icons/materials/brilliant_miners_component.png",
-      type: "brilliant"
+      category: "brilliant"
     },
     {
       id: 55,
       name: "Brilliant Botanist's Component",
       icon: "/icons/endwalker-icons/materials/brilliant_botanists_component.png",
-      type: "brilliant"
+      category: "brilliant"
     },
     {
       id: 56,
       name: "Brilliant Fishing Rod Component",
       icon: "/icons/endwalker-icons/materials/brilliant_fishing_rod_component.png",
-      type: "brilliant"
+      category: "brilliant"
     },
     {
       id: 57,
       name: "Brilliant Fishing Reel Component",
       icon: "/icons/endwalker-icons/materials/brilliant_fishing_reel_component.png",
-      type: "brilliant"
+      category: "brilliant"
     },
     {
       id: 58,
@@ -460,7 +460,7 @@ const data = {
       icon: "/icons/endwalker-icons/materials/connoisseurs_aurum_regis_ore.png",
       minCollectability: "570-999",
       maxCollectability: "1000",
-      type: "brilliant",
+      category: "brilliant",
       wiki: "https://ffxiv.consolegameswiki.com/wiki/Connoisseur%27s_Aurum_Regis_Ore"
     },
     {
@@ -469,21 +469,21 @@ const data = {
       icon: "/icons/endwalker-icons/materials/connoisseurs_cloves.png",
       minCollectability: "570-999",
       maxCollectability: "1000",
-      type: "brilliant",
+      category: "brilliant",
       wiki: "https://ffxiv.consolegameswiki.com/wiki/Connoisseur%27s_Cloves"
     },
     {
       id: 60,
       name: "Brilliant Lightning Cluster",
       icon: "/icons/endwalker-icons/materials/brilliant_lightning_cluster.png",
-      type: "brilliant",
+      category: "brilliant",
       wiki: "https://ffxiv.consolegameswiki.com/wiki/Brilliant_Lightning_Cluster"
     },
     {
       id: 61,
       name: "Brilliant Earth Cluster",
       icon: "/icons/endwalker-icons/materials/brilliant_earth_cluster.png",
-      type: "brilliant",
+      category: "brilliant",
       wiki: "https://ffxiv.consolegameswiki.com/wiki/Brilliant_Earth_Cluster"
     },
     {
@@ -492,7 +492,7 @@ const data = {
       icon: "/icons/endwalker-icons/materials/oil_slick.png",
       minCollectability: "94-219",
       maxCollectability: "220+",
-      type: "brilliant",
+      category: "brilliant",
       wiki: "https://ffxiv.consolegameswiki.com/wiki/Oil_Slick"
     },
     {
@@ -501,8 +501,150 @@ const data = {
       icon: "/icons/endwalker-icons/materials/gonzalos_grace.png",
       minCollectability: "47-109",
       maxCollectability: "110+",
-      type: "brilliant",
+      category: "brilliant",
       wiki: "https://ffxiv.consolegameswiki.com/wiki/Gonzalo%27s_Grace"
+    },
+    {
+      id: 64,
+      name: "Connoisseur's Asphaltum",
+      icon: "/icons/endwalker-icons/materials/connoisseurs_asphaltum.png",
+      minCollectability: "570-999",
+      maxCollectability: "1000",
+      category: "vrandticVisionarys",
+      wiki: "https://ffxiv.consolegameswiki.com/wiki/Connoisseur%27s_Asphaltum"
+    },
+    {
+      id: 65,
+      name: "Inspirational Miner's Component",
+      icon: "/icons/endwalker-icons/materials/inspirational_miners_component.png",
+      category: "vrandticVisionarys",
+      wiki: "https://ffxiv.consolegameswiki.com/wiki/Inspirational_Miner%27s_Component"
+    },
+    {
+      id: 66,
+      name: "Inspirational Wind Cluster",
+      icon: "/icons/endwalker-icons/materials/inspirational_wind_cluster.png",
+      category: "vrandticVisionarys",
+      wiki: "https://ffxiv.consolegameswiki.com/wiki/Inspirational_Wind_Cluster"
+    },
+    {
+      id: 67,
+      name: "Connoisseur's Gianthive Chip",
+      icon: "/icons/endwalker-icons/materials/connoisseurs_gianthive_chip.png",
+      minCollectability: "570-999",
+      maxCollectability: "1000",
+      category: "vrandticVisionarys",
+      wiki: "https://ffxiv.consolegameswiki.com/wiki/Connoisseur%27s_Gianthive_Chip"
+    },
+    {
+      id: 68,
+      name: "Inspirational Botanist's Component",
+      icon: "/icons/endwalker-icons/materials/inspirational_botanists_component.png",
+      category: "vrandticVisionarys",
+      wiki: "https://ffxiv.consolegameswiki.com/wiki/Inspirational_Botanist%27s_Component"
+    },
+    {
+      id: 69,
+      name: "Inspirational Fire Cluster",
+      icon: "/icons/endwalker-icons/materials/inspirational_fire_cluster.png",
+      category: "vrandticVisionarys",
+      wiki: "https://ffxiv.consolegameswiki.com/wiki/Inspirational_Fire_Cluster"
+    },
+    {
+      id: 70,
+      name: "Deadwood Shadow",
+      icon: "/icons/endwalker-icons/materials/deadwood_shadow.png",
+      minCollectability: "501-1176",
+      maxCollectability: "1177+",
+      category: "vrandticVisionarys",
+      wiki: "https://ffxiv.consolegameswiki.com/wiki/Deadwood_Shadow"
+    },
+    {
+      id: 71,
+      name: "Ronkan Bullion",
+      icon: "/icons/endwalker-icons/materials/ronkan_bullion.png",
+      minCollectability: "501-1176",
+      maxCollectability: "1177+",
+      category: "vrandticVisionarys",
+      wiki: "https://ffxiv.consolegameswiki.com/wiki/Ronkan_Bullion"
+    },
+    {
+      id: 72,
+      name: "Inspirational Fisher's Component",
+      icon: "/icons/endwalker-icons/materials/inspirational_fishers_component.png",
+      category: "vrandticVisionarys",
+      wiki: "https://ffxiv.consolegameswiki.com/wiki/Inspirational_Fisher%27s_Component"
+    },
+    {
+      id: 73,
+      name: "Connoisseur's Raw Onyx",
+      icon: "/icons/endwalker-icons/materials/connoisseurs_raw_onyx.png",
+      minCollectability: "580-999",
+      maxCollectability: "1000",
+      category: "lodestar",
+      wiki: "https://ffxiv.consolegameswiki.com/wiki/Connoisseur%27s_Raw_Onyx"
+    },
+    {
+      id: 74,
+      name: "Nightforged Miner's Component",
+      icon: "/icons/endwalker-icons/materials/nightforged_miners_component.png",
+      category: "lodestar",
+      wiki: "https://ffxiv.consolegameswiki.com/wiki/Nightforged_Miner%27s_Component"
+    },
+    {
+      id: 75,
+      name: "Nightforged Ice Cluster",
+      icon: "/icons/endwalker-icons/materials/nightforged_ice_cluster.png",
+      category: "lodestar",
+      wiki: "https://ffxiv.consolegameswiki.com/wiki/Nightforged_Ice_Cluster"
+    },
+    {
+      id: 76,
+      name: "Connoisseur's Glimshroom",
+      icon: "/icons/endwalker-icons/materials/connoisseurs_glimshroom.png",
+      minCollectability: "570-999",
+      maxCollectability: "1000",
+      category: "lodestar",
+      wiki: "https://ffxiv.consolegameswiki.com/wiki/Connoisseur%27s_Glimshroom"
+    },
+    {
+      id: 77,
+      name: "Nightforged Botanist's Component",
+      icon: "/icons/endwalker-icons/materials/nightforged_botanists_component.png",
+      category: "lodestar",
+      wiki: "https://ffxiv.consolegameswiki.com/wiki/Nightforged_Botanist%27s_Component"
+    },
+    {
+      id: 78,
+      name: "Nightforged Water Cluster",
+      icon: "/icons/endwalker-icons/materials/nightforged_water_cluster.png",
+      category: "lodestar",
+      wiki: "https://ffxiv.consolegameswiki.com/wiki/Nightforged_Water_Cluster"
+    },
+    {
+      id: 79,
+      name: "Little Bounty",
+      icon: "/icons/endwalker-icons/materials/little_bounty.png",
+      minCollectability: "9-20",
+      maxCollectability: "21+",
+      category: "lodestar",
+      wiki: "https://ffxiv.consolegameswiki.com/wiki/Little_Bounty"
+    },
+    {
+      id: 80,
+      name: "Saint Fathric's Face",
+      icon: "/icons/endwalker-icons/materials/saint_fathrics_face.png",
+      minCollectability: "384-901",
+      maxCollectability: "902+",
+      category: "lodestar",
+      wiki: "https://ffxiv.consolegameswiki.com/wiki/Saint_Fathric%27s_Face"
+    },
+    {
+      id: 81,
+      name: "Nightforged Fisher's Component",
+      icon: "/icons/endwalker-icons/materials/nightforged_fishers_component.png",
+      category: "lodestar",
+      wiki: "https://ffxiv.consolegameswiki.com/wiki/Nightforged_Fisher%27s_Component"
     }
   ],
   manderville: [
@@ -512,7 +654,7 @@ const data = {
       wpnJob: "Paladin",
       wpnJobShort: "PLD",
       icon: "/icons/endwalker-icons/manderville/manderville_sword.png",
-      isSelected: false
+      category: "manderville"
     },
     {
       id: 1,
@@ -520,7 +662,8 @@ const data = {
       wpnJob: "Paladin",
       wpnJobShort: "PLD",
       icon: "/icons/endwalker-icons/manderville/manderville_kite_shield.png",
-      isSelected: false
+      category: "manderville",
+      shield: true
     },
     {
       id: 2,
@@ -528,7 +671,7 @@ const data = {
       wpnJob: "Warrior",
       wpnJobShort: "WAR",
       icon: "/icons/endwalker-icons/manderville/manderville_axe.png",
-      isSelected: false
+      category: "manderville"
     },
     {
       id: 3,
@@ -536,7 +679,7 @@ const data = {
       wpnJob: "Dark Knight",
       wpnJobShort: "DRK",
       icon: "/icons/endwalker-icons/manderville/manderville_zweihander.png",
-      isSelected: false
+      category: "manderville"
     },
     {
       id: 4,
@@ -544,7 +687,7 @@ const data = {
       wpnJob: "Gunbreaker",
       wpnJobShort: "GNB",
       icon: "/icons/endwalker-icons/manderville/manderville_gunblade.png",
-      isSelected: false
+      category: "manderville"
     },
     {
       id: 5,
@@ -552,7 +695,7 @@ const data = {
       wpnJob: "Dragoon",
       wpnJobShort: "DRG",
       icon: "/icons/endwalker-icons/manderville/manderville_spear.png",
-      isSelected: false
+      category: "manderville"
     },
     {
       id: 6,
@@ -560,7 +703,7 @@ const data = {
       wpnJob: "Reaper",
       wpnJobShort: "RPR",
       icon: "/icons/endwalker-icons/manderville/manderville_scythe.png",
-      isSelected: false
+      category: "manderville"
     },
     {
       id: 7,
@@ -568,7 +711,7 @@ const data = {
       wpnJob: "Monk",
       wpnJobShort: "MNK",
       icon: "/icons/endwalker-icons/manderville/manderville_knuckles.png",
-      isSelected: false
+      category: "manderville"
     },
     {
       id: 8,
@@ -576,7 +719,7 @@ const data = {
       wpnJob: "Samurai",
       wpnJobShort: "SAM",
       icon: "/icons/endwalker-icons/manderville/manderville_samurai_blade.png",
-      isSelected: false
+      category: "manderville"
     },
     {
       id: 9,
@@ -584,7 +727,7 @@ const data = {
       wpnJob: "Ninja",
       wpnJobShort: "NIN",
       icon: "/icons/endwalker-icons/manderville/manderville_knives.png",
-      isSelected: false
+      category: "manderville"
     },
     {
       id: 10,
@@ -592,7 +735,7 @@ const data = {
       wpnJob: "Bard",
       wpnJobShort: "BRD",
       icon: "/icons/endwalker-icons/manderville/manderville_harp_bow.png",
-      isSelected: false
+      category: "manderville"
     },
     {
       id: 11,
@@ -600,7 +743,7 @@ const data = {
       wpnJob: "Machinist",
       wpnJobShort: "MCH",
       icon: "/icons/endwalker-icons/manderville/manderville_revolver.png",
-      isSelected: false
+      category: "manderville"
     },
     {
       id: 12,
@@ -608,7 +751,7 @@ const data = {
       wpnJob: "Dancer",
       wpnJobShort: "DNC",
       icon: "/icons/endwalker-icons/manderville/manderville_chakrams.png",
-      isSelected: false
+      category: "manderville"
     },
     {
       id: 13,
@@ -616,7 +759,7 @@ const data = {
       wpnJob: "Black Mage",
       wpnJobShort: "BLM",
       icon: "/icons/endwalker-icons/manderville/manderville_rod.png",
-      isSelected: false
+      category: "manderville"
     },
     {
       id: 14,
@@ -624,7 +767,7 @@ const data = {
       wpnJob: "Summoner",
       wpnJobShort: "SMN",
       icon: "/icons/endwalker-icons/manderville/manderville_index.png",
-      isSelected: false
+      category: "manderville"
     },
     {
       id: 15,
@@ -632,7 +775,7 @@ const data = {
       wpnJob: "Red Mage",
       wpnJobShort: "RDM",
       icon: "/icons/endwalker-icons/manderville/manderville_rapier.png",
-      isSelected: false
+      category: "manderville"
     },
     {
       id: 16,
@@ -640,7 +783,7 @@ const data = {
       wpnJob: "White Mage",
       wpnJobShort: "WHM",
       icon: "/icons/endwalker-icons/manderville/manderville_cane.png",
-      isSelected: false
+      category: "manderville"
     },
     {
       id: 17,
@@ -648,7 +791,7 @@ const data = {
       wpnJob: "Scholar",
       wpnJobShort: "SCH",
       icon: "/icons/endwalker-icons/manderville/manderville_codex.png",
-      isSelected: false
+      category: "manderville"
     },
     {
       id: 18,
@@ -656,7 +799,7 @@ const data = {
       wpnJob: "Astrologian",
       wpnJobShort: "AST",
       icon: "/icons/endwalker-icons/manderville/manderville_torquetum.png",
-      isSelected: false
+      category: "manderville"
     },
     {
       id: 19,
@@ -664,2447 +807,2645 @@ const data = {
       wpnJob: "Sage",
       wpnJobShort: "SGE",
       icon: "/icons/endwalker-icons/manderville/manderville_milpreves.png",
-      isSelected: false
+      category: "manderville"
     }
   ],
   amazingManderville: [
     {
-      id: 0,
+      id: 20,
       wpnName: "Amazing Manderville Sword",
       wpnJob: "Paladin",
       wpnJobShort: "PLD",
       icon: "/icons/endwalker-icons/amazing-manderville/amazing_manderville_sword.png",
-      isSelected: false
+      category: "amazingManderville"
     },
     {
-      id: 1,
+      id: 21,
       wpnName: "Amazing Manderville Kite Shield",
       wpnJob: "Paladin",
       wpnJobShort: "PLD",
       icon: "/icons/endwalker-icons/amazing-manderville/amazing_manderville_kite_shield.png",
-      isSelected: false
+      category: "amazingManderville",
+      shield: true
     },
     {
-      id: 2,
+      id: 22,
       wpnName: "Amazing Manderville Axe",
       wpnJob: "Warrior",
       wpnJobShort: "WAR",
       icon: "/icons/endwalker-icons/amazing-manderville/amazing_manderville_axe.png",
-      isSelected: false
+      category: "amazingManderville"
     },
     {
-      id: 3,
+      id: 23,
       wpnName: "Amazing Manderville Zweihander",
       wpnJob: "Dark Knight",
       wpnJobShort: "DRK",
       icon: "/icons/endwalker-icons/amazing-manderville/amazing_manderville_zweihander.png",
-      isSelected: false
+      category: "amazingManderville"
     },
     {
-      id: 4,
+      id: 24,
       wpnName: "Amazing Manderville Gunblade",
       wpnJob: "Gunbreaker",
       wpnJobShort: "GNB",
       icon: "/icons/endwalker-icons/amazing-manderville/amazing_manderville_gunblade.png",
-      isSelected: false
+      category: "amazingManderville"
     },
     {
-      id: 5,
+      id: 25,
       wpnName: "Amazing Manderville Spear",
       wpnJob: "Dragoon",
       wpnJobShort: "DRG",
       icon: "/icons/endwalker-icons/amazing-manderville/amazing_manderville_spear.png",
-      isSelected: false
+      category: "amazingManderville"
     },
     {
-      id: 6,
+      id: 26,
       wpnName: "Amazing Manderville Scythe",
       wpnJob: "Reaper",
       wpnJobShort: "RPR",
       icon: "/icons/endwalker-icons/amazing-manderville/amazing_manderville_scythe.png",
-      isSelected: false
+      category: "amazingManderville"
     },
     {
-      id: 7,
+      id: 27,
       wpnName: "Amazing Manderville Knuckles",
       wpnJob: "Monk",
       wpnJobShort: "MNK",
       icon: "/icons/endwalker-icons/amazing-manderville/amazing_manderville_knuckles.png",
-      isSelected: false
+      category: "amazingManderville"
     },
     {
-      id: 8,
+      id: 28,
       wpnName: "Amazing Manderville Samurai Blade",
       wpnJob: "Samurai",
       wpnJobShort: "SAM",
       icon: "/icons/endwalker-icons/amazing-manderville/amazing_manderville_samurai_blade.png",
-      isSelected: false
+      category: "amazingManderville"
     },
     {
-      id: 9,
+      id: 29,
       wpnName: "Amazing Manderville Knives",
       wpnJob: "Ninja",
       wpnJobShort: "NIN",
       icon: "/icons/endwalker-icons/amazing-manderville/amazing_manderville_knives.png",
-      isSelected: false
+      category: "amazingManderville"
     },
     {
-      id: 10,
+      id: 30,
       wpnName: "Amazing Manderville Harp Bow",
       wpnJob: "Bard",
       wpnJobShort: "BRD",
       icon: "/icons/endwalker-icons/amazing-manderville/amazing_manderville_harp_bow.png",
-      isSelected: false
+      category: "amazingManderville"
     },
     {
-      id: 11,
+      id: 31,
       wpnName: "Amazing Manderville Revolver",
       wpnJob: "Machinist",
       wpnJobShort: "MCH",
       icon: "/icons/endwalker-icons/amazing-manderville/amazing_manderville_revolver.png",
-      isSelected: false
+      category: "amazingManderville"
     },
     {
-      id: 12,
+      id: 32,
       wpnName: "Amazing Manderville Chakrams",
       wpnJob: "Dancer",
       wpnJobShort: "DNC",
       icon: "/icons/endwalker-icons/amazing-manderville/amazing_manderville_chakrams.png",
-      isSelected: false
+      category: "amazingManderville"
     },
     {
-      id: 13,
+      id: 33,
       wpnName: "Amazing Manderville Rod",
       wpnJob: "Black Mage",
       wpnJobShort: "BLM",
       icon: "/icons/endwalker-icons/amazing-manderville/amazing_manderville_rod.png",
-      isSelected: false
+      category: "amazingManderville"
     },
     {
-      id: 14,
+      id: 34,
       wpnName: "Amazing Manderville Index",
       wpnJob: "Summoner",
       wpnJobShort: "SMN",
       icon: "/icons/endwalker-icons/amazing-manderville/amazing_manderville_index.png",
-      isSelected: false
+      category: "amazingManderville"
     },
     {
-      id: 15,
+      id: 35,
       wpnName: "Amazing Manderville Rapier",
       wpnJob: "Red Mage",
       wpnJobShort: "RDM",
       icon: "/icons/endwalker-icons/amazing-manderville/amazing_manderville_rapier.png",
-      isSelected: false
+      category: "amazingManderville"
     },
     {
-      id: 16,
+      id: 36,
       wpnName: "Amazing Manderville Cane",
       wpnJob: "White Mage",
       wpnJobShort: "WHM",
       icon: "/icons/endwalker-icons/amazing-manderville/amazing_manderville_cane.png",
-      isSelected: false
+      category: "amazingManderville"
     },
     {
-      id: 17,
+      id: 37,
       wpnName: "Amazing Manderville Codex",
       wpnJob: "Scholar",
       wpnJobShort: "SCH",
       icon: "/icons/endwalker-icons/amazing-manderville/amazing_manderville_codex.png",
-      isSelected: false
+      category: "amazingManderville"
     },
     {
-      id: 18,
+      id: 38,
       wpnName: "Amazing Manderville Torquetum",
       wpnJob: "Astrologian",
       wpnJobShort: "AST",
       icon: "/icons/endwalker-icons/amazing-manderville/amazing_manderville_torquetum.png",
-      isSelected: false
+      category: "amazingManderville"
     },
     {
-      id: 19,
+      id: 39,
       wpnName: "Amazing Manderville Milpreves",
       wpnJob: "Sage",
       wpnJobShort: "SGE",
       icon: "/icons/endwalker-icons/amazing-manderville/amazing_manderville_milpreves.png",
-      isSelected: false
+      category: "amazingManderville"
     }
   ],
   majesticManderville: [
     {
-      id: 0,
+      id: 40,
       wpnName: "Majestic Manderville Sword",
       wpnJob: "Paladin",
       wpnJobShort: "PLD",
       icon: "/icons/endwalker-icons/majestic-manderville/majestic_manderville_sword.png",
-      isSelected: false
+      category: "majesticManderville"
     },
     {
-      id: 1,
+      id: 41,
       wpnName: "Majestic Manderville Kite Shield",
       wpnJob: "Paladin",
       wpnJobShort: "PLD",
       icon: "/icons/endwalker-icons/majestic-manderville/majestic_manderville_shield.png",
-      isSelected: false
+      category: "majesticManderville",
+      shield: true
     },
     {
-      id: 2,
+      id: 42,
       wpnName: "Majestic Manderville Bardiche",
       wpnJob: "Warrior",
       wpnJobShort: "WAR",
       icon: "/icons/endwalker-icons/majestic-manderville/majestic_manderville_bardiche.png",
-      isSelected: false
+      category: "majesticManderville"
     },
     {
-      id: 3,
+      id: 43,
       wpnName: "Majestic Manderville Greatsword",
       wpnJob: "Dark Knight",
       wpnJobShort: "DRK",
       icon: "/icons/endwalker-icons/majestic-manderville/majestic_manderville_greatsword.png",
-      isSelected: false
+      category: "majesticManderville"
     },
     {
-      id: 4,
+      id: 44,
       wpnName: "Majestic Manderville Bayonet",
       wpnJob: "Gunbreaker",
       wpnJobShort: "GNB",
       icon: "/icons/endwalker-icons/majestic-manderville/majestic_manderville_bayonet.png",
-      isSelected: false
+      category: "majesticManderville"
     },
     {
-      id: 5,
+      id: 45,
       wpnName: "Majestic Manderville Spear",
       wpnJob: "Dragoon",
       wpnJobShort: "DRG",
       icon: "/icons/endwalker-icons/majestic-manderville/majestic_manderville_spear.png",
-      isSelected: false
+      category: "majesticManderville"
     },
     {
-      id: 6,
+      id: 46,
       wpnName: "Majestic Manderville War Scythe",
       wpnJob: "Reaper",
       wpnJobShort: "RPR",
       icon: "/icons/endwalker-icons/majestic-manderville/majestic_manderville_war_scythe.png",
-      isSelected: false
+      category: "majesticManderville"
     },
     {
-      id: 7,
+      id: 47,
       wpnName: "Majestic Manderville Fists",
       wpnJob: "Monk",
       wpnJobShort: "MNK",
       icon: "/icons/endwalker-icons/majestic-manderville/majestic_manderville_fists.png",
-      isSelected: false
+      category: "majesticManderville"
     },
     {
-      id: 8,
+      id: 48,
       wpnName: "Majestic Manderville Samurai Blade",
       wpnJob: "Samurai",
       wpnJobShort: "SAM",
       icon: "/icons/endwalker-icons/majestic-manderville/majestic_manderville_samurai_blade.png",
-      isSelected: false
+      category: "majesticManderville"
     },
     {
-      id: 9,
+      id: 49,
       wpnName: "Majestic Manderville Knives",
       wpnJob: "Ninja",
       wpnJobShort: "NIN",
       icon: "/icons/endwalker-icons/majestic-manderville/majestic_manderville_knives.png",
-      isSelected: false
+      category: "majesticManderville"
     },
     {
-      id: 10,
+      id: 50,
       wpnName: "Majestic Manderville Harp Bow",
       wpnJob: "Bard",
       wpnJobShort: "BRD",
       icon: "/icons/endwalker-icons/majestic-manderville/majestic_manderville_harp_bow.png",
-      isSelected: false
+      category: "majesticManderville"
     },
     {
-      id: 11,
+      id: 51,
       wpnName: "Majestic Manderville Pistol",
       wpnJob: "Machinist",
       wpnJobShort: "MCH",
       icon: "/icons/endwalker-icons/majestic-manderville/majestic_manderville_pistol.png",
-      isSelected: false
+      category: "majesticManderville"
     },
     {
-      id: 12,
+      id: 52,
       wpnName: "Majestic Manderville Chakrams",
       wpnJob: "Dancer",
       wpnJobShort: "DNC",
       icon: "/icons/endwalker-icons/majestic-manderville/majestic_manderville_chakrams.png",
-      isSelected: false
+      category: "majesticManderville"
     },
     {
-      id: 13,
+      id: 53,
       wpnName: "Majestic Manderville Staff",
       wpnJob: "Black Mage",
       wpnJobShort: "BLM",
       icon: "/icons/endwalker-icons/majestic-manderville/majestic_manderville_staff.png",
-      isSelected: false
+      category: "majesticManderville"
     },
     {
-      id: 14,
+      id: 54,
       wpnName: "Majestic Manderville Index",
       wpnJob: "Summoner",
       wpnJobShort: "SMN",
       icon: "/icons/endwalker-icons/majestic-manderville/majestic_manderville_index.png",
-      isSelected: false
+      category: "majesticManderville"
     },
     {
-      id: 15,
+      id: 55,
       wpnName: "Majestic Manderville Degen",
       wpnJob: "Red Mage",
       wpnJobShort: "RDM",
       icon: "/icons/endwalker-icons/majestic-manderville/majestic_manderville_degen.png",
-      isSelected: false
+      category: "majesticManderville"
     },
     {
-      id: 16,
+      id: 56,
       wpnName: "Majestic Manderville Wand",
       wpnJob: "White Mage",
       wpnJobShort: "WHM",
       icon: "/icons/endwalker-icons/majestic-manderville/majestic_manderville_wand.png",
-      isSelected: false
+      category: "majesticManderville"
     },
     {
-      id: 17,
+      id: 57,
       wpnName: "Majestic Manderville Codex",
       wpnJob: "Scholar",
       wpnJobShort: "SCH",
       icon: "/icons/endwalker-icons/majestic-manderville/majestic_manderville_codex.png",
-      isSelected: false
+      category: "majesticManderville"
     },
     {
-      id: 18,
+      id: 58,
       wpnName: "Majestic Manderville Orrery",
       wpnJob: "Astrologian",
       wpnJobShort: "AST",
       icon: "/icons/endwalker-icons/majestic-manderville/majestic_manderville_orrery.png",
-      isSelected: false
+      category: "majesticManderville"
     },
     {
-      id: 19,
+      id: 59,
       wpnName: "Majestic Manderville Wings",
       wpnJob: "Sage",
       wpnJobShort: "SGE",
       icon: "/icons/endwalker-icons/majestic-manderville/majestic_manderville_wings.png",
-      isSelected: false
+      category: "majesticManderville"
     }
   ],
   resistance: [
     {
-      id: 0,
+      id: 60,
       wpnName: "Honorbound",
       wpnJob: "Paladin",
       wpnJobShort: "PLD",
       icon: "/icons/shadowbringers-icons/resistance/honorbound.png",
-      isSelected: false
+      category: "resistance"
     },
     {
-      id: 1,
+      id: 61,
       wpnName: "Tenacity",
       wpnJob: "Paladin",
       wpnJobShort: "PLD",
       icon: "/icons/shadowbringers-icons/resistance/tenacity.png",
-      isSelected: false
+      category: "resistance",
+      shield: true
     },
     {
-      id: 2,
+      id: 62,
       wpnName: "Skullrender",
       wpnJob: "Warrior",
       wpnJobShort: "WAR",
       icon: "/icons/shadowbringers-icons/resistance/skullrender.png",
-      isSelected: false
+      category: "resistance"
     },
     {
-      id: 3,
+      id: 63,
       wpnName: "Woeborn",
       wpnJob: "Dark Knight",
       wpnJobShort: "DRK",
       icon: "/icons/shadowbringers-icons/resistance/woeborn.png",
-      isSelected: false
+      category: "resistance"
     },
     {
-      id: 4,
+      id: 64,
       wpnName: "Crownsblade",
       wpnJob: "Gunbreaker",
       wpnJobShort: "GNB",
       icon: "/icons/shadowbringers-icons/resistance/crownsblade.png",
-      isSelected: false
+      category: "resistance"
     },
     {
-      id: 5,
+      id: 65,
       wpnName: "Dreizack",
       wpnJob: "Dragoon",
       wpnJobShort: "DRG",
       icon: "/icons/shadowbringers-icons/resistance/dreizack.png",
-      isSelected: false
+      category: "resistance"
     },
     {
-      id: 6,
+      id: 66,
       wpnName: "Samsara",
       wpnJob: "Monk",
       wpnJobShort: "MNK",
       icon: "/icons/shadowbringers-icons/resistance/samsara.png",
-      isSelected: false
+      category: "resistance"
     },
     {
-      id: 7,
+      id: 67,
       wpnName: "Hoshikiri",
       wpnJob: "Samurai",
       wpnJobShort: "SAM",
       icon: "/icons/shadowbringers-icons/resistance/hoshikiri.png",
-      isSelected: false
+      category: "resistance"
     },
     {
-      id: 8,
+      id: 68,
       wpnName: "Honeshirazu",
       wpnJob: "Ninja",
       wpnJobShort: "NIN",
       icon: "/icons/shadowbringers-icons/resistance/honeshirazu.png",
-      isSelected: false
+      category: "resistance"
     },
     {
-      id: 9,
+      id: 69,
       wpnName: "Brilliance",
       wpnJob: "Bard",
       wpnJobShort: "BRD",
       icon: "/icons/shadowbringers-icons/resistance/brilliance.png",
-      isSelected: false
+      category: "resistance"
     },
     {
-      id: 10,
+      id: 70,
       wpnName: "Lawman",
       wpnJob: "Machinist",
       wpnJobShort: "MCH",
       icon: "/icons/shadowbringers-icons/resistance/lawman.png",
-      isSelected: false
+      category: "resistance"
     },
     {
-      id: 11,
+      id: 71,
       wpnName: "Enchufla",
       wpnJob: "Dancer",
       wpnJobShort: "DNC",
       icon: "/icons/shadowbringers-icons/resistance/enchufla.png",
-      isSelected: false
+      category: "resistance"
     },
     {
-      id: 12,
+      id: 72,
       wpnName: "Soulscourge",
       wpnJob: "Black Mage",
       wpnJobShort: "BLM",
       icon: "/icons/shadowbringers-icons/resistance/soulscourge.png",
-      isSelected: false
+      category: "resistance"
     },
     {
-      id: 13,
+      id: 73,
       wpnName: "Espiritus",
       wpnJob: "Summoner",
       wpnJobShort: "SMN",
       icon: "/icons/shadowbringers-icons/resistance/espiritus.png",
-      isSelected: false
+      category: "resistance"
     },
     {
-      id: 14,
+      id: 74,
       wpnName: "Talekeeper",
       wpnJob: "Red Mage",
       wpnJobShort: "RDM",
       icon: "/icons/shadowbringers-icons/resistance/talekeeper.png",
-      isSelected: false
+      category: "resistance"
     },
     {
-      id: 15,
+      id: 75,
       wpnName: "Ingrimm",
       wpnJob: "White Mage",
       wpnJobShort: "WHM",
       icon: "/icons/shadowbringers-icons/resistance/ingrimm.png",
-      isSelected: false
+      category: "resistance"
     },
     {
-      id: 16,
+      id: 76,
       wpnName: "Akademos",
       wpnJob: "Scholar",
       wpnJobShort: "SCH",
       icon: "/icons/shadowbringers-icons/resistance/akademos.png",
-      isSelected: false
+      category: "resistance"
     },
     {
-      id: 17,
+      id: 77,
       wpnName: "Solstice",
       wpnJob: "Astrologian",
       wpnJobShort: "AST",
       icon: "/icons/shadowbringers-icons/resistance/solstice.png",
-      isSelected: false
+      category: "resistance"
     }
   ],
   augmentedResistance: [
     {
-      id: 0,
+      id: 78,
       wpnName: "Augmented Honorbound",
       wpnJob: "Paladin",
       wpnJobShort: "PLD",
       icon: "/icons/shadowbringers-icons/augmented-resistance/augmented_honorbound.png",
-      isSelected: false
+      category: "augmentedResistance"
     },
     {
-      id: 1,
+      id: 79,
       wpnName: "Augmented Tenacity",
       wpnJob: "Paladin",
       wpnJobShort: "PLD",
       icon: "/icons/shadowbringers-icons/augmented-resistance/augmented_tenacity.png",
-      isSelected: false
+      category: "augmentedResistance",
+      shield: true
     },
     {
-      id: 2,
+      id: 80,
       wpnName: "Augmented Skullrender",
       wpnJob: "Warrior",
       wpnJobShort: "WAR",
       icon: "/icons/shadowbringers-icons/augmented-resistance/augmented_skullrender.png",
-      isSelected: false
+      category: "augmentedResistance"
     },
     {
-      id: 3,
+      id: 81,
       wpnName: "Augmented Woeborn",
       wpnJob: "Dark Knight",
       wpnJobShort: "DRK",
       icon: "/icons/shadowbringers-icons/augmented-resistance/augmented_woeborn.png",
-      isSelected: false
+      category: "augmentedResistance"
     },
     {
-      id: 4,
+      id: 82,
       wpnName: "Augmented Crownsblade",
       wpnJob: "Gunbreaker",
       wpnJobShort: "GNB",
       icon: "/icons/shadowbringers-icons/augmented-resistance/augmented_crownsblade.png",
-      isSelected: false
+      category: "augmentedResistance"
     },
     {
-      id: 5,
+      id: 83,
       wpnName: "Augmented Dreizack",
       wpnJob: "Dragoon",
       wpnJobShort: "DRG",
       icon: "/icons/shadowbringers-icons/augmented-resistance/augmented_dreizack.png",
-      isSelected: false
+      category: "augmentedResistance"
     },
     {
-      id: 6,
+      id: 84,
       wpnName: "Augmented Samsara",
       wpnJob: "Monk",
       wpnJobShort: "MNK",
       icon: "/icons/shadowbringers-icons/augmented-resistance/augmented_samsara.png",
-      isSelected: false
+      category: "augmentedResistance"
     },
     {
-      id: 7,
+      id: 85,
       wpnName: "Augmented Hoshikiri",
       wpnJob: "Samurai",
       wpnJobShort: "SAM",
       icon: "/icons/shadowbringers-icons/augmented-resistance/augmented_hoshikiri.png",
-      isSelected: false
+      category: "augmentedResistance"
     },
     {
-      id: 8,
+      id: 86,
       wpnName: "Augmented Honeshirazu",
       wpnJob: "Ninja",
       wpnJobShort: "NIN",
       icon: "/icons/shadowbringers-icons/augmented-resistance/augmented_honeshirazu.png",
-      isSelected: false
+      category: "augmentedResistance"
     },
     {
-      id: 9,
+      id: 87,
       wpnName: "Augmented Brilliance",
       wpnJob: "Bard",
       wpnJobShort: "BRD",
       icon: "/icons/shadowbringers-icons/augmented-resistance/augmented_brilliance.png",
-      isSelected: false
+      category: "augmentedResistance"
     },
     {
-      id: 10,
+      id: 88,
       wpnName: "Augmented Lawman",
       wpnJob: "Machinist",
       wpnJobShort: "MCH",
       icon: "/icons/shadowbringers-icons/augmented-resistance/augmented_lawman.png",
-      isSelected: false
+      category: "augmentedResistance"
     },
     {
-      id: 11,
+      id: 89,
       wpnName: "Augmented Enchufla",
       wpnJob: "Dancer",
       wpnJobShort: "DNC",
       icon: "/icons/shadowbringers-icons/augmented-resistance/augmented_enchufla.png",
-      isSelected: false
+      category: "augmentedResistance"
     },
     {
-      id: 12,
+      id: 90,
       wpnName: "Augmented Soulscourge",
       wpnJob: "Black Mage",
       wpnJobShort: "BLM",
       icon: "/icons/shadowbringers-icons/augmented-resistance/augmented_soulscourge.png",
-      isSelected: false
+      category: "augmentedResistance"
     },
     {
-      id: 13,
+      id: 91,
       wpnName: "Augmented Espiritus",
       wpnJob: "Summoner",
       wpnJobShort: "SMN",
       icon: "/icons/shadowbringers-icons/augmented-resistance/augmented_espiritus.png",
-      isSelected: false
+      category: "augmentedResistance"
     },
     {
-      id: 14,
+      id: 92,
       wpnName: "Augmented Talekeeper",
       wpnJob: "Red Mage",
       wpnJobShort: "RDM",
       icon: "/icons/shadowbringers-icons/augmented-resistance/augmented_talekeeper.png",
-      isSelected: false
+      category: "augmentedResistance"
     },
     {
-      id: 15,
+      id: 93,
       wpnName: "Augmented Ingrimm",
       wpnJob: "White Mage",
       wpnJobShort: "WHM",
       icon: "/icons/shadowbringers-icons/augmented-resistance/augmented_ingrimm.png",
-      isSelected: false
+      category: "augmentedResistance"
     },
     {
-      id: 16,
+      id: 94,
       wpnName: "Augmented Akademos",
       wpnJob: "Scholar",
       wpnJobShort: "SCH",
       icon: "/icons/shadowbringers-icons/augmented-resistance/augmented_akademos.png",
-      isSelected: false
+      category: "augmentedResistance"
     },
     {
-      id: 17,
+      id: 95,
       wpnName: "Augmented Solstice",
       wpnJob: "Astrologian",
       wpnJobShort: "AST",
       icon: "/icons/shadowbringers-icons/augmented-resistance/augmented_solstice.png",
-      isSelected: false
+      category: "augmentedResistance"
     }
   ],
   recollection: [
     {
-      id: 0,
+      id: 96,
       wpnName: "Honorbound Recollection",
       wpnJob: "Paladin",
       wpnJobShort: "PLD",
       icon: "/icons/shadowbringers-icons/augmented-resistance/augmented_honorbound.png",
-      isSelected: false
+      category: "recollection"
     },
     {
-      id: 1,
+      id: 97,
       wpnName: "Tenacity Recollection",
       wpnJob: "Paladin",
       wpnJobShort: "PLD",
       icon: "/icons/shadowbringers-icons/augmented-resistance/augmented_tenacity.png",
-      isSelected: false
+      category: "recollection",
+      shield: true
     },
     {
-      id: 2,
+      id: 98,
       wpnName: "Skullrender Recollection",
       wpnJob: "Warrior",
       wpnJobShort: "WAR",
       icon: "/icons/shadowbringers-icons/augmented-resistance/augmented_skullrender.png",
-      isSelected: false
+      category: "recollection"
     },
     {
-      id: 3,
+      id: 99,
       wpnName: "Woeborn Recollection",
       wpnJob: "Dark Knight",
       wpnJobShort: "DRK",
       icon: "/icons/shadowbringers-icons/augmented-resistance/augmented_woeborn.png",
-      isSelected: false
+      category: "recollection"
     },
     {
-      id: 4,
+      id: 100,
       wpnName: "Crownsblade Recollection",
       wpnJob: "Gunbreaker",
       wpnJobShort: "GNB",
       icon: "/icons/shadowbringers-icons/augmented-resistance/augmented_crownsblade.png",
-      isSelected: false
+      category: "recollection"
     },
     {
-      id: 5,
+      id: 101,
       wpnName: "Dreizack Recollection",
       wpnJob: "Dragoon",
       wpnJobShort: "DRG",
       icon: "/icons/shadowbringers-icons/augmented-resistance/augmented_dreizack.png",
-      isSelected: false
+      category: "recollection"
     },
     {
-      id: 6,
+      id: 102,
       wpnName: "Samsara Recollection",
       wpnJob: "Monk",
       wpnJobShort: "MNK",
       icon: "/icons/shadowbringers-icons/augmented-resistance/augmented_samsara.png",
-      isSelected: false
+      category: "recollection"
     },
     {
-      id: 7,
+      id: 103,
       wpnName: "Hoshikiri Recollection",
       wpnJob: "Samurai",
       wpnJobShort: "SAM",
       icon: "/icons/shadowbringers-icons/augmented-resistance/augmented_hoshikiri.png",
-      isSelected: false
+      category: "recollection"
     },
     {
-      id: 8,
+      id: 104,
       wpnName: "Honeshirazu Recollection",
       wpnJob: "Ninja",
       wpnJobShort: "NIN",
       icon: "/icons/shadowbringers-icons/augmented-resistance/augmented_honeshirazu.png",
-      isSelected: false
+      category: "recollection"
     },
     {
-      id: 9,
+      id: 105,
       wpnName: "Brilliance Recollection",
       wpnJob: "Bard",
       wpnJobShort: "BRD",
       icon: "/icons/shadowbringers-icons/augmented-resistance/augmented_brilliance.png",
-      isSelected: false
+      category: "recollection"
     },
     {
-      id: 10,
+      id: 106,
       wpnName: "Lawman Recollection",
       wpnJob: "Machinist",
       wpnJobShort: "MCH",
       icon: "/icons/shadowbringers-icons/augmented-resistance/augmented_lawman.png",
-      isSelected: false
+      category: "recollection"
     },
     {
-      id: 11,
+      id: 107,
       wpnName: "Enchufla Recollection",
       wpnJob: "Dancer",
       wpnJobShort: "DNC",
       icon: "/icons/shadowbringers-icons/augmented-resistance/augmented_enchufla.png",
-      isSelected: false
+      category: "recollection"
     },
     {
-      id: 12,
+      id: 108,
       wpnName: "Soulscourge Recollection",
       wpnJob: "Black Mage",
       wpnJobShort: "BLM",
       icon: "/icons/shadowbringers-icons/augmented-resistance/augmented_soulscourge.png",
-      isSelected: false
+      category: "recollection"
     },
     {
-      id: 13,
+      id: 109,
       wpnName: "Espiritus Recollection",
       wpnJob: "Summoner",
       wpnJobShort: "SMN",
       icon: "/icons/shadowbringers-icons/augmented-resistance/augmented_espiritus.png",
-      isSelected: false
+      category: "recollection"
     },
     {
-      id: 14,
+      id: 110,
       wpnName: "Talekeeper Recollection",
       wpnJob: "Red Mage",
       wpnJobShort: "RDM",
       icon: "/icons/shadowbringers-icons/augmented-resistance/augmented_talekeeper.png",
-      isSelected: false
+      category: "recollection"
     },
     {
-      id: 15,
+      id: 111,
       wpnName: "Ingrimm Recollection",
       wpnJob: "White Mage",
       wpnJobShort: "WHM",
       icon: "/icons/shadowbringers-icons/augmented-resistance/augmented_ingrimm.png",
-      isSelected: false
+      category: "recollection"
     },
     {
-      id: 16,
+      id: 112,
       wpnName: "Akademos Recollection",
       wpnJob: "Scholar",
       wpnJobShort: "SCH",
       icon: "/icons/shadowbringers-icons/augmented-resistance/augmented_akademos.png",
-      isSelected: false
+      category: "recollection"
     },
     {
-      id: 17,
+      id: 113,
       wpnName: "Solstice Recollection",
       wpnJob: "Astrologian",
       wpnJobShort: "AST",
       icon: "/icons/shadowbringers-icons/augmented-resistance/augmented_solstice.png",
-      isSelected: false
+      category: "recollection"
     }
   ],
   lawsOrder: [
     {
-      id: 0,
+      id: 114,
       wpnName: "Law's Order Bastard Sword",
       wpnJob: "Paladin",
       wpnJobShort: "PLD",
       icon: "/icons/shadowbringers-icons/laws-order/law's_order_bastard_sword.png",
-      isSelected: false
+      category: "lawsOrder"
     },
     {
-      id: 1,
+      id: 115,
       wpnName: "Law's Order Kite Shield",
       wpnJob: "Paladin",
       wpnJobShort: "PLD",
       icon: "/icons/shadowbringers-icons/laws-order/law's_order_kite_shield.png",
-      isSelected: false
+      category: "lawsOrder",
+      shield: true
     },
     {
-      id: 2,
+      id: 116,
       wpnName: "Law's Order Labrys",
       wpnJob: "Warrior",
       wpnJobShort: "WAR",
       icon: "/icons/shadowbringers-icons/laws-order/law's_order_labrys.png",
-      isSelected: false
+      category: "lawsOrder"
     },
     {
-      id: 3,
+      id: 117,
       wpnName: "Law's Order Zweihander",
       wpnJob: "Dark Knight",
       wpnJobShort: "DRK",
       icon: "/icons/shadowbringers-icons/laws-order/law's_order_zweihander.png",
-      isSelected: false
+      category: "lawsOrder"
     },
     {
-      id: 4,
+      id: 118,
       wpnName: "Law's Order Manatrigger",
       wpnJob: "Gunbreaker",
       wpnJobShort: "GNB",
       icon: "/icons/shadowbringers-icons/laws-order/law's_order_manatrigger.png",
-      isSelected: false
+      category: "lawsOrder"
     },
     {
-      id: 5,
+      id: 119,
       wpnName: "Law's Order Spear",
       wpnJob: "Dragoon",
       wpnJobShort: "DRG",
       icon: "/icons/shadowbringers-icons/laws-order/law's_order_spear.png",
-      isSelected: false
+      category: "lawsOrder"
     },
     {
-      id: 6,
+      id: 120,
       wpnName: "Law's Order Knuckles",
       wpnJob: "Monk",
       wpnJobShort: "MNK",
       icon: "/icons/shadowbringers-icons/laws-order/law's_order_knuckles.png",
-      isSelected: false
+      category: "lawsOrder"
     },
     {
-      id: 7,
+      id: 121,
       wpnName: "Law's Order Samurai Blade",
       wpnJob: "Samurai",
       wpnJobShort: "SAM",
       icon: "/icons/shadowbringers-icons/laws-order/law's_order_samurai_blade.png",
-      isSelected: false
+      category: "lawsOrder"
     },
     {
-      id: 8,
+      id: 122,
       wpnName: "Law's Order Knives",
       wpnJob: "Ninja",
       wpnJobShort: "NIN",
       icon: "/icons/shadowbringers-icons/laws-order/law's_order_knives.png",
-      isSelected: false
+      category: "lawsOrder"
     },
     {
-      id: 9,
+      id: 123,
       wpnName: "Law's Order Composite Bow",
       wpnJob: "Bard",
       wpnJobShort: "BRD",
       icon: "/icons/shadowbringers-icons/laws-order/law's_order_composite_bow.png",
-      isSelected: false
+      category: "lawsOrder"
     },
     {
-      id: 10,
+      id: 124,
       wpnName: "Law's Order Revolver",
       wpnJob: "Machinist",
       wpnJobShort: "MCH",
       icon: "/icons/shadowbringers-icons/laws-order/law's_order_revolver.png",
-      isSelected: false
+      category: "lawsOrder"
     },
     {
-      id: 11,
+      id: 125,
       wpnName: "Law's Order Chakrams",
       wpnJob: "Dancer",
       wpnJobShort: "DNC",
       icon: "/icons/shadowbringers-icons/laws-order/law's_order_chakrams.png",
-      isSelected: false
+      category: "lawsOrder"
     },
     {
-      id: 12,
+      id: 126,
       wpnName: "Law's Order Rod",
       wpnJob: "Black Mage",
       wpnJobShort: "BLM",
       icon: "/icons/shadowbringers-icons/laws-order/law's_order_rod.png",
-      isSelected: false
+      category: "lawsOrder"
     },
     {
-      id: 13,
+      id: 127,
       wpnName: "Law's Order Index",
       wpnJob: "Summoner",
       wpnJobShort: "SMN",
       icon: "/icons/shadowbringers-icons/laws-order/law's_order_index.png",
-      isSelected: false
+      category: "lawsOrder"
     },
     {
-      id: 14,
+      id: 128,
       wpnName: "Law's Order Rapier",
       wpnJob: "Red Mage",
       wpnJobShort: "RDM",
       icon: "/icons/shadowbringers-icons/laws-order/law's_order_rapier.png",
-      isSelected: false
+      category: "lawsOrder"
     },
     {
-      id: 15,
+      id: 129,
       wpnName: "Law's Order Cane",
       wpnJob: "White Mage",
       wpnJobShort: "WHM",
       icon: "/icons/shadowbringers-icons/laws-order/law's_order_cane.png",
-      isSelected: false
+      category: "lawsOrder"
     },
     {
-      id: 16,
+      id: 130,
       wpnName: "Law's Order Codex",
       wpnJob: "Scholar",
       wpnJobShort: "SCH",
       icon: "/icons/shadowbringers-icons/laws-order/law's_order_codex.png",
-      isSelected: false
+      category: "lawsOrder"
     },
     {
-      id: 17,
+      id: 131,
       wpnName: "Law's Order Astrometer",
       wpnJob: "Astrologian",
       wpnJobShort: "AST",
       icon: "/icons/shadowbringers-icons/laws-order/law's_order_astrometer.png",
-      isSelected: false
+      category: "lawsOrder"
     }
   ],
   augmentedLawsOrder: [
     {
-      id: 0,
+      id: 132,
       wpnName: "Augmented Law's Order Bastard Sword",
       wpnJob: "Paladin",
       wpnJobShort: "PLD",
       icon: "/icons/shadowbringers-icons/laws-order/law's_order_bastard_sword.png",
-      isSelected: false
+      category: "augmentedLawsOrder"
     },
     {
-      id: 1,
+      id: 133,
       wpnName: "Augmented Law's Order Kite Shield",
       wpnJob: "Paladin",
       wpnJobShort: "PLD",
       icon: "/icons/shadowbringers-icons/laws-order/law's_order_kite_shield.png",
-      isSelected: false
+      category: "augmentedLawsOrder",
+      shield: true
     },
     {
-      id: 2,
+      id: 134,
       wpnName: "Augmented Law's Order Labrys",
       wpnJob: "Warrior",
       wpnJobShort: "WAR",
       icon: "/icons/shadowbringers-icons/laws-order/law's_order_labrys.png",
-      isSelected: false
+      category: "augmentedLawsOrder"
     },
     {
-      id: 3,
+      id: 135,
       wpnName: "Augmented Law's Order Zweihander",
       wpnJob: "Dark Knight",
       wpnJobShort: "DRK",
       icon: "/icons/shadowbringers-icons/laws-order/law's_order_zweihander.png",
-      isSelected: false
+      category: "augmentedLawsOrder"
     },
     {
-      id: 4,
+      id: 136,
       wpnName: "Augmented Law's Order Manatrigger",
       wpnJob: "Gunbreaker",
       wpnJobShort: "GNB",
       icon: "/icons/shadowbringers-icons/laws-order/law's_order_manatrigger.png",
-      isSelected: false
+      category: "augmentedLawsOrder"
     },
     {
-      id: 5,
+      id: 137,
       wpnName: "Augmented Law's Order Spear",
       wpnJob: "Dragoon",
       wpnJobShort: "DRG",
       icon: "/icons/shadowbringers-icons/laws-order/law's_order_spear.png",
-      isSelected: false
+      category: "augmentedLawsOrder"
     },
     {
-      id: 6,
+      id: 138,
       wpnName: "Augmented Law's Order Knuckles",
       wpnJob: "Monk",
       wpnJobShort: "MNK",
       icon: "/icons/shadowbringers-icons/laws-order/law's_order_knuckles.png",
-      isSelected: false
+      category: "augmentedLawsOrder"
     },
     {
-      id: 7,
+      id: 139,
       wpnName: "Augmented Law's Order Samurai Blade",
       wpnJob: "Samurai",
       wpnJobShort: "SAM",
       icon: "/icons/shadowbringers-icons/laws-order/law's_order_samurai_blade.png",
-      isSelected: false
+      category: "augmentedLawsOrder"
     },
     {
-      id: 8,
+      id: 140,
       wpnName: "Augmented Law's Order Knives",
       wpnJob: "Ninja",
       wpnJobShort: "NIN",
       icon: "/icons/shadowbringers-icons/laws-order/law's_order_knives.png",
-      isSelected: false
+      category: "augmentedLawsOrder"
     },
     {
-      id: 9,
+      id: 141,
       wpnName: "Augmented Law's Order Composite Bow",
       wpnJob: "Bard",
       wpnJobShort: "BRD",
       icon: "/icons/shadowbringers-icons/laws-order/law's_order_composite_bow.png",
-      isSelected: false
+      category: "augmentedLawsOrder"
     },
     {
-      id: 10,
+      id: 142,
       wpnName: "Augmented Law's Order Revolver",
       wpnJob: "Machinist",
       wpnJobShort: "MCH",
       icon: "/icons/shadowbringers-icons/laws-order/law's_order_revolver.png",
-      isSelected: false
+      category: "augmentedLawsOrder"
     },
     {
-      id: 11,
+      id: 143,
       wpnName: "Augmented Law's Order Chakrams",
       wpnJob: "Dancer",
       wpnJobShort: "DNC",
       icon: "/icons/shadowbringers-icons/laws-order/law's_order_chakrams.png",
-      isSelected: false
+      category: "augmentedLawsOrder"
     },
     {
-      id: 12,
+      id: 144,
       wpnName: "Augmented Law's Order Rod",
       wpnJob: "Black Mage",
       wpnJobShort: "BLM",
       icon: "/icons/shadowbringers-icons/laws-order/law's_order_rod.png",
-      isSelected: false
+      category: "augmentedLawsOrder"
     },
     {
-      id: 13,
+      id: 145,
       wpnName: "Augmented Law's Order Index",
       wpnJob: "Summoner",
       wpnJobShort: "SMN",
       icon: "/icons/shadowbringers-icons/laws-order/law's_order_index.png",
-      isSelected: false
+      category: "augmentedLawsOrder"
     },
     {
-      id: 14,
+      id: 146,
       wpnName: "Augmented Law's Order Rapier",
       wpnJob: "Red Mage",
       wpnJobShort: "RDM",
       icon: "/icons/shadowbringers-icons/laws-order/law's_order_rapier.png",
-      isSelected: false
+      category: "augmentedLawsOrder"
     },
     {
-      id: 15,
+      id: 147,
       wpnName: "Augmented Law's Order Cane",
       wpnJob: "White Mage",
       wpnJobShort: "WHM",
       icon: "/icons/shadowbringers-icons/laws-order/law's_order_cane.png",
-      isSelected: false
+      category: "augmentedLawsOrder"
     },
     {
-      id: 16,
+      id: 148,
       wpnName: "Augmented Law's Order Codex",
       wpnJob: "Scholar",
       wpnJobShort: "SCH",
       icon: "/icons/shadowbringers-icons/laws-order/law's_order_codex.png",
-      isSelected: false
+      category: "augmentedLawsOrder"
     },
     {
-      id: 17,
+      id: 149,
       wpnName: "Augmented Law's Order Astrometer",
       wpnJob: "Astrologian",
       wpnJobShort: "AST",
       icon: "/icons/shadowbringers-icons/laws-order/law's_order_astrometer.png",
-      isSelected: false
+      category: "augmentedLawsOrder"
     }
   ],
   blades: [
     {
-      id: 0,
+      id: 150,
       wpnName: "Blade's Honor",
       wpnJob: "Paladin",
       wpnJobShort: "PLD",
       icon: "/icons/shadowbringers-icons/blades/blade's_honor.png",
-      isSelected: false
+      category: "blades"
     },
     {
-      id: 1,
+      id: 151,
       wpnName: "Blade's Fortitude",
       wpnJob: "Paladin",
       wpnJobShort: "PLD",
       icon: "/icons/shadowbringers-icons/blades/blade's_fortitude.png",
-      isSelected: false
+      category: "blades",
+      shield: true
     },
     {
-      id: 2,
+      id: 152,
       wpnName: "Blade's Valor",
       wpnJob: "Warrior",
       wpnJobShort: "WAR",
       icon: "/icons/shadowbringers-icons/blades/blade's_valor.png",
-      isSelected: false
+      category: "blades"
     },
     {
-      id: 3,
+      id: 153,
       wpnName: "Blade's Justice",
       wpnJob: "Dark Knight",
       wpnJobShort: "DRK",
       icon: "/icons/shadowbringers-icons/blades/blade's_justice.png",
-      isSelected: false
+      category: "blades"
     },
     {
-      id: 4,
+      id: 154,
       wpnName: "Blade's Resolve",
       wpnJob: "Gunbreaker",
       wpnJobShort: "GNB",
       icon: "/icons/shadowbringers-icons/blades/blade's_resolve.png",
-      isSelected: false
+      category: "blades"
     },
     {
-      id: 5,
+      id: 155,
       wpnName: "Blade's Glory",
       wpnJob: "Dragoon",
       wpnJobShort: "DRG",
       icon: "/icons/shadowbringers-icons/blades/blade's_glory.png",
-      isSelected: false
+      category: "blades"
     },
     {
-      id: 6,
+      id: 156,
       wpnName: "Blade's Serenity",
       wpnJob: "Monk",
       wpnJobShort: "MNK",
       icon: "/icons/shadowbringers-icons/blades/blade's_serenity.png",
-      isSelected: false
+      category: "blades"
     },
     {
-      id: 7,
+      id: 157,
       wpnName: "Blade's Fealty",
       wpnJob: "Samurai",
       wpnJobShort: "SAM",
       icon: "/icons/shadowbringers-icons/blades/blade's_fealty.png",
-      isSelected: false
+      category: "blades"
     },
     {
-      id: 8,
+      id: 158,
       wpnName: "Blade's Subtlety",
       wpnJob: "Ninja",
       wpnJobShort: "NIN",
       icon: "/icons/shadowbringers-icons/blades/blade's_subtlety.png",
-      isSelected: false
+      category: "blades"
     },
     {
-      id: 9,
+      id: 159,
       wpnName: "Blade's Muse",
       wpnJob: "Bard",
       wpnJobShort: "BRD",
       icon: "/icons/shadowbringers-icons/blades/blade's_muse.png",
-      isSelected: false
+      category: "blades"
     },
     {
-      id: 10,
+      id: 160,
       wpnName: "Blade's Ingenuity",
       wpnJob: "Machinist",
       wpnJobShort: "MCH",
       icon: "/icons/shadowbringers-icons/blades/blade's_ingenuity.png",
-      isSelected: false
+      category: "blades"
     },
     {
-      id: 11,
+      id: 161,
       wpnName: "Blade's Euphoria",
       wpnJob: "Dancer",
       wpnJobShort: "DNC",
       icon: "/icons/shadowbringers-icons/blades/blade's_euphoria.png",
-      isSelected: false
+      category: "blades"
     },
     {
-      id: 12,
+      id: 162,
       wpnName: "Blade's Fury",
       wpnJob: "Black Mage",
       wpnJobShort: "BLM",
       icon: "/icons/shadowbringers-icons/blades/blade's_fury.png",
-      isSelected: false
+      category: "blades"
     },
     {
-      id: 13,
+      id: 163,
       wpnName: "Blade's Acumen",
       wpnJob: "Summoner",
       wpnJobShort: "SMN",
       icon: "/icons/shadowbringers-icons/blades/blade's_acumen.png",
-      isSelected: false
+      category: "blades"
     },
     {
-      id: 14,
+      id: 164,
       wpnName: "Blade's Temperance",
       wpnJob: "Red Mage",
       wpnJobShort: "RDM",
       icon: "/icons/shadowbringers-icons/blades/blade's_temperance.png",
-      isSelected: false
+      category: "blades"
     },
     {
-      id: 15,
+      id: 165,
       wpnName: "Blade's Mercy",
       wpnJob: "White Mage",
       wpnJobShort: "WHM",
       icon: "/icons/shadowbringers-icons/blades/blade's_mercy.png",
-      isSelected: false
+      category: "blades"
     },
     {
-      id: 16,
+      id: 166,
       wpnName: "Blade's Wisdom",
       wpnJob: "Scholar",
       wpnJobShort: "SCH",
       icon: "/icons/shadowbringers-icons/blades/blade's_wisdom.png",
-      isSelected: false
+      category: "blades"
     },
     {
-      id: 17,
+      id: 167,
       wpnName: "Blade's Providence",
       wpnJob: "Astrologian",
       wpnJobShort: "AST",
       icon: "/icons/shadowbringers-icons/blades/blade's_providence.png",
-      isSelected: false
+      category: "blades"
     }
   ],
   antiquated: [
     {
-      id: 0,
+      id: 168,
       wpnName: "Antiquated Galatyn",
       wpnJob: "Paladin",
       wpnJobShort: "PLD",
       icon: "/icons/stormblood-icons/antiquated/antiquated_galatyn.png",
-      isSelected: false
+      category: "antiquated"
     },
     {
-      id: 1,
+      id: 169,
       wpnName: "Antiquated Evalach",
       wpnJob: "Paladin",
       wpnJobShort: "PLD",
       icon: "/icons/stormblood-icons/antiquated/antiquated_evalach.png",
-      isSelected: false
+      category: "antiquated",
+      shield: true
     },
     {
-      id: 2,
+      id: 170,
       wpnName: "Antiquated Farsha",
       wpnJob: "Warrior",
       wpnJobShort: "WAR",
       icon: "/icons/stormblood-icons/antiquated/antiquated_farsha.png",
-      isSelected: false
+      category: "antiquated"
     },
     {
-      id: 3,
+      id: 171,
       wpnName: "Antiquated Caladbolg",
       wpnJob: "Dark Knight",
       wpnJobShort: "DRK",
       icon: "/icons/stormblood-icons/antiquated/antiquated_caladbolg.png",
-      isSelected: false
+      category: "antiquated"
     },
     {
-      id: 4,
+      id: 172,
       wpnName: "Antiquated Ryunohige",
       wpnJob: "Dragoon",
       wpnJobShort: "DRG",
       icon: "/icons/stormblood-icons/antiquated/antiquated_ryunohige.png",
-      isSelected: false
+      category: "antiquated"
     },
     {
-      id: 5,
+      id: 173,
       wpnName: "Antiquated Sudarshana Chakra",
       wpnJob: "Monk",
       wpnJobShort: "MNK",
       icon: "/icons/stormblood-icons/antiquated/antiquated_sudarshana_chakra.png",
-      isSelected: false
+      category: "antiquated"
     },
     {
-      id: 6,
+      id: 174,
       wpnName: "Antiquated Kiku-ichimonji",
       wpnJob: "Samurai",
       wpnJobShort: "SAM",
       icon: "/icons/stormblood-icons/antiquated/antiquated_kiku-ichimonji.png",
-      isSelected: false
+      category: "antiquated"
     },
     {
-      id: 7,
+      id: 175,
       wpnName: "Antiquated Nagi",
       wpnJob: "Ninja",
       wpnJobShort: "NIN",
       icon: "/icons/stormblood-icons/antiquated/antiquated_nagi.png",
-      isSelected: false
+      category: "antiquated"
     },
     {
-      id: 8,
+      id: 176,
       wpnName: "Antiquated Failnaught",
       wpnJob: "Bard",
       wpnJobShort: "BRD",
       icon: "/icons/stormblood-icons/antiquated/antiquated_failnaught.png",
-      isSelected: false
+      category: "antiquated"
     },
     {
-      id: 9,
+      id: 177,
       wpnName: "Antiquated Outsider",
       wpnJob: "Machinist",
       wpnJobShort: "MCH",
       icon: "/icons/stormblood-icons/antiquated/antiquated_outsider.png",
-      isSelected: false
+      category: "antiquated"
     },
     {
-      id: 10,
+      id: 178,
       wpnName: "Antiquated Vanargand",
       wpnJob: "Black Mage",
       wpnJobShort: "BLM",
       icon: "/icons/stormblood-icons/antiquated/antiquated_vanargand.png",
-      isSelected: false
+      category: "antiquated"
     },
     {
-      id: 11,
+      id: 179,
       wpnName: "Antiquated Lemegeton",
       wpnJob: "Summoner",
       wpnJobShort: "SMN",
       icon: "/icons/stormblood-icons/antiquated/antiquated_lemegeton.png",
-      isSelected: false
+      category: "antiquated"
     },
     {
-      id: 12,
+      id: 180,
       wpnName: "Antiquated Murgleis",
       wpnJob: "Red Mage",
       wpnJobShort: "RDM",
       icon: "/icons/stormblood-icons/antiquated/antiquated_murgleis.png",
-      isSelected: false
+      category: "antiquated"
     },
     {
-      id: 13,
+      id: 181,
       wpnName: "Antiquated Aymur",
       wpnJob: "White Mage",
       wpnJobShort: "WHM",
       icon: "/icons/stormblood-icons/antiquated/antiquated_aymur.png",
-      isSelected: false
+      category: "antiquated"
     },
     {
-      id: 14,
+      id: 182,
       wpnName: "Antiquated Organum",
       wpnJob: "Scholar",
       wpnJobShort: "SCH",
       icon: "/icons/stormblood-icons/antiquated/antiquated_organum.png",
-      isSelected: false
+      category: "antiquated"
     },
     {
-      id: 15,
+      id: 183,
       wpnName: "Antiquated Pleiades",
       wpnJob: "Astrologian",
       wpnJobShort: "AST",
       icon: "/icons/stormblood-icons/antiquated/antiquated_pleiades.png",
-      isSelected: false
+      category: "antiquated"
     }
   ],
   anemos: [
     {
-      id: 0,
+      id: 184,
       wpnName: "Galatyn Anemos",
       wpnJob: "Paladin",
       wpnJobShort: "PLD",
       icon: "/icons/stormblood-icons/anemos/galatyn_anemos.png",
-      isSelected: false
+      category: "anemos"
     },
     {
-      id: 1,
+      id: 185,
       wpnName: "Evalach Anemos",
       wpnJob: "Paladin",
       wpnJobShort: "PLD",
       icon: "/icons/stormblood-icons/anemos/evalach_anemos.png",
-      isSelected: false
+      category: "anemos",
+      shield: true
     },
     {
-      id: 2,
+      id: 186,
       wpnName: "Farsha Anemos",
       wpnJob: "Warrior",
       wpnJobShort: "WAR",
       icon: "/icons/stormblood-icons/anemos/farsha_anemos.png",
-      isSelected: false
+      category: "anemos"
     },
     {
-      id: 3,
+      id: 187,
       wpnName: "Caladbolg Anemos",
       wpnJob: "Dark Knight",
       wpnJobShort: "DRK",
       icon: "/icons/stormblood-icons/anemos/caladbolg_anemos.png",
-      isSelected: false
+      category: "anemos"
     },
     {
-      id: 4,
+      id: 188,
       wpnName: "Ryunohige Anemos",
       wpnJob: "Dragoon",
       wpnJobShort: "DRG",
       icon: "/icons/stormblood-icons/anemos/ryunohige_anemos.png",
-      isSelected: false
+      category: "anemos"
     },
     {
-      id: 5,
+      id: 189,
       wpnName: "Sudarshana Chakra Anemos",
       wpnJob: "Monk",
       wpnJobShort: "MNK",
       icon: "/icons/stormblood-icons/anemos/sudarshana_chakra_anemos.png",
-      isSelected: false
+      category: "anemos"
     },
     {
-      id: 6,
+      id: 190,
       wpnName: "Kiku-ichimonji Anemos",
       wpnJob: "Samurai",
       wpnJobShort: "SAM",
       icon: "/icons/stormblood-icons/anemos/kiku-ichimonji_anemos.png",
-      isSelected: false
+      category: "anemos"
     },
     {
-      id: 7,
+      id: 191,
       wpnName: "Nagi Anemos",
       wpnJob: "Ninja",
       wpnJobShort: "NIN",
       icon: "/icons/stormblood-icons/anemos/nagi_anemos.png",
-      isSelected: false
+      category: "anemos"
     },
     {
-      id: 8,
+      id: 192,
       wpnName: "Failnaught Anemos",
       wpnJob: "Bard",
       wpnJobShort: "BRD",
       icon: "/icons/stormblood-icons/anemos/failnaught_anemos.png",
-      isSelected: false
+      category: "anemos"
     },
     {
-      id: 9,
+      id: 193,
       wpnName: "Outsider Anemos",
       wpnJob: "Machinist",
       wpnJobShort: "MCH",
       icon: "/icons/stormblood-icons/anemos/outsider_anemos.png",
-      isSelected: false
+      category: "anemos"
     },
     {
-      id: 10,
+      id: 194,
       wpnName: "Vanargand Anemos",
       wpnJob: "Black Mage",
       wpnJobShort: "BLM",
       icon: "/icons/stormblood-icons/anemos/vanargand_anemos.png",
-      isSelected: false
+      category: "anemos"
     },
     {
-      id: 11,
+      id: 195,
       wpnName: "Lemegeton Anemos",
       wpnJob: "Summoner",
       wpnJobShort: "SMN",
       icon: "/icons/stormblood-icons/anemos/lemegeton_anemos.png",
-      isSelected: false
+      category: "anemos"
     },
     {
-      id: 12,
+      id: 196,
       wpnName: "Murgleis Anemos",
       wpnJob: "Red Mage",
       wpnJobShort: "RDM",
       icon: "/icons/stormblood-icons/anemos/murgleis_anemos.png",
-      isSelected: false
+      category: "anemos"
     },
     {
-      id: 13,
+      id: 197,
       wpnName: "Aymur Anemos",
       wpnJob: "White Mage",
       wpnJobShort: "WHM",
       icon: "/icons/stormblood-icons/anemos/aymur_anemos.png",
-      isSelected: false
+      category: "anemos"
     },
     {
-      id: 14,
+      id: 198,
       wpnName: "Organum Anemos",
       wpnJob: "Scholar",
       wpnJobShort: "SCH",
       icon: "/icons/stormblood-icons/anemos/organum_anemos.png",
-      isSelected: false
+      category: "anemos"
     },
     {
-      id: 15,
+      id: 199,
       wpnName: "Pleiades Anemos",
       wpnJob: "Astrologian",
       wpnJobShort: "AST",
       icon: "/icons/stormblood-icons/anemos/pleiades_anemos.png",
-      isSelected: false
+      category: "anemos"
     }
   ],
   elemental: [
     {
-      id: 0,
+      id: 200,
       wpnName: "Elemental Sword",
       wpnJob: "Paladin",
       wpnJobShort: "PLD",
       icon: "/icons/stormblood-icons/elemental/elemental_sword.png",
-      isSelected: false
+      category: "elemental"
     },
     {
-      id: 1,
+      id: 201,
       wpnName: "Elemental Shield",
       wpnJob: "Paladin",
       wpnJobShort: "PLD",
       icon: "/icons/stormblood-icons/elemental/elemental_shield.png",
-      isSelected: false
+      category: "elemental",
+      shield: true
     },
     {
-      id: 2,
+      id: 202,
       wpnName: "Elemental Battleaxe",
       wpnJob: "Warrior",
       wpnJobShort: "WAR",
       icon: "/icons/stormblood-icons/elemental/elemental_battleaxe.png",
-      isSelected: false
+      category: "elemental"
     },
     {
-      id: 3,
+      id: 203,
       wpnName: "Elemental Guillotine",
       wpnJob: "Dark Knight",
       wpnJobShort: "DRK",
       icon: "/icons/stormblood-icons/elemental/elemental_guillotine.png",
-      isSelected: false
+      category: "elemental"
     },
     {
-      id: 4,
+      id: 204,
       wpnName: "Elemental Lance",
       wpnJob: "Dragoon",
       wpnJobShort: "DRG",
       icon: "/icons/stormblood-icons/elemental/elemental_lance.png",
-      isSelected: false
+      category: "elemental"
     },
     {
-      id: 5,
+      id: 205,
       wpnName: "Elemental Knuckles",
       wpnJob: "Monk",
       wpnJobShort: "MNK",
       icon: "/icons/stormblood-icons/elemental/elemental_knuckles.png",
-      isSelected: false
+      category: "elemental"
     },
     {
-      id: 6,
+      id: 206,
       wpnName: "Elemental Blade",
       wpnJob: "Samurai",
       wpnJobShort: "SAM",
       icon: "/icons/stormblood-icons/elemental/elemental_blade.png",
-      isSelected: false
+      category: "elemental"
     },
     {
-      id: 7,
+      id: 207,
       wpnName: "Elemental Knives",
       wpnJob: "Ninja",
       wpnJobShort: "NIN",
       icon: "/icons/stormblood-icons/elemental/elemental_knives.png",
-      isSelected: false
+      category: "elemental"
     },
     {
-      id: 8,
+      id: 208,
       wpnName: "Elemental Harp Bow",
       wpnJob: "Bard",
       wpnJobShort: "BRD",
       icon: "/icons/stormblood-icons/elemental/elemental_harp_bow.png",
-      isSelected: false
+      category: "elemental"
     },
     {
-      id: 9,
+      id: 209,
       wpnName: "Elemental Handgonne",
       wpnJob: "Machinist",
       wpnJobShort: "MCH",
       icon: "/icons/stormblood-icons/elemental/elemental_handgonne.png",
-      isSelected: false
+      category: "elemental"
     },
     {
-      id: 10,
+      id: 210,
       wpnName: "Elemental Rod",
       wpnJob: "Black Mage",
       wpnJobShort: "BLM",
       icon: "/icons/stormblood-icons/elemental/elemental_rod.png",
-      isSelected: false
+      category: "elemental"
     },
     {
-      id: 11,
+      id: 211,
       wpnName: "Elemental Grimoire",
       wpnJob: "Summoner",
       wpnJobShort: "SMN",
       icon: "/icons/stormblood-icons/elemental/elemental_grimoire.png",
-      isSelected: false
+      category: "elemental"
     },
     {
-      id: 12,
+      id: 212,
       wpnName: "Elemental Tuck",
       wpnJob: "Red Mage",
       wpnJobShort: "RDM",
       icon: "/icons/stormblood-icons/elemental/elemental_tuck.png",
-      isSelected: false
+      category: "elemental"
     },
     {
-      id: 13,
+      id: 213,
       wpnName: "Elemental Cane",
       wpnJob: "White Mage",
       wpnJobShort: "WHM",
       icon: "/icons/stormblood-icons/elemental/elemental_cane.png",
-      isSelected: false
+      category: "elemental"
     },
     {
-      id: 14,
+      id: 214,
       wpnName: "Elemental Codex",
       wpnJob: "Scholar",
       wpnJobShort: "SCH",
       icon: "/icons/stormblood-icons/elemental/elemental_codex.png",
-      isSelected: false
+      category: "elemental"
     },
     {
-      id: 15,
+      id: 215,
       wpnName: "Elemental Astrometer",
       wpnJob: "Astrologian",
       wpnJobShort: "AST",
       icon: "/icons/stormblood-icons/elemental/elemental_astrometer.png",
-      isSelected: false
+      category: "elemental"
     }
   ],
   pyros: [
     {
-      id: 0,
+      id: 216,
       wpnName: "Pyros Sword",
       wpnJob: "Paladin",
       wpnJobShort: "PLD",
       icon: "/icons/stormblood-icons/pyros/pyros_sword.png",
-      isSelected: false
+      category: "pyros"
     },
     {
-      id: 1,
+      id: 217,
       wpnName: "Pyros Shield",
       wpnJob: "Paladin",
       wpnJobShort: "PLD",
       icon: "/icons/stormblood-icons/pyros/pyros_shield.png",
-      isSelected: false
+      category: "pyros",
+      shield: true
     },
     {
-      id: 2,
+      id: 218,
       wpnName: "Pyros Battleaxe",
       wpnJob: "Warrior",
       wpnJobShort: "WAR",
       icon: "/icons/stormblood-icons/pyros/pyros_battleaxe.png",
-      isSelected: false
+      category: "pyros"
     },
     {
-      id: 3,
+      id: 219,
       wpnName: "Pyros Guillotine",
       wpnJob: "Dark Knight",
       wpnJobShort: "DRK",
       icon: "/icons/stormblood-icons/pyros/pyros_guillotine.png",
-      isSelected: false
+      category: "pyros"
     },
     {
-      id: 4,
+      id: 220,
       wpnName: "Pyros Lance",
       wpnJob: "Dragoon",
       wpnJobShort: "DRG",
       icon: "/icons/stormblood-icons/pyros/pyros_lance.png",
-      isSelected: false
+      category: "pyros"
     },
     {
-      id: 5,
+      id: 221,
       wpnName: "Pyros Knuckles",
       wpnJob: "Monk",
       wpnJobShort: "MNK",
       icon: "/icons/stormblood-icons/pyros/pyros_knuckles.png",
-      isSelected: false
+      category: "pyros"
     },
     {
-      id: 6,
+      id: 222,
       wpnName: "Pyros Blade",
       wpnJob: "Samurai",
       wpnJobShort: "SAM",
       icon: "/icons/stormblood-icons/pyros/pyros_blade.png",
-      isSelected: false
+      category: "pyros"
     },
     {
-      id: 7,
+      id: 223,
       wpnName: "Pyros Knives",
       wpnJob: "Ninja",
       wpnJobShort: "NIN",
       icon: "/icons/stormblood-icons/pyros/pyros_knives.png",
-      isSelected: false
+      category: "pyros"
     },
     {
-      id: 8,
+      id: 224,
       wpnName: "Pyros Harp Bow",
       wpnJob: "Bard",
       wpnJobShort: "BRD",
       icon: "/icons/stormblood-icons/pyros/pyros_harp_bow.png",
-      isSelected: false
+      category: "pyros"
     },
     {
-      id: 9,
+      id: 225,
       wpnName: "Pyros Handgonne",
       wpnJob: "Machinist",
       wpnJobShort: "MCH",
       icon: "/icons/stormblood-icons/pyros/pyros_handgonne.png",
-      isSelected: false
+      category: "pyros"
     },
     {
-      id: 10,
+      id: 226,
       wpnName: "Pyros Rod",
       wpnJob: "Black Mage",
       wpnJobShort: "BLM",
       icon: "/icons/stormblood-icons/pyros/pyros_rod.png",
-      isSelected: false
+      category: "pyros"
     },
     {
-      id: 11,
+      id: 227,
       wpnName: "Pyros Grimoire",
       wpnJob: "Summoner",
       wpnJobShort: "SMN",
       icon: "/icons/stormblood-icons/pyros/pyros_grimoire.png",
-      isSelected: false
+      category: "pyros"
     },
     {
-      id: 12,
+      id: 228,
       wpnName: "Pyros Tuck",
       wpnJob: "Red Mage",
       wpnJobShort: "RDM",
       icon: "/icons/stormblood-icons/pyros/pyros_tuck.png",
-      isSelected: false
+      category: "pyros"
     },
     {
-      id: 13,
+      id: 229,
       wpnName: "Pyros Cane",
       wpnJob: "White Mage",
       wpnJobShort: "WHM",
       icon: "/icons/stormblood-icons/pyros/pyros_cane.png",
-      isSelected: false
+      category: "pyros"
     },
     {
-      id: 14,
+      id: 230,
       wpnName: "Pyros Codex",
       wpnJob: "Scholar",
       wpnJobShort: "SCH",
       icon: "/icons/stormblood-icons/pyros/pyros_codex.png",
-      isSelected: false
+      category: "pyros"
     },
     {
-      id: 15,
+      id: 231,
       wpnName: "Pyros Astrometer",
       wpnJob: "Astrologian",
       wpnJobShort: "AST",
       icon: "/icons/stormblood-icons/pyros/pyros_astrometer.png",
-      isSelected: false
+      category: "pyros"
     }
   ],
   eureka: [
     {
-      id: 0,
+      id: 232,
       wpnName: "Antea Eureka",
       wpnJob: "Paladin",
       wpnJobShort: "PLD",
       icon: "/icons/stormblood-icons/eureka/antea_eureka.png",
-      isSelected: false
+      category: "eureka"
     },
     {
-      id: 1,
+      id: 233,
       wpnName: "Bellerophon Eureka",
       wpnJob: "Paladin",
       wpnJobShort: "PLD",
       icon: "/icons/stormblood-icons/eureka/bellerophon_eureka.png",
-      isSelected: false
+      category: "eureka",
+      shield: true
     },
     {
-      id: 2,
+      id: 234,
       wpnName: "Shamash Eureka",
       wpnJob: "Warrior",
       wpnJobShort: "WAR",
       icon: "/icons/stormblood-icons/eureka/shamash_eureka.png",
-      isSelected: false
+      category: "eureka"
     },
     {
-      id: 3,
+      id: 235,
       wpnName: "Xiphias Eureka",
       wpnJob: "Dark Knight",
       wpnJobShort: "DRK",
       icon: "/icons/stormblood-icons/eureka/xiphias_eureka.png",
-      isSelected: false
+      category: "eureka"
     },
     {
-      id: 4,
+      id: 236,
       wpnName: "Daboya Eureka",
       wpnJob: "Dragoon",
       wpnJobShort: "DRG",
       icon: "/icons/stormblood-icons/eureka/daboya_eureka.png",
-      isSelected: false
+      category: "eureka"
     },
     {
-      id: 5,
+      id: 237,
       wpnName: "Dumuzis Eureka",
       wpnJob: "Monk",
       wpnJobShort: "MNK",
       icon: "/icons/stormblood-icons/eureka/dumuzis_eureka.png",
-      isSelected: false
+      category: "eureka"
     },
     {
-      id: 6,
+      id: 238,
       wpnName: "Torigashira Eureka",
       wpnJob: "Samurai",
       wpnJobShort: "SAM",
       icon: "/icons/stormblood-icons/eureka/torigashira_eureka.png",
-      isSelected: false
+      category: "eureka"
     },
     {
-      id: 7,
+      id: 239,
       wpnName: "Kasasagi Eureka",
       wpnJob: "Ninja",
       wpnJobShort: "NIN",
       icon: "/icons/stormblood-icons/eureka/kasasagi_eureka.png",
-      isSelected: false
+      category: "eureka"
     },
     {
-      id: 8,
+      id: 240,
       wpnName: "Circinae Eureka",
       wpnJob: "Bard",
       wpnJobShort: "BRD",
       icon: "/icons/stormblood-icons/eureka/circinae_eureka.png",
-      isSelected: false
+      category: "eureka"
     },
     {
-      id: 9,
+      id: 241,
       wpnName: "Mollfrith Eureka",
       wpnJob: "Machinist",
       wpnJobShort: "MCH",
       icon: "/icons/stormblood-icons/eureka/mollfrith_eureka.png",
-      isSelected: false
+      category: "eureka"
     },
     {
-      id: 10,
+      id: 242,
       wpnName: "Paikea Eureka",
       wpnJob: "Black Mage",
       wpnJobShort: "BLM",
       icon: "/icons/stormblood-icons/eureka/paikea_eureka.png",
-      isSelected: false
+      category: "eureka"
     },
     {
-      id: 11,
+      id: 243,
       wpnName: "Tuah Eureka",
       wpnJob: "Summoner",
       wpnJobShort: "SMN",
       icon: "/icons/stormblood-icons/eureka/tuah_eureka.png",
-      isSelected: false
+      category: "eureka"
     },
     {
-      id: 12,
+      id: 244,
       wpnName: "Brunello Eureka",
       wpnJob: "Red Mage",
       wpnJobShort: "RDM",
       icon: "/icons/stormblood-icons/eureka/brunello_eureka.png",
-      isSelected: false
+      category: "eureka"
     },
     {
-      id: 13,
+      id: 245,
       wpnName: "Rose Couverte Eureka",
       wpnJob: "White Mage",
       wpnJobShort: "WHM",
       icon: "/icons/stormblood-icons/eureka/rose_couverte_eureka.png",
-      isSelected: false
+      category: "eureka"
     },
     {
-      id: 14,
+      id: 246,
       wpnName: "Jebat Eureka",
       wpnJob: "Scholar",
       wpnJobShort: "SCH",
       icon: "/icons/stormblood-icons/eureka/jebat_eureka.png",
-      isSelected: false
+      category: "eureka"
     },
     {
-      id: 15,
+      id: 247,
       wpnName: "Albireo Eureka",
       wpnJob: "Astrologian",
       wpnJobShort: "AST",
       icon: "/icons/stormblood-icons/eureka/albireo_eureka.png",
-      isSelected: false
+      category: "eureka"
     }
   ],
   physeos: [
     {
-      id: 0,
+      id: 248,
       wpnName: "Antea Physeos",
       wpnJob: "Paladin",
       wpnJobShort: "PLD",
       icon: "/icons/stormblood-icons/eureka/antea_eureka.png",
-      isSelected: false
+      category: "physeos"
     },
     {
-      id: 1,
+      id: 249,
       wpnName: "Bellerophon Physeos",
       wpnJob: "Paladin",
       wpnJobShort: "PLD",
       icon: "/icons/stormblood-icons/eureka/bellerophon_eureka.png",
-      isSelected: false
+      category: "physeos",
+      shield: true
     },
     {
-      id: 2,
+      id: 250,
       wpnName: "Shamash Physeos",
       wpnJob: "Warrior",
       wpnJobShort: "WAR",
       icon: "/icons/stormblood-icons/eureka/shamash_eureka.png",
-      isSelected: false
+      category: "physeos"
     },
     {
-      id: 3,
+      id: 251,
       wpnName: "Xiphias Physeos",
       wpnJob: "Dark Knight",
       wpnJobShort: "DRK",
       icon: "/icons/stormblood-icons/eureka/xiphias_eureka.png",
-      isSelected: false
+      category: "physeos"
     },
     {
-      id: 4,
+      id: 252,
       wpnName: "Daboya Physeos",
       wpnJob: "Dragoon",
       wpnJobShort: "DRG",
       icon: "/icons/stormblood-icons/eureka/daboya_eureka.png",
-      isSelected: false
+      category: "physeos"
     },
     {
-      id: 5,
+      id: 253,
       wpnName: "Dumuzis Physeos",
       wpnJob: "Monk",
       wpnJobShort: "MNK",
       icon: "/icons/stormblood-icons/eureka/dumuzis_eureka.png",
-      isSelected: false
+      category: "physeos"
     },
     {
-      id: 6,
+      id: 254,
       wpnName: "Torigashira Physeos",
       wpnJob: "Samurai",
       wpnJobShort: "SAM",
       icon: "/icons/stormblood-icons/eureka/torigashira_eureka.png",
-      isSelected: false
+      category: "physeos"
     },
     {
-      id: 7,
+      id: 255,
       wpnName: "Kasasagi Physeos",
       wpnJob: "Ninja",
       wpnJobShort: "NIN",
       icon: "/icons/stormblood-icons/eureka/kasasagi_eureka.png",
-      isSelected: false
+      category: "physeos"
     },
     {
-      id: 8,
+      id: 256,
       wpnName: "Circinae Physeos",
       wpnJob: "Bard",
       wpnJobShort: "BRD",
       icon: "/icons/stormblood-icons/eureka/circinae_eureka.png",
-      isSelected: false
+      category: "physeos"
     },
     {
-      id: 9,
+      id: 257,
       wpnName: "Mollfrith Physeos",
       wpnJob: "Machinist",
       wpnJobShort: "MCH",
       icon: "/icons/stormblood-icons/eureka/mollfrith_eureka.png",
-      isSelected: false
+      category: "physeos"
     },
     {
-      id: 10,
+      id: 258,
       wpnName: "Paikea Physeos",
       wpnJob: "Black Mage",
       wpnJobShort: "BLM",
       icon: "/icons/stormblood-icons/eureka/paikea_eureka.png",
-      isSelected: false
+      category: "physeos"
     },
     {
-      id: 11,
+      id: 259,
       wpnName: "Tuah Physeos",
       wpnJob: "Summoner",
       wpnJobShort: "SMN",
       icon: "/icons/stormblood-icons/eureka/tuah_eureka.png",
-      isSelected: false
+      category: "physeos"
     },
     {
-      id: 12,
+      id: 260,
       wpnName: "Brunello Physeos",
       wpnJob: "Red Mage",
       wpnJobShort: "RDM",
       icon: "/icons/stormblood-icons/eureka/brunello_eureka.png",
-      isSelected: false
+      category: "physeos"
     },
     {
-      id: 13,
+      id: 261,
       wpnName: "Rose Couverte Physeos",
       wpnJob: "White Mage",
       wpnJobShort: "WHM",
       icon: "/icons/stormblood-icons/eureka/rose_couverte_eureka.png",
-      isSelected: false
+      category: "physeos"
     },
     {
-      id: 14,
+      id: 262,
       wpnName: "Jebat Physeos",
       wpnJob: "Scholar",
       wpnJobShort: "SCH",
       icon: "/icons/stormblood-icons/eureka/jebat_eureka.png",
-      isSelected: false
+      category: "physeos"
     },
     {
-      id: 15,
+      id: 263,
       wpnName: "Albireo Physeos",
       wpnJob: "Astrologian",
       wpnJobShort: "AST",
       icon: "/icons/stormblood-icons/eureka/albireo_eureka.png",
-      isSelected: false
+      category: "physeos"
     }
   ],
-  splendorousDoH: [
+  splendorousCrafters: [
     {
-      id: 0,
+      id: "t0",
       wpnName: "Splendorous Saw",
       wpnJob: "Carpenter",
       wpnJobShort: "CRP",
       icon: "/icons/endwalker-icons/splendorous/splendorous_saw.png",
-      isSelected: false
+      category: "splendorousCrafters"
     },
     {
-      id: 1,
+      id: "t1",
       wpnName: "Splendorous Cross-pein Hammer",
       wpnJob: "Blacksmith",
       wpnJobShort: "BSM",
       icon: "/icons/endwalker-icons/splendorous/splendorous_cross_pein_hammer.png",
-      isSelected: false
+      category: "splendorousCrafters"
     },
     {
-      id: 2,
+      id: "t2",
       wpnName: "Splendorous Raising Hammer",
       wpnJob: "Armorer",
       wpnJobShort: "ARM",
       icon: "/icons/endwalker-icons/splendorous/splendorous_raising_hammer.png",
-      isSelected: false
+      category: "splendorousCrafters"
     },
     {
-      id: 3,
+      id: "t3",
       wpnName: "Splendorous Mallet",
       wpnJob: "Goldsmith",
       wpnJobShort: "GSM",
       icon: "/icons/endwalker-icons/splendorous/splendorous_mallet.png",
-      isSelected: false
+      category: "splendorousCrafters"
     },
     {
-      id: 4,
+      id: "t4",
       wpnName: "Splendorous Knife",
       wpnJob: "Leatherworker",
       wpnJobShort: "LTW",
       icon: "/icons/endwalker-icons/splendorous/splendorous_knife.png",
-      isSelected: false
+      category: "splendorousCrafters"
     },
     {
-      id: 5,
+      id: "t5",
       wpnName: "Splendorous Needle",
       wpnJob: "Weaver",
       wpnJobShort: "WVR",
       icon: "/icons/endwalker-icons/splendorous/splendorous_needle.png",
-      isSelected: false
+      category: "splendorousCrafters"
     },
     {
-      id: 6,
+      id: "t6",
       wpnName: "Splendorous Alembic",
       wpnJob: "Alchemist",
       wpnJobShort: "ALC",
       icon: "/icons/endwalker-icons/splendorous/splendorous_alembic.png",
-      isSelected: false
+      category: "splendorousCrafters"
     },
     {
-      id: 7,
+      id: "t7",
       wpnName: "Splendorous Frypan",
       wpnJob: "Culinarian",
       wpnJobShort: "CUL",
       icon: "/icons/endwalker-icons/splendorous/splendorous_frypan.png",
-      isSelected: false
+      category: "splendorousCrafters"
     }
   ],
-  splendorousDoL: [
+  splendorousGatherers: [
     {
-      id: 8,
+      id: "t8",
       wpnName: "Splendorous Pickaxe",
       wpnJob: "Miner",
       wpnJobShort: "MIN",
       icon: "/icons/endwalker-icons/splendorous/splendorous_pickaxe.png",
-      isSelected: false
+      category: "splendorousGatherers"
     },
     {
-      id: 9,
+      id: "t9",
       wpnName: "Splendorous Hatchet",
       wpnJob: "Botanist",
       wpnJobShort: "BTN",
       icon: "/icons/endwalker-icons/splendorous/splendorous_hatchet.png",
-      isSelected: false
+      category: "splendorousGatherers"
     },
     {
-      id: 10,
+      id: "t10",
       wpnName: "Splendorous Fishing Rod",
       wpnJob: "Fisher",
       wpnJobShort: "FSH",
       icon: "/icons/endwalker-icons/splendorous/splendorous_fishing_rod.png",
-      isSelected: false
+      category: "splendorousGatherers"
     }
   ],
-  augmentedSplendorousDoH: [
+  augmentedSplendorousCrafters: [
     {
-      id: 0,
+      id: "t11",
       wpnName: "Augmented Splendorous Saw",
       wpnJob: "Carpenter",
       wpnJobShort: "CRP",
       icon: "/icons/endwalker-icons/splendorous/splendorous_saw.png",
-      isSelected: false
+      category: "augmentedSplendorousCrafters"
     },
     {
-      id: 1,
+      id: "t12",
       wpnName: "Augmented Splendorous Cross-pein Hammer",
       wpnJob: "Blacksmith",
       wpnJobShort: "BSM",
       icon: "/icons/endwalker-icons/splendorous/splendorous_cross_pein_hammer.png",
-      isSelected: false
+      category: "augmentedSplendorousCrafters"
     },
     {
-      id: 2,
+      id: "t13",
       wpnName: "Augmented Splendorous Raising Hammer",
       wpnJob: "Armorer",
       wpnJobShort: "ARM",
       icon: "/icons/endwalker-icons/splendorous/splendorous_raising_hammer.png",
-      isSelected: false
+      category: "augmentedSplendorousCrafters"
     },
     {
-      id: 3,
+      id: "t14",
       wpnName: "Augmented Splendorous Mallet",
       wpnJob: "Goldsmith",
       wpnJobShort: "GSM",
       icon: "/icons/endwalker-icons/splendorous/splendorous_mallet.png",
-      isSelected: false
+      category: "augmentedSplendorousCrafters"
     },
     {
-      id: 4,
+      id: "t15",
       wpnName: "Augmented Splendorous Knife",
       wpnJob: "Leatherworker",
       wpnJobShort: "LTW",
       icon: "/icons/endwalker-icons/splendorous/splendorous_knife.png",
-      isSelected: false
+      category: "augmentedSplendorousCrafters"
     },
     {
-      id: 5,
+      id: "t16",
       wpnName: "Augmented Splendorous Needle",
       wpnJob: "Weaver",
       wpnJobShort: "WVR",
       icon: "/icons/endwalker-icons/splendorous/splendorous_needle.png",
-      isSelected: false
+      category: "augmentedSplendorousCrafters"
     },
     {
-      id: 6,
+      id: "t17",
       wpnName: "Augmented Splendorous Alembic",
       wpnJob: "Alchemist",
       wpnJobShort: "ALC",
       icon: "/icons/endwalker-icons/splendorous/splendorous_alembic.png",
-      isSelected: false
+      category: "augmentedSplendorousCrafters"
     },
     {
-      id: 7,
+      id: "t18",
       wpnName: "Augmented Splendorous Frypan",
       wpnJob: "Culinarian",
       wpnJobShort: "CUL",
       icon: "/icons/endwalker-icons/splendorous/splendorous_frypan.png",
-      isSelected: false
+      category: "augmentedSplendorousCrafters"
     }
   ],
-  augmentedSplendorousDoL: [
+  augmentedSplendorousGatherers: [
     {
-      id: 8,
+      id: "t19",
       wpnName: "Augmented Splendorous Pickaxe",
       wpnJob: "Miner",
       wpnJobShort: "MIN",
       icon: "/icons/endwalker-icons/splendorous/splendorous_pickaxe.png",
-      isSelected: false
+      category: "augmentedSplendorousGatherers"
     },
     {
-      id: 9,
+      id: "t20",
       wpnName: "Augmented Splendorous Hatchet",
       wpnJob: "Botanist",
       wpnJobShort: "BTN",
       icon: "/icons/endwalker-icons/splendorous/splendorous_hatchet.png",
-      isSelected: false
+      category: "augmentedSplendorousGatherers"
     },
     {
-      id: 10,
+      id: "t21",
       wpnName: "Augmented Splendorous Fishing Rod",
       wpnJob: "Fisher",
       wpnJobShort: "FSH",
       icon: "/icons/endwalker-icons/splendorous/splendorous_fishing_rod.png",
-      isSelected: false
+      category: "augmentedSplendorousGatherers"
     }
   ],
-  crystallineDoH: [
+  crystallineCrafters: [
     {
-      id: 0,
+      id: "t22",
       wpnName: "Crystalline Saw",
       wpnJob: "Carpenter",
       wpnJobShort: "CRP",
       icon: "/icons/endwalker-icons/crystalline/crystalline_saw.png",
-      isSelected: false
+      category: "crystallineCrafters"
     },
     {
-      id: 1,
+      id: "t23",
       wpnName: "Crystalline Cross-pein Hammer",
       wpnJob: "Blacksmith",
       wpnJobShort: "BSM",
       icon: "/icons/endwalker-icons/crystalline/crystalline_cross_pein_hammer.png",
-      isSelected: false
+      category: "crystallineCrafters"
     },
     {
-      id: 2,
+      id: "t24",
       wpnName: "Crystalline Raising Hammer",
       wpnJob: "Armorer",
       wpnJobShort: "ARM",
       icon: "/icons/endwalker-icons/crystalline/crystalline_raising_hammer.png",
-      isSelected: false
+      category: "crystallineCrafters"
     },
     {
-      id: 3,
+      id: "t25",
       wpnName: "Crystalline Mallet",
       wpnJob: "Goldsmith",
       wpnJobShort: "GSM",
       icon: "/icons/endwalker-icons/crystalline/crystalline_mallet.png",
-      isSelected: false
+      category: "crystallineCrafters"
     },
     {
-      id: 4,
+      id: "t26",
       wpnName: "Crystalline Round Knife",
       wpnJob: "Leatherworker",
       wpnJobShort: "LTW",
       icon: "/icons/endwalker-icons/crystalline/crystalline_round_knife.png",
-      isSelected: false
+      category: "crystallineCrafters"
     },
     {
-      id: 5,
+      id: "t27",
       wpnName: "Crystalline Needle",
       wpnJob: "Weaver",
       wpnJobShort: "WVR",
       icon: "/icons/endwalker-icons/crystalline/crystalline_needle.png",
-      isSelected: false
+      category: "crystallineCrafters"
     },
     {
-      id: 6,
+      id: "t28",
       wpnName: "Crystalline Alembic",
       wpnJob: "Alchemist",
       wpnJobShort: "ALC",
       icon: "/icons/endwalker-icons/crystalline/crystalline_alembic.png",
-      isSelected: false
+      category: "crystallineCrafters"
     },
     {
-      id: 7,
+      id: "t29",
       wpnName: "Crystalline Frypan",
       wpnJob: "Culinarian",
       wpnJobShort: "CUL",
       icon: "/icons/endwalker-icons/crystalline/crystalline_frypan.png",
-      isSelected: false
+      category: "crystallineCrafters"
     }
   ],
-  crystallineDoL: [
+  crystallineGatherers: [
     {
-      id: 8,
+      id: "t30",
       wpnName: "Crystalline Pickaxe",
       wpnJob: "Miner",
       wpnJobShort: "MIN",
       icon: "/icons/endwalker-icons/crystalline/crystalline_pickaxe.png",
-      isSelected: false
+      category: "crystallineGatherers"
     },
     {
-      id: 9,
+      id: "t31",
       wpnName: "Crystalline Hatchet",
       wpnJob: "Botanist",
       wpnJobShort: "BTN",
       icon: "/icons/endwalker-icons/crystalline/crystalline_hatchet.png",
-      isSelected: false
+      category: "crystallineGatherers"
     },
     {
-      id: 10,
+      id: "t32",
       wpnName: "Crystalline Fishing Rod",
       wpnJob: "Fisher",
       wpnJobShort: "FSH",
       icon: "/icons/endwalker-icons/crystalline/crystalline_fishing_rod.png",
-      isSelected: false
+      category: "crystallineGatherers"
     }
   ],
-  choraZoisCrystallineDoH: [
+  choraZoisCrystallineCrafters: [
     {
-      id: 0,
+      id: "t33",
       wpnName: "Chora Zoi's Crystalline Saw",
       wpnJob: "Carpenter",
       wpnJobShort: "CRP",
       icon: "/icons/endwalker-icons/chora-zois-crystalline/chora_zois_crystalline_saw.png",
-      isSelected: false
+      category: "choraZoisCrystallineCrafters"
     },
     {
-      id: 1,
+      id: "t34",
       wpnName: "Chora Zoi's Crystalline Cross-pein Hammer",
       wpnJob: "Blacksmith",
       wpnJobShort: "BSM",
       icon: "/icons/endwalker-icons/chora-zois-crystalline/chora_zois_crystalline_cross_pein_hammer.png",
-      isSelected: false
+      category: "choraZoisCrystallineCrafters"
     },
     {
-      id: 2,
+      id: "t35",
       wpnName: "Chora Zoi's Crystalline Raising Hammer",
       wpnJob: "Armorer",
       wpnJobShort: "ARM",
       icon: "/icons/endwalker-icons/chora-zois-crystalline/chora_zois_crystalline_raising_hammer.png",
-      isSelected: false
+      category: "choraZoisCrystallineCrafters"
     },
     {
-      id: 3,
+      id: "t36",
       wpnName: "Chora Zoi's Crystalline Mallet",
       wpnJob: "Goldsmith",
       wpnJobShort: "GSM",
       icon: "/icons/endwalker-icons/chora-zois-crystalline/chora_zois_crystalline_mallet.png",
-      isSelected: false
+      category: "choraZoisCrystallineCrafters"
     },
     {
-      id: 4,
+      id: "t37",
       wpnName: "Chora Zoi's Crystalline Round Knife",
       wpnJob: "Leatherworker",
       wpnJobShort: "LTW",
       icon: "/icons/endwalker-icons/chora-zois-crystalline/chora_zois_crystalline_round_knife.png",
-      isSelected: false
+      category: "choraZoisCrystallineCrafters"
     },
     {
-      id: 5,
+      id: "t38",
       wpnName: "Chora Zoi's Crystalline Needle",
       wpnJob: "Weaver",
       wpnJobShort: "WVR",
       icon: "/icons/endwalker-icons/chora-zois-crystalline/chora_zois_crystalline_needle.png",
-      isSelected: false
+      category: "choraZoisCrystallineCrafters"
     },
     {
-      id: 6,
+      id: "t39",
       wpnName: "Chora Zoi's Crystalline Alembic",
       wpnJob: "Alchemist",
       wpnJobShort: "ALC",
       icon: "/icons/endwalker-icons/chora-zois-crystalline/chora_zois_crystalline_alembic.png",
-      isSelected: false
+      category: "choraZoisCrystallineCrafters"
     },
     {
-      id: 7,
+      id: "t40",
       wpnName: "Chora Zoi's Crystalline Frypan",
       wpnJob: "Culinarian",
       wpnJobShort: "CUL",
       icon: "/icons/endwalker-icons/chora-zois-crystalline/chora_zois_crystalline_frypan.png",
-      isSelected: false
+      category: "choraZoisCrystallineCrafters"
     }
   ],
-  choraZoisCrystallineDoL: [
+  choraZoisCrystallineGatherers: [
     {
-      id: 8,
+      id: "t41",
       wpnName: "Chora Zoi's Crystalline Pickaxe",
       wpnJob: "Miner",
       wpnJobShort: "MIN",
       icon: "/icons/endwalker-icons/chora-zois-crystalline/chora_zois_crystalline_pickaxe.png",
-      isSelected: false
+      category: "choraZoisCrystallineGatherers"
     },
     {
-      id: 9,
+      id: "t42",
       wpnName: "Chora Zoi's Crystalline Hatchet",
       wpnJob: "Botanist",
       wpnJobShort: "BTN",
       icon: "/icons/endwalker-icons/chora-zois-crystalline/chora_zois_crystalline_hatchet.png",
-      isSelected: false
+      category: "choraZoisCrystallineGatherers"
     },
     {
-      id: 10,
+      id: "t43",
       wpnName: "Chora Zoi's Crystalline Fishing Rod",
       wpnJob: "Fisher",
       wpnJobShort: "FSH",
       icon: "/icons/endwalker-icons/chora-zois-crystalline/chora_zois_crystalline_fishing_rod.png",
-      isSelected: false
+      category: "choraZoisCrystallineGatherers"
     }
   ],
-  brilliantDoH: [
+  brilliantCrafters: [
     {
-      id: 0,
+      id: "t44",
       wpnName: "Brilliant Saw",
       wpnJob: "Carpenter",
       wpnJobShort: "CRP",
       icon: "/icons/endwalker-icons/brilliant/brilliant_saw.png",
-      isSelected: false
+      category: "brilliantCrafters"
     },
     {
-      id: 1,
+      id: "t45",
       wpnName: "Brilliant Cross-pein Hammer",
       wpnJob: "Blacksmith",
       wpnJobShort: "BSM",
       icon: "/icons/endwalker-icons/brilliant/brilliant_cross_pein_hammer.png",
-      isSelected: false
+      category: "brilliantCrafters"
     },
     {
-      id: 2,
+      id: "t46",
       wpnName: "Brilliant Raising Hammer",
       wpnJob: "Armorer",
       wpnJobShort: "ARM",
       icon: "/icons/endwalker-icons/brilliant/brilliant_raising_hammer.png",
-      isSelected: false
+      category: "brilliantCrafters"
     },
     {
-      id: 3,
+      id: "t47",
       wpnName: "Brilliant Mallet",
       wpnJob: "Goldsmith",
       wpnJobShort: "GSM",
       icon: "/icons/endwalker-icons/brilliant/brilliant_mallet.png",
-      isSelected: false
+      category: "brilliantCrafters"
     },
     {
-      id: 4,
+      id: "t48",
       wpnName: "Brilliant Round Knife",
       wpnJob: "Leatherworker",
       wpnJobShort: "LTW",
       icon: "/icons/endwalker-icons/brilliant/brilliant_round_knife.png",
-      isSelected: false
+      category: "brilliantCrafters"
     },
     {
-      id: 5,
+      id: "t49",
       wpnName: "Brilliant Needle",
       wpnJob: "Weaver",
       wpnJobShort: "WVR",
       icon: "/icons/endwalker-icons/brilliant/brilliant_needle.png",
-      isSelected: false
+      category: "brilliantCrafters"
     },
     {
-      id: 6,
+      id: "t50",
       wpnName: "Brilliant Alembic",
       wpnJob: "Alchemist",
       wpnJobShort: "ALC",
       icon: "/icons/endwalker-icons/brilliant/brilliant_alembic.png",
-      isSelected: false
+      category: "brilliantCrafters"
     },
     {
-      id: 7,
+      id: "t51",
       wpnName: "Brilliant Frypan",
       wpnJob: "Culinarian",
       wpnJobShort: "CUL",
       icon: "/icons/endwalker-icons/brilliant/brilliant_frypan.png",
-      isSelected: false
+      category: "brilliantCrafters"
     }
   ],
-  brilliantDoL: [
+  brilliantGatherers: [
     {
-      id: 8,
+      id: "t52",
       wpnName: "Brilliant Pickaxe",
       wpnJob: "Miner",
       wpnJobShort: "MIN",
       icon: "/icons/endwalker-icons/brilliant/brilliant_pickaxe.png",
-      isSelected: false
+      category: "brilliantGatherers"
     },
     {
-      id: 9,
+      id: "t53",
       wpnName: "Brilliant Hatchet",
       wpnJob: "Botanist",
       wpnJobShort: "BTN",
       icon: "/icons/endwalker-icons/brilliant/brilliant_hatchet.png",
-      isSelected: false
+      category: "brilliantGatherers"
     },
     {
-      id: 10,
+      id: "t54",
       wpnName: "Brilliant Fishing Rod",
       wpnJob: "Fisher",
       wpnJobShort: "FSH",
       icon: "/icons/endwalker-icons/brilliant/brilliant_fishing_rod.png",
-      isSelected: false
+      category: "brilliantGatherers"
+    }
+  ],
+  vrandticVisionarysCrafters: [
+    {
+      id: "t55",
+      wpnName: "Vrandtic Visionary's Saw",
+      wpnJob: "Carpenter",
+      wpnJobShort: "CRP",
+      icon: "/icons/endwalker-icons/vrandtic-visionarys/vrandtic_visionarys_saw.png",
+      category: "vrandticVisionarysCrafters"
+    },
+    {
+      id: "t56",
+      wpnName: "Vrandtic Visionary's Cross-pein Hammer",
+      wpnJob: "Blacksmith",
+      wpnJobShort: "BSM",
+      icon: "/icons/endwalker-icons/vrandtic-visionarys/vrandtic_visionarys_cross_pein_hammer.png",
+      category: "vrandticVisionarysCrafters"
+    },
+    {
+      id: "t57",
+      wpnName: "Vrandtic Visionary's Raising Hammer",
+      wpnJob: "Armorer",
+      wpnJobShort: "ARM",
+      icon: "/icons/endwalker-icons/vrandtic-visionarys/vrandtic_visionarys_raising_hammer.png",
+      category: "vrandticVisionarysCrafters"
+    },
+    {
+      id: "t58",
+      wpnName: "Vrandtic Visionary's Mallet",
+      wpnJob: "Goldsmith",
+      wpnJobShort: "GSM",
+      icon: "/icons/endwalker-icons/vrandtic-visionarys/vrandtic_visionarys_mallet.png",
+      category: "vrandticVisionarysCrafters"
+    },
+    {
+      id: "t59",
+      wpnName: "Vrandtic Visionary's Round Knife",
+      wpnJob: "Leatherworker",
+      wpnJobShort: "LTW",
+      icon: "/icons/endwalker-icons/vrandtic-visionarys/vrandtic_visionarys_round_knife.png",
+      category: "vrandticVisionarysCrafters"
+    },
+    {
+      id: "t60",
+      wpnName: "Vrandtic Visionary's Needle",
+      wpnJob: "Weaver",
+      wpnJobShort: "WVR",
+      icon: "/icons/endwalker-icons/vrandtic-visionarys/vrandtic_visionarys_needle.png",
+      category: "vrandticVisionarysCrafters"
+    },
+    {
+      id: "t61",
+      wpnName: "Vrandtic Visionary's Alembic",
+      wpnJob: "Alchemist",
+      wpnJobShort: "ALC",
+      icon: "/icons/endwalker-icons/vrandtic-visionarys/vrandtic_visionarys_alembic.png",
+      category: "vrandticVisionarysCrafters"
+    },
+    {
+      id: "t62",
+      wpnName: "Vrandtic Visionary's Frypan",
+      wpnJob: "Culinarian",
+      wpnJobShort: "CUL",
+      icon: "/icons/endwalker-icons/vrandtic-visionarys/vrandtic_visionarys_frypan.png",
+      category: "vrandticVisionarysCrafters"
+    }
+  ],
+  vrandticVisionarysGatherers: [
+    {
+      id: "t63",
+      wpnName: "Vrandtic Visionary's Pickaxe",
+      wpnJob: "Miner",
+      wpnJobShort: "MIN",
+      icon: "/icons/endwalker-icons/vrandtic-visionarys/vrandtic_visionarys_pickaxe.png",
+      category: "vrandticVisionarysGatherers"
+    },
+    {
+      id: "t64",
+      wpnName: "Vrandtic Visionary's Hatchet",
+      wpnJob: "Botanist",
+      wpnJobShort: "BTN",
+      icon: "/icons/endwalker-icons/vrandtic-visionarys/vrandtic_visionarys_hatchet.png",
+      category: "vrandticVisionarysGatherers"
+    },
+    {
+      id: "t65",
+      wpnName: "Vrandtic Visionary's Fishing Rod",
+      wpnJob: "Fisher",
+      wpnJobShort: "FSH",
+      icon: "/icons/endwalker-icons/vrandtic-visionarys/vrandtic_visionarys_fishing_rod.png",
+      category: "vrandticVisionarysGatherers"
+    }
+  ],
+  lodestarCrafters: [
+    {
+      id: "t66",
+      wpnName: "Lodestar Saw",
+      wpnJob: "Carpenter",
+      wpnJobShort: "CRP",
+      icon: "/icons/endwalker-icons/lodestar/lodestar_saw.png",
+      category: "lodestarCrafters"
+    },
+    {
+      id: "t67",
+      wpnName: "Lodestar Cross-pein Hammer",
+      wpnJob: "Blacksmith",
+      wpnJobShort: "BSM",
+      icon: "/icons/endwalker-icons/lodestar/lodestar_cross_pein_hammer.png",
+      category: "lodestarCrafters"
+    },
+    {
+      id: "t68",
+      wpnName: "Lodestar Raising Hammer",
+      wpnJob: "Armorer",
+      wpnJobShort: "ARM",
+      icon: "/icons/endwalker-icons/lodestar/lodestar_raising_hammer.png",
+      category: "lodestarCrafters"
+    },
+    {
+      id: "t69",
+      wpnName: "Lodestar Mallet",
+      wpnJob: "Goldsmith",
+      wpnJobShort: "GSM",
+      icon: "/icons/endwalker-icons/lodestar/lodestar_mallet.png",
+      category: "lodestarCrafters"
+    },
+    {
+      id: "t70",
+      wpnName: "Lodestar Round Knife",
+      wpnJob: "Leatherworker",
+      wpnJobShort: "LTW",
+      icon: "/icons/endwalker-icons/lodestar/lodestar_round_knife.png",
+      category: "lodestarCrafters"
+    },
+    {
+      id: "t71",
+      wpnName: "Lodestar Needle",
+      wpnJob: "Weaver",
+      wpnJobShort: "WVR",
+      icon: "/icons/endwalker-icons/lodestar/lodestar_needle.png",
+      category: "lodestarCrafters"
+    },
+    {
+      id: "t72",
+      wpnName: "Lodestar Alembic",
+      wpnJob: "Alchemist",
+      wpnJobShort: "ALC",
+      icon: "/icons/endwalker-icons/lodestar/lodestar_alembic.png",
+      category: "lodestarCrafters"
+    },
+    {
+      id: "t73",
+      wpnName: "Lodestar Frypan",
+      wpnJob: "Culinarian",
+      wpnJobShort: "CUL",
+      icon: "/icons/endwalker-icons/lodestar/lodestar_frypan.png",
+      category: "lodestarCrafters"
+    }
+  ],
+  lodestarGatherers: [
+    {
+      id: "t74",
+      wpnName: "Lodestar Pickaxe",
+      wpnJob: "Miner",
+      wpnJobShort: "MIN",
+      icon: "/icons/endwalker-icons/lodestar/lodestar_pickaxe.png",
+      category: "lodestarGatherers"
+    },
+    {
+      id: "t75",
+      wpnName: "Lodestar Hatchet",
+      wpnJob: "Botanist",
+      wpnJobShort: "BTN",
+      icon: "/icons/endwalker-icons/lodestar/lodestar_hatchet.png",
+      category: "lodestarGatherers"
+    },
+    {
+      id: "t76",
+      wpnName: "Lodestar Fishing Rod",
+      wpnJob: "Fisher",
+      wpnJobShort: "FSH",
+      icon: "/icons/endwalker-icons/lodestar/lodestar_fishing_rod.png",
+      category: "lodestarGatherers"
     }
   ]
 };

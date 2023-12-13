@@ -3,11 +3,11 @@ import { GoChevronDown, GoChevronUp } from "react-icons/go";
 import { BsCheckLg } from "react-icons/bs";
 import { WeaponsSectionContext } from "./WeaponsSection";
 
-function WeaponsHeader({ totalWeapons, weaponsCounter, name, patchInfo }) {
+function WeaponsHeader({ totalWeapons, name, patchInfo, counter }) {
   const { open, setOpen } = useContext(WeaponsSectionContext);
 
   const check =
-    totalWeapons - weaponsCounter === totalWeapons ? (
+    counter?.length === totalWeapons ? (
       <BsCheckLg className="mr-2 text-[20px] text-green-500 sm:text-[28px]" />
     ) : null;
 
@@ -17,7 +17,7 @@ function WeaponsHeader({ totalWeapons, weaponsCounter, name, patchInfo }) {
       onClick={setOpen}
     >
       <p className="flex items-center text-[14px] font-bold sm:text-[18px] ">
-        {check} {totalWeapons - weaponsCounter}/{totalWeapons}
+        {check} {counter?.length}/{totalWeapons}
       </p>
       <h4 className="ml-auto mr-auto text-center text-[16px] font-bold sm:text-[22px]">
         {name}

@@ -62,7 +62,7 @@ function Sidebar({ isVisible, setIsVisible }) {
               isActive ? activeStyle : inactiveStyle
             }
           >
-            <h2 className="font-bold text-[#e7e7e7]">DoH</h2>
+            <h2 className="font-bold text-[#e7e7e7]">Crafters</h2>
           </NavLink>
         )}
         {gatherersTo && (
@@ -72,7 +72,7 @@ function Sidebar({ isVisible, setIsVisible }) {
               isActive ? activeStyle : inactiveStyle
             }
           >
-            <h2 className="font-bold text-[#e7e7e7]">DoL</h2>
+            <h2 className="font-bold text-[#e7e7e7]">Gatherers</h2>
           </NavLink>
         )}
       </div>

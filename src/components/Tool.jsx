@@ -1,12 +1,14 @@
 import useWeaponsData from "../hooks/use-weapons-data";
 import useAuth from "../hooks/use-auth";
 
-function Tool({ tool, tools, type }) {
-  const { selectWeapon } = useWeaponsData();
+function Tool({ tool }) {
+  const { selectWeapon, ownedWeapons } = useWeaponsData();
   const { currentUser } = useAuth();
 
+  const isSelected = ownedWeapons.some((el) => el.id === tool.id); // Testing new weapon method
+
   const styles = {
-    opacity: tool.isSelected ? "25%" : "100%"
+    opacity: isSelected ? "25%" : "100%"
   };
 
   return (
@@ -17,7 +19,7 @@ function Tool({ tool, tools, type }) {
             {tool.wpnName}
           </span>
           <div
-            onClick={() => selectWeapon(tool.wpnName, type, tools)}
+            onClick={() => selectWeapon(tool)}
             style={styles}
             className="cursor-pointer text-[14px]"
             id={tool.id}

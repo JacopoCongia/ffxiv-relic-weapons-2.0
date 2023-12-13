@@ -9,19 +9,20 @@ import useAuth from "../hooks/use-auth";
 const WeaponsSectionContext = createContext();
 
 function WeaponsSection({
-  weaponsCounter,
   weapons,
+  ownedWeapons,
   totalWeapons,
-  name,
   patchInfo,
-  type,
+  category,
+  name,
   selectWeapon,
   materials,
   tomestones,
   tomestoneAmount,
   checkAll,
   uncheckAll,
-  notes
+  notes,
+  counter
 }) {
   const [open, setOpen] = useToggle(true);
   const { currentUser } = useAuth();
@@ -30,32 +31,35 @@ function WeaponsSection({
     <>
       <WeaponsSectionContext.Provider value={{ open, setOpen }}>
         <WeaponsHeader
-          weaponsCounter={weaponsCounter.length}
+          ownedWeapons={ownedWeapons}
           weapons={weapons}
           totalWeapons={totalWeapons}
-          name={name}
           patchInfo={patchInfo}
+          category={category}
+          name={name}
+          counter={counter}
         />
       </WeaponsSectionContext.Provider>
       {open && (
         <div className="flex flex-col items-center justify-center m-auto bg-stone-800 py-10 px-[3em] text-white max-w-[1000px]">
           <WeaponsContainer
             weapons={weapons}
-            type={type}
+            category={category}
             selectWeapon={selectWeapon}
           />
           <MaterialsContainer
             materials={materials}
-            type={type}
+            category={category}
             tomestones={tomestones}
             tomestoneAmount={tomestoneAmount}
-            weaponsCounter={weaponsCounter}
             notes={notes || null}
+            counter={counter}
+            totalWeapons={totalWeapons}
           />
           {currentUser?.emailVerified && (
             <CheckUncheck
               weapons={weapons}
-              type={type}
+              category={category}
               checkAll={checkAll}
               uncheckAll={uncheckAll}
             />

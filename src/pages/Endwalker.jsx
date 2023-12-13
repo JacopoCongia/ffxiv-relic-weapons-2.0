@@ -1,61 +1,66 @@
 import data from "../../data";
 import useWeaponsData from "../hooks/use-weapons-data";
 import Header from "../components/Header";
-import { useWeaponsCounter } from "../hooks/use-weapons-counter";
 import WeaponsSection from "../components/WeaponsSection";
+import { useCounter } from "../hooks/use-counter";
 
 function Endwalker() {
-  const { weapons, checkAll, uncheckAll } = useWeaponsData();
+  const { weapons, ownedWeapons, checkAll, uncheckAll } = useWeaponsData();
 
-  const mandervilleCounter = useWeaponsCounter(weapons.manderville);
-  const amazingMandervilleCounter = useWeaponsCounter(
-    weapons.amazingManderville
+  const mandervilleCounter = useCounter(ownedWeapons, "manderville");
+  const amazingMandervilleCounter = useCounter(
+    ownedWeapons,
+    "amazingManderville"
   );
-  const majesticMandervilleCounter = useWeaponsCounter(
-    weapons.majesticManderville
+  const majesticMandervilleCounter = useCounter(
+    ownedWeapons,
+    "majesticManderville"
   );
 
   return (
     <div className="w-[100%] duration-[0.5s] min-[1000px]:pl-[250px]">
       <Header title="Manderville" />
       <WeaponsSection
-        weaponsCounter={mandervilleCounter}
         weapons={weapons.manderville}
+        ownedWeapons={ownedWeapons}
         totalWeapons={19}
-        name="Manderville Weapons"
+        name="Manderville"
+        category="manderville"
         patchInfo="iLvl 615 (Patch 6.25)"
-        type="manderville"
         materials={data.materials}
         tomestones={data.tomestones.causality}
         tomestoneAmount={1500}
         checkAll={checkAll}
         uncheckAll={uncheckAll}
+        counter={mandervilleCounter}
       />
       <WeaponsSection
-        weaponsCounter={amazingMandervilleCounter}
         weapons={weapons.amazingManderville}
+        ownedWeapons={ownedWeapons}
         totalWeapons={19}
-        name="Amazing Manderville Weapons"
+        name="Amazing Manderville"
+        category="amazingManderville"
         patchInfo="iLvl 630 (Patch 6.35)"
-        type="amazingManderville"
         materials={data.materials}
         tomestones={data.tomestones.causality}
         tomestoneAmount={1500}
         checkAll={checkAll}
         uncheckAll={uncheckAll}
+        counter={amazingMandervilleCounter}
       />
       <WeaponsSection
-        weaponsCounter={majesticMandervilleCounter}
         weapons={weapons.majesticManderville}
+        ownedWeapons={ownedWeapons}
         totalWeapons={19}
-        name="Majestic Manderville Weapons"
+        name="Majestic Manderville"
+        category="majesticManderville"
         patchInfo="iLvl 645 (Patch 6.45)"
-        type="majesticManderville"
         materials={data.materials}
         tomestones={data.tomestones.causality}
         tomestoneAmount={1500}
         checkAll={checkAll}
         uncheckAll={uncheckAll}
+        counter={majesticMandervilleCounter}
       />
     </div>
   );

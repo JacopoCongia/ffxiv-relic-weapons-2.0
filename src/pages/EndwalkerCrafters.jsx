@@ -1,17 +1,35 @@
 import ToolsContainer from "../components/ToolsContainer";
 import ToolsHeader from "../components/ToolsHeader";
 import useWeaponsData from "../hooks/use-weapons-data";
+import { useCounter } from "../hooks/use-counter";
 
 function EndwalkerCrafters() {
-  const { weapons: tools } = useWeaponsData();
+  const { weapons: tools, ownedWeapons } = useWeaponsData();
+
+  const splendorousCounter = useCounter(ownedWeapons, "splendorousCrafters");
+  const augmentedSplendorousCounter = useCounter(
+    ownedWeapons,
+    "augmentedSplendorousCrafters"
+  );
+  const crystallineCounter = useCounter(ownedWeapons, "crystallineCrafters");
+  const choraZoisCrystallineCounter = useCounter(
+    ownedWeapons,
+    "choraZoisCrystallineCrafters"
+  );
+  const brilliantCounter = useCounter(ownedWeapons, "brilliantCrafters");
+  const vrandticVisionarysCounter = useCounter(
+    ownedWeapons,
+    "vrandticVisionarysCrafters"
+  );
+  const lodestarCounter = useCounter(ownedWeapons, "lodestarCrafters");
 
   return (
     <div className="min-[1000px]:pl-[250px] duration-[0.5s]">
       <ToolsHeader name={"Splendorous"} />
       <ToolsContainer
-        tools={tools.splendorousDoH}
-        category={"Crafters"}
-        type={"splendorousDoH"}
+        tools={tools.splendorousCrafters}
+        category={"splendorousCrafters"}
+        counter={splendorousCounter}
       >
         <div className="text-white flex flex-col gap-3 mb-[2em] px-[2em] text-center">
           <p className="flex gap-2 justify-center flex-wrap">
@@ -42,9 +60,9 @@ function EndwalkerCrafters() {
       </ToolsContainer>
       <ToolsHeader name={"Augmented Splendorous"} />
       <ToolsContainer
-        tools={tools.augmentedSplendorousDoH}
-        category={"Crafters"}
-        type={"augmentedSplendorousDoH"}
+        tools={tools.augmentedSplendorousCrafters}
+        category={"augmentedSplendorousCrafters"}
+        counter={augmentedSplendorousCounter}
       >
         <div className="text-white flex flex-col gap-3 mb-[2em] px-[2em] text-center">
           <p className="flex gap-2 justify-center flex-wrap">
@@ -61,9 +79,9 @@ function EndwalkerCrafters() {
       </ToolsContainer>
       <ToolsHeader name={"Crystalline"} />
       <ToolsContainer
-        tools={tools.crystallineDoH}
-        category={"Crafters"}
-        type={"crystallineDoH"}
+        tools={tools.crystallineCrafters}
+        category={"crystallineCrafters"}
+        counter={crystallineCounter}
       >
         <div className="text-white flex flex-col gap-3 mb-[2em] px-[2em] text-center">
           <p className="flex gap-2 justify-center flex-wrap">
@@ -80,9 +98,9 @@ function EndwalkerCrafters() {
       </ToolsContainer>
       <ToolsHeader name={"Chora Zoi's Crystalline"} />
       <ToolsContainer
-        tools={tools.choraZoisCrystallineDoH}
-        category={"Crafters"}
-        type={"choraZoisCrystallineDoH"}
+        tools={tools.choraZoisCrystallineCrafters}
+        category={"choraZoisCrystallineCrafters"}
+        counter={choraZoisCrystallineCounter}
       >
         <div className="text-white flex flex-col gap-3 mb-[2em] px-[2em] text-center">
           <p className="flex gap-2 justify-center flex-wrap">
@@ -99,9 +117,9 @@ function EndwalkerCrafters() {
       </ToolsContainer>
       <ToolsHeader name={"Brilliant"} />
       <ToolsContainer
-        tools={tools.brilliantDoH}
-        category={"Crafters"}
-        type={"brilliantDoH"}
+        tools={tools.brilliantCrafters}
+        category={"brilliantCrafters"}
+        counter={brilliantCounter}
       >
         <div className="text-white flex flex-col gap-3 mb-[2em] px-[2em] text-center">
           <p className="flex gap-2 justify-center flex-wrap">
@@ -112,6 +130,44 @@ function EndwalkerCrafters() {
             />
             Brilliant Components per Tool which means{" "}
             <span className="font-bold">30</span> Collectables at maximum
+            collectability.
+          </p>
+        </div>
+      </ToolsContainer>
+      <ToolsHeader name={"Vrandtic Visionary's"} />
+      <ToolsContainer
+        tools={tools.vrandticVisionarysCrafters}
+        category={"vrandticVisionarysCrafters"}
+        counter={vrandticVisionarysCounter}
+      >
+        <div className="text-white flex flex-col gap-3 mb-[2em] px-[2em] text-center">
+          <p className="flex gap-2 justify-center flex-wrap">
+            You will need <span className="font-bold">60</span>
+            <img
+              className="w-[22px]"
+              src="/icons/endwalker-icons/materials/customized_crafters_component.png"
+            />
+            Inspirational Components per Tool which means{" "}
+            <span className="font-bold">20</span> Collectables at maximum
+            collectability.
+          </p>
+        </div>
+      </ToolsContainer>
+      <ToolsHeader name={"Lodestar"} />
+      <ToolsContainer
+        tools={tools.lodestarCrafters}
+        category={"lodestarCrafters"}
+        counter={lodestarCounter}
+      >
+        <div className="text-white flex flex-col gap-3 mb-[2em] px-[2em] text-center">
+          <p className="flex gap-2 justify-center flex-wrap">
+            You will need <span className="font-bold">60</span>
+            <img
+              className="w-[22px]"
+              src="/icons/endwalker-icons/materials/nightforged_carpenters_component.png"
+            />
+            Nightforged Components per Tool which means{" "}
+            <span className="font-bold">20</span> Collectables at maximum
             collectability.
           </p>
         </div>

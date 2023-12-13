@@ -4,12 +4,13 @@ function MaterialsContainer({
   tomestones,
   tomestoneAmount,
   materials,
-  type,
-  weaponsCounter,
-  notes
+  category,
+  notes,
+  counter,
+  totalWeapons
 }) {
   const updatedMaterials = materials.filter(
-    (material) => material.type === type
+    (material) => material.category === category
   );
 
   return (
@@ -33,12 +34,13 @@ function MaterialsContainer({
               alt={tomestones.name}
               src={tomestones.icon}
             />
-            {tomestones.name}: {weaponsCounter.length * tomestoneAmount}
+            {tomestones.name}:{" "}
+            {totalWeapons * tomestoneAmount - counter.length * tomestoneAmount}
           </p>
         )}
         <Materials
           materials={updatedMaterials}
-          weaponsCounter={weaponsCounter}
+          counter={counter}
         />
       </div>
       {notes && (
