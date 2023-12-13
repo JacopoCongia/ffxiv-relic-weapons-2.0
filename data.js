@@ -2804,648 +2804,648 @@ const data = {
       category: "physeos"
     }
   ],
-  splendorousDoH: [
+  splendorousCrafters: [
     {
-      id: 0,
+      id: "t0",
       wpnName: "Splendorous Saw",
       wpnJob: "Carpenter",
       wpnJobShort: "CRP",
       icon: "/icons/endwalker-icons/splendorous/splendorous_saw.png",
-      isSelected: false
+      category: "splendorousCrafters"
     },
     {
-      id: 1,
+      id: "t1",
       wpnName: "Splendorous Cross-pein Hammer",
       wpnJob: "Blacksmith",
       wpnJobShort: "BSM",
       icon: "/icons/endwalker-icons/splendorous/splendorous_cross_pein_hammer.png",
-      isSelected: false
+      category: "splendorousCrafters"
     },
     {
-      id: 2,
+      id: "t2",
       wpnName: "Splendorous Raising Hammer",
       wpnJob: "Armorer",
       wpnJobShort: "ARM",
       icon: "/icons/endwalker-icons/splendorous/splendorous_raising_hammer.png",
-      isSelected: false
+      category: "splendorousCrafters"
     },
     {
-      id: 3,
+      id: "t3",
       wpnName: "Splendorous Mallet",
       wpnJob: "Goldsmith",
       wpnJobShort: "GSM",
       icon: "/icons/endwalker-icons/splendorous/splendorous_mallet.png",
-      isSelected: false
+      category: "splendorousCrafters"
     },
     {
-      id: 4,
+      id: "t4",
       wpnName: "Splendorous Knife",
       wpnJob: "Leatherworker",
       wpnJobShort: "LTW",
       icon: "/icons/endwalker-icons/splendorous/splendorous_knife.png",
-      isSelected: false
+      category: "splendorousCrafters"
     },
     {
-      id: 5,
+      id: "t5",
       wpnName: "Splendorous Needle",
       wpnJob: "Weaver",
       wpnJobShort: "WVR",
       icon: "/icons/endwalker-icons/splendorous/splendorous_needle.png",
-      isSelected: false
+      category: "splendorousCrafters"
     },
     {
-      id: 6,
+      id: "t6",
       wpnName: "Splendorous Alembic",
       wpnJob: "Alchemist",
       wpnJobShort: "ALC",
       icon: "/icons/endwalker-icons/splendorous/splendorous_alembic.png",
-      isSelected: false
+      category: "splendorousCrafters"
     },
     {
-      id: 7,
+      id: "t7",
       wpnName: "Splendorous Frypan",
       wpnJob: "Culinarian",
       wpnJobShort: "CUL",
       icon: "/icons/endwalker-icons/splendorous/splendorous_frypan.png",
-      isSelected: false
+      category: "splendorousCrafters"
     }
   ],
-  splendorousDoL: [
+  splendorousGatherers: [
     {
-      id: 8,
+      id: "t8",
       wpnName: "Splendorous Pickaxe",
       wpnJob: "Miner",
       wpnJobShort: "MIN",
       icon: "/icons/endwalker-icons/splendorous/splendorous_pickaxe.png",
-      isSelected: false
+      category: "splendorousGatherers"
     },
     {
-      id: 9,
+      id: "t9",
       wpnName: "Splendorous Hatchet",
       wpnJob: "Botanist",
       wpnJobShort: "BTN",
       icon: "/icons/endwalker-icons/splendorous/splendorous_hatchet.png",
-      isSelected: false
+      category: "splendorousGatherers"
     },
     {
-      id: 10,
+      id: "t10",
       wpnName: "Splendorous Fishing Rod",
       wpnJob: "Fisher",
       wpnJobShort: "FSH",
       icon: "/icons/endwalker-icons/splendorous/splendorous_fishing_rod.png",
-      isSelected: false
+      category: "splendorousGatherers"
     }
   ],
-  augmentedSplendorousDoH: [
+  augmentedSplendorousCrafters: [
     {
-      id: 0,
+      id: "t11",
       wpnName: "Augmented Splendorous Saw",
       wpnJob: "Carpenter",
       wpnJobShort: "CRP",
       icon: "/icons/endwalker-icons/splendorous/splendorous_saw.png",
-      isSelected: false
+      category: "augmentedSplendorousCrafters"
     },
     {
-      id: 1,
+      id: "t12",
       wpnName: "Augmented Splendorous Cross-pein Hammer",
       wpnJob: "Blacksmith",
       wpnJobShort: "BSM",
       icon: "/icons/endwalker-icons/splendorous/splendorous_cross_pein_hammer.png",
-      isSelected: false
+      category: "augmentedSplendorousCrafters"
     },
     {
-      id: 2,
+      id: "t13",
       wpnName: "Augmented Splendorous Raising Hammer",
       wpnJob: "Armorer",
       wpnJobShort: "ARM",
       icon: "/icons/endwalker-icons/splendorous/splendorous_raising_hammer.png",
-      isSelected: false
+      category: "augmentedSplendorousCrafters"
     },
     {
-      id: 3,
+      id: "t14",
       wpnName: "Augmented Splendorous Mallet",
       wpnJob: "Goldsmith",
       wpnJobShort: "GSM",
       icon: "/icons/endwalker-icons/splendorous/splendorous_mallet.png",
-      isSelected: false
+      category: "augmentedSplendorousCrafters"
     },
     {
-      id: 4,
+      id: "t15",
       wpnName: "Augmented Splendorous Knife",
       wpnJob: "Leatherworker",
       wpnJobShort: "LTW",
       icon: "/icons/endwalker-icons/splendorous/splendorous_knife.png",
-      isSelected: false
+      category: "augmentedSplendorousCrafters"
     },
     {
-      id: 5,
+      id: "t16",
       wpnName: "Augmented Splendorous Needle",
       wpnJob: "Weaver",
       wpnJobShort: "WVR",
       icon: "/icons/endwalker-icons/splendorous/splendorous_needle.png",
-      isSelected: false
+      category: "augmentedSplendorousCrafters"
     },
     {
-      id: 6,
+      id: "t17",
       wpnName: "Augmented Splendorous Alembic",
       wpnJob: "Alchemist",
       wpnJobShort: "ALC",
       icon: "/icons/endwalker-icons/splendorous/splendorous_alembic.png",
-      isSelected: false
+      category: "augmentedSplendorousCrafters"
     },
     {
-      id: 7,
+      id: "t18",
       wpnName: "Augmented Splendorous Frypan",
       wpnJob: "Culinarian",
       wpnJobShort: "CUL",
       icon: "/icons/endwalker-icons/splendorous/splendorous_frypan.png",
-      isSelected: false
+      category: "augmentedSplendorousCrafters"
     }
   ],
-  augmentedSplendorousDoL: [
+  augmentedSplendorousGatherers: [
     {
-      id: 8,
+      id: "t19",
       wpnName: "Augmented Splendorous Pickaxe",
       wpnJob: "Miner",
       wpnJobShort: "MIN",
       icon: "/icons/endwalker-icons/splendorous/splendorous_pickaxe.png",
-      isSelected: false
+      category: "augmentedSplendorousGatherers"
     },
     {
-      id: 9,
+      id: "t20",
       wpnName: "Augmented Splendorous Hatchet",
       wpnJob: "Botanist",
       wpnJobShort: "BTN",
       icon: "/icons/endwalker-icons/splendorous/splendorous_hatchet.png",
-      isSelected: false
+      category: "augmentedSplendorousGatherers"
     },
     {
-      id: 10,
+      id: "t21",
       wpnName: "Augmented Splendorous Fishing Rod",
       wpnJob: "Fisher",
       wpnJobShort: "FSH",
       icon: "/icons/endwalker-icons/splendorous/splendorous_fishing_rod.png",
-      isSelected: false
+      category: "augmentedSplendorousGatherers"
     }
   ],
-  crystallineDoH: [
+  crystallineCrafters: [
     {
-      id: 0,
+      id: "t22",
       wpnName: "Crystalline Saw",
       wpnJob: "Carpenter",
       wpnJobShort: "CRP",
       icon: "/icons/endwalker-icons/crystalline/crystalline_saw.png",
-      isSelected: false
+      category: "crystallineCrafters"
     },
     {
-      id: 1,
+      id: "t23",
       wpnName: "Crystalline Cross-pein Hammer",
       wpnJob: "Blacksmith",
       wpnJobShort: "BSM",
       icon: "/icons/endwalker-icons/crystalline/crystalline_cross_pein_hammer.png",
-      isSelected: false
+      category: "crystallineCrafters"
     },
     {
-      id: 2,
+      id: "t24",
       wpnName: "Crystalline Raising Hammer",
       wpnJob: "Armorer",
       wpnJobShort: "ARM",
       icon: "/icons/endwalker-icons/crystalline/crystalline_raising_hammer.png",
-      isSelected: false
+      category: "crystallineCrafters"
     },
     {
-      id: 3,
+      id: "t25",
       wpnName: "Crystalline Mallet",
       wpnJob: "Goldsmith",
       wpnJobShort: "GSM",
       icon: "/icons/endwalker-icons/crystalline/crystalline_mallet.png",
-      isSelected: false
+      category: "crystallineCrafters"
     },
     {
-      id: 4,
+      id: "t26",
       wpnName: "Crystalline Round Knife",
       wpnJob: "Leatherworker",
       wpnJobShort: "LTW",
       icon: "/icons/endwalker-icons/crystalline/crystalline_round_knife.png",
-      isSelected: false
+      category: "crystallineCrafters"
     },
     {
-      id: 5,
+      id: "t27",
       wpnName: "Crystalline Needle",
       wpnJob: "Weaver",
       wpnJobShort: "WVR",
       icon: "/icons/endwalker-icons/crystalline/crystalline_needle.png",
-      isSelected: false
+      category: "crystallineCrafters"
     },
     {
-      id: 6,
+      id: "t28",
       wpnName: "Crystalline Alembic",
       wpnJob: "Alchemist",
       wpnJobShort: "ALC",
       icon: "/icons/endwalker-icons/crystalline/crystalline_alembic.png",
-      isSelected: false
+      category: "crystallineCrafters"
     },
     {
-      id: 7,
+      id: "t29",
       wpnName: "Crystalline Frypan",
       wpnJob: "Culinarian",
       wpnJobShort: "CUL",
       icon: "/icons/endwalker-icons/crystalline/crystalline_frypan.png",
-      isSelected: false
+      category: "crystallineCrafters"
     }
   ],
-  crystallineDoL: [
+  crystallineGatherers: [
     {
-      id: 8,
+      id: "t30",
       wpnName: "Crystalline Pickaxe",
       wpnJob: "Miner",
       wpnJobShort: "MIN",
       icon: "/icons/endwalker-icons/crystalline/crystalline_pickaxe.png",
-      isSelected: false
+      category: "crystallineGatherers"
     },
     {
-      id: 9,
+      id: "t31",
       wpnName: "Crystalline Hatchet",
       wpnJob: "Botanist",
       wpnJobShort: "BTN",
       icon: "/icons/endwalker-icons/crystalline/crystalline_hatchet.png",
-      isSelected: false
+      category: "crystallineGatherers"
     },
     {
-      id: 10,
+      id: "t32",
       wpnName: "Crystalline Fishing Rod",
       wpnJob: "Fisher",
       wpnJobShort: "FSH",
       icon: "/icons/endwalker-icons/crystalline/crystalline_fishing_rod.png",
-      isSelected: false
+      category: "crystallineGatherers"
     }
   ],
-  choraZoisCrystallineDoH: [
+  choraZoisCrystallineCrafters: [
     {
-      id: 0,
+      id: "t33",
       wpnName: "Chora Zoi's Crystalline Saw",
       wpnJob: "Carpenter",
       wpnJobShort: "CRP",
       icon: "/icons/endwalker-icons/chora-zois-crystalline/chora_zois_crystalline_saw.png",
-      isSelected: false
+      category: "choraZoisCrystallineCrafters"
     },
     {
-      id: 1,
+      id: "t34",
       wpnName: "Chora Zoi's Crystalline Cross-pein Hammer",
       wpnJob: "Blacksmith",
       wpnJobShort: "BSM",
       icon: "/icons/endwalker-icons/chora-zois-crystalline/chora_zois_crystalline_cross_pein_hammer.png",
-      isSelected: false
+      category: "choraZoisCrystallineCrafters"
     },
     {
-      id: 2,
+      id: "t35",
       wpnName: "Chora Zoi's Crystalline Raising Hammer",
       wpnJob: "Armorer",
       wpnJobShort: "ARM",
       icon: "/icons/endwalker-icons/chora-zois-crystalline/chora_zois_crystalline_raising_hammer.png",
-      isSelected: false
+      category: "choraZoisCrystallineCrafters"
     },
     {
-      id: 3,
+      id: "t36",
       wpnName: "Chora Zoi's Crystalline Mallet",
       wpnJob: "Goldsmith",
       wpnJobShort: "GSM",
       icon: "/icons/endwalker-icons/chora-zois-crystalline/chora_zois_crystalline_mallet.png",
-      isSelected: false
+      category: "choraZoisCrystallineCrafters"
     },
     {
-      id: 4,
+      id: "t37",
       wpnName: "Chora Zoi's Crystalline Round Knife",
       wpnJob: "Leatherworker",
       wpnJobShort: "LTW",
       icon: "/icons/endwalker-icons/chora-zois-crystalline/chora_zois_crystalline_round_knife.png",
-      isSelected: false
+      category: "choraZoisCrystallineCrafters"
     },
     {
-      id: 5,
+      id: "t38",
       wpnName: "Chora Zoi's Crystalline Needle",
       wpnJob: "Weaver",
       wpnJobShort: "WVR",
       icon: "/icons/endwalker-icons/chora-zois-crystalline/chora_zois_crystalline_needle.png",
-      isSelected: false
+      category: "choraZoisCrystallineCrafters"
     },
     {
-      id: 6,
+      id: "t39",
       wpnName: "Chora Zoi's Crystalline Alembic",
       wpnJob: "Alchemist",
       wpnJobShort: "ALC",
       icon: "/icons/endwalker-icons/chora-zois-crystalline/chora_zois_crystalline_alembic.png",
-      isSelected: false
+      category: "choraZoisCrystallineCrafters"
     },
     {
-      id: 7,
+      id: "t40",
       wpnName: "Chora Zoi's Crystalline Frypan",
       wpnJob: "Culinarian",
       wpnJobShort: "CUL",
       icon: "/icons/endwalker-icons/chora-zois-crystalline/chora_zois_crystalline_frypan.png",
-      isSelected: false
+      category: "choraZoisCrystallineCrafters"
     }
   ],
-  choraZoisCrystallineDoL: [
+  choraZoisCrystallineGatherers: [
     {
-      id: 8,
+      id: "t41",
       wpnName: "Chora Zoi's Crystalline Pickaxe",
       wpnJob: "Miner",
       wpnJobShort: "MIN",
       icon: "/icons/endwalker-icons/chora-zois-crystalline/chora_zois_crystalline_pickaxe.png",
-      isSelected: false
+      category: "choraZoisCrystallineGatherers"
     },
     {
-      id: 9,
+      id: "t42",
       wpnName: "Chora Zoi's Crystalline Hatchet",
       wpnJob: "Botanist",
       wpnJobShort: "BTN",
       icon: "/icons/endwalker-icons/chora-zois-crystalline/chora_zois_crystalline_hatchet.png",
-      isSelected: false
+      category: "choraZoisCrystallineGatherers"
     },
     {
-      id: 10,
+      id: "t43",
       wpnName: "Chora Zoi's Crystalline Fishing Rod",
       wpnJob: "Fisher",
       wpnJobShort: "FSH",
       icon: "/icons/endwalker-icons/chora-zois-crystalline/chora_zois_crystalline_fishing_rod.png",
-      isSelected: false
+      category: "choraZoisCrystallineGatherers"
     }
   ],
-  brilliantDoH: [
+  brilliantCrafters: [
     {
-      id: 0,
+      id: "t44",
       wpnName: "Brilliant Saw",
       wpnJob: "Carpenter",
       wpnJobShort: "CRP",
       icon: "/icons/endwalker-icons/brilliant/brilliant_saw.png",
-      isSelected: false
+      category: "brilliantCrafters"
     },
     {
-      id: 1,
+      id: "t45",
       wpnName: "Brilliant Cross-pein Hammer",
       wpnJob: "Blacksmith",
       wpnJobShort: "BSM",
       icon: "/icons/endwalker-icons/brilliant/brilliant_cross_pein_hammer.png",
-      isSelected: false
+      category: "brilliantCrafters"
     },
     {
-      id: 2,
+      id: "t46",
       wpnName: "Brilliant Raising Hammer",
       wpnJob: "Armorer",
       wpnJobShort: "ARM",
       icon: "/icons/endwalker-icons/brilliant/brilliant_raising_hammer.png",
-      isSelected: false
+      category: "brilliantCrafters"
     },
     {
-      id: 3,
+      id: "t47",
       wpnName: "Brilliant Mallet",
       wpnJob: "Goldsmith",
       wpnJobShort: "GSM",
       icon: "/icons/endwalker-icons/brilliant/brilliant_mallet.png",
-      isSelected: false
+      category: "brilliantCrafters"
     },
     {
-      id: 4,
+      id: "t48",
       wpnName: "Brilliant Round Knife",
       wpnJob: "Leatherworker",
       wpnJobShort: "LTW",
       icon: "/icons/endwalker-icons/brilliant/brilliant_round_knife.png",
-      isSelected: false
+      category: "brilliantCrafters"
     },
     {
-      id: 5,
+      id: "t49",
       wpnName: "Brilliant Needle",
       wpnJob: "Weaver",
       wpnJobShort: "WVR",
       icon: "/icons/endwalker-icons/brilliant/brilliant_needle.png",
-      isSelected: false
+      category: "brilliantCrafters"
     },
     {
-      id: 6,
+      id: "t50",
       wpnName: "Brilliant Alembic",
       wpnJob: "Alchemist",
       wpnJobShort: "ALC",
       icon: "/icons/endwalker-icons/brilliant/brilliant_alembic.png",
-      isSelected: false
+      category: "brilliantCrafters"
     },
     {
-      id: 7,
+      id: "t51",
       wpnName: "Brilliant Frypan",
       wpnJob: "Culinarian",
       wpnJobShort: "CUL",
       icon: "/icons/endwalker-icons/brilliant/brilliant_frypan.png",
-      isSelected: false
+      category: "brilliantCrafters"
     }
   ],
-  brilliantDoL: [
+  brilliantGatherers: [
     {
-      id: 8,
+      id: "t52",
       wpnName: "Brilliant Pickaxe",
       wpnJob: "Miner",
       wpnJobShort: "MIN",
       icon: "/icons/endwalker-icons/brilliant/brilliant_pickaxe.png",
-      isSelected: false
+      category: "brilliantGatherers"
     },
     {
-      id: 9,
+      id: "t53",
       wpnName: "Brilliant Hatchet",
       wpnJob: "Botanist",
       wpnJobShort: "BTN",
       icon: "/icons/endwalker-icons/brilliant/brilliant_hatchet.png",
-      isSelected: false
+      category: "brilliantGatherers"
     },
     {
-      id: 10,
+      id: "t54",
       wpnName: "Brilliant Fishing Rod",
       wpnJob: "Fisher",
       wpnJobShort: "FSH",
       icon: "/icons/endwalker-icons/brilliant/brilliant_fishing_rod.png",
-      isSelected: false
+      category: "brilliantGatherers"
     }
   ],
-  vrandticVisionarysDoH: [
+  vrandticVisionarysCrafters: [
     {
-      id: 0,
+      id: "t55",
       wpnName: "Vrandtic Visionary's Saw",
       wpnJob: "Carpenter",
       wpnJobShort: "CRP",
       icon: "/icons/endwalker-icons/vrandtic-visionarys/vrandtic_visionarys_saw.png",
-      isSelected: false
+      category: "vrandticVisionarysCrafters"
     },
     {
-      id: 1,
+      id: "t56",
       wpnName: "Vrandtic Visionary's Cross-pein Hammer",
       wpnJob: "Blacksmith",
       wpnJobShort: "BSM",
       icon: "/icons/endwalker-icons/vrandtic-visionarys/vrandtic_visionarys_cross_pein_hammer.png",
-      isSelected: false
+      category: "vrandticVisionarysCrafters"
     },
     {
-      id: 2,
+      id: "t57",
       wpnName: "Vrandtic Visionary's Raising Hammer",
       wpnJob: "Armorer",
       wpnJobShort: "ARM",
       icon: "/icons/endwalker-icons/vrandtic-visionarys/vrandtic_visionarys_raising_hammer.png",
-      isSelected: false
+      category: "vrandticVisionarysCrafters"
     },
     {
-      id: 3,
+      id: "t58",
       wpnName: "Vrandtic Visionary's Mallet",
       wpnJob: "Goldsmith",
       wpnJobShort: "GSM",
       icon: "/icons/endwalker-icons/vrandtic-visionarys/vrandtic_visionarys_mallet.png",
-      isSelected: false
+      category: "vrandticVisionarysCrafters"
     },
     {
-      id: 4,
+      id: "t59",
       wpnName: "Vrandtic Visionary's Round Knife",
       wpnJob: "Leatherworker",
       wpnJobShort: "LTW",
       icon: "/icons/endwalker-icons/vrandtic-visionarys/vrandtic_visionarys_round_knife.png",
-      isSelected: false
+      category: "vrandticVisionarysCrafters"
     },
     {
-      id: 5,
+      id: "t60",
       wpnName: "Vrandtic Visionary's Needle",
       wpnJob: "Weaver",
       wpnJobShort: "WVR",
       icon: "/icons/endwalker-icons/vrandtic-visionarys/vrandtic_visionarys_needle.png",
-      isSelected: false
+      category: "vrandticVisionarysCrafters"
     },
     {
-      id: 6,
+      id: "t61",
       wpnName: "Vrandtic Visionary's Alembic",
       wpnJob: "Alchemist",
       wpnJobShort: "ALC",
       icon: "/icons/endwalker-icons/vrandtic-visionarys/vrandtic_visionarys_alembic.png",
-      isSelected: false
+      category: "vrandticVisionarysCrafters"
     },
     {
-      id: 7,
+      id: "t62",
       wpnName: "Vrandtic Visionary's Frypan",
       wpnJob: "Culinarian",
       wpnJobShort: "CUL",
       icon: "/icons/endwalker-icons/vrandtic-visionarys/vrandtic_visionarys_frypan.png",
-      isSelected: false
+      category: "vrandticVisionarysCrafters"
     }
   ],
-  vrandticVisionarysDoL: [
+  vrandticVisionarysGatherers: [
     {
-      id: 8,
+      id: "t63",
       wpnName: "Vrandtic Visionary's Pickaxe",
       wpnJob: "Miner",
       wpnJobShort: "MIN",
       icon: "/icons/endwalker-icons/vrandtic-visionarys/vrandtic_visionarys_pickaxe.png",
-      isSelected: false
+      category: "vrandticVisionarysGatherers"
     },
     {
-      id: 9,
+      id: "t64",
       wpnName: "Vrandtic Visionary's Hatchet",
       wpnJob: "Botanist",
       wpnJobShort: "BTN",
       icon: "/icons/endwalker-icons/vrandtic-visionarys/vrandtic_visionarys_hatchet.png",
-      isSelected: false
+      category: "vrandticVisionarysGatherers"
     },
     {
-      id: 10,
+      id: "t65",
       wpnName: "Vrandtic Visionary's Fishing Rod",
       wpnJob: "Fisher",
       wpnJobShort: "FSH",
       icon: "/icons/endwalker-icons/vrandtic-visionarys/vrandtic_visionarys_fishing_rod.png",
-      isSelected: false
+      category: "vrandticVisionarysGatherers"
     }
   ],
-  lodestarDoH: [
+  lodestarCrafters: [
     {
-      id: 0,
+      id: "t66",
       wpnName: "Lodestar Saw",
       wpnJob: "Carpenter",
       wpnJobShort: "CRP",
       icon: "/icons/endwalker-icons/lodestar/lodestar_saw.png",
-      isSelected: false
+      category: "lodestarCrafters"
     },
     {
-      id: 1,
+      id: "t67",
       wpnName: "Lodestar Cross-pein Hammer",
       wpnJob: "Blacksmith",
       wpnJobShort: "BSM",
       icon: "/icons/endwalker-icons/lodestar/lodestar_cross_pein_hammer.png",
-      isSelected: false
+      category: "lodestarCrafters"
     },
     {
-      id: 2,
+      id: "t68",
       wpnName: "Lodestar Raising Hammer",
       wpnJob: "Armorer",
       wpnJobShort: "ARM",
       icon: "/icons/endwalker-icons/lodestar/lodestar_raising_hammer.png",
-      isSelected: false
+      category: "lodestarCrafters"
     },
     {
-      id: 3,
+      id: "t69",
       wpnName: "Lodestar Mallet",
       wpnJob: "Goldsmith",
       wpnJobShort: "GSM",
       icon: "/icons/endwalker-icons/lodestar/lodestar_mallet.png",
-      isSelected: false
+      category: "lodestarCrafters"
     },
     {
-      id: 4,
+      id: "t70",
       wpnName: "Lodestar Round Knife",
       wpnJob: "Leatherworker",
       wpnJobShort: "LTW",
       icon: "/icons/endwalker-icons/lodestar/lodestar_round_knife.png",
-      isSelected: false
+      category: "lodestarCrafters"
     },
     {
-      id: 5,
+      id: "t71",
       wpnName: "Lodestar Needle",
       wpnJob: "Weaver",
       wpnJobShort: "WVR",
       icon: "/icons/endwalker-icons/lodestar/lodestar_needle.png",
-      isSelected: false
+      category: "lodestarCrafters"
     },
     {
-      id: 6,
+      id: "t72",
       wpnName: "Lodestar Alembic",
       wpnJob: "Alchemist",
       wpnJobShort: "ALC",
       icon: "/icons/endwalker-icons/lodestar/lodestar_alembic.png",
-      isSelected: false
+      category: "lodestarCrafters"
     },
     {
-      id: 7,
+      id: "t73",
       wpnName: "Lodestar Frypan",
       wpnJob: "Culinarian",
       wpnJobShort: "CUL",
       icon: "/icons/endwalker-icons/lodestar/lodestar_frypan.png",
-      isSelected: false
+      category: "lodestarCrafters"
     }
   ],
-  lodestarDoL: [
+  lodestarGatherers: [
     {
-      id: 8,
+      id: "t74",
       wpnName: "Lodestar Pickaxe",
       wpnJob: "Miner",
       wpnJobShort: "MIN",
       icon: "/icons/endwalker-icons/lodestar/lodestar_pickaxe.png",
-      isSelected: false
+      category: "lodestarGatherers"
     },
     {
-      id: 9,
+      id: "t75",
       wpnName: "Lodestar Hatchet",
       wpnJob: "Botanist",
       wpnJobShort: "BTN",
       icon: "/icons/endwalker-icons/lodestar/lodestar_hatchet.png",
-      isSelected: false
+      category: "lodestarGatherers"
     },
     {
-      id: 10,
+      id: "t76",
       wpnName: "Lodestar Fishing Rod",
       wpnJob: "Fisher",
       wpnJobShort: "FSH",
       icon: "/icons/endwalker-icons/lodestar/lodestar_fishing_rod.png",
-      isSelected: false
+      category: "lodestarGatherers"
     }
   ]
 };

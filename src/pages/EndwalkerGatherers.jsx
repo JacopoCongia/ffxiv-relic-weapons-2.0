@@ -3,17 +3,35 @@ import ToolsTable from "../components/ToolsTable";
 import ToolsHeader from "../components/ToolsHeader";
 import useWeaponsData from "../hooks/use-weapons-data";
 import data from "../../data";
+import { useCounter } from "../hooks/use-counter";
 
 function EndwalkerGatherers() {
-  const { weapons: tools } = useWeaponsData();
+  const { weapons: tools, ownedWeapons } = useWeaponsData();
+
+  const splendorousCounter = useCounter(ownedWeapons, "splendorousGatherers");
+  const augmentedSplendorousCounter = useCounter(
+    ownedWeapons,
+    "augmentedSplendorousGatherers"
+  );
+  const crystallineCounter = useCounter(ownedWeapons, "crystallineGatherers");
+  const choraZoisCrystallineCounter = useCounter(
+    ownedWeapons,
+    "choraZoisCrystallineGatherers"
+  );
+  const brilliantCounter = useCounter(ownedWeapons, "brilliantGatherers");
+  const vrandticVisionarysCounter = useCounter(
+    ownedWeapons,
+    "vrandticVisionarysGatherers"
+  );
+  const lodestarCounter = useCounter(ownedWeapons, "lodestarGatherers");
 
   return (
     <div className="min-[1000px]:pl-[250px] duration-[0.5s]">
       <ToolsHeader name={"Splendorous"} />
       <ToolsContainer
-        tools={tools.splendorousDoL}
-        category={"Gatherers"}
-        type={"splendorousDoL"}
+        tools={tools.splendorousGatherers}
+        category={"splendorousGatherers"}
+        counter={splendorousCounter}
       >
         <div className="text-white flex flex-col gap-3 mb-[2em] px-[2em] text-center">
           <p className="flex gap-2 justify-center flex-wrap">
@@ -44,9 +62,9 @@ function EndwalkerGatherers() {
       </ToolsContainer>
       <ToolsHeader name={"Augmented Splendorous"} />
       <ToolsContainer
-        tools={tools.augmentedSplendorousDoL}
-        category={"Gatherers"}
-        type={"augmentedSplendorousDoL"}
+        tools={tools.augmentedSplendorousGatherers}
+        category={"augmentedSplendorousGatherers"}
+        counter={augmentedSplendorousCounter}
       >
         <div className="text-white flex flex-col gap-3 mb-[2em] px-[2em] text-center">
           <p className="flex gap-2 justify-center flex-wrap">
@@ -85,9 +103,9 @@ function EndwalkerGatherers() {
       </ToolsContainer>
       <ToolsHeader name={"Crystalline"} />
       <ToolsContainer
-        tools={tools.crystallineDoL}
-        category={"Gatherers"}
-        type={"crystallineDoL"}
+        tools={tools.crystallineGatherers}
+        category={"crystallineGatherers"}
+        counter={crystallineCounter}
       >
         <div className="text-white flex flex-col gap-3 mb-[2em] px-[2em] text-center">
           <p className="flex gap-2 justify-center flex-wrap">
@@ -132,9 +150,9 @@ function EndwalkerGatherers() {
       </ToolsContainer>
       <ToolsHeader name={"Chora Zoi's Crystalline"} />
       <ToolsContainer
-        tools={tools.choraZoisCrystallineDoL}
-        category={"Gatherers"}
-        type={"choraZoisCrystallineDoL"}
+        tools={tools.choraZoisCrystallineGatherers}
+        category={"choraZoisCrystallineGatherers"}
+        counter={choraZoisCrystallineCounter}
       >
         <div className="text-white flex flex-col gap-3 mb-[2em] px-[2em] text-center">
           <p className="flex gap-2 justify-center flex-wrap">
@@ -179,9 +197,9 @@ function EndwalkerGatherers() {
       </ToolsContainer>
       <ToolsHeader name={"Brilliant"} />
       <ToolsContainer
-        tools={tools.brilliantDoL}
-        category={"Gatherers"}
-        type={"brilliantDoL"}
+        tools={tools.brilliantGatherers}
+        category={"brilliantGatherers"}
+        counter={brilliantCounter}
       >
         <div className="text-white flex flex-col gap-3 mb-[2em] px-[2em] text-center">
           <p className="flex gap-2 justify-center flex-wrap">
@@ -226,9 +244,9 @@ function EndwalkerGatherers() {
       </ToolsContainer>
       <ToolsHeader name={"Vrandtic Visionary's"} />
       <ToolsContainer
-        tools={tools.vrandticVisionarysDoL}
-        category={"Gatherers"}
-        type={"vrandticVisionarys"}
+        tools={tools.vrandticVisionarysGatherers}
+        category={"vrandticVisionarysGatherers"}
+        counter={vrandticVisionarysCounter}
       >
         <div className="text-white flex flex-col gap-3 mb-[2em] px-[2em] text-center">
           <p className="flex gap-2 justify-center flex-wrap">
@@ -267,9 +285,9 @@ function EndwalkerGatherers() {
       </ToolsContainer>
       <ToolsHeader name={"Lodestar"} />
       <ToolsContainer
-        tools={tools.lodestarDoL}
-        category={"Gatherers"}
-        type={"lodestar"}
+        tools={tools.lodestarGatherers}
+        category={"lodestarGatherers"}
+        counter={lodestarCounter}
       >
         <div className="text-white flex flex-col gap-3 mb-[2em] px-[2em] text-center">
           <p className="flex gap-2 justify-center flex-wrap">

@@ -28,10 +28,10 @@ function WeaponsDataProvider({ children }) {
 
   // Testing new method to select weapons
 
-  console.log(ownedWeapons);
-
   function selectWeapon(weapon) {
     const isItInArray = ownedWeapons.some((el) => el.id === weapon.id);
+
+    console.log(ownedWeapons);
 
     if (!isItInArray) {
       setOwnedWeapons((prevOwnedWeapons) => {
@@ -41,7 +41,7 @@ function WeaponsDataProvider({ children }) {
             id: weapon.id,
             name: weapon.wpnName,
             category: weapon.category,
-            shield: weapon.shield
+            shield: weapon.shield || null
           }
         ];
       });
@@ -61,7 +61,7 @@ function WeaponsDataProvider({ children }) {
         id: el.id,
         name: el.wpnName,
         category: el.category,
-        shield: el.shield
+        shield: el.shield || null
       };
     });
 
@@ -107,14 +107,14 @@ function WeaponsDataProvider({ children }) {
       const weaponsFromDb = await getWeapons(currentUser);
 
       if (weaponsFromDb) {
-        setWeapons(weaponsFromDb);
+        setOwnedWeapons(weaponsFromDb);
       }
     }
 
     if (currentUser?.emailVerified) {
       getWeaponsFromDb();
     } else {
-      setWeapons(data);
+      setOwnedWeapons([]);
     }
   }, [currentUser]);
 
@@ -124,9 +124,9 @@ function WeaponsDataProvider({ children }) {
     // }
 
     if (currentUser?.emailVerified) {
-      addToDb(weapons, currentUser);
+      addToDb(ownedWeapons, currentUser);
     }
-  }, [weapons]);
+  }, [ownedWeapons]);
 
   const valuesToShare = {
     weapons,

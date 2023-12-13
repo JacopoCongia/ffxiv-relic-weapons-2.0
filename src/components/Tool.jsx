@@ -5,7 +5,7 @@ function Tool({ tool }) {
   const { selectWeapon, ownedWeapons } = useWeaponsData();
   const { currentUser } = useAuth();
 
-  const isSelected = ownedWeapons.some((el) => el === tool.id); // Testing new weapon method
+  const isSelected = ownedWeapons.some((el) => el.id === tool.id); // Testing new weapon method
 
   const styles = {
     opacity: isSelected ? "25%" : "100%"
@@ -19,7 +19,7 @@ function Tool({ tool }) {
             {tool.wpnName}
           </span>
           <div
-            onClick={() => selectWeapon(tool.id)}
+            onClick={() => selectWeapon(tool)}
             style={styles}
             className="cursor-pointer text-[14px]"
             id={tool.id}
