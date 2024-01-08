@@ -3278,7 +3278,7 @@ const data = {
       wpnName: "Vrandtic Visionary's Cross-pein Hammer",
       wpnJob: "Blacksmith",
       wpnJobShort: "BSM",
-      icon: "/icons/endwalker-icons/vrandtic-visionarys/vrandtic_visionarys_cross_pein_hammer.png",
+      icon: "/icons/endwalker-icons/vrandtic-visionarys/vrandtic_visionarys_cross-pein_hammer.png",
       category: "vrandticVisionarysCrafters"
     },
     {
@@ -3370,7 +3370,7 @@ const data = {
       wpnName: "Lodestar Cross-pein Hammer",
       wpnJob: "Blacksmith",
       wpnJobShort: "BSM",
-      icon: "/icons/endwalker-icons/lodestar/lodestar_cross_pein_hammer.png",
+      icon: "/icons/endwalker-icons/lodestar/lodestar_cross-pein_hammer.png",
       category: "lodestarCrafters"
     },
     {

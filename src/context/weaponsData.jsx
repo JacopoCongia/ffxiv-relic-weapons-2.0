@@ -31,8 +31,6 @@ function WeaponsDataProvider({ children }) {
   function selectWeapon(weapon) {
     const isItInArray = ownedWeapons.some((el) => el.id === weapon.id);
 
-    console.log(ownedWeapons);
-
     if (!isItInArray) {
       setOwnedWeapons((prevOwnedWeapons) => {
         return [
