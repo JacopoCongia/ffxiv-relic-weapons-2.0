@@ -16,6 +16,7 @@ function Endwalker() {
     ownedWeapons,
     "majesticManderville"
   );
+  const mandervillousCounter = useCounter(ownedWeapons, "mandervillous");
 
   return (
     <div className="w-[100%] duration-[0.5s] min-[1000px]:pl-[250px]">
@@ -61,6 +62,20 @@ function Endwalker() {
         checkAll={checkAll}
         uncheckAll={uncheckAll}
         counter={majesticMandervilleCounter}
+      />
+      <WeaponsSection
+        weapons={weapons.mandervillous}
+        ownedWeapons={ownedWeapons}
+        totalWeapons={19}
+        name="Mandervillous"
+        category="mandervillous"
+        patchInfo="iLvl 665 (Patch 6.55)"
+        materials={data.materials}
+        tomestones={data.tomestones.causality}
+        tomestoneAmount={1500}
+        checkAll={checkAll}
+        uncheckAll={uncheckAll}
+        counter={mandervillousCounter}
       />
     </div>
   );

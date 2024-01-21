@@ -37,6 +37,14 @@ const data = {
       category: "majesticManderville"
     },
     {
+      id: "mew3",
+      name: "Cosmic Crystallite",
+      icon: "/icons/endwalker-icons/materials/cosmic_crystallite.png",
+      reqTotal: 57,
+      reqPerWeapon: 3,
+      category: "mandervillous"
+    },
+    {
       id: 3,
       name: "Thavnairian Scalepowder",
       icon: "/icons/shadowbringers-icons/materials/thavnairian_scalepowder.png",
@@ -1134,6 +1142,169 @@ const data = {
       wpnJobShort: "SGE",
       icon: "/icons/endwalker-icons/majestic-manderville/majestic_manderville_wings.png",
       category: "majesticManderville"
+    }
+  ],
+  mandervillous: [
+    {
+      id: "ew60",
+      wpnName: "Mandervillous Falchion",
+      wpnJob: "Paladin",
+      wpnJobShort: "PLD",
+      icon: "/icons/endwalker-icons/mandervillous/mandervillous_sword.png",
+      category: "mandervillous"
+    },
+    {
+      id: "ew61",
+      wpnName: "Mandervillous Kite Shield",
+      wpnJob: "Paladin",
+      wpnJobShort: "PLD",
+      icon: "/icons/endwalker-icons/mandervillous/mandervillous_kite_shield.png",
+      category: "mandervillous",
+      shield: true
+    },
+    {
+      id: "ew62",
+      wpnName: "Mandervillous Battleaxe",
+      wpnJob: "Warrior",
+      wpnJobShort: "WAR",
+      icon: "/icons/endwalker-icons/mandervillous/mandervillous_battleaxe.png",
+      category: "mandervillous"
+    },
+    {
+      id: "ew63",
+      wpnName: "Mandervillous Greatsword",
+      wpnJob: "Dark Knight",
+      wpnJobShort: "DRK",
+      icon: "/icons/endwalker-icons/mandervillous/mandervillous_greatsword.png",
+      category: "mandervillous"
+    },
+    {
+      id: "ew64",
+      wpnName: "Mandervillous Gunblade",
+      wpnJob: "Gunbreaker",
+      wpnJobShort: "GNB",
+      icon: "/icons/endwalker-icons/mandervillous/mandervillous_gunblade.png",
+      category: "mandervillous"
+    },
+    {
+      id: "ew65",
+      wpnName: "Mandervillous Trident",
+      wpnJob: "Dragoon",
+      wpnJobShort: "DRG",
+      icon: "/icons/endwalker-icons/mandervillous/mandervillous_trident.png",
+      category: "mandervillous"
+    },
+    {
+      id: "ew66",
+      wpnName: "Mandervillous Zaghnal",
+      wpnJob: "Reaper",
+      wpnJobShort: "RPR",
+      icon: "/icons/endwalker-icons/mandervillous/mandervillous_zaghnal.png",
+      category: "mandervillous"
+    },
+    {
+      id: "ew67",
+      wpnName: "Mandervillous Fists",
+      wpnJob: "Monk",
+      wpnJobShort: "MNK",
+      icon: "/icons/endwalker-icons/mandervillous/mandervillous_fists.png",
+      category: "mandervillous"
+    },
+    {
+      id: "ew68",
+      wpnName: "Mandervillous Samurai Blade",
+      wpnJob: "Samurai",
+      wpnJobShort: "SAM",
+      icon: "/icons/endwalker-icons/mandervillous/mandervillous_samurai_blade.png",
+      category: "mandervillous"
+    },
+    {
+      id: "ew69",
+      wpnName: "Mandervillous Knives",
+      wpnJob: "Ninja",
+      wpnJobShort: "NIN",
+      icon: "/icons/endwalker-icons/mandervillous/mandervillous_knives.png",
+      category: "mandervillous"
+    },
+    {
+      id: "ew70",
+      wpnName: "Mandervillous Compound Bow",
+      wpnJob: "Bard",
+      wpnJobShort: "BRD",
+      icon: "/icons/endwalker-icons/mandervillous/mandervillous_compound_bow.png",
+      category: "mandervillous"
+    },
+    {
+      id: "ew71",
+      wpnName: "Mandervillous Revolver",
+      wpnJob: "Machinist",
+      wpnJobShort: "MCH",
+      icon: "/icons/endwalker-icons/mandervillous/mandervillous_revolver.png",
+      category: "mandervillous"
+    },
+    {
+      id: "ew72",
+      wpnName: "Mandervillous Chakrams",
+      wpnJob: "Dancer",
+      wpnJobShort: "DNC",
+      icon: "/icons/endwalker-icons/mandervillous/mandervillous_chakrams.png",
+      category: "mandervillous"
+    },
+    {
+      id: "ew73",
+      wpnName: "Mandervillous Rod",
+      wpnJob: "Black Mage",
+      wpnJobShort: "BLM",
+      icon: "/icons/endwalker-icons/mandervillous/mandervillous_rod.png",
+      category: "mandervillous"
+    },
+    {
+      id: "ew74",
+      wpnName: "Mandervillous Index",
+      wpnJob: "Summoner",
+      wpnJobShort: "SMN",
+      icon: "/icons/endwalker-icons/mandervillous/mandervillous_index.png",
+      category: "mandervillous"
+    },
+    {
+      id: "ew75",
+      wpnName: "Mandervillous Rapier",
+      wpnJob: "Red Mage",
+      wpnJobShort: "RDM",
+      icon: "/icons/endwalker-icons/mandervillous/mandervillous_rapier.png",
+      category: "mandervillous"
+    },
+    {
+      id: "ew76",
+      wpnName: "Mandervillous Cane",
+      wpnJob: "White Mage",
+      wpnJobShort: "WHM",
+      icon: "/icons/endwalker-icons/mandervillous/mandervillous_cane.png",
+      category: "mandervillous"
+    },
+    {
+      id: "ew77",
+      wpnName: "Mandervillous Codex",
+      wpnJob: "Scholar",
+      wpnJobShort: "SCH",
+      icon: "/icons/endwalker-icons/mandervillous/mandervillous_codex.png",
+      category: "mandervillous"
+    },
+    {
+      id: "ew78",
+      wpnName: "Mandervillous Torquetum",
+      wpnJob: "Astrologian",
+      wpnJobShort: "AST",
+      icon: "/icons/endwalker-icons/mandervillous/mandervillous_torquetum.png",
+      category: "mandervillous"
+    },
+    {
+      id: "ew79",
+      wpnName: "Mandervillous Wings",
+      wpnJob: "Sage",
+      wpnJobShort: "SGE",
+      icon: "/icons/endwalker-icons/mandervillous/mandervillous_wings.png",
+      category: "mandervillous"
     }
   ],
   resistance: [
