@@ -1150,7 +1150,7 @@ const data = {
       wpnName: "Mandervillous Falchion",
       wpnJob: "Paladin",
       wpnJobShort: "PLD",
-      icon: "/icons/endwalker-icons/mandervillous/mandervillous_sword.png",
+      icon: "/icons/endwalker-icons/mandervillous/mandervillous_falchion.png",
       category: "mandervillous"
     },
     {
