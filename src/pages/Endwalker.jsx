@@ -2,21 +2,9 @@ import data from "../../data";
 import useWeaponsData from "../hooks/use-weapons-data";
 import Header from "../components/Header";
 import WeaponsSection from "../components/WeaponsSection";
-import { useCounter } from "../hooks/use-counter";
 
 function Endwalker() {
   const { weapons, ownedWeapons, checkAll, uncheckAll } = useWeaponsData();
-
-  const mandervilleCounter = useCounter(ownedWeapons, "manderville");
-  const amazingMandervilleCounter = useCounter(
-    ownedWeapons,
-    "amazingManderville"
-  );
-  const majesticMandervilleCounter = useCounter(
-    ownedWeapons,
-    "majesticManderville"
-  );
-  const mandervillousCounter = useCounter(ownedWeapons, "mandervillous");
 
   return (
     <div className="w-[100%] duration-[0.5s] min-[1000px]:pl-[250px]">
@@ -33,7 +21,6 @@ function Endwalker() {
         tomestoneAmount={1500}
         checkAll={checkAll}
         uncheckAll={uncheckAll}
-        counter={mandervilleCounter}
       />
       <WeaponsSection
         weapons={weapons.amazingManderville}
@@ -47,7 +34,6 @@ function Endwalker() {
         tomestoneAmount={1500}
         checkAll={checkAll}
         uncheckAll={uncheckAll}
-        counter={amazingMandervilleCounter}
       />
       <WeaponsSection
         weapons={weapons.majesticManderville}
@@ -61,7 +47,6 @@ function Endwalker() {
         tomestoneAmount={1500}
         checkAll={checkAll}
         uncheckAll={uncheckAll}
-        counter={majesticMandervilleCounter}
       />
       <WeaponsSection
         weapons={weapons.mandervillous}
@@ -75,7 +60,6 @@ function Endwalker() {
         tomestoneAmount={1500}
         checkAll={checkAll}
         uncheckAll={uncheckAll}
-        counter={mandervillousCounter}
       />
     </div>
   );

@@ -5,6 +5,7 @@ import MaterialsContainer from "./MaterialsContainer";
 import CheckUncheck from "./CheckUncheck";
 import useToggle from "../hooks/use-toggle";
 import useAuth from "../hooks/use-auth";
+import { useCounter } from "../hooks/use-counter";
 
 const WeaponsSectionContext = createContext();
 
@@ -22,10 +23,11 @@ function WeaponsSection({
   checkAll,
   uncheckAll,
   notes,
-  counter
 }) {
   const [open, setOpen] = useToggle(true);
   const { currentUser } = useAuth();
+
+  const counter = useCounter(ownedWeapons, category);
 
   return (
     <>
