@@ -1,13 +1,13 @@
 import Materials from "./Materials";
 
 function MaterialsContainer({
-  tomestones,
-  tomestoneAmount,
-  materials,
   category,
-  notes,
   counter,
-  totalWeapons
+  materials,
+  notes,
+  tomestoneAmount,
+  tomestones,
+  totalWeapons,
 }) {
   const updatedMaterials = materials.filter(
     (material) => material.category === category

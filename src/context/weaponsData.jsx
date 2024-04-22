@@ -12,21 +12,24 @@ function WeaponsDataProvider({ children }) {
   const [ownedWeapons, setOwnedWeapons] = useState([]);
   const { currentUser } = useAuth();
 
-  // function selectWeapon(name, key, wpnCategory) {
-  //   setWeapons((oldWeapons) => ({
-  //     ...oldWeapons,
-  //     [key]: wpnCategory.map((weapon) => {
-  //       return weapon.wpnName === name
-  //         ? {
-  //             ...weapon,
-  //             isSelected: !weapon.isSelected
-  //           }
-  //         : weapon;
-  //     })
-  //   }));
-  // }
+  // SECTION VISIBILITY START
 
-  // Testing new method to select weapons
+  const storedVisibility = JSON.parse(localStorage.getItem("visibility"));
+
+  const [visibility, setVisibility] = useState(storedVisibility || {});
+
+  function handleVisibility(category, isOpen) {
+    setVisibility((prevVisibility) => ({
+      ...prevVisibility,
+      [category]: !isOpen,
+    }));
+  }
+
+  useEffect(() => {
+    localStorage.setItem("visibility", JSON.stringify(visibility));
+  }, [visibility]);
+
+  // SECTION VISIBILITY END
 
   function selectWeapon(weapon) {
     const isItInArray = ownedWeapons.some((el) => el.id === weapon.id);
@@ -39,8 +42,8 @@ function WeaponsDataProvider({ children }) {
             id: weapon.id,
             name: weapon.wpnName,
             category: weapon.category,
-            shield: weapon.shield || null
-          }
+            shield: weapon.shield || null,
+          },
         ];
       });
     } else {
@@ -51,15 +54,13 @@ function WeaponsDataProvider({ children }) {
     }
   }
 
-  ////////////////////////////////////////////
-
   function checkAll(weapons) {
     const checkedWeapons = weapons.map((el) => {
       return {
         id: el.id,
         name: el.wpnName,
         category: el.category,
-        shield: el.shield || null
+        shield: el.shield || null,
       };
     });
 
@@ -85,22 +86,6 @@ function WeaponsDataProvider({ children }) {
   }
 
   useEffect(() => {
-    // const APP_VERSION = "1.0.2";
-
-    // if (
-    //   typeof localStorage.APP_VERSION === "undefined" ||
-    //   localStorage.APP_VERSION === null
-    // ) {
-    //   localStorage.setItem("APP_VERSION", APP_VERSION);
-    // }
-
-    // if (localStorage.APP_VERSION != APP_VERSION) {
-    //   localStorage.clear();
-    // }
-
-    // let storedWeapons = JSON.parse(localStorage.getItem("weapons")) || data;
-
-    // setWeapons(storedWeapons);
     async function getWeaponsFromDb() {
       const weaponsFromDb = await getWeapons(currentUser);
 
@@ -117,10 +102,6 @@ function WeaponsDataProvider({ children }) {
   }, [currentUser]);
 
   useEffect(() => {
-    // if (weapons !== data) {
-    //   localStorage.setItem("weapons", JSON.stringify(weapons));
-    // }
-
     if (currentUser?.emailVerified) {
       addToDb(ownedWeapons, currentUser);
     }
@@ -132,7 +113,9 @@ function WeaponsDataProvider({ children }) {
     selectWeapon,
     checkAll,
     uncheckAll,
-    ownedWeapons // Testing new weapon sorting
+    ownedWeapons, // Testing new weapon sorting
+    visibility, // Section visibility object
+    handleVisibility, // Section visibility change
   };
 
   return (

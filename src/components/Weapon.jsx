@@ -8,7 +8,7 @@ function Weapon({ weapon }) {
   const isSelected = ownedWeapons.some((el) => el.id === weapon.id); // Testing new weapon method
 
   const styles = {
-    opacity: isSelected ? "25%" : "100%"
+    opacity: isSelected ? "25%" : "100%",
   };
   return (
     <div className="group flex text-center flex-col relative items-center text-white text-[0.9rem] gap-1">

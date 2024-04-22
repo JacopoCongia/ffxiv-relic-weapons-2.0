@@ -1,12 +1,10 @@
 import Weapon from "./Weapon";
 
-function WeaponsContainer({ weapons, type }) {
+function WeaponsContainer({ weapons }) {
   const weaponElements = weapons.map((weapon) => (
     <Weapon
       key={weapon.id}
       weapon={weapon}
-      wpnCategory={weapons}
-      type={type}
     />
   ));
 
@@ -18,4 +16,3 @@ function WeaponsContainer({ weapons, type }) {
 }
 
 export default WeaponsContainer;
-

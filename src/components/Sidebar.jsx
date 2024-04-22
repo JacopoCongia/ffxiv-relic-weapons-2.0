@@ -27,18 +27,18 @@ function Sidebar({ isVisible, setIsVisible }) {
       name: "Endwalker",
       to: "/endwalker",
       craftersTo: "/crafters",
-      gatherersTo: "/gatherers"
+      gatherersTo: "/gatherers",
     },
     {
       name: "Shadowbringers",
       to: "/shadowbringers",
-      crafterTo: null
+      crafterTo: null,
     },
     {
       name: "Stormblood",
       to: "/stormblood",
-      crafterTo: null
-    }
+      crafterTo: null,
+    },
   ];
 
   const linksEl = links.map((link) => {

@@ -8,7 +8,7 @@ function ToolsTable({
   fisherMaterialOne,
   fisherMaterialTwo,
   fisherMaterialThree,
-  fisherMaterialFour
+  fisherMaterialFour,
 }) {
   return (
     <>
