@@ -2,7 +2,7 @@ import {
   Route,
   RouterProvider,
   createBrowserRouter,
-  createRoutesFromElements
+  createRoutesFromElements,
 } from "react-router-dom";
 
 import Home from "./pages/Home";

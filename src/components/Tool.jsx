@@ -8,7 +8,7 @@ function Tool({ tool }) {
   const isSelected = ownedWeapons.some((el) => el.id === tool.id); // Testing new weapon method
 
   const styles = {
-    opacity: isSelected ? "25%" : "100%"
+    opacity: isSelected ? "25%" : "100%",
   };
 
   return (

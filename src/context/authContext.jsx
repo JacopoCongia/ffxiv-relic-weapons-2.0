@@ -10,7 +10,7 @@ import {
   signOut,
   deleteUser,
   EmailAuthProvider,
-  reauthenticateWithCredential
+  reauthenticateWithCredential,
 } from "firebase/auth";
 
 const AuthContext = createContext();
@@ -131,7 +131,7 @@ function AuthContextProvider({ children }) {
         logOut,
         deleteAccount,
         currentUser,
-        error
+        error,
       }}
     >
       {children}

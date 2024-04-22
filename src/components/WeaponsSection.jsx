@@ -1,13 +1,10 @@
-import { createContext } from "react";
 import WeaponsContainer from "./WeaponsContainer";
 import WeaponsHeader from "./WeaponsHeader";
 import MaterialsContainer from "./MaterialsContainer";
 import CheckUncheck from "./CheckUncheck";
-import useToggle from "../hooks/use-toggle";
 import useAuth from "../hooks/use-auth";
+import useWeaponsData from "../hooks/use-weapons-data";
 import { useCounter } from "../hooks/use-counter";
-
-const WeaponsSectionContext = createContext();
 
 function WeaponsSection({
   weapons,
@@ -16,7 +13,6 @@ function WeaponsSection({
   patchInfo,
   category,
   name,
-  selectWeapon,
   materials,
   tomestones,
   tomestoneAmount,
@@ -24,38 +20,30 @@ function WeaponsSection({
   uncheckAll,
   notes,
 }) {
-  const [open, setOpen] = useToggle(true);
   const { currentUser } = useAuth();
+  const { visibility } = useWeaponsData();
 
   const counter = useCounter(ownedWeapons, category);
 
   return (
     <>
-      <WeaponsSectionContext.Provider value={{ open, setOpen }}>
-        <WeaponsHeader
-          ownedWeapons={ownedWeapons}
-          weapons={weapons}
-          totalWeapons={totalWeapons}
-          patchInfo={patchInfo}
-          category={category}
-          name={name}
-          counter={counter}
-        />
-      </WeaponsSectionContext.Provider>
-      {open && (
+      <WeaponsHeader
+        category={category}
+        counter={counter}
+        name={name}
+        patchInfo={patchInfo}
+        totalWeapons={totalWeapons}
+      />
+      {visibility[category] && (
         <div className="flex flex-col items-center justify-center m-auto bg-stone-800 py-10 px-[3em] text-white max-w-[1000px]">
-          <WeaponsContainer
-            weapons={weapons}
-            category={category}
-            selectWeapon={selectWeapon}
-          />
+          <WeaponsContainer weapons={weapons} />
           <MaterialsContainer
-            materials={materials}
             category={category}
-            tomestones={tomestones}
-            tomestoneAmount={tomestoneAmount}
-            notes={notes || null}
             counter={counter}
+            materials={materials}
+            notes={notes || null}
+            tomestoneAmount={tomestoneAmount}
+            tomestones={tomestones}
             totalWeapons={totalWeapons}
           />
           {currentUser?.emailVerified && (
@@ -73,4 +61,3 @@ function WeaponsSection({
 }
 
 export default WeaponsSection;
-export { WeaponsSectionContext };

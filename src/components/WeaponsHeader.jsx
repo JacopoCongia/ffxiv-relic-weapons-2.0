@@ -1,10 +1,10 @@
-import { useContext } from "react";
 import { GoChevronDown, GoChevronUp } from "react-icons/go";
 import { BsCheckLg } from "react-icons/bs";
-import { WeaponsSectionContext } from "./WeaponsSection";
 
-function WeaponsHeader({ totalWeapons, name, patchInfo, counter }) {
-  const { open, setOpen } = useContext(WeaponsSectionContext);
+import useWeaponsData from "../hooks/use-weapons-data";
+
+function WeaponsHeader({ category, counter, name, patchInfo, totalWeapons }) {
+  const { visibility, handleVisibility } = useWeaponsData();
 
   const check =
     counter?.length === totalWeapons ? (
@@ -13,8 +13,8 @@ function WeaponsHeader({ totalWeapons, name, patchInfo, counter }) {
 
   return (
     <div
+      onClick={() => handleVisibility(category, visibility[category])}
       className="mb-[1px] flex cursor-pointer items-center justify-center gap-2 bg-sky-900 px-5 py-3 text-[16px] text-white hover:opacity-95 sm:text-[20px]"
-      onClick={setOpen}
     >
       <p className="flex items-center text-[14px] font-bold sm:text-[18px] ">
         {check} {counter?.length}/{totalWeapons}
@@ -25,7 +25,7 @@ function WeaponsHeader({ totalWeapons, name, patchInfo, counter }) {
           {patchInfo}
         </span>
       </h4>
-      {!open ? (
+      {!visibility[category] ? (
         <GoChevronDown className="text-2xl sm:text-3xl" />
       ) : (
         <GoChevronUp className="text-2xl sm:text-3xl" />

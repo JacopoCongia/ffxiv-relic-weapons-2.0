@@ -1,35 +1,18 @@
 import ToolsContainer from "../components/ToolsContainer";
-import ToolsHeader from "../components/ToolsHeader";
 import useWeaponsData from "../hooks/use-weapons-data";
-import { useCounter } from "../hooks/use-counter";
 
 function EndwalkerCrafters() {
-  const { weapons: tools, ownedWeapons } = useWeaponsData();
-
-  const splendorousCounter = useCounter(ownedWeapons, "splendorousCrafters");
-  const augmentedSplendorousCounter = useCounter(
-    ownedWeapons,
-    "augmentedSplendorousCrafters"
-  );
-  const crystallineCounter = useCounter(ownedWeapons, "crystallineCrafters");
-  const choraZoisCrystallineCounter = useCounter(
-    ownedWeapons,
-    "choraZoisCrystallineCrafters"
-  );
-  const brilliantCounter = useCounter(ownedWeapons, "brilliantCrafters");
-  const vrandticVisionarysCounter = useCounter(
-    ownedWeapons,
-    "vrandticVisionarysCrafters"
-  );
-  const lodestarCounter = useCounter(ownedWeapons, "lodestarCrafters");
+  const { weapons: tools } = useWeaponsData();
 
   return (
     <div className="min-[1000px]:pl-[250px] duration-[0.5s]">
-      <ToolsHeader name={"Splendorous"} />
+      <div className="py-7 px-4 bg-[#4e3727] text-[#fae6c8] text-center text-[1.9rem] font-[700]">
+        Crafters
+      </div>
       <ToolsContainer
         tools={tools.splendorousCrafters}
         category={"splendorousCrafters"}
-        counter={splendorousCounter}
+        name={"Splendorous"}
       >
         <div className="text-white flex flex-col gap-3 mb-[2em] px-[2em] text-center">
           <p className="flex gap-2 justify-center flex-wrap">
@@ -58,11 +41,10 @@ function EndwalkerCrafters() {
           </p>
         </div>
       </ToolsContainer>
-      <ToolsHeader name={"Augmented Splendorous"} />
       <ToolsContainer
         tools={tools.augmentedSplendorousCrafters}
         category={"augmentedSplendorousCrafters"}
-        counter={augmentedSplendorousCounter}
+        name={"Augmented Splendorous"}
       >
         <div className="text-white flex flex-col gap-3 mb-[2em] px-[2em] text-center">
           <p className="flex gap-2 justify-center flex-wrap">
@@ -77,11 +59,10 @@ function EndwalkerCrafters() {
           </p>
         </div>
       </ToolsContainer>
-      <ToolsHeader name={"Crystalline"} />
       <ToolsContainer
         tools={tools.crystallineCrafters}
         category={"crystallineCrafters"}
-        counter={crystallineCounter}
+        name={"Crystalline"}
       >
         <div className="text-white flex flex-col gap-3 mb-[2em] px-[2em] text-center">
           <p className="flex gap-2 justify-center flex-wrap">
@@ -96,11 +77,10 @@ function EndwalkerCrafters() {
           </p>
         </div>
       </ToolsContainer>
-      <ToolsHeader name={"Chora Zoi's Crystalline"} />
       <ToolsContainer
         tools={tools.choraZoisCrystallineCrafters}
         category={"choraZoisCrystallineCrafters"}
-        counter={choraZoisCrystallineCounter}
+        name={"Chora Zoi's Crystalline"}
       >
         <div className="text-white flex flex-col gap-3 mb-[2em] px-[2em] text-center">
           <p className="flex gap-2 justify-center flex-wrap">
@@ -115,11 +95,10 @@ function EndwalkerCrafters() {
           </p>
         </div>
       </ToolsContainer>
-      <ToolsHeader name={"Brilliant"} />
       <ToolsContainer
         tools={tools.brilliantCrafters}
         category={"brilliantCrafters"}
-        counter={brilliantCounter}
+        name={"Brilliant"}
       >
         <div className="text-white flex flex-col gap-3 mb-[2em] px-[2em] text-center">
           <p className="flex gap-2 justify-center flex-wrap">
@@ -134,11 +113,10 @@ function EndwalkerCrafters() {
           </p>
         </div>
       </ToolsContainer>
-      <ToolsHeader name={"Vrandtic Visionary's"} />
       <ToolsContainer
         tools={tools.vrandticVisionarysCrafters}
         category={"vrandticVisionarysCrafters"}
-        counter={vrandticVisionarysCounter}
+        name={"Vrandtic Visionary's"}
       >
         <div className="text-white flex flex-col gap-3 mb-[2em] px-[2em] text-center">
           <p className="flex gap-2 justify-center flex-wrap">
@@ -153,11 +131,10 @@ function EndwalkerCrafters() {
           </p>
         </div>
       </ToolsContainer>
-      <ToolsHeader name={"Lodestar"} />
       <ToolsContainer
         tools={tools.lodestarCrafters}
         category={"lodestarCrafters"}
-        counter={lodestarCounter}
+        name={"Lodestar"}
       >
         <div className="text-white flex flex-col gap-3 mb-[2em] px-[2em] text-center">
           <p className="flex gap-2 justify-center flex-wrap">
