@@ -32,10 +32,11 @@ function WeaponsSection({
         counter={counter}
         name={name}
         patchInfo={patchInfo}
-        totalWeapons={totalWeapons}
+        weapons={weapons}
+        weapon
       />
       {visibility[category] && (
-        <div className="flex flex-col items-center justify-center m-auto bg-stone-800 py-10 px-[3em] text-white max-w-[1000px]">
+        <div className="flex flex-col items-center justify-center bg-stone-800 py-10 px-[3em] text-white max-w-[1000px]">
           <WeaponsContainer weapons={weapons} />
           <MaterialsContainer
             category={category}

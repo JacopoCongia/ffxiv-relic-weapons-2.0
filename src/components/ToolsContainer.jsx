@@ -1,10 +1,10 @@
 import Tool from "./Tool";
 import { useCounter } from "../hooks/use-counter";
 import useWeaponsData from "../hooks/use-weapons-data";
-import ToolsHeader from "./ToolsHeader";
+import WeaponsHeader from "./WeaponsHeader";
 
-function ToolsContainer({ tools, category, name, children }) {
-  const { ownedWeapons } = useWeaponsData();
+function ToolsContainer({ tools, category, name, children, patchInfo }) {
+  const { ownedWeapons, visibility, handleVisibility } = useWeaponsData();
 
   const counter = useCounter(ownedWeapons, category);
 
@@ -19,15 +19,23 @@ function ToolsContainer({ tools, category, name, children }) {
 
   return (
     <>
-      <ToolsHeader
+      <WeaponsHeader
         name={name}
-        tools={tools}
+        weapons={tools}
+        handleClick={() => handleVisibility(category, visibility[category])}
+        category={category}
         counter={counter}
+        patchInfo={patchInfo}
+        tool
       />
-      <div className="flex flex-wrap items-center justify-center p-[3em] gap-5">
-        {toolsEl}
-      </div>
-      <div>{children}</div>
+      {visibility[category] && (
+        <>
+          <div className="flex flex-wrap items-center justify-center p-[3em] gap-5">
+            {toolsEl}
+          </div>
+          <div>{children}</div>
+        </>
+      )}
     </>
   );
 }
