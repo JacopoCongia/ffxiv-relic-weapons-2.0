@@ -72,16 +72,16 @@ function EndwalkerGatherers() {
             collectability.
           </p>
           <ToolsTable
-            minerMaterialOne={data.materials[28]}
-            minerMaterialTwo={data.materials[24]}
-            minerMaterialThree={data.materials[30]}
-            botanistMaterialOne={data.materials[29]}
-            botanistMaterialTwo={data.materials[25]}
-            botanistMaterialThree={data.materials[31]}
-            fisherMaterialOne={data.materials[32]}
-            fisherMaterialTwo={data.materials[26]}
-            fisherMaterialThree={data.materials[33]}
-            fisherMaterialFour={data.materials[27]}
+            minerMaterialOne={data.materials[29]}
+            minerMaterialTwo={data.materials[25]}
+            minerMaterialThree={data.materials[31]}
+            botanistMaterialOne={data.materials[30]}
+            botanistMaterialTwo={data.materials[26]}
+            botanistMaterialThree={data.materials[32]}
+            fisherMaterialOne={data.materials[33]}
+            fisherMaterialTwo={data.materials[27]}
+            fisherMaterialThree={data.materials[34]}
+            fisherMaterialFour={data.materials[28]}
           />
         </div>
       </ToolsContainer>
@@ -119,16 +119,16 @@ function EndwalkerGatherers() {
             collectability.
           </p>
           <ToolsTable
-            minerMaterialOne={data.materials[38]}
-            minerMaterialTwo={data.materials[34]}
-            minerMaterialThree={data.materials[40]}
-            botanistMaterialOne={data.materials[39]}
-            botanistMaterialTwo={data.materials[35]}
-            botanistMaterialThree={data.materials[41]}
-            fisherMaterialOne={data.materials[42]}
-            fisherMaterialTwo={data.materials[36]}
-            fisherMaterialThree={data.materials[43]}
-            fisherMaterialFour={data.materials[37]}
+            minerMaterialOne={data.materials[39]}
+            minerMaterialTwo={data.materials[35]}
+            minerMaterialThree={data.materials[41]}
+            botanistMaterialOne={data.materials[40]}
+            botanistMaterialTwo={data.materials[36]}
+            botanistMaterialThree={data.materials[42]}
+            fisherMaterialOne={data.materials[43]}
+            fisherMaterialTwo={data.materials[37]}
+            fisherMaterialThree={data.materials[44]}
+            fisherMaterialFour={data.materials[38]}
           />
         </div>
       </ToolsContainer>
@@ -166,16 +166,16 @@ function EndwalkerGatherers() {
             collectability.
           </p>
           <ToolsTable
-            minerMaterialOne={data.materials[48]}
-            minerMaterialTwo={data.materials[44]}
-            minerMaterialThree={data.materials[50]}
-            botanistMaterialOne={data.materials[49]}
-            botanistMaterialTwo={data.materials[45]}
-            botanistMaterialThree={data.materials[51]}
-            fisherMaterialOne={data.materials[52]}
-            fisherMaterialTwo={data.materials[46]}
-            fisherMaterialThree={data.materials[53]}
-            fisherMaterialFour={data.materials[47]}
+            minerMaterialOne={data.materials[49]}
+            minerMaterialTwo={data.materials[45]}
+            minerMaterialThree={data.materials[51]}
+            botanistMaterialOne={data.materials[50]}
+            botanistMaterialTwo={data.materials[46]}
+            botanistMaterialThree={data.materials[52]}
+            fisherMaterialOne={data.materials[53]}
+            fisherMaterialTwo={data.materials[47]}
+            fisherMaterialThree={data.materials[54]}
+            fisherMaterialFour={data.materials[48]}
           />
         </div>
       </ToolsContainer>
@@ -213,16 +213,16 @@ function EndwalkerGatherers() {
             collectability.
           </p>
           <ToolsTable
-            minerMaterialOne={data.materials[58]}
-            minerMaterialTwo={data.materials[54]}
-            minerMaterialThree={data.materials[60]}
-            botanistMaterialOne={data.materials[59]}
-            botanistMaterialTwo={data.materials[55]}
-            botanistMaterialThree={data.materials[61]}
-            fisherMaterialOne={data.materials[62]}
-            fisherMaterialTwo={data.materials[56]}
-            fisherMaterialThree={data.materials[63]}
-            fisherMaterialFour={data.materials[57]}
+            minerMaterialOne={data.materials[59]}
+            minerMaterialTwo={data.materials[55]}
+            minerMaterialThree={data.materials[61]}
+            botanistMaterialOne={data.materials[60]}
+            botanistMaterialTwo={data.materials[56]}
+            botanistMaterialThree={data.materials[62]}
+            fisherMaterialOne={data.materials[63]}
+            fisherMaterialTwo={data.materials[57]}
+            fisherMaterialThree={data.materials[64]}
+            fisherMaterialFour={data.materials[58]}
           />
         </div>
       </ToolsContainer>
@@ -254,16 +254,16 @@ function EndwalkerGatherers() {
             collectability.
           </p>
           <ToolsTable
-            minerMaterialOne={data.materials[64]}
-            minerMaterialTwo={data.materials[65]}
-            minerMaterialThree={data.materials[66]}
-            botanistMaterialOne={data.materials[67]}
-            botanistMaterialTwo={data.materials[68]}
-            botanistMaterialThree={data.materials[69]}
-            fisherMaterialOne={data.materials[70]}
-            fisherMaterialTwo={data.materials[72]}
-            fisherMaterialThree={data.materials[71]}
-            fisherMaterialFour={data.materials[72]}
+            minerMaterialOne={data.materials[65]}
+            minerMaterialTwo={data.materials[66]}
+            minerMaterialThree={data.materials[67]}
+            botanistMaterialOne={data.materials[68]}
+            botanistMaterialTwo={data.materials[69]}
+            botanistMaterialThree={data.materials[70]}
+            fisherMaterialOne={data.materials[71]}
+            fisherMaterialTwo={data.materials[73]}
+            fisherMaterialThree={data.materials[72]}
+            fisherMaterialFour={data.materials[73]}
           />
         </div>
       </ToolsContainer>
@@ -295,16 +295,16 @@ function EndwalkerGatherers() {
             collectability.
           </p>
           <ToolsTable
-            minerMaterialOne={data.materials[73]}
-            minerMaterialTwo={data.materials[74]}
-            minerMaterialThree={data.materials[75]}
-            botanistMaterialOne={data.materials[76]}
-            botanistMaterialTwo={data.materials[77]}
-            botanistMaterialThree={data.materials[78]}
-            fisherMaterialOne={data.materials[79]}
-            fisherMaterialTwo={data.materials[81]}
-            fisherMaterialThree={data.materials[80]}
-            fisherMaterialFour={data.materials[81]}
+            minerMaterialOne={data.materials[74]}
+            minerMaterialTwo={data.materials[75]}
+            minerMaterialThree={data.materials[76]}
+            botanistMaterialOne={data.materials[77]}
+            botanistMaterialTwo={data.materials[78]}
+            botanistMaterialThree={data.materials[79]}
+            fisherMaterialOne={data.materials[80]}
+            fisherMaterialTwo={data.materials[82]}
+            fisherMaterialThree={data.materials[81]}
+            fisherMaterialFour={data.materials[82]}
           />
         </div>
       </ToolsContainer>

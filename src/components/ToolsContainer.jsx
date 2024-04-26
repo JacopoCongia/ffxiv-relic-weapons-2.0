@@ -30,7 +30,7 @@ function ToolsContainer({ tools, category, name, children, patchInfo }) {
       />
       {visibility[category] && (
         <>
-          <div className="flex flex-wrap items-center justify-center p-[3em] gap-5">
+          <div className="flex flex-wrap items-center justify-center gap-5 p-[3em]">
             {toolsEl}
           </div>
           <div>{children}</div>

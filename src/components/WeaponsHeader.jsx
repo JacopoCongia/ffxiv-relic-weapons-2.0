@@ -14,8 +14,12 @@ function WeaponsHeader({
 }) {
   const { visibility, handleVisibility } = useWeaponsData();
 
-  const totalWeapons =
-    weapons[0].wpnJobShort === "PLD" ? weapons.length - 1 : weapons.length;
+  const totalWeapons = weapon
+    ? weapons.length - 1
+    : tool
+    ? weapons.length
+    : null;
+
   const check =
     counter?.length === totalWeapons ? (
       <BsCheckLg className="mr-2 text-[20px] text-green-500 sm:text-[28px]" />
