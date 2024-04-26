@@ -7,18 +7,15 @@ import useWeaponsData from "../hooks/use-weapons-data";
 import { useCounter } from "../hooks/use-counter";
 
 function WeaponsSection({
-  weapons,
-  ownedWeapons,
-  totalWeapons,
-  patchInfo,
   category,
-  name,
   materials,
-  tomestones,
-  tomestoneAmount,
-  checkAll,
-  uncheckAll,
+  name,
   notes,
+  ownedWeapons,
+  patchInfo,
+  tomestoneAmount,
+  tomestones,
+  weapons,
 }) {
   const { currentUser } = useAuth();
   const { visibility } = useWeaponsData();
@@ -32,10 +29,11 @@ function WeaponsSection({
         counter={counter}
         name={name}
         patchInfo={patchInfo}
-        totalWeapons={totalWeapons}
+        weapon
+        weapons={weapons}
       />
       {visibility[category] && (
-        <div className="flex flex-col items-center justify-center m-auto bg-stone-800 py-10 px-[3em] text-white max-w-[1000px]">
+        <div className="flex flex-col items-center justify-center mx-auto bg-stone-800 py-10 px-[3em] text-white max-w-[1000px]">
           <WeaponsContainer weapons={weapons} />
           <MaterialsContainer
             category={category}
@@ -44,14 +42,12 @@ function WeaponsSection({
             notes={notes || null}
             tomestoneAmount={tomestoneAmount}
             tomestones={tomestones}
-            totalWeapons={totalWeapons}
+            weapons={weapons}
           />
           {currentUser?.emailVerified && (
             <CheckUncheck
-              weapons={weapons}
               category={category}
-              checkAll={checkAll}
-              uncheckAll={uncheckAll}
+              weapons={weapons}
             />
           )}
         </div>

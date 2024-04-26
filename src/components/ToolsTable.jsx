@@ -12,7 +12,7 @@ function ToolsTable({
 }) {
   return (
     <>
-      <table className="hidden border m-5 text-white text-[0.9rem] min-[1200px]:text-[1rem] min-[900px]:table">
+      <table className="m-5 hidden border text-[0.9rem] text-white min-[900px]:table min-[1200px]:text-[1rem]">
         <thead className="bg-neutral-700 text-left">
           <tr>
             <th className="px-5 py-3">Job</th>

@@ -1,6 +1,9 @@
+import useWeaponsData from "../hooks/use-weapons-data";
 import Button from "./Button";
 
-function CheckUncheck({ checkAll, uncheckAll, weapons }) {
+function CheckUncheck({ weapons }) {
+  const { checkAll, uncheckAll } = useWeaponsData();
+
   return (
     <div
       className="

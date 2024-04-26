@@ -13,6 +13,7 @@ function EndwalkerCrafters() {
         tools={tools.splendorousCrafters}
         category={"splendorousCrafters"}
         name={"Splendorous"}
+        patchInfo={"iLvl 570 (Patch 6.35)"}
       >
         <div className="text-white flex flex-col gap-3 mb-[2em] px-[2em] text-center">
           <p className="flex gap-2 justify-center flex-wrap">
@@ -45,6 +46,7 @@ function EndwalkerCrafters() {
         tools={tools.augmentedSplendorousCrafters}
         category={"augmentedSplendorousCrafters"}
         name={"Augmented Splendorous"}
+        patchInfo={"iLvl 590 (Patch 6.35)"}
       >
         <div className="text-white flex flex-col gap-3 mb-[2em] px-[2em] text-center">
           <p className="flex gap-2 justify-center flex-wrap">
@@ -63,6 +65,7 @@ function EndwalkerCrafters() {
         tools={tools.crystallineCrafters}
         category={"crystallineCrafters"}
         name={"Crystalline"}
+        patchInfo={"iLvl 620 (Patch 6.35)"}
       >
         <div className="text-white flex flex-col gap-3 mb-[2em] px-[2em] text-center">
           <p className="flex gap-2 justify-center flex-wrap">
@@ -81,6 +84,7 @@ function EndwalkerCrafters() {
         tools={tools.choraZoisCrystallineCrafters}
         category={"choraZoisCrystallineCrafters"}
         name={"Chora Zoi's Crystalline"}
+        patchInfo={"iLvl 625 (Patch 6.45)"}
       >
         <div className="text-white flex flex-col gap-3 mb-[2em] px-[2em] text-center">
           <p className="flex gap-2 justify-center flex-wrap">
@@ -99,6 +103,7 @@ function EndwalkerCrafters() {
         tools={tools.brilliantCrafters}
         category={"brilliantCrafters"}
         name={"Brilliant"}
+        patchInfo={"iLvl 630 (Patch 6.45)"}
       >
         <div className="text-white flex flex-col gap-3 mb-[2em] px-[2em] text-center">
           <p className="flex gap-2 justify-center flex-wrap">
@@ -117,6 +122,7 @@ function EndwalkerCrafters() {
         tools={tools.vrandticVisionarysCrafters}
         category={"vrandticVisionarysCrafters"}
         name={"Vrandtic Visionary's"}
+        patchInfo={"iLvl 635 (Patch 6.51)"}
       >
         <div className="text-white flex flex-col gap-3 mb-[2em] px-[2em] text-center">
           <p className="flex gap-2 justify-center flex-wrap">
@@ -135,6 +141,7 @@ function EndwalkerCrafters() {
         tools={tools.lodestarCrafters}
         category={"lodestarCrafters"}
         name={"Lodestar"}
+        patchInfo={"iLvl 640 (Patch 6.51)"}
       >
         <div className="text-white flex flex-col gap-3 mb-[2em] px-[2em] text-center">
           <p className="flex gap-2 justify-center flex-wrap">

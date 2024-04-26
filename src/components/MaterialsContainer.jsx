@@ -7,11 +7,13 @@ function MaterialsContainer({
   notes,
   tomestoneAmount,
   tomestones,
-  totalWeapons,
+  weapons,
 }) {
   const updatedMaterials = materials.filter(
     (material) => material.category === category
   );
+
+  const totalWeapons = weapons.length - 1;
 
   return (
     <>
