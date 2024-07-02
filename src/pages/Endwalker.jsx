@@ -1,4 +1,4 @@
-import data from "../../data";
+import materialsData from "../../materialsData";
 import useWeaponsData from "../hooks/use-weapons-data";
 import Header from "../components/Header";
 import WeaponsSection from "../components/WeaponsSection";
@@ -15,8 +15,8 @@ function Endwalker() {
         name="Manderville"
         category="manderville"
         patchInfo="iLvl 615 (Patch 6.25)"
-        materials={data.materials}
-        tomestones={data.tomestones.causality}
+        materials={materialsData.materials.endwalker.dow.manderville}
+        tomestones={materialsData.tomestones.poetics}
         tomestoneAmount={1500}
       />
       <WeaponsSection
@@ -25,8 +25,8 @@ function Endwalker() {
         name="Amazing Manderville"
         category="amazingManderville"
         patchInfo="iLvl 630 (Patch 6.35)"
-        materials={data.materials}
-        tomestones={data.tomestones.causality}
+        materials={materialsData.materials.endwalker.dow.amazingManderville}
+        tomestones={materialsData.tomestones.poetics}
         tomestoneAmount={1500}
       />
       <WeaponsSection
@@ -35,8 +35,8 @@ function Endwalker() {
         name="Majestic Manderville"
         category="majesticManderville"
         patchInfo="iLvl 645 (Patch 6.45)"
-        materials={data.materials}
-        tomestones={data.tomestones.causality}
+        materials={materialsData.materials.endwalker.dow.majesticManderville}
+        tomestones={materialsData.tomestones.poetics}
         tomestoneAmount={1500}
       />
       <WeaponsSection
@@ -45,8 +45,8 @@ function Endwalker() {
         name="Mandervillous"
         category="mandervillous"
         patchInfo="iLvl 665 (Patch 6.55)"
-        materials={data.materials}
-        tomestones={data.tomestones.causality}
+        materials={materialsData.materials.endwalker.dow.mandervillous}
+        tomestones={materialsData.tomestones.poetics}
         tomestoneAmount={1500}
       />
     </div>
