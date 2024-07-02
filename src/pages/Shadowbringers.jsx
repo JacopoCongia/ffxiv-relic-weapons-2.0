@@ -1,4 +1,4 @@
-import data from "../../data";
+import materialsData from "../../materialsData";
 import useWeaponsData from "../hooks/use-weapons-data";
 import Header from "../components/Header";
 import WeaponsSection from "../components/WeaponsSection";
@@ -15,8 +15,8 @@ function Shadowbringers() {
         name="Resistance Weapons"
         patchInfo="iLvl 485 (Patch 5.25)"
         category="resistance"
-        materials={data.materials}
-        tomestones={data.tomestones.poetics}
+        materials={materialsData.materials.shadowbringers.resistance}
+        tomestones={materialsData.tomestones.poetics}
         tomestoneAmount={1000}
       />
       <WeaponsSection
@@ -25,7 +25,7 @@ function Shadowbringers() {
         name="Augmented Resistance Weapons"
         patchInfo="iLvl 500 (Patch 5.35)"
         category="augmentedResistance"
-        materials={data.materials}
+        materials={materialsData.materials.shadowbringers.augmentedResistance}
         tomestones={null}
         tomestoneAmount={null}
       />
@@ -35,7 +35,7 @@ function Shadowbringers() {
         name="Recollection Weapons"
         patchInfo="iLvl 500 (Patch 5.35)"
         category="recollection"
-        materials={data.materials}
+        materials={materialsData.materials.shadowbringers.recollection}
         tomestones={null}
         tomestoneAmount={null}
       />
@@ -45,7 +45,7 @@ function Shadowbringers() {
         name="Law's Order Weapons"
         patchInfo="iLvl 510 (Patch 5.45)"
         category="lawsOrder"
-        materials={data.materials}
+        materials={materialsData.materials.shadowbringers.lawsOrder}
         tomestones={null}
         tomestoneAmount={null}
       />
@@ -55,7 +55,7 @@ function Shadowbringers() {
         name="Augmented Law's Order Weapons"
         patchInfo="iLvl 515 (Patch 5.45)"
         category="augmentedLawsOrder"
-        materials={data.materials}
+        materials={materialsData.materials.shadowbringers.augmentedLawsOrder}
         tomestones={null}
         tomestoneAmount={null}
       />
@@ -65,7 +65,7 @@ function Shadowbringers() {
         name="Blade's Weapons"
         patchInfo="iLvl 535 (Patch 5.55)"
         category="blades"
-        materials={data.materials}
+        materials={materialsData.materials.shadowbringers.blades}
         tomestones={null}
         tomestoneAmount={null}
       />

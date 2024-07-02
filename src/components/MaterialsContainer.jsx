@@ -1,7 +1,6 @@
 import Materials from "./Materials";
 
 function MaterialsContainer({
-  category,
   counter,
   materials,
   notes,
@@ -9,10 +8,6 @@ function MaterialsContainer({
   tomestones,
   weapons,
 }) {
-  const updatedMaterials = materials.filter(
-    (material) => material.category === category
-  );
-
   const totalWeapons = weapons.length - 1;
 
   return (
@@ -41,7 +36,7 @@ function MaterialsContainer({
           </p>
         )}
         <Materials
-          materials={updatedMaterials}
+          materials={materials}
           counter={counter}
         />
       </div>

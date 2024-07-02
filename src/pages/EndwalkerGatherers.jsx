@@ -2,6 +2,7 @@ import ToolsContainer from "../components/ToolsContainer";
 import ToolsTable from "../components/ToolsTable";
 import useWeaponsData from "../hooks/use-weapons-data";
 import data from "../../data";
+import materialsData from "../../materialsData";
 
 function EndwalkerGatherers() {
   const { weapons: tools } = useWeaponsData();
@@ -72,16 +73,46 @@ function EndwalkerGatherers() {
             collectability.
           </p>
           <ToolsTable
-            minerMaterialOne={data.materials[29]}
-            minerMaterialTwo={data.materials[25]}
-            minerMaterialThree={data.materials[31]}
-            botanistMaterialOne={data.materials[30]}
-            botanistMaterialTwo={data.materials[26]}
-            botanistMaterialThree={data.materials[32]}
-            fisherMaterialOne={data.materials[33]}
-            fisherMaterialTwo={data.materials[27]}
-            fisherMaterialThree={data.materials[34]}
-            fisherMaterialFour={data.materials[28]}
+            minerMaterialOne={
+              materialsData.materials.endwalker.doL.augmentedSplendorous
+                .connoisseursPrismstone
+            }
+            minerMaterialTwo={
+              materialsData.materials.endwalker.doL.augmentedSplendorous
+                .splendorousMinersComponent
+            }
+            minerMaterialThree={
+              materialsData.materials.endwalker.doL.augmentedSplendorous
+                .splendorousWaterShard
+            }
+            botanistMaterialOne={
+              materialsData.materials.endwalker.doL.augmentedSplendorous
+                .connoisseursWattlePetribark
+            }
+            botanistMaterialTwo={
+              materialsData.materials.endwalker.doL.augmentedSplendorous
+                .splendorousBotanistsComponent
+            }
+            botanistMaterialThree={
+              materialsData.materials.endwalker.doL.augmentedSplendorous
+                .splendorousEarthShard
+            }
+            fisherMaterialOne={
+              materialsData.materials.endwalker.doL.augmentedSplendorous
+                .platinumSeahorse
+            }
+            fisherMaterialTwo={
+              materialsData.materials.endwalker.doL.augmentedSplendorous
+                .splendorousFishingRodComponent
+            }
+            fisherMaterialThree={
+              materialsData.materials.endwalker.doL.augmentedSplendorous
+                .clavekeeper
+            }
+            fisherMaterialFour={
+              materialsData.materials.endwalker.doL.augmentedSplendorous
+                .splendorousFishingReelComponent
+            }
           />
         </div>
       </ToolsContainer>
