@@ -7,6 +7,7 @@ import {
 
 import Home from "./pages/Home";
 import Layout from "./components/Layout";
+import Dawntrail from "./pages/Dawntrail";
 import Endwalker from "./pages/Endwalker";
 import Shadowbringers from "./pages/Shadowbringers";
 import Stormblood from "./pages/Stormblood";
@@ -24,6 +25,10 @@ const router = createBrowserRouter(
       <Route
         index
         element={<Home />}
+      />
+      <Route
+        path="dawntrail"
+        element={<Dawntrail />}
       />
       <Route
         path="endwalker"

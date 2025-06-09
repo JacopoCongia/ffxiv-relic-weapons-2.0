@@ -10,10 +10,16 @@ function Materials({ materials, counter }) {
           alt={material.name}
           src={material.icon}
         />
-        <p>
-          {material.name}:{" "}
-          {material.reqTotal - material.reqPerWeapon * counter.length}
-        </p>
+        {material.reqTotal - material.reqPerWeapon * counter.length <= 0 ? (
+          <p>
+            {material.name}: {0}
+          </p>
+        ) : (
+          <p>
+            {material.name}:{" "}
+            {material.reqTotal - material.reqPerWeapon * counter.length}
+          </p>
+        )}
       </div>
     );
   });
