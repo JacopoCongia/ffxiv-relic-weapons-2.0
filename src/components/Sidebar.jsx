@@ -24,6 +24,10 @@ function Sidebar({ isVisible, setIsVisible }) {
 
   const links = [
     {
+      name: "Dawntrail",
+      to: "/dawntrail",
+    },
+    {
       name: "Endwalker",
       to: "/endwalker",
       craftersTo: "/crafters",

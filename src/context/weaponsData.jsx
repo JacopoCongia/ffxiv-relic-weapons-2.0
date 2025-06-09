@@ -35,22 +35,53 @@ function WeaponsDataProvider({ children }) {
     const isItInArray = ownedWeapons.some((el) => el.id === weapon.id);
 
     if (!isItInArray) {
-      setOwnedWeapons((prevOwnedWeapons) => {
-        return [
-          ...prevOwnedWeapons,
-          {
-            id: weapon.id,
-            name: weapon.wpnName,
-            category: weapon.category,
-            shield: weapon.shield || null,
-          },
-        ];
-      });
+      if (weapon.wpnJobShort === "PLD") {
+        // Find all PLD weapons in the same category (sword and shield)
+        const pldWeapons = weapons[weapon.category].filter(
+          (w) => w.wpnJobShort === "PLD"
+        );
+        setOwnedWeapons((prevOwnedWeapons) => {
+          // Only add those not already owned
+          const newWeapons = pldWeapons
+            .filter((w) => !prevOwnedWeapons.some((el) => el.id === w.id))
+            .map((w) => ({
+              id: w.id,
+              name: w.wpnName,
+              category: w.category,
+              shield: w.shield || null,
+            }));
+          return [...prevOwnedWeapons, ...newWeapons];
+        });
+      } else {
+        setOwnedWeapons((prevOwnedWeapons) => {
+          return [
+            ...prevOwnedWeapons,
+            {
+              id: weapon.id,
+              name: weapon.wpnName,
+              category: weapon.category,
+              shield: weapon.shield || null,
+            },
+          ];
+        });
+      }
     } else {
-      const removedWeapon = ownedWeapons.filter(
-        (element) => element.id !== weapon.id
-      );
-      setOwnedWeapons(removedWeapon);
+      if (weapon.wpnJobShort === "PLD") {
+        // Remove all PLD weapons in the same category (sword and shield)
+        const pldWeapons = weapons[weapon.category].filter(
+          (w) => w.wpnJobShort === "PLD"
+        );
+        setOwnedWeapons((prevOwnedWeapons) =>
+          prevOwnedWeapons.filter(
+            (el) => !pldWeapons.some((w) => w.id === el.id)
+          )
+        );
+      } else {
+        const removedWeapon = ownedWeapons.filter(
+          (element) => element.id !== weapon.id
+        );
+        setOwnedWeapons(removedWeapon);
+      }
     }
   }
 
