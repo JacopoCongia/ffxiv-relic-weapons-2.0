@@ -658,7 +658,7 @@ const data = {
   ],
   penumbrae: [
     {
-      id: 0,
+      id: "dt01",
       wpnName: "Phantom Sword Penumbrae",
       wpnJob: "Paladin",
       wpnJobShort: "PLD",
@@ -666,7 +666,7 @@ const data = {
       category: "penumbrae",
     },
     {
-      id: 1,
+      id: "dt02",
       wpnName: "Phantom Kite Shield Penumbrae",
       wpnJob: "Paladin",
       wpnJobShort: "PLD",
@@ -675,7 +675,7 @@ const data = {
       shield: true,
     },
     {
-      id: 2,
+      id: "dt03",
       wpnName: "Phantom Bardiche Penumbrae",
       wpnJob: "Warrior",
       wpnJobShort: "WAR",
@@ -683,7 +683,7 @@ const data = {
       category: "penumbrae",
     },
     {
-      id: 3,
+      id: "dt04",
       wpnName: "Phantom Guillotine Penumbrae",
       wpnJob: "Dark Knight",
       wpnJobShort: "DRK",
@@ -691,7 +691,7 @@ const data = {
       category: "penumbrae",
     },
     {
-      id: 4,
+      id: "dt05",
       wpnName: "Phantom Bayonet Penumbrae",
       wpnJob: "Gunbreaker",
       wpnJobShort: "GNB",
@@ -699,7 +699,7 @@ const data = {
       category: "penumbrae",
     },
     {
-      id: 5,
+      id: "dt06",
       wpnName: "Phantom Spear Penumbrae",
       wpnJob: "Dragoon",
       wpnJobShort: "DRG",
@@ -707,7 +707,7 @@ const data = {
       category: "penumbrae",
     },
     {
-      id: 6,
+      id: "dt07",
       wpnName: "Phantom War Scythe Penumbrae",
       wpnJob: "Reaper",
       wpnJobShort: "RPR",
@@ -715,7 +715,7 @@ const data = {
       category: "penumbrae",
     },
     {
-      id: 7,
+      id: "dt08",
       wpnName: "Phantom Knuckles Penumbrae",
       wpnJob: "Monk",
       wpnJobShort: "MNK",
@@ -723,7 +723,7 @@ const data = {
       category: "penumbrae",
     },
     {
-      id: 8,
+      id: "dt09",
       wpnName: "Phantom Blade Penumbrae",
       wpnJob: "Samurai",
       wpnJobShort: "SAM",
@@ -731,7 +731,7 @@ const data = {
       category: "penumbrae",
     },
     {
-      id: 9,
+      id: "dt10",
       wpnName: "Phantom Cleavers Penumbrae",
       wpnJob: "Ninja",
       wpnJobShort: "NIN",
@@ -739,7 +739,7 @@ const data = {
       category: "penumbrae",
     },
     {
-      id: 10,
+      id: "dt11",
       wpnName: "Phantom Twinfangs Penumbrae",
       wpnJob: "Viper",
       wpnJobShort: "VPR",
@@ -747,7 +747,7 @@ const data = {
       category: "penumbrae",
     },
     {
-      id: 11,
+      id: "dt12",
       wpnName: "Phantom Harp Bow Penumbrae",
       wpnJob: "Bard",
       wpnJobShort: "BRD",
@@ -755,7 +755,7 @@ const data = {
       category: "penumbrae",
     },
     {
-      id: 12,
+      id: "dt13",
       wpnName: "Phantom Arquebus Penumbrae",
       wpnJob: "Machinist",
       wpnJobShort: "MCH",
@@ -763,7 +763,7 @@ const data = {
       category: "penumbrae",
     },
     {
-      id: 13,
+      id: "dt14",
       wpnName: "Phantom Terpna Penumbrae",
       wpnJob: "Dancer",
       wpnJobShort: "DNC",
@@ -771,7 +771,7 @@ const data = {
       category: "penumbrae",
     },
     {
-      id: 14,
+      id: "dt15",
       wpnName: "Phantom Staff Penumbrae",
       wpnJob: "Black Mage",
       wpnJobShort: "BLM",
@@ -779,7 +779,7 @@ const data = {
       category: "penumbrae",
     },
     {
-      id: 15,
+      id: "dt16",
       wpnName: "Phantom Index Penumbrae",
       wpnJob: "Summoner",
       wpnJobShort: "SMN",
@@ -787,7 +787,7 @@ const data = {
       category: "penumbrae",
     },
     {
-      id: 16,
+      id: "dt17",
       wpnName: "Phantom Rapier Penumbrae",
       wpnJob: "Red Mage",
       wpnJobShort: "RDM",
@@ -795,7 +795,7 @@ const data = {
       category: "penumbrae",
     },
     {
-      id: 17,
+      id: "dt18",
       wpnName: "Phantom Flat Brush Penumbrae",
       wpnJob: "Pictomancer",
       wpnJobShort: "PCT",
@@ -803,7 +803,7 @@ const data = {
       category: "penumbrae",
     },
     {
-      id: 18,
+      id: "dt19",
       wpnName: "Phantom Crook Penumbrae",
       wpnJob: "White Mage",
       wpnJobShort: "WHM",
@@ -811,7 +811,7 @@ const data = {
       category: "penumbrae",
     },
     {
-      id: 19,
+      id: "dt20",
       wpnName: "Phantom Codex Penumbrae",
       wpnJob: "Scholar",
       wpnJobShort: "SCH",
@@ -819,7 +819,7 @@ const data = {
       category: "penumbrae",
     },
     {
-      id: 20,
+      id: "dt21",
       wpnName: "Phantom Star Globe Penumbrae",
       wpnJob: "Astrologian",
       wpnJobShort: "AST",
@@ -827,7 +827,7 @@ const data = {
       category: "penumbrae",
     },
     {
-      id: 21,
+      id: "dt22",
       wpnName: "Phantom Pendulums Penumbrae",
       wpnJob: "Sage",
       wpnJobShort: "SGE",
