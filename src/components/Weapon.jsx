@@ -23,7 +23,7 @@ function Weapon({ weapon }) {
       {/* If the user is verified, allow interaction with the weapon */}
       {currentUser?.emailVerified ? (
         <>
-          <span className="invisible absolute bottom-[105%] left-[50%] ml-[-60px] w-[120px] rounded-[6px] bg-neutral-700 p-[10px] text-[15px] opacity-[92%] group-hover:visible">
+          <span className="invisible absolute bottom-[105%] left-[50%] ml-[-60px] w-[120px] rounded-[6px] bg-neutral-700/90 p-[10px] text-[15px] pointer-events-none group-hover:visible">
             {weapon.wpnName}
           </span>
           <div
