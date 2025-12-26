@@ -1,4 +1,6 @@
-import { GoChevronDown, GoChevronUp } from "react-icons/go";
+import { motion } from "motion/react";
+
+import { GoChevronDown } from "react-icons/go";
 import { BsCheckLg } from "react-icons/bs";
 
 import useWeaponsData from "../hooks/use-weapons-data";
@@ -49,11 +51,13 @@ function WeaponsHeader({
           {patchInfo}
         </span>
       </h4>
-      {!visibility[category] ? (
+      <motion.div
+        animate={{ rotate: visibility[category] ? 180 : 0 }}
+        transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
+        className="flex items-center justify-center"
+      >
         <GoChevronDown className="text-2xl sm:text-3xl" />
-      ) : (
-        <GoChevronUp className="text-2xl sm:text-3xl" />
-      )}
+      </motion.div>
     </div>
   );
 }
