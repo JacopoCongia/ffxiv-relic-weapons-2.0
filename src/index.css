@@ -6,4 +6,5 @@
 html {
   background: #252525;
   font-family: Inter, sans-serif;
+  scrollbar-gutter: stable;
 }
