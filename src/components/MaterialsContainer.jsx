@@ -12,22 +12,11 @@ function MaterialsContainer({
 
   return (
     <>
-      <div
-        className="
-          flex 
-          flex-col 
-          items-start 
-          gap-2 
-          pb-6 
-          pt-6 
-          text-[0.8rem]
-          sm:text-[1rem]
-        "
-      >
+      <div className="flex flex-col items-start gap-2 pb-6 pt-6 text-[0.8rem] sm:text-[1rem]">
         {tomestones !== null && (
           <p className="flex items-center gap-3">
             <img
-              className="w-9 aspect-square"
+              className="aspect-square w-9"
               alt={tomestones.name}
               src={tomestones.icon}
             />
@@ -35,10 +24,7 @@ function MaterialsContainer({
             {totalWeapons * tomestoneAmount - counter.length * tomestoneAmount}
           </p>
         )}
-        <Materials
-          materials={materials}
-          counter={counter}
-        />
+        <Materials materials={materials} counter={counter} />
       </div>
       {notes && (
         <p className="max-w-[400px] pb-6">

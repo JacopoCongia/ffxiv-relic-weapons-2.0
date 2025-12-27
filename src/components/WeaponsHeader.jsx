@@ -19,8 +19,8 @@ function WeaponsHeader({
   const totalWeapons = weapon
     ? weapons.length - 1
     : tool
-    ? weapons.length
-    : null;
+      ? weapons.length
+      : null;
 
   const check =
     counter?.length === totalWeapons ? (
@@ -28,24 +28,24 @@ function WeaponsHeader({
     ) : null;
 
   const customStyle = weapon
-    ? "bg-sky-900 text-white"
+    ? "bg-[#003B4F] text-[white]"
     : tool
-    ? "bg-[#F3D9B1] text-[#4e3727]"
-    : "";
+      ? "bg-[#F3D9B1] text-[#4e3727]"
+      : "";
 
   return (
     <div
       onClick={() => handleVisibility(category, visibility[category])}
       className={`mb-[1px] flex cursor-pointer items-center justify-center gap-2 px-5 py-3 text-[16px] hover:opacity-95 sm:text-[20px] ${customStyle}`}
     >
-      <p className="flex items-center text-[14px] font-bold sm:text-[18px] ">
+      <p className="flex items-center text-[14px] font-bold sm:text-[18px]">
         {check} {counter?.length}/{totalWeapons}
       </p>
       <h4 className="ml-auto mr-auto text-center text-[16px] font-bold sm:text-[22px]">
         {name}
         <span
           className={`block text-[12px] sm:text-[16px] ${
-            weapon ? "text-green-500" : tool ? "text-green-600" : ""
+            weapon ? "text-[#02B680]" : tool ? "text-green-600" : ""
           }`}
         >
           {patchInfo}

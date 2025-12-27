@@ -2,14 +2,11 @@ import Weapon from "./Weapon";
 
 function WeaponsContainer({ weapons }) {
   const weaponElements = weapons.map((weapon) => (
-    <Weapon
-      key={weapon.id}
-      weapon={weapon}
-    />
+    <Weapon key={weapon.id} weapon={weapon} />
   ));
 
   return (
-    <div className="flex flex-row flex-wrap gap-5 items-center justify-center">
+    <div className="flex flex-row flex-wrap items-center justify-center gap-5">
       {weaponElements}
     </div>
   );

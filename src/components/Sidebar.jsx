@@ -48,10 +48,7 @@ function Sidebar({ isVisible, setIsVisible }) {
   const linksEl = links.map((link) => {
     const { name, to, craftersTo, gatherersTo } = link;
     return (
-      <div
-        key={name}
-        className="ml-2 text-[0.8rem] flex flex-col gap-2"
-      >
+      <div key={name} className="ml-2 flex flex-col gap-2 text-[0.8rem]">
         <h1 className="text-[1.2rem] tracking-wider">{name}</h1>
         <NavLink
           to={to}
@@ -94,16 +91,16 @@ function Sidebar({ isVisible, setIsVisible }) {
         {linksEl}
 
         {/* To be replaced in the future */}
-        <h1 className="text-[1.2rem] tracking-wider opacity-50 cursor-not-allowed">
+        <h1 className="cursor-not-allowed text-[1.2rem] tracking-wider opacity-50">
           Heavensward
         </h1>
-        <h1 className="text-[1.2rem] tracking-wider opacity-50 cursor-not-allowed">
+        <h1 className="cursor-not-allowed text-[1.2rem] tracking-wider opacity-50">
           A Realm Reborn
         </h1>
-        <div className="border my-[0.5em]"></div>
+        <div className="my-[0.5em] border"></div>
         <NavLink
           to="/account"
-          className="flex items-center gap-[0.5em] justify-center text-[1.1rem] hover:text-[#e6e6e6]"
+          className="flex items-center justify-center gap-[0.5em] text-[1.1rem] hover:text-[#e6e6e6]"
         >
           <BiUserCircle className="text-[1.8rem]" />
           My Account

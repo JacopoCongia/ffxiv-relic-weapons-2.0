@@ -39,7 +39,6 @@ function WeaponsSection({
           initial="collapsed"
           animate="open"
           exit="collapsed"
-          layout
           variants={{
             open: {
               height: "auto",
@@ -50,9 +49,9 @@ function WeaponsSection({
             collapsed: { height: 0, zIndex: 0, overflow: "hidden" },
           }}
           transition={{ duration: 0.5, ease: [0.4, 0, 0.2, 1] }}
-          className="flex flex-col items-center justify-center mx-auto bg-stone-800 px-[3em] text-white max-w-[1000px]"
+          className="mx-auto flex max-w-[1000px] flex-col items-center justify-center bg-stone-800 px-[3em] text-white"
         >
-          <div className="py-10 w-full flex flex-col items-center">
+          <div className="flex w-full flex-col items-center py-10">
             <WeaponsContainer weapons={weapons} />
             <MaterialsContainer
               category={category}
@@ -64,10 +63,7 @@ function WeaponsSection({
               weapons={weapons}
             />
             {currentUser?.emailVerified && (
-              <CheckUncheck
-                category={category}
-                weapons={weapons}
-              />
+              <CheckUncheck category={category} weapons={weapons} />
             )}
           </div>
         </motion.div>

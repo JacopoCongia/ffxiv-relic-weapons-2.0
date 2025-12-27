@@ -1,12 +1,9 @@
 function Materials({ materials, counter }) {
   const materialsElements = materials.map((material) => {
     return (
-      <div
-        key={material.id}
-        className="flex items-center gap-3"
-      >
+      <div key={material.id} className="flex items-center gap-3">
         <img
-          className="w-9 aspect-square rounded-[50%]"
+          className="aspect-square w-9 rounded-[50%]"
           alt={material.name}
           src={material.icon}
         />
