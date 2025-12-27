@@ -16,7 +16,7 @@ function MaterialsContainer({
         {tomestones !== null && (
           <p className="flex items-center gap-3">
             <img
-              className="aspect-square w-9"
+              className="aspect-square w-9aspect-square"
               alt={tomestones.name}
               src={tomestones.icon}
             />
