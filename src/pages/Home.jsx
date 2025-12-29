@@ -1,15 +1,15 @@
 export default function Home() {
   return (
-    <div className="min-[1000px]:pl-[250px] duration-[0.5s] pb-[5em] flex flex-col text-center font-bold text-white">
+    <div className="flex flex-col pb-[5em] text-center font-[Cinzel] text-neutral-100 duration-[0.5s] min-[1000px]:pl-[250px]">
       <img
-        className="max-w-[800px] w-[100%] m-auto p-[0.8em]"
+        className="m-auto w-[100%] max-w-[800px] p-[0.8em]"
         src="/final_fantasy_xiv_logo.png"
         alt="the original game logo depicting the different game races and the text saying Final Fantasy XIV Online"
       />
-      <div className="px-[2em] font-normal text-[2rem] flex flex-col gap-[1em]">
+      <div className="flex flex-col gap-[1em] px-[2em] text-[2rem] min-[600px]:text-left">
         <p>
           Welcome to the{" "}
-          <span className="text-emerald-400 text-[2.2rem] font-bold">
+          <span className="text-header text-[2.2rem] font-bold">
             Final Fantasy XIV Relic Weapons
           </span>{" "}
           checklist website!

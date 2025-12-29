@@ -1,6 +1,6 @@
 function Header({ title }) {
   return (
-    <header className="flex justify-center bg-[#0c4944] px-10 py-6 text-[4.8vw] font-bold text-neutral-100 shadow sm:text-[1.875rem] lg:text-[2.25rem]">
+    <header className="flex justify-center bg-headerWeapons py-[1em] text-[1.2rem] font-bold text-neutral-100 min-[600px]:text-[1.6rem]">
       <h1>{title} Weapons Checklist</h1>
     </header>
   );

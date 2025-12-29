@@ -28,9 +28,9 @@ function WeaponsHeader({
     ) : null;
 
   const customStyle = weapon
-    ? "bg-[#003B4F] text-[white]"
+    ? "bg-headerWeaponsSection text-white"
     : tool
-      ? "bg-[#F3D9B1] text-[#4e3727]"
+      ? "bg-headerToolsSection text-[#4e3727]"
       : "";
 
   return (
