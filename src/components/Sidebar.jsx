@@ -1,11 +1,10 @@
 import { NavLink } from "react-router-dom";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { BiUserCircle } from "react-icons/bi";
+import SidebarLink from "./SidebarLink";
 
 function Sidebar({ isVisible, setIsVisible }) {
-  const activeStyle = "bg-teal-700 rounded py-1 drop-shadow-sm";
-  const inactiveStyle = "hover:bg-teal-600 rounded py-1 drop-shadow-sm2";
-
+  const [hoveredItem, setHoveredItem] = useState(null);
   const navRef = useRef();
 
   useEffect(() => {
@@ -50,31 +49,33 @@ function Sidebar({ isVisible, setIsVisible }) {
     return (
       <div key={name} className="ml-2 flex flex-col gap-2 text-[0.8rem]">
         <h1 className="text-[1.2rem] tracking-wider">{name}</h1>
-        <NavLink
+        <SidebarLink
           to={to}
-          className={({ isActive }) => (isActive ? activeStyle : inactiveStyle)}
+          id={`${name}-dow`}
+          hoveredItem={hoveredItem}
+          setHoveredItem={setHoveredItem}
         >
-          <h2 className="font-bold text-[#e7e7e7]">DoW / DoM</h2>
-        </NavLink>
+          DoW / DoM
+        </SidebarLink>
         {craftersTo && (
-          <NavLink
+          <SidebarLink
             to={craftersTo}
-            className={({ isActive }) =>
-              isActive ? activeStyle : inactiveStyle
-            }
+            id={`${name}-crafters`}
+            hoveredItem={hoveredItem}
+            setHoveredItem={setHoveredItem}
           >
-            <h2 className="font-bold text-[#e7e7e7]">Crafters</h2>
-          </NavLink>
+            Crafters
+          </SidebarLink>
         )}
         {gatherersTo && (
-          <NavLink
+          <SidebarLink
             to={gatherersTo}
-            className={({ isActive }) =>
-              isActive ? activeStyle : inactiveStyle
-            }
+            id={`${name}-gatherers`}
+            hoveredItem={hoveredItem}
+            setHoveredItem={setHoveredItem}
           >
-            <h2 className="font-bold text-[#e7e7e7]">Gatherers</h2>
-          </NavLink>
+            Gatherers
+          </SidebarLink>
         )}
       </div>
     );
@@ -83,14 +84,12 @@ function Sidebar({ isVisible, setIsVisible }) {
   return (
     <div
       ref={navRef}
-      className={`fixed z-10 flex min-h-[100vh] min-w-[250px] translate-x-[-100%] flex-col gap-6 bg-neutral-700 px-7 pt-[3em] text-center font-bold text-white duration-[0.5s] min-[1000px]:fixed min-[1000px]:min-w-[250px] min-[1000px]:translate-x-[0] ${
-        isVisible && "translate-x-[0]"
-      }`}
+      className={`fixed z-10 flex min-h-[100vh] min-w-[250px] translate-x-[-100%] flex-col gap-6 bg-neutral-800/[95%] px-7 pt-[3em] text-center font-bold text-neutral-100 backdrop-blur-sm duration-[0.5s] min-[1000px]:translate-x-[0]`}
+      style={isVisible ? { transform: "translateX(0)" } : undefined}
+      onMouseLeave={() => setHoveredItem(null)}
     >
       <div className="flex flex-col gap-4">
         {linksEl}
-
-        {/* To be replaced in the future */}
         <h1 className="cursor-not-allowed text-[1.2rem] tracking-wider opacity-50">
           Heavensward
         </h1>
@@ -100,7 +99,7 @@ function Sidebar({ isVisible, setIsVisible }) {
         <div className="my-[0.5em] border"></div>
         <NavLink
           to="/account"
-          className="flex items-center justify-center gap-[0.5em] text-[1.1rem] hover:text-[#e6e6e6]"
+          className="flex items-center justify-center gap-[0.5em] text-[1.1rem]"
         >
           <BiUserCircle className="text-[1.8rem]" />
           My Account

@@ -3,7 +3,7 @@ function Materials({ materials, counter }) {
     return (
       <div key={material.id} className="flex items-center gap-3">
         <img
-          className="aspect-square w-9 aspect-squarerounded-[50%]"
+          className="aspect-square w-9 rounded-[50%]"
           alt={material.name}
           src={material.icon}
         />

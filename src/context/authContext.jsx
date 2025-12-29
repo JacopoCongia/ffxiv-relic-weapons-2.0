@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useState, useEffect } from "react";
 import { addUserToDb, auth } from "../../firebase";
 import {
   createUserWithEmailAndPassword,
@@ -19,22 +19,24 @@ const provider = new GoogleAuthProvider();
 function AuthContextProvider({ children }) {
   const [error, setError] = useState(null);
   const [currentUser, setCurrentUser] = useState(null);
+  const [loading, setLoading] = useState(true);
   const [emailSent, setEmailSent] = useState(false);
 
-  onAuthStateChanged(auth, (user) => {
-    if (user) {
-      setCurrentUser(user);
-    } else {
-      setCurrentUser(null);
-    }
-  });
+  // Listen for auth changes
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      setCurrentUser(user ?? null);
+      setLoading(false);
+    });
+    return unsubscribe;
+  }, []);
 
   async function createAccount(userData) {
     try {
       const credential = await createUserWithEmailAndPassword(
         auth,
         userData.email,
-        userData.password
+        userData.password,
       );
 
       setEmailSent(true);
@@ -83,7 +85,7 @@ function AuthContextProvider({ children }) {
     try {
       const credential = EmailAuthProvider.credential(
         auth.currentUser.email,
-        password
+        password,
       );
       await reauthenticateWithCredential(auth.currentUser, credential);
     } catch (error) {
@@ -131,6 +133,7 @@ function AuthContextProvider({ children }) {
         logOut,
         deleteAccount,
         currentUser,
+        loading,
         error,
       }}
     >
