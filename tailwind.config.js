@@ -5,11 +5,24 @@ export default {
     extend: {
       fontFamily: {},
       colors: {
+        "dark-teal": {
+          50: "#e5f9ff",
+          100: "#ccf2ff",
+          200: "#99e6ff",
+          300: "#66d9ff",
+          400: "#33ccff",
+          500: "#00bfff",
+          600: "#0099cc",
+          700: "#007399",
+          800: "#004d66",
+          900: "#002633",
+          950: "#001b24",
+        },
         navbar: "#0e2d41",
-        headerWeapons: "#0C4944",
-        headerWeaponsSection: "#003B4F",
-        headerTools: "#4E3727",
-        headerToolsSection: "#F3D9B1",
+        headerTools: "#3A5A40",
+        headerToolsSection: "#344e41",
+        headerToolsText: "#DAD7CD",
+        headerToolsTextPatch: "#A3B18A",
 
         background: "#1c1917", // Very dark stone (Page BG)
         surface: "#292524", // Slightly lighter stone (Card BG)

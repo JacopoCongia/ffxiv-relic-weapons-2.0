@@ -4,7 +4,6 @@ import { BiUserCircle } from "react-icons/bi";
 import SidebarLink from "./SidebarLink";
 
 function Sidebar({ isVisible, setIsVisible }) {
-  const [hoveredItem, setHoveredItem] = useState(null);
   const navRef = useRef();
 
   useEffect(() => {
@@ -19,7 +18,7 @@ function Sidebar({ isVisible, setIsVisible }) {
       // Unbind the event listener on clean up
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  });
+  }, [setIsVisible]);
 
   const links = [
     {
@@ -47,33 +46,18 @@ function Sidebar({ isVisible, setIsVisible }) {
   const linksEl = links.map((link) => {
     const { name, to, craftersTo, gatherersTo } = link;
     return (
-      <div key={name} className="ml-2 flex flex-col gap-2 text-[0.8rem]">
+      <div key={name} className="z-10 ml-2 flex flex-col gap-2 text-[0.8rem]">
         <h1 className="text-[1.2rem] tracking-wider">{name}</h1>
-        <SidebarLink
-          to={to}
-          id={`${name}-dow`}
-          hoveredItem={hoveredItem}
-          setHoveredItem={setHoveredItem}
-        >
+        <SidebarLink to={to} id={`${name}-dow`}>
           DoW / DoM
         </SidebarLink>
         {craftersTo && (
-          <SidebarLink
-            to={craftersTo}
-            id={`${name}-crafters`}
-            hoveredItem={hoveredItem}
-            setHoveredItem={setHoveredItem}
-          >
+          <SidebarLink to={craftersTo} id={`${name}-crafters`}>
             Crafters
           </SidebarLink>
         )}
         {gatherersTo && (
-          <SidebarLink
-            to={gatherersTo}
-            id={`${name}-gatherers`}
-            hoveredItem={hoveredItem}
-            setHoveredItem={setHoveredItem}
-          >
+          <SidebarLink to={gatherersTo} id={`${name}-gatherers`}>
             Gatherers
           </SidebarLink>
         )}
@@ -84,9 +68,8 @@ function Sidebar({ isVisible, setIsVisible }) {
   return (
     <div
       ref={navRef}
-      className={`fixed z-10 flex min-h-[100vh] min-w-[250px] translate-x-[-100%] flex-col gap-6 bg-neutral-800/[95%] px-7 pt-[3em] text-center font-bold text-neutral-100 backdrop-blur-sm duration-[0.5s] min-[1000px]:translate-x-[0]`}
+      className={`fixed z-10 flex min-h-[100vh] min-w-[250px] translate-x-[-100%] select-none flex-col gap-6 bg-neutral-900/[85%] px-7 pt-[3em] text-center font-bold text-neutral-100 backdrop-blur-sm duration-[0.5s] min-[1000px]:translate-x-[0]`}
       style={isVisible ? { transform: "translateX(0)" } : undefined}
-      onMouseLeave={() => setHoveredItem(null)}
     >
       <div className="flex flex-col gap-4">
         {linksEl}
@@ -99,7 +82,7 @@ function Sidebar({ isVisible, setIsVisible }) {
         <div className="my-[0.5em] border"></div>
         <NavLink
           to="/account"
-          className="flex items-center justify-center gap-[0.5em] text-[1.1rem]"
+          className="flex items-center justify-center gap-[0.5em] text-[1.1rem] transition-colors duration-[0.3s] hover:text-teal-500"
         >
           <BiUserCircle className="text-[1.8rem]" />
           My Account

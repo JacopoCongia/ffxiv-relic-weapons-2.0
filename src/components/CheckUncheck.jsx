@@ -5,7 +5,7 @@ function CheckUncheck({ weapons }) {
   const { checkAll, uncheckAll } = useWeaponsData();
 
   return (
-    <div className="flex w-[100%] flex-col justify-center gap-2 sm:flex-row sm:gap-4">
+    <div className="flex w-full flex-col justify-center gap-2 min-[600px]:w-[400px] min-[600px]:flex-row min-[600px]:gap-4">
       <Button onClick={() => checkAll(weapons)} check>
         Check All
       </Button>
