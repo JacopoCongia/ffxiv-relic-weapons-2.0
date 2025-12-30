@@ -1,5 +1,6 @@
 import ToolsContainer from "../components/ToolsContainer";
 import ToolsTable from "../components/ToolsTable";
+import Header from "../components/Header";
 import useWeaponsData from "../hooks/use-weapons-data";
 import data from "../../data";
 import materialsData from "../../materialsData";
@@ -8,39 +9,31 @@ function EndwalkerGatherers() {
   const { weapons: tools } = useWeaponsData();
 
   return (
-    <div className="min-[1000px]:pl-[250px] duration-[0.5s]">
-      <div className="py-7 px-4 bg-[#4e3727] text-[#fae6c8] text-center text-[1.9rem] font-[700]">
-        Gatherers
-      </div>
+    <div className="duration-[0.5s] min-[1000px]:pl-[250px]">
+      <Header dol />
       <ToolsContainer
         tools={tools.splendorousGatherers}
         category={"splendorousGatherers"}
         name={"Splendorous"}
         patchInfo={"iLvl 570 (Patch 6.35)"}
       >
-        <div className="text-white flex flex-col gap-3 mb-[2em] px-[2em] text-center">
-          <p className="flex gap-2 justify-center flex-wrap">
+        <div className="mb-[2em] flex flex-col gap-3 px-[2em] text-center text-white">
+          <p className="flex flex-wrap justify-center gap-2">
             You will get your first tool by completing the quest
             <a
-              className="underline flex items-center underline-offset-[5px] hover:text-[#dddddd]"
+              className="flex items-center underline underline-offset-[5px] hover:text-[#dddddd]"
               href="https://ffxiv.consolegameswiki.com/wiki/An_Original_Improvement"
               target="_blank"
               rel="noreferrer"
             >
-              <img
-                className="w-[25px]"
-                src="/icons/feature_quest.png"
-              />
+              <img className="w-[25px]" src="/icons/feature_quest.png" />
               An Original Improvement
             </a>
           </p>
-          <p className="flex gap-1 justify-center items-center flex-wrap">
+          <p className="flex flex-wrap items-center justify-center gap-1">
             Each subsequent tool can be acquired for
             <span className="font-bold">1500</span>
-            <img
-              className="w-[22px]"
-              src="/icons/white_gatherers_scrip.png"
-            />
+            <img className="w-[22px]" src="/icons/white_gatherers_scrip.png" />
             White Gatherer Scrips from Quinnana, in The Crystarium
           </p>
         </div>
@@ -51,8 +44,8 @@ function EndwalkerGatherers() {
         name={"Augmented Splendorous"}
         patchInfo={"iLvl 590 (Patch 6.35)"}
       >
-        <div className="text-white flex flex-col gap-3 mb-[2em] px-[2em] text-center">
-          <p className="flex gap-2 justify-center flex-wrap">
+        <div className="mb-[2em] flex flex-col gap-3 px-[2em] text-center text-white">
+          <p className="flex flex-wrap justify-center gap-2">
             Miner and Botanist need <span className="font-bold">180</span>
             <img
               className="w-[22px]"
@@ -62,7 +55,7 @@ function EndwalkerGatherers() {
             <span className="font-bold">60</span> Collectables at maximum
             collectability.
           </p>
-          <p className="flex gap-2 justify-center flex-wrap">
+          <p className="flex flex-wrap justify-center gap-2">
             Fisher needs <span className="font-bold">60</span>
             <img
               className="w-[22px]"
@@ -122,8 +115,8 @@ function EndwalkerGatherers() {
         name={"Crystalline"}
         patchInfo={"iLvl 620 (Patch 6.35)"}
       >
-        <div className="text-white flex flex-col gap-3 mb-[2em] px-[2em] text-center">
-          <p className="flex gap-2 justify-center flex-wrap">
+        <div className="mb-[2em] flex flex-col gap-3 px-[2em] text-center text-white">
+          <p className="flex flex-wrap justify-center gap-2">
             Miner and Botanist need <span className="font-bold">210</span>
             <img
               className="w-[22px]"
@@ -133,7 +126,7 @@ function EndwalkerGatherers() {
             <span className="font-bold">70</span> Collectables at maximum
             collectability.
           </p>
-          <p className="flex gap-2 justify-center flex-wrap">
+          <p className="flex flex-wrap justify-center gap-2">
             Fisher needs <span className="font-bold">80</span>
             <img
               className="w-[22px]"
@@ -169,8 +162,8 @@ function EndwalkerGatherers() {
         name={"Chora Zoi's Crystalline"}
         patchInfo={"iLvl 625 (Patch 6.45)"}
       >
-        <div className="text-white flex flex-col gap-3 mb-[2em] px-[2em] text-center">
-          <p className="flex gap-2 justify-center flex-wrap">
+        <div className="mb-[2em] flex flex-col gap-3 px-[2em] text-center text-white">
+          <p className="flex flex-wrap justify-center gap-2">
             Miner and Botanist need <span className="font-bold">210</span>
             <img
               className="w-[22px]"
@@ -180,7 +173,7 @@ function EndwalkerGatherers() {
             <span className="font-bold">70</span> Collectables at maximum
             collectability.
           </p>
-          <p className="flex gap-2 justify-center flex-wrap">
+          <p className="flex flex-wrap justify-center gap-2">
             Fisher needs <span className="font-bold">80</span>
             <img
               className="w-[22px]"
@@ -216,8 +209,8 @@ function EndwalkerGatherers() {
         name={"Brilliant"}
         patchInfo={"iLvl 630 (Patch 6.45)"}
       >
-        <div className="text-white flex flex-col gap-3 mb-[2em] px-[2em] text-center">
-          <p className="flex gap-2 justify-center flex-wrap">
+        <div className="mb-[2em] flex flex-col gap-3 px-[2em] text-center text-white">
+          <p className="flex flex-wrap justify-center gap-2">
             Miner and Botanist need <span className="font-bold">210</span>
             <img
               className="w-[22px]"
@@ -227,7 +220,7 @@ function EndwalkerGatherers() {
             <span className="font-bold">70</span> Collectables at maximum
             collectability.
           </p>
-          <p className="flex gap-2 justify-center flex-wrap">
+          <p className="flex flex-wrap justify-center gap-2">
             Fisher needs <span className="font-bold">80</span>
             <img
               className="w-[22px]"
@@ -263,8 +256,8 @@ function EndwalkerGatherers() {
         name={"Vrandtic Visionary's"}
         patchInfo={"iLvl 635 (Patch 6.51)"}
       >
-        <div className="text-white flex flex-col gap-3 mb-[2em] px-[2em] text-center">
-          <p className="flex gap-2 justify-center flex-wrap">
+        <div className="mb-[2em] flex flex-col gap-3 px-[2em] text-center text-white">
+          <p className="flex flex-wrap justify-center gap-2">
             Miner and Botanist need <span className="font-bold">220</span>
             <img
               className="w-[22px]"
@@ -274,7 +267,7 @@ function EndwalkerGatherers() {
             <span className="font-bold">110</span> Collectables at maximum
             collectability.
           </p>
-          <p className="flex gap-2 justify-center flex-wrap">
+          <p className="flex flex-wrap justify-center gap-2">
             Fisher needs <span className="font-bold">170</span>
             <img
               className="w-[22px]"
@@ -304,8 +297,8 @@ function EndwalkerGatherers() {
         name={"Lodestar"}
         patchInfo={"iLvl 640 (Patch 6.51)"}
       >
-        <div className="text-white flex flex-col gap-3 mb-[2em] px-[2em] text-center">
-          <p className="flex gap-2 justify-center flex-wrap">
+        <div className="mb-[2em] flex flex-col gap-3 px-[2em] text-center text-white">
+          <p className="flex flex-wrap justify-center gap-2">
             Miner and Botanist need <span className="font-bold">220</span>
             <img
               className="w-[22px]"
@@ -315,7 +308,7 @@ function EndwalkerGatherers() {
             <span className="font-bold">110</span> Collectables at maximum
             collectability.
           </p>
-          <p className="flex gap-2 justify-center flex-wrap">
+          <p className="flex flex-wrap justify-center gap-2">
             Fisher needs <span className="font-bold">170</span>
             <img
               className="w-[22px]"

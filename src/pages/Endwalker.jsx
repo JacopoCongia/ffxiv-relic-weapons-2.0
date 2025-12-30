@@ -8,7 +8,7 @@ function Endwalker() {
 
   return (
     <div className="w-[100%] duration-[0.5s] min-[1000px]:pl-[250px]">
-      <Header title="Manderville" />
+      <Header title="Manderville" dow />
       <WeaponsSection
         weapons={weapons.manderville}
         ownedWeapons={ownedWeapons}

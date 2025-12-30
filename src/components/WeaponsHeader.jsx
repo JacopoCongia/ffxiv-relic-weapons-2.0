@@ -24,13 +24,13 @@ function WeaponsHeader({
 
   const check =
     counter?.length === totalWeapons ? (
-      <BsCheckLg className="mr-2 text-[20px] text-green-500 sm:text-[28px]" />
+      <BsCheckLg className="text-dark-teal-400 mr-2 text-[20px] sm:text-[28px]" />
     ) : null;
 
   const customStyle = weapon
-    ? "bg-headerWeaponsSection text-white"
+    ? "bg-dark-teal-900 text-dark-teal-100 border-b border-dark-teal-800 hover:bg-dark-teal-800/70 transition-colors duration-[0.3s]"
     : tool
-      ? "bg-headerToolsSection text-[#4e3727]"
+      ? "bg-headerToolsSection text-headerToolsText"
       : "";
 
   return (
@@ -38,25 +38,29 @@ function WeaponsHeader({
       onClick={() => handleVisibility(category, visibility[category])}
       className={`mb-[1px] flex cursor-pointer items-center justify-center gap-2 px-5 py-3 text-[16px] hover:opacity-95 sm:text-[20px] ${customStyle}`}
     >
-      <p className="flex items-center text-[14px] font-bold sm:text-[18px]">
+      <p className="flex items-center text-[1rem] font-bold min-[600px]:text-[1.1rem]">
         {check} {counter?.length}/{totalWeapons}
       </p>
-      <h4 className="ml-auto mr-auto text-center text-[16px] font-bold sm:text-[22px]">
+      <h1 className="mx-auto text-center text-[1.1rem] font-bold min-[600px]:text-[1.3rem]">
         {name}
         <span
-          className={`block text-[12px] sm:text-[16px] ${
-            weapon ? "text-[#02B680]" : tool ? "text-green-600" : ""
+          className={`block text-[0.9rem] min-[600px]:text-[1rem] ${
+            weapon
+              ? "text-dark-teal-300"
+              : tool
+                ? "text-headerToolsTextPatch"
+                : ""
           }`}
         >
           {patchInfo}
         </span>
-      </h4>
+      </h1>
       <motion.div
         animate={{ rotate: visibility[category] ? 180 : 0 }}
         transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
         className="flex items-center justify-center"
       >
-        <GoChevronDown className="text-2xl sm:text-3xl" />
+        <GoChevronDown className="text-[1.9rem] sm:text-[2.3rem]" />
       </motion.div>
     </div>
   );
