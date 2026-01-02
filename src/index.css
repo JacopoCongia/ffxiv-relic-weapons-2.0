@@ -3,6 +3,20 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  /* Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* IE and Edge */
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    /* Firefox */
+    scrollbar-width: none;
+  }
+}
+
 html {
   background: #252525;
   font-family: Montserrat, sans-serif;

@@ -2,12 +2,10 @@ import { Link } from "react-router-dom";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { RxCross1 } from "react-icons/rx";
 import Logo from "./Logo";
-import useAuth from "../hooks/use-auth";
 
 function Navbar({ isVisible, setIsVisible }) {
-  const { currentUser, loading } = useAuth();
   return (
-    <div className="sticky top-0 z-10 flex select-none items-center justify-center bg-navbar/[85%] py-[2em] pl-[3em] text-center font-[Cinzel] text-neutral-100 backdrop-blur-md min-[1000px]:pl-0">
+    <div className="sticky top-0 z-50 flex select-none items-center justify-center bg-navbar/[85%] py-[2em] pl-[3em] text-center font-[Cinzel] text-neutral-100 backdrop-blur-md min-[1000px]:pl-0">
       {!isVisible ? (
         <RxHamburgerMenu
           onClick={() => setIsVisible(true)}
@@ -33,16 +31,6 @@ function Navbar({ isVisible, setIsVisible }) {
         </Link>
         <Logo className="mt-[-6px] h-[50px] w-[50px] text-neutral-100 min-[600px]:h-[80px] min-[600px]:w-[80px]" />
       </div>
-      {!loading && !currentUser?.emailVerified && (
-        <Link
-          to="/account"
-          className="fixed bottom-0 z-20 w-screen bg-red-900 py-3 text-center font-semibold text-white underline underline-offset-4 opacity-[95%] hover:text-[#ddd]"
-        >
-          {!currentUser
-            ? "Log in and verify your email to save your collection"
-            : "Verify your email to save your collection"}
-        </Link>
-      )}
     </div>
   );
 }

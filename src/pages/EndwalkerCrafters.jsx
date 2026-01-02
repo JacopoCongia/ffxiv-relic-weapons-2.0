@@ -48,7 +48,7 @@ function EndwalkerCrafters() {
               className="w-[22px]"
               src="/icons/endwalker-icons/materials/splendorous_crafters_component.png"
             />
-            Splendorous Components per Tool which means{" "}
+            Splendorous Components per Tool which means
             <span className="font-bold">20</span> Collectables at maximum
             collectability.
           </p>

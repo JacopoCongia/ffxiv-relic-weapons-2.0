@@ -6,7 +6,7 @@ export default function Home() {
         src="/final_fantasy_xiv_logo.png"
         alt="the original game logo depicting the different game races and the text saying Final Fantasy XIV Online"
       />
-      <div className="flex flex-col gap-[1em] px-[2em] text-[2rem] min-[600px]:text-left">
+      <div className="flex flex-col gap-[1em] px-[2em] text-[2rem]">
         <p>
           Welcome to the{" "}
           <span className="text-header text-[2.2rem] font-bold">
