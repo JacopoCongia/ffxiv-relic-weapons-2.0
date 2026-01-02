@@ -68,7 +68,7 @@ function Sidebar({ isVisible, setIsVisible }) {
   return (
     <div
       ref={navRef}
-      className={`fixed z-10 flex min-h-[100vh] min-w-[250px] translate-x-[-100%] select-none flex-col gap-6 bg-neutral-900/[85%] px-7 pt-[3em] text-center font-bold text-neutral-100 backdrop-blur-sm duration-[0.5s] min-[1000px]:translate-x-[0]`}
+      className={`no-scrollbar fixed inset-y-0 z-10 mt-[112px] flex min-w-[250px] translate-x-[-100%] select-none flex-col gap-6 overflow-y-auto bg-neutral-900/[85%] px-7 pt-[4em] text-center font-bold text-neutral-100 backdrop-blur-md duration-[0.5s] min-[600px]:mt-[140.8px] min-[1000px]:translate-x-[0]`}
       style={isVisible ? { transform: "translateX(0)" } : undefined}
     >
       <div className="flex flex-col gap-4">

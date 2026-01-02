@@ -37,11 +37,12 @@ function ToolsContainer({ tools, category, name, children, patchInfo }) {
               zIndex: 10,
               overflow: "hidden",
               transitionEnd: { overflow: "visible" },
+              opacity: 1,
             },
-            collapsed: { height: 0, zIndex: 0, overflow: "hidden" },
+            collapsed: { height: 0, zIndex: 0, overflow: "hidden", opacity: 0 },
           }}
           transition={{ duration: 0.5, ease: [0.4, 0, 0.2, 1] }}
-          className="mx-auto flex max-w-[1000px] flex-col items-center justify-center bg-stone-800 px-[3em] text-white"
+          className="flex flex-col items-center justify-center gap-[2em] bg-stone-800 text-neutral-100"
         >
           <div className="flex flex-wrap items-center justify-center gap-5 p-[3em]">
             {toolsEl}

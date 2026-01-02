@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import WeaponsContainer from "./WeaponsContainer";
 import WeaponsHeader from "./WeaponsHeader";
@@ -20,11 +21,32 @@ function WeaponsSection({
 }) {
   const { currentUser } = useAuth();
   const { visibility } = useWeaponsData();
+  const containerRef = useRef(null);
 
   const counter = useCounter(ownedWeapons, category);
 
+  // Logic to scroll to bottom when the user opens a section
+  const handleScrollOnOpen = () => {
+    if (containerRef.current) {
+      setTimeout(() => {
+        const rect = containerRef.current.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+
+        if (rect.bottom > windowHeight) {
+          containerRef.current.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }
+      }, 100);
+    }
+  };
+
   return (
-    <AnimatePresence initial={false}>
+    <div
+      ref={containerRef}
+      className="scroll-mt-[112px] min-[600px]:scroll-mt-[140.8px]"
+    >
       <WeaponsHeader
         category={category}
         counter={counter}
@@ -33,42 +55,53 @@ function WeaponsSection({
         weapon
         weapons={weapons}
       />
-      {visibility[category] && (
-        <motion.div
-          key="content"
-          initial="collapsed"
-          animate="open"
-          exit="collapsed"
-          variants={{
-            open: {
-              height: "auto",
-              zIndex: 10,
-              overflow: "hidden",
-              transitionEnd: { overflow: "visible" },
-            },
-            collapsed: { height: 0, zIndex: 0, overflow: "hidden" },
-          }}
-          transition={{ duration: 0.5, ease: [0.4, 0, 0.2, 1] }}
-          className="mx-auto flex max-w-[1000px] flex-col items-center justify-center bg-stone-800 px-[3em] text-white"
-        >
-          <div className="flex w-full flex-col items-center py-10">
-            <WeaponsContainer weapons={weapons} />
-            <MaterialsContainer
-              category={category}
-              counter={counter}
-              materials={materials}
-              notes={notes || null}
-              tomestoneAmount={tomestoneAmount}
-              tomestones={tomestones}
-              weapons={weapons}
-            />
-            {currentUser?.emailVerified && (
-              <CheckUncheck category={category} weapons={weapons} />
-            )}
-          </div>
-        </motion.div>
-      )}
-    </AnimatePresence>
+      <AnimatePresence initial={false}>
+        {visibility[category] && (
+          <motion.div
+            key="content"
+            initial="collapsed"
+            animate="open"
+            exit="collapsed"
+            onAnimationComplete={(definition) => {
+              if (definition === "open") handleScrollOnOpen();
+            }}
+            variants={{
+              open: {
+                height: "auto",
+                zIndex: 10,
+                overflow: "hidden",
+                transitionEnd: { overflow: "visible" },
+                opacity: 1,
+              },
+              collapsed: {
+                height: 0,
+                zIndex: 0,
+                overflow: "hidden",
+                opacity: 0,
+              },
+            }}
+            transition={{ duration: 0.5, ease: [0.4, 0, 0.2, 1] }}
+            className="mx-auto bg-stone-800 text-white"
+          >
+            <div className="flex w-full flex-col items-center px-[3em] py-10">
+              <WeaponsContainer weapons={weapons} />
+              <MaterialsContainer
+                category={category}
+                counter={counter}
+                materials={materials}
+                notes={notes || null}
+                tomestoneAmount={tomestoneAmount}
+                tomestones={tomestones}
+                weapons={weapons}
+              />
+              {currentUser?.emailVerified && (
+                <CheckUncheck category={category} weapons={weapons} />
+              )}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
   );
 }
 
