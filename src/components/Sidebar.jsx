@@ -82,7 +82,7 @@ function Sidebar({ isVisible, setIsVisible }) {
         <div className="my-[0.5em] border"></div>
         <NavLink
           to="/account"
-          className="mb-[3em] flex items-center justify-center gap-[0.5em] text-[1.1rem] transition-colors duration-[0.3s] hover:text-teal-500"
+          className="flex items-center justify-center gap-[0.5em] text-[1.1rem] transition-colors duration-[0.3s] hover:text-teal-500"
         >
           <BiUserCircle className="text-[1.8rem]" />
           My Account
