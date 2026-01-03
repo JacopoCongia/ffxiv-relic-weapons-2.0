@@ -1,6 +1,6 @@
-import ToolsContainer from "../components/ToolsContainer";
+import ToolsContainer from "../components/features/weapons/ToolsContainer.jsx";
 import useWeaponsData from "../hooks/use-weapons-data";
-import Header from "../components/Header";
+import Header from "../components/layout/Header.jsx";
 
 function EndwalkerCrafters() {
   const { weapons: tools } = useWeaponsData();

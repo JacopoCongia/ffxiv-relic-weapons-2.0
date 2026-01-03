@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 import { GoChevronDown } from "react-icons/go";
 import { BsCheckLg } from "react-icons/bs";
 
-import useWeaponsData from "../hooks/use-weapons-data";
+import useWeaponsData from "../../../hooks/use-weapons-data.jsx";
 
 function WeaponsHeader({
   category,
@@ -24,7 +24,7 @@ function WeaponsHeader({
 
   const check =
     counter?.length === totalWeapons ? (
-      <BsCheckLg className="text-dark-teal-400 mr-2 text-[20px] sm:text-[28px]" />
+      <BsCheckLg className="mr-2 text-[20px] text-dark-teal-400 sm:text-[28px]" />
     ) : null;
 
   const customStyle = weapon
@@ -36,7 +36,7 @@ function WeaponsHeader({
   return (
     <div
       onClick={() => handleVisibility(category, visibility[category])}
-      className={`mb-[1px] flex cursor-pointer items-center justify-center gap-2 px-5 py-3 text-[16px] hover:opacity-95 sm:text-[20px] ${customStyle}`}
+      className={`mb-[1px] flex cursor-pointer select-none items-center justify-center gap-2 px-5 py-3 text-[16px] hover:opacity-95 sm:text-[20px] ${customStyle}`}
     >
       <p className="flex items-center text-[1rem] font-bold min-[600px]:text-[1.1rem]">
         {check} {counter?.length}/{totalWeapons}

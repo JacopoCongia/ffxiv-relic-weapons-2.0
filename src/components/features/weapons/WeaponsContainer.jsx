@@ -1,4 +1,4 @@
-import Weapon from "./Weapon";
+import Weapon from "./Weapon.jsx";
 
 function WeaponsContainer({ weapons }) {
   const weaponElements = weapons.map((weapon) => (

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import useAuth from "../../hooks/use-auth";
+import useAuth from "../../../hooks/use-auth.js";
 
 function SignIn() {
   const [formData, setFormData] = useState({ email: "", password: "" });
@@ -13,7 +13,7 @@ function SignIn() {
     setFormData((prevFormData) => {
       return {
         ...prevFormData,
-        [name]: value
+        [name]: value,
       };
     });
   }
@@ -31,18 +31,18 @@ function SignIn() {
     <div className="flex flex-col items-center gap-5 text-white">
       <h1 className="text-[1.7rem] font-[600]">Sign In</h1>
       <button
-        className="text-center rounded hover:opacity-90 w-[66%] bg-[#4285F4] flex items-center justify-between"
+        className="flex w-[66%] items-center justify-between rounded bg-[#4285F4] text-center hover:opacity-90"
         onClick={() => logInWithGoogle()}
       >
         <img src="/google-sign-in.svg" />
-        <p className="font-medium m-auto">Sign in With Google</p>
+        <p className="m-auto font-medium">Sign in With Google</p>
       </button>
       <form
         onSubmit={handleFormSubmit}
-        className="flex flex-col m-auto gap-3 text-center w-[66%]"
+        className="m-auto flex w-[66%] flex-col gap-3 text-center"
       >
         <input
-          className="text-center py-[0.5em] rounded border text-[#272727]"
+          className="rounded border py-[0.5em] text-center text-[#272727]"
           type="email"
           placeholder="Email"
           onChange={handleFormChange}
@@ -50,7 +50,7 @@ function SignIn() {
           name="email"
         />
         <input
-          className="text-center py-[0.5em] rounded border text-[#272727]"
+          className="rounded border py-[0.5em] text-center text-[#272727]"
           type="password"
           placeholder="Password"
           onChange={handleFormChange}
@@ -58,7 +58,7 @@ function SignIn() {
           name="password"
         />
         <button
-          className="text-center py-[0.5em] rounded border hover:bg-[#363636]"
+          className="rounded border py-[0.5em] text-center hover:bg-[#363636]"
           type="submit"
         >
           Sign In
@@ -67,14 +67,14 @@ function SignIn() {
           Don&apos;t have an account yet?{" "}
           <Link
             to="/register"
-            className="text-teal-500 font-[600] hover:underline underline-offset-4 hover:cursor-pointer"
+            className="font-[600] text-teal-500 underline-offset-4 hover:cursor-pointer hover:underline"
           >
             Create one now.
           </Link>
         </p>
       </form>
       {error && (
-        <h1 className="text-[#ddd] rounded px-[1.5em] py-[0.4em] font-semibold bg-red-800">
+        <h1 className="rounded bg-red-800 px-[1.5em] py-[0.4em] font-semibold text-[#ddd]">
           Error: {error?.code.replace("auth/", "").replaceAll("-", " ")}
         </h1>
       )}

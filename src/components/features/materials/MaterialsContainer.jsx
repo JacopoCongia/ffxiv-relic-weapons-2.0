@@ -1,4 +1,4 @@
-import Materials from "./Materials";
+import Materials from "./Materials.jsx";
 
 function MaterialsContainer({
   counter,

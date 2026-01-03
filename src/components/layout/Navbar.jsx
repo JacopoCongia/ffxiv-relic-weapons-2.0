@@ -1,12 +1,11 @@
 import { Link } from "react-router-dom";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { RxCross1 } from "react-icons/rx";
-import Logo from "./Logo";
+import Logo from "../common/Logo.jsx";
 
 function Navbar({ isVisible, setIsVisible }) {
   return (
     <div className="sticky top-0 z-50 flex select-none items-center justify-center bg-navbar/[85%] py-[2em] pl-[3em] text-center font-[Cinzel] text-neutral-100 backdrop-blur-md min-[1000px]:pl-0">
-
       {!isVisible ? (
         <RxHamburgerMenu
           onClick={() => setIsVisible(true)}

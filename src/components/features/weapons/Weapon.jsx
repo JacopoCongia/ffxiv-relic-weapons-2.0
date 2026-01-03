@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion, useAnimation } from "motion/react";
-import useWeaponsData from "../hooks/use-weapons-data";
-import useAuth from "../hooks/use-auth";
+import useWeaponsData from "../../../hooks/use-weapons-data.jsx";
+import useAuth from "../../../hooks/use-auth.js";
 
 // Variants for tooltip animation
 const tooltipVariants = {

@@ -1,9 +1,10 @@
 import { Outlet, Link } from "react-router-dom";
-import { useState } from "react";
-import useAuth from "../hooks/use-auth";
+import { useState, Suspense } from "react";
+import useAuth from "../../hooks/use-auth.js";
+import Loading from "../common/Loading.jsx";
 
-import Navbar from "./Navbar";
-import Sidebar from "./Sidebar";
+import Navbar from "./Navbar.jsx";
+import Sidebar from "./Sidebar.jsx";
 
 function Layout() {
   const [isVisible, setIsVisible] = useState(false);
@@ -13,7 +14,10 @@ function Layout() {
     <>
       <Navbar isVisible={isVisible} setIsVisible={setIsVisible} />
       <Sidebar isVisible={isVisible} setIsVisible={setIsVisible} />
-      <Outlet />
+      {/* Shows the "Loading" component when the page is loading */}
+      <Suspense fallback={<Loading />}>
+        <Outlet />
+      </Suspense>
       {!loading && !currentUser?.emailVerified && (
         <Link
           to="/account"

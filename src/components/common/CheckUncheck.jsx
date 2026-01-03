@@ -1,5 +1,5 @@
-import useWeaponsData from "../hooks/use-weapons-data";
-import Button from "./Button";
+import useWeaponsData from "../../hooks/use-weapons-data.jsx";
+import Button from "./Button.jsx";
 
 function CheckUncheck({ weapons }) {
   const { checkAll, uncheckAll } = useWeaponsData();

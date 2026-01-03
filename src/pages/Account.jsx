@@ -1,7 +1,7 @@
 import { reload } from "firebase/auth";
 
-import SignIn from "../components/authentication/SignIn";
-import SignInAgain from "../components/authentication/SignInAgain";
+import SignIn from "../components/features/authentication/SignIn";
+import SignInAgain from "../components/features/authentication/SignInAgain";
 
 import useAuth from "../hooks/use-auth";
 
@@ -35,28 +35,28 @@ function Account() {
   return (
     <>
       {currentUser ? (
-        <div className="mt-[5em] flex flex-col items-center duration-[0.5s] min-[1000px]:pl-[250px] min-[650px]:w-[66%] min-[650px]:mx-auto">
-          <h1 className="text-[#dbdbdb] text-center bg-neutral-700 p-5 w-full text-[1rem] mb-1 min-[650px]:rounded">
+        <div className="mt-[5em] flex flex-col items-center duration-[0.5s] min-[650px]:mx-auto min-[650px]:w-[66%] min-[1000px]:pl-[250px]">
+          <h1 className="mb-1 w-full bg-neutral-700 p-5 text-center text-[1rem] text-[#dbdbdb] min-[650px]:rounded">
             <span className="font-bold">Logged in as:</span> {currentUser.email}
           </h1>
           {!currentUser?.emailVerified ? (
             <button
               disabled={emailSent}
               onClick={() => handleVerifyEmail()}
-              className="text-center w-full bg-neutral-700 text-green-500 p-5 text-[1rem] mb-[5em]hover:cursor-pointer hover:bg-neutral-600 disabled:opacity-80 disabled:text-[#ccc] disabled:cursor-not-allowed min-[650px]:rounded mb-[5em]"
+              className="mb-[5em]hover:cursor-pointer mb-[5em] w-full bg-neutral-700 p-5 text-center text-[1rem] text-green-500 hover:bg-neutral-600 disabled:cursor-not-allowed disabled:text-[#ccc] disabled:opacity-80 min-[650px]:rounded"
             >
               {emailSent
                 ? "Verification email sent, check your inbox."
                 : "Click to send a new verification email."}
             </button>
           ) : (
-            <h1 className="text-center w-full font-semibold bg-neutral-700 text-green-500 p-5 mb-[5em] min-[650px]:rounded">
+            <h1 className="mb-[5em] w-full bg-neutral-700 p-5 text-center font-semibold text-green-500 min-[650px]:rounded">
               Email Verified
             </h1>
           )}
           <button
             onClick={handleLogOut}
-            className="w-[100%] mb-[1.5em] text-white py-2 bg-red-700 hover:bg-red-600 min-[650px]:rounded"
+            className="mb-[1.5em] w-[100%] bg-red-700 py-2 text-white hover:bg-red-600 min-[650px]:rounded"
           >
             Log Out
           </button>
@@ -68,7 +68,7 @@ function Account() {
           ) : (
             <button
               onClick={handleDeleteAccount}
-              className="w-[100%] text-white py-2 bg-red-700 hover:bg-red-600 min-[650px]:rounded"
+              className="w-[100%] bg-red-700 py-2 text-white hover:bg-red-600 min-[650px]:rounded"
             >
               Delete Account
             </button>

@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 import { BiUserCircle } from "react-icons/bi";
-import SidebarLink from "./SidebarLink";
+import SidebarLink from "./SidebarLink.jsx";
 
 function Sidebar({ isVisible, setIsVisible }) {
   const navRef = useRef();
@@ -82,7 +82,7 @@ function Sidebar({ isVisible, setIsVisible }) {
         <div className="my-[0.5em] border"></div>
         <NavLink
           to="/account"
-          className="flex items-center justify-center gap-[0.5em] text-[1.1rem] transition-colors duration-[0.3s] hover:text-teal-500"
+          className="mb-[3em] flex items-center justify-center gap-[0.5em] text-[1.1rem] transition-colors duration-[0.3s] hover:text-teal-500"
         >
           <BiUserCircle className="text-[1.8rem]" />
           My Account

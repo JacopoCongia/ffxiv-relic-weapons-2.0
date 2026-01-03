@@ -1,16 +1,16 @@
 import { useEffect, useState } from "react";
 import { Navigate } from "react-router-dom";
-import useAuth from "../../hooks/use-auth";
+import useAuth from "../../../hooks/use-auth.js";
 import {
   BsFillCheckSquareFill,
-  BsFillExclamationSquareFill
+  BsFillExclamationSquareFill,
 } from "react-icons/bs";
 
 function SignUp() {
   const [formData, setFormData] = useState({
     email: "",
     password: "",
-    confirmPassword: ""
+    confirmPassword: "",
   });
   const [wrongPassword, setWrongPassword] = useState(false);
   const { createAccount, currentUser, error } = useAuth();
@@ -22,7 +22,7 @@ function SignUp() {
     setFormData((prevFormData) => {
       return {
         ...prevFormData,
-        [name]: value
+        [name]: value,
       };
     });
   }
@@ -48,10 +48,10 @@ function SignUp() {
       <h1 className="text-[1.7rem] font-[600]">Create Account</h1>
       <form
         onSubmit={handleFormSubmit}
-        className="flex flex-col m-auto gap-3 text-center w-[66%]"
+        className="m-auto flex w-[66%] flex-col gap-3 text-center"
       >
         <input
-          className="text-center py-[0.5em] rounded border text-[#272727]"
+          className="rounded border py-[0.5em] text-center text-[#272727]"
           type="email"
           placeholder="Email"
           onChange={handleFormChange}
@@ -60,7 +60,7 @@ function SignUp() {
         />
         <div className="relative">
           <input
-            className={`w-full text-center py-[0.5em] rounded border text-[#272727]`}
+            className={`w-full rounded border py-[0.5em] text-center text-[#272727]`}
             type="password"
             placeholder="Password"
             onChange={handleFormChange}
@@ -69,17 +69,17 @@ function SignUp() {
           />
           {!wrongPassword && formData.password.length > 0 ? (
             <BsFillCheckSquareFill
-              className={`absolute right-[2%] opacity-90 text-green-700 text-[1.4rem] top-[50%] translate-y-[-50%]`}
+              className={`absolute right-[2%] top-[50%] translate-y-[-50%] text-[1.4rem] text-green-700 opacity-90`}
             />
           ) : wrongPassword && formData.password.length > 0 ? (
-            <BsFillExclamationSquareFill className="absolute right-[2%] opacity-90 text-red-700 text-[1.4rem] top-[50%] translate-y-[-50%]" />
+            <BsFillExclamationSquareFill className="absolute right-[2%] top-[50%] translate-y-[-50%] text-[1.4rem] text-red-700 opacity-90" />
           ) : (
             ""
           )}
         </div>
         <div className="relative">
           <input
-            className={`w-full text-center py-[0.5em] rounded border text-[#272727]`}
+            className={`w-full rounded border py-[0.5em] text-center text-[#272727]`}
             type="password"
             placeholder="Confirm Password"
             onChange={handleFormChange}
@@ -88,17 +88,17 @@ function SignUp() {
           />
           {!wrongPassword && formData.password.length > 0 ? (
             <BsFillCheckSquareFill
-              className={`absolute right-[2%] opacity-90 text-green-700 text-[1.4rem] top-[50%] translate-y-[-50%]`}
+              className={`absolute right-[2%] top-[50%] translate-y-[-50%] text-[1.4rem] text-green-700 opacity-90`}
             />
           ) : wrongPassword && formData.password.length > 0 ? (
-            <BsFillExclamationSquareFill className="absolute right-[2%] opacity-90 text-red-700 text-[1.4rem] top-[50%] translate-y-[-50%]" />
+            <BsFillExclamationSquareFill className="absolute right-[2%] top-[50%] translate-y-[-50%] text-[1.4rem] text-red-700 opacity-90" />
           ) : (
             ""
           )}
         </div>
 
         <button
-          className="text-center py-[0.5em] rounded border enabled:hover:bg-[#363636] disabled:opacity-50 disabled:cursor-not-allowed"
+          className="rounded border py-[0.5em] text-center enabled:hover:bg-[#363636] disabled:cursor-not-allowed disabled:opacity-50"
           type="submit"
           disabled={
             wrongPassword ||
@@ -113,7 +113,7 @@ function SignUp() {
         <h1 className="text-red-500">Passwords do not match</h1>
       )}
       {error && (
-        <h1 className="text-[#ddd] rounded px-[1.5em] py-[0.4em] font-semibold bg-red-800">
+        <h1 className="rounded bg-red-800 px-[1.5em] py-[0.4em] font-semibold text-[#ddd]">
           Error: {error?.code.replace("auth/", "").replaceAll("-", " ")}
         </h1>
       )}

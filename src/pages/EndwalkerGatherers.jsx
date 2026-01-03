@@ -1,9 +1,9 @@
-import ToolsContainer from "../components/ToolsContainer";
-import ToolsTable from "../components/ToolsTable";
-import Header from "../components/Header";
+import ToolsContainer from "../components/features/weapons/ToolsContainer.jsx";
+import ToolsTable from "../components/features/weapons/ToolsTable.jsx";
+import Header from "../components/layout/Header.jsx";
 import useWeaponsData from "../hooks/use-weapons-data";
-import data from "../../data";
-import materialsData from "../../materialsData";
+import data from "../data/data.js";
+import materialsData from "../data/materialsData.js";
 
 function EndwalkerGatherers() {
   const { weapons: tools } = useWeaponsData();

@@ -1,7 +1,7 @@
 import { createContext, useState, useEffect } from "react";
 import { addToDb, getWeapons } from "../../firebase";
 
-import data from "../../data";
+import data from "../data/data.js";
 
 import useAuth from "../hooks/use-auth";
 
@@ -38,7 +38,7 @@ function WeaponsDataProvider({ children }) {
       if (weapon.wpnJobShort === "PLD") {
         // Find all PLD weapons in the same category (sword and shield)
         const pldWeapons = weapons[weapon.category].filter(
-          (w) => w.wpnJobShort === "PLD"
+          (w) => w.wpnJobShort === "PLD",
         );
         setOwnedWeapons((prevOwnedWeapons) => {
           // Only add those not already owned
@@ -69,16 +69,16 @@ function WeaponsDataProvider({ children }) {
       if (weapon.wpnJobShort === "PLD") {
         // Remove all PLD weapons in the same category (sword and shield)
         const pldWeapons = weapons[weapon.category].filter(
-          (w) => w.wpnJobShort === "PLD"
+          (w) => w.wpnJobShort === "PLD",
         );
         setOwnedWeapons((prevOwnedWeapons) =>
           prevOwnedWeapons.filter(
-            (el) => !pldWeapons.some((w) => w.id === el.id)
-          )
+            (el) => !pldWeapons.some((w) => w.id === el.id),
+          ),
         );
       } else {
         const removedWeapon = ownedWeapons.filter(
-          (element) => element.id !== weapon.id
+          (element) => element.id !== weapon.id,
         );
         setOwnedWeapons(removedWeapon);
       }
@@ -110,7 +110,7 @@ function WeaponsDataProvider({ children }) {
     });
 
     const filteredWeapons = ownedWeapons.filter(
-      (el) => !uncheckedWeapons.includes(el.id)
+      (el) => !uncheckedWeapons.includes(el.id),
     );
 
     setOwnedWeapons(filteredWeapons);
