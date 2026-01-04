@@ -1,7 +1,7 @@
 import sectionData from "../data/sectionData.js";
 import useWeaponsData from "../hooks/use-weapons-data";
 import Header from "../components/layout/Header.jsx";
-import WeaponsSection from "../components/features/weapons/WeaponsSection.jsx";
+import ItemsSection from "../components/features/weapons/ItemsSection.jsx";
 
 function Dawntrail() {
   const { weapons, ownedWeapons } = useWeaponsData();
@@ -10,9 +10,9 @@ function Dawntrail() {
     <div className="w-[100%] duration-[0.5s] min-[1000px]:pl-[250px]">
       <Header title="Phantom" dow />
       {sectionData.dawntrail.map((section) => (
-        <WeaponsSection
+        <ItemsSection
           key={section.id}
-          weapons={weapons[section.id]}
+          items={weapons[section.id]}
           ownedWeapons={ownedWeapons}
           name={section.name}
           category={section.id}
@@ -20,6 +20,7 @@ function Dawntrail() {
           materials={section.materials}
           tomestones={section.tomestones}
           tomestoneAmount={section.tomestoneAmount}
+          type={"weapon"}
         />
       ))}
     </div>

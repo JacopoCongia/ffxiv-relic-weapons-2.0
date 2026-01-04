@@ -13,7 +13,6 @@ function WeaponsDataProvider({ children }) {
   const { currentUser } = useAuth();
 
   // SECTION VISIBILITY START
-
   const storedVisibility = JSON.parse(localStorage.getItem("visibility"));
 
   const [visibility, setVisibility] = useState(storedVisibility || {});

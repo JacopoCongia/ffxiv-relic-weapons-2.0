@@ -3,8 +3,8 @@ import classNames from "classnames";
 
 function Button({ children, check, uncheck, ...rest }) {
   const defaultClassNames = classNames(
-    "select-none px-5 py-2 flex-1 rounded-[0.1e] text-[1rem] font-medium",
-    { "bg-[#234921]": check, "bg-[#71221A]": uncheck },
+    "select-none py-[0.7em] flex-1 rounded-[50px] text-[0.9rem] font-medium tracking-wide",
+    { "bg-[#4A6D7C]": check, "bg-[#2C3E50]": uncheck },
   );
 
   return (

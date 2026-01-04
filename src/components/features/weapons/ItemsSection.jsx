@@ -1,19 +1,31 @@
-import { AnimatePresence, motion } from "motion/react";
 import { useRef } from "react";
-import Tool from "./Tool.jsx";
-import { useCounter } from "../../../hooks/use-counter.js";
+import { AnimatePresence, motion } from "motion/react";
+import ItemsHeader from "./ItemsHeader.jsx";
+import ItemsContainer from "./ItemsContainer.jsx";
+import MaterialsContainer from "../materials/MaterialsContainer.jsx";
+import CheckUncheck from "../../common/CheckUncheck.jsx";
+import useAuth from "../../../hooks/use-auth.js";
 import useWeaponsData from "../../../hooks/use-weapons-data.jsx";
-import WeaponsHeader from "./WeaponsHeader.jsx";
+import { useCounter } from "../../../hooks/use-counter.js";
 
-function ToolsContainer({ tools, category, name, children, patchInfo }) {
-  const { ownedWeapons, visibility, handleVisibility } = useWeaponsData();
-
-  const counter = useCounter(ownedWeapons, category);
+function ItemsSection({
+  notes,
+  items,
+  ownedWeapons,
+  name,
+  category,
+  patchInfo,
+  materials,
+  tomestones,
+  tomestoneAmount,
+  children,
+  type,
+}) {
+  const { currentUser } = useAuth();
+  const { visibility } = useWeaponsData();
   const containerRef = useRef(null);
 
-  const toolsEl = tools.map((tool) => {
-    return <Tool key={tool.id} tool={tool} />;
-  });
+  const counter = useCounter(ownedWeapons || [], category);
 
   // Logic to scroll to the section when the user opens it
   const handleScrollOnOpen = () => {
@@ -28,7 +40,7 @@ function ToolsContainer({ tools, category, name, children, patchInfo }) {
             block: "start",
           });
         }
-      }, 100);
+      }, 50);
     }
   };
 
@@ -37,14 +49,13 @@ function ToolsContainer({ tools, category, name, children, patchInfo }) {
       ref={containerRef}
       className="scroll-mt-[112px] min-[600px]:scroll-mt-[140.8px]"
     >
-      <WeaponsHeader
+      <ItemsHeader
         name={name}
-        weapons={tools}
-        handleClick={() => handleVisibility(category, visibility[category])}
+        items={items}
         category={category}
         counter={counter}
         patchInfo={patchInfo}
-        tool
+        type={type}
       />
       <AnimatePresence initial={false}>
         {visibility[category] && (
@@ -72,12 +83,26 @@ function ToolsContainer({ tools, category, name, children, patchInfo }) {
               },
             }}
             transition={{ duration: 0.5, ease: [0.4, 0, 0.2, 1] }}
-            className="flex flex-col items-center justify-center gap-[2em] bg-stone-800 text-neutral-100"
+            className="mx-auto bg-stone-800 text-white"
           >
-            <div className="flex flex-wrap items-center justify-center gap-5 p-[3em]">
-              {toolsEl}
+            <div className="flex w-full flex-col items-center gap-[3em] px-[3em] py-10">
+              <ItemsContainer items={items} />
+              {type === "weapon" && (
+                <MaterialsContainer
+                  category={category}
+                  counter={counter}
+                  materials={materials}
+                  notes={notes || null}
+                  tomestoneAmount={tomestoneAmount}
+                  tomestones={tomestones}
+                  items={items}
+                />
+              )}
+              {children && children}
+              {currentUser?.emailVerified && (
+                <CheckUncheck category={category} items={items} />
+              )}
             </div>
-            <div>{children}</div>
           </motion.div>
         )}
       </AnimatePresence>
@@ -85,4 +110,4 @@ function ToolsContainer({ tools, category, name, children, patchInfo }) {
   );
 }
 
-export default ToolsContainer;
+export default ItemsSection;
