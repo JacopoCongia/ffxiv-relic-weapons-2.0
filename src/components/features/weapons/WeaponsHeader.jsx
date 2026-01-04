@@ -28,15 +28,15 @@ function WeaponsHeader({
     ) : null;
 
   const customStyle = weapon
-    ? "bg-dark-teal-900 text-dark-teal-100 border-b border-dark-teal-800 hover:bg-dark-teal-800/70 transition-colors duration-[0.3s]"
+    ? "bg-dark-teal-900/80 hover:dark-teal-800/80 text-dark-teal-100 border-b border-dark-teal-800 hover:bg-dark-teal-800/70"
     : tool
-      ? "bg-headerToolsSection text-headerToolsText"
+      ? "bg-headerToolsSection/80 text-headerToolsText hover:bg-headerToolsSection/50 "
       : "";
 
   return (
     <div
       onClick={() => handleVisibility(category, visibility[category])}
-      className={`mb-[1px] flex cursor-pointer select-none items-center justify-center gap-2 px-5 py-3 text-[16px] hover:opacity-95 sm:text-[20px] ${customStyle}`}
+      className={`sticky top-[112px] z-30 mb-[1px] flex cursor-pointer select-none items-center justify-center gap-2 px-5 py-3 text-[16px] backdrop-blur-md transition-colors duration-[0.3s] min-[600px]:top-[140.8px] sm:text-[20px] ${customStyle}`}
     >
       <p className="flex items-center text-[1rem] font-bold min-[600px]:text-[1.1rem]">
         {check} {counter?.length}/{totalWeapons}
