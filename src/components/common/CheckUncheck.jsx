@@ -1,15 +1,15 @@
 import useWeaponsData from "../../hooks/use-weapons-data.jsx";
 import Button from "./Button.jsx";
 
-function CheckUncheck({ weapons }) {
+function CheckUncheck({ items }) {
   const { checkAll, uncheckAll } = useWeaponsData();
 
   return (
     <div className="flex w-full flex-col justify-center gap-2 min-[600px]:w-[400px] min-[600px]:flex-row min-[600px]:gap-4">
-      <Button onClick={() => checkAll(weapons)} check>
+      <Button onClick={() => checkAll(items)} check>
         Check All
       </Button>
-      <Button onClick={() => uncheckAll(weapons)} uncheck>
+      <Button onClick={() => uncheckAll(items)} uncheck>
         Uncheck All
       </Button>
     </div>

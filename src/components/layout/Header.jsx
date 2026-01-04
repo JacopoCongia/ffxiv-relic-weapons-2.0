@@ -1,4 +1,4 @@
-function Header({ title, dow, doh, dol }) {
+function Header({ title, dow, doh }) {
   const bgColor = dow ? "bg-dark-teal-800" : "bg-headerTools";
   const textColor = dow ? "text-dark-teal-100" : "text-headerToolsText";
 

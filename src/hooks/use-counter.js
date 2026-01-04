@@ -1,6 +1,9 @@
-export function useCounter(ownedWeapons, category) {
-  const counter = ownedWeapons.filter((element) => {
-    return element.shield ? null : element.category === category;
+export function useCounter(ownedItems = [], category) {
+  const counter = ownedItems.filter((element) => {
+    const isSameCategory = element.category === category;
+    const isMainHand = !element.shield;
+
+    return isSameCategory && isMainHand;
   });
 
   return counter;

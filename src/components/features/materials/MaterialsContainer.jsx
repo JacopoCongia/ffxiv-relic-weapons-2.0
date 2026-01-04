@@ -6,13 +6,13 @@ function MaterialsContainer({
   notes,
   tomestoneAmount,
   tomestones,
-  weapons,
+  items,
 }) {
-  const totalWeapons = weapons.length - 1;
+  const totalItems = items.length - 1;
 
   return (
     <>
-      <div className="flex flex-col items-start gap-2 pb-6 pt-6 text-[0.8rem] sm:text-[1rem]">
+      <div className="flex flex-col items-start gap-2 text-[0.8rem] sm:text-[1rem]">
         {tomestones !== null && (
           <p className="flex items-center gap-3">
             <img
@@ -21,7 +21,7 @@ function MaterialsContainer({
               src={tomestones.icon}
             />
             {tomestones.name}:{" "}
-            {totalWeapons * tomestoneAmount - counter.length * tomestoneAmount}
+            {totalItems * tomestoneAmount - counter.length * tomestoneAmount}
           </p>
         )}
         <Materials materials={materials} counter={counter} />

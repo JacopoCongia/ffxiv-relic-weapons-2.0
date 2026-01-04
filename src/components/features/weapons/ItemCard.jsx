@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion, useAnimation } from "motion/react";
+
 import useWeaponsData from "../../../hooks/use-weapons-data.jsx";
 import useAuth from "../../../hooks/use-auth.js";
 
@@ -9,25 +10,25 @@ const tooltipVariants = {
   visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.2 } }, // Fades in, moves up, grows
 };
 
-function Weapon({ weapon }) {
+function ItemCard({ item }) {
   const { selectWeapon, ownedWeapons } = useWeaponsData();
   const { currentUser } = useAuth();
   const [isHovered, setIsHovered] = useState(false);
 
-  const isSelected = ownedWeapons.some((el) => el.id === weapon.id); // Testing new weapon method
+  const isSelected = ownedWeapons.some((el) => el.id === item.id);
   const isVerified = currentUser?.emailVerified; // Check if the user is logged in and email is verified
   const controls = useAnimation(); // Create animation controls
 
   // Function to handle image loading errors
   const handleImageError = (e) => {
     e.target.onerror = null; // Prevents infinite loop if the image fails to load by setting the onerror to null on the first error
-    e.target.src = "/icons/not_found.png";
+    e.target.src = "/icons/not_found.png"; //
   };
 
   const handleSelection = () => {
     if (!isVerified) return; // Prevent selection if the user is not verified
 
-    selectWeapon(weapon);
+    selectWeapon(item);
 
     // Trigger the shake animation
     controls.start({
@@ -36,7 +37,7 @@ function Weapon({ weapon }) {
     });
   };
 
-  // Styles for the weapon icon based on selection status
+  // Styles for the item icon based on selection status
   const styles = {
     opacity: isSelected ? "25%" : "100%",
   };
@@ -55,26 +56,26 @@ function Weapon({ weapon }) {
         variants={tooltipVariants}
         className={`pointer-events-none absolute bottom-[105%] left-[50%] z-50 ml-[-60px] w-[120px] rounded-[6px] bg-neutral-700 p-[10px] text-[0.8rem] font-bold ${!isVerified && "bg-red-900"} `}
       >
-        {isVerified ? weapon.wpnName : "Login and verify your email to select"}
+        {isVerified ? item.wpnName : "Login and verify your email to select"}
       </motion.span>
       <div
         // If verified, pass the handler. If not, pass undefined (no click event).
         onClick={isVerified ? handleSelection : undefined}
         style={styles}
-        id={weapon.id}
-        className={`relative text-[14px] transition-opacity ${isVerified ? "cursor-pointer" : "cursor-not-allowed"} `}
+        id={item.id}
+        className={`relative flex flex-col gap-[0.2em] text-[0.8rem] font-bold text-neutral-400 transition-opacity ${isVerified ? "cursor-pointer" : "cursor-not-allowed"} `}
       >
         {/* Animated Weapon Icon */}
         <motion.img
           animate={controls}
           className="h-[70px] w-[70px] object-contain"
-          src={weapon.icon}
+          src={item.icon}
           onError={handleImageError}
         />
-        <p>{weapon.wpnJobShort}</p>
+        <p>{item.wpnJobShort}</p>
       </div>
     </div>
   );
 }
 
-export default Weapon;
+export default ItemCard;
