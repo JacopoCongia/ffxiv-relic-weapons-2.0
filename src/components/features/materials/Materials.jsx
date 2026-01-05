@@ -1,27 +1,24 @@
-function Materials({ materials, counter }) {
-  const materialsElements = materials.map((material) => {
-    return (
-      <div key={material.id} className="flex items-center gap-3">
-        <img
-          className="aspect-square w-9 rounded-[50%]"
-          alt={material.name}
-          src={material.icon}
-        />
-        {material.reqTotal - material.reqPerWeapon * counter.length <= 0 ? (
-          <p>
-            {material.name}: {0}
-          </p>
-        ) : (
-          <p>
-            {material.name}:{" "}
-            {material.reqTotal - material.reqPerWeapon * counter.length}
-          </p>
-        )}
-      </div>
-    );
-  });
+// Materials component for displaying a list of materials with icons, names, and amounts
 
-  return <>{materialsElements}</>;
+import MaterialCard from "./MaterialCard.jsx";
+
+function Materials({ materials, counter }) {
+  return (
+    <>
+      {materials.map((material) => {
+        const remaining =
+          material.reqTotal - material.reqPerWeapon * counter.length;
+        return (
+          <MaterialCard
+            key={material.id}
+            name={material.name}
+            icon={material.icon}
+            amount={remaining}
+          />
+        );
+      })}
+    </>
+  );
 }
 
 export default Materials;

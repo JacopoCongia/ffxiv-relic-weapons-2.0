@@ -1,3 +1,6 @@
+// MaterialsContainer component for displaying a list of materials with icons, names, and amounts
+
+import MaterialCard from "./MaterialCard.jsx";
 import Materials from "./Materials.jsx";
 
 function MaterialsContainer({
@@ -8,31 +11,38 @@ function MaterialsContainer({
   tomestones,
   items,
 }) {
+  // Calculate total items and remaining tomestones
   const totalItems = items.length - 1;
+  const remainingTomestones =
+    totalItems * tomestoneAmount - counter.length * tomestoneAmount;
 
   return (
-    <>
-      <div className="flex flex-col items-start gap-2 text-[0.8rem] sm:text-[1rem]">
+    <div className="mx-auto w-full max-w-4xl p-4">
+      {/* The Grid Container */}
+      <div className="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3">
+        {/* Tomestone Card only rendered if tomestones are present */}
         {tomestones !== null && (
-          <p className="flex items-center gap-3">
-            <img
-              className="aspect-square w-9 rounded-[50%]"
-              alt={tomestones.name}
-              src={tomestones.icon}
-            />
-            {tomestones.name}:{" "}
-            {totalItems * tomestoneAmount - counter.length * tomestoneAmount}
-          </p>
+          <MaterialCard
+            name={tomestones.name}
+            icon={tomestones.icon}
+            amount={remainingTomestones}
+            type="Currency"
+          />
         )}
+
+        {/* Material Cards */}
         <Materials materials={materials} counter={counter} />
       </div>
+
       {notes && (
-        <p className="max-w-[400px] pb-6">
-          <span className="font-bold text-red-600">Notes: </span>
-          {notes}
-        </p>
+        <div className="mt-8 rounded-r-md border-l-4 border-red-600 bg-red-900/10 p-4">
+          <span className="text-xs font-bold uppercase tracking-widest text-red-500">
+            Notes
+          </span>
+          <p className="mt-1 text-gray-300">{notes}</p>
+        </div>
       )}
-    </>
+    </div>
   );
 }
 
