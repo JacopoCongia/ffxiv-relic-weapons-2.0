@@ -27,9 +27,9 @@ function ItemsHeader({ category, counter, name, patchInfo, items = [], type }) {
   return (
     <div
       onClick={() => handleVisibility(category, visibility[category])}
-      className={`sticky top-[112px] z-30 mb-[1px] flex cursor-pointer select-none items-center justify-center gap-2 px-5 py-3 text-[16px] backdrop-blur-md transition-colors duration-[0.3s] min-[600px]:top-[140.8px] sm:text-[20px] ${customStyle}`}
+      className={`relative sticky top-[112px] z-30 mb-[1px] flex cursor-pointer select-none items-center gap-2 px-5 py-3 text-[1rem] backdrop-blur-md transition-colors duration-[0.3s] min-[600px]:top-[140.8px] sm:text-[20px] ${customStyle}`}
     >
-      <p className="flex items-center text-[1rem] font-bold min-[600px]:text-[1.1rem]">
+      <p className="absolute left-[1em] flex items-center font-mono text-[1rem] font-bold min-[600px]:text-[1.2rem]">
         {check} {counter?.length}/{totalItems}
       </p>
       <h1 className="mx-auto text-center text-[1.1rem] font-bold min-[600px]:text-[1.3rem]">
@@ -49,9 +49,9 @@ function ItemsHeader({ category, counter, name, patchInfo, items = [], type }) {
       <motion.div
         animate={{ rotate: visibility[category] ? 180 : 0 }}
         transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
-        className="flex items-center justify-center"
+        className="absolute right-[1em]"
       >
-        <GoChevronDown className="text-[1.9rem] sm:text-[2.3rem]" />
+        <GoChevronDown className="text-[1.9rem] min-[600px]:text-[2.3rem]" />
       </motion.div>
     </div>
   );

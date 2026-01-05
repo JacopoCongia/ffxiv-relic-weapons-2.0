@@ -30,89 +30,60 @@ function WeaponsDataProvider({ children }) {
 
   // SECTION VISIBILITY END
 
+  // Weapon selection logic
   function selectWeapon(weapon) {
-    const isItInArray = ownedWeapons.some((el) => el.id === weapon.id);
+    const isOwned = ownedWeapons.some((el) => el.id === weapon.id);
+    const isPLD = weapon.wpnJobShort === "PLD";
 
-    if (!isItInArray) {
-      if (weapon.wpnJobShort === "PLD") {
-        // Find all PLD weapons in the same category (sword and shield)
-        const pldWeapons = weapons[weapon.category].filter(
-          (w) => w.wpnJobShort === "PLD",
-        );
-        setOwnedWeapons((prevOwnedWeapons) => {
-          // Only add those not already owned
-          const newWeapons = pldWeapons
-            .filter((w) => !prevOwnedWeapons.some((el) => el.id === w.id))
-            .map((w) => ({
-              id: w.id,
-              name: w.wpnName,
-              category: w.category,
-              shield: w.shield || null,
-            }));
-          return [...prevOwnedWeapons, ...newWeapons];
-        });
-      } else {
-        setOwnedWeapons((prevOwnedWeapons) => {
-          return [
-            ...prevOwnedWeapons,
-            {
-              id: weapon.id,
-              name: weapon.wpnName,
-              category: weapon.category,
-              shield: weapon.shield || null,
-            },
-          ];
-        });
-      }
+    // Get weapons to process (all PLD weapons in category, or just this one)
+    const weaponsToProcess = isPLD
+      ? weapons[weapon.category].filter((w) => w.wpnJobShort === "PLD")
+      : [weapon];
+
+    // Helper to create weapon object
+    const toWeaponObj = (w) => ({
+      id: w.id,
+      name: w.wpnName,
+      category: w.category,
+      shield: w.shield || null,
+    });
+
+    if (!isOwned) {
+      // Add weapons
+      setOwnedWeapons((prev) => {
+        const newWeapons = weaponsToProcess
+          .filter((w) => !prev.some((el) => el.id === w.id))
+          .map(toWeaponObj);
+        return [...prev, ...newWeapons];
+      });
     } else {
-      if (weapon.wpnJobShort === "PLD") {
-        // Remove all PLD weapons in the same category (sword and shield)
-        const pldWeapons = weapons[weapon.category].filter(
-          (w) => w.wpnJobShort === "PLD",
-        );
-        setOwnedWeapons((prevOwnedWeapons) =>
-          prevOwnedWeapons.filter(
-            (el) => !pldWeapons.some((w) => w.id === el.id),
-          ),
-        );
-      } else {
-        const removedWeapon = ownedWeapons.filter(
-          (element) => element.id !== weapon.id,
-        );
-        setOwnedWeapons(removedWeapon);
-      }
+      // Remove weapons
+      const idsToRemove = new Set(weaponsToProcess.map((w) => w.id));
+      setOwnedWeapons((prev) => prev.filter((el) => !idsToRemove.has(el.id)));
     }
   }
-
-  function checkAll(weapons) {
-    const checkedWeapons = weapons.map((el) => {
-      return {
-        id: el.id,
-        name: el.wpnName,
-        category: el.category,
-        shield: el.shield || null,
-      };
-    });
-
-    const filteredWeapons = checkedWeapons.filter((el) => {
-      return !ownedWeapons.some((element) => element.id === el.id);
-    });
-
+  // Select all items in a category
+  function checkAll(items) {
     setOwnedWeapons((prevOwnedWeapons) => {
-      return [...prevOwnedWeapons, ...filteredWeapons];
+      const existingIds = new Set(prevOwnedWeapons.map((item) => item.id));
+
+      const newItemsToAdd = items
+        .filter((item) => !existingIds.has(item.id))
+        .map((item) => ({
+          id: item.id,
+          name: item.wpnName,
+          category: item.category,
+          shield: item.shield || null,
+        }));
+      return [...prevOwnedWeapons, ...newItemsToAdd];
     });
   }
-
-  function uncheckAll(weapons) {
-    const uncheckedWeapons = weapons.map((el) => {
-      return el.id;
+  // Deselect all items in a category
+  function uncheckAll(items) {
+    const idsToRemove = new Set(items.map((item) => item.id)); // create a set of ids to remove
+    setOwnedWeapons((prevOwnedWeapons) => {
+      return prevOwnedWeapons.filter((item) => !idsToRemove.has(item.id));
     });
-
-    const filteredWeapons = ownedWeapons.filter(
-      (el) => !uncheckedWeapons.includes(el.id),
-    );
-
-    setOwnedWeapons(filteredWeapons);
   }
 
   useEffect(() => {
@@ -143,7 +114,7 @@ function WeaponsDataProvider({ children }) {
     selectWeapon,
     checkAll,
     uncheckAll,
-    ownedWeapons, // Testing new weapon sorting
+    ownedWeapons, // Keeps track of selected weapons
     visibility, // Section visibility object
     handleVisibility, // Section visibility change
   };
