@@ -21,6 +21,7 @@ function Stormblood() {
           tomestones={section.tomestones}
           tomestoneAmount={section.tomestoneAmount}
           type={"weapon"}
+          notes={section.notes || null}
         />
       ))}
     </div>

@@ -152,7 +152,7 @@ const sectionsData = {
       tomestones: null,
       tomestoneAmount: null,
       notes:
-        "you will also need to craft 30 different Logos Actions (10 for the first step, 20 for the second step) to get the weapons.",
+        "You will also need to craft 30 different Logos Actions (10 for the first step, 20 for the second step) to get the weapons.",
     },
     {
       id: "eureka",
@@ -171,7 +171,7 @@ const sectionsData = {
       materials: materialsData.materials.stormblood.physeos,
       tomestones: null,
       tomestoneAmount: null,
-      notes: "you can get Eureka Fragments from The Baldesion Arsenal",
+      notes: "You can get Eureka Fragments from The Baldesion Arsenal",
     },
   ],
 };

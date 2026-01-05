@@ -25,6 +25,7 @@ function ItemsSection({
   const { visibility } = useWeaponsData();
   const containerRef = useRef(null);
 
+  // Counter for owned weapons
   const counter = useCounter(ownedWeapons || [], category);
 
   // Logic to scroll to the section when the user opens it
