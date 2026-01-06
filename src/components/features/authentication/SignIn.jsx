@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import useAuth from "../../../hooks/use-auth.js";
 
+import AuthError from "../../../components/common/AuthError.jsx";
+
 function SignIn() {
   const [formData, setFormData] = useState({ email: "", password: "" });
   const { logIn, logInWithGoogle, error } = useAuth();
@@ -28,10 +30,10 @@ function SignIn() {
   }
 
   return (
-    <div className="flex flex-col items-center gap-5 text-white">
+    <div className="flex w-[90%] flex-col items-center gap-5 pb-[7em] text-white min-[600px]:w-[66%]">
       <h1 className="text-[1.7rem] font-[600]">Sign In</h1>
       <button
-        className="flex w-[66%] items-center justify-between rounded bg-[#4285F4] text-center hover:opacity-90"
+        className="flex w-full items-center justify-between rounded bg-[#4285F4] text-center hover:opacity-90"
         onClick={() => logInWithGoogle()}
       >
         <img src="/google-sign-in.svg" />
@@ -39,7 +41,7 @@ function SignIn() {
       </button>
       <form
         onSubmit={handleFormSubmit}
-        className="m-auto flex w-[66%] flex-col gap-3 text-center"
+        className="m-auto flex w-full flex-col gap-3 text-center"
       >
         <input
           className="rounded border py-[0.5em] text-center text-[#272727]"
@@ -73,11 +75,7 @@ function SignIn() {
           </Link>
         </p>
       </form>
-      {error && (
-        <h1 className="rounded bg-red-800 px-[1.5em] py-[0.4em] font-semibold text-[#ddd]">
-          Error: {error?.code.replace("auth/", "").replaceAll("-", " ")}
-        </h1>
-      )}
+      <AuthError error={error} />
     </div>
   );
 }

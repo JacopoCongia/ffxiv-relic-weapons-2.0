@@ -44,7 +44,7 @@ function SignUp() {
   }, [formData]);
 
   return (
-    <div className="flex flex-col items-center gap-5 text-white duration-[0.5s] min-[1000px]:pl-[250px]">
+    <div className="flex flex-col items-center gap-5 pb-[7em] text-neutral-100 duration-[0.5s] min-[1000px]:pl-[250px]">
       <h1 className="text-[1.7rem] font-[600]">Create Account</h1>
       <form
         onSubmit={handleFormSubmit}

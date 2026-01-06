@@ -31,6 +31,17 @@ function AuthContextProvider({ children }) {
     return unsubscribe;
   }, []);
 
+  // Auto-clear errors after a certain amount of seconds
+  useEffect(() => {
+    if (error) {
+      const timer = setTimeout(() => {
+        setError(null);
+      }, 5000);
+
+      return () => clearTimeout(timer); // Cleanup if error changes or component unmounts
+    }
+  }, [error]);
+
   async function createAccount(userData) {
     try {
       const credential = await createUserWithEmailAndPassword(

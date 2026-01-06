@@ -86,7 +86,7 @@ function ItemsSection({
             transition={{ duration: 0.5, ease: [0.4, 0, 0.2, 1] }}
             className="mx-auto bg-stone-800 text-white"
           >
-            <div className="flex w-full flex-col items-center gap-[3em] px-[3em] py-10">
+            <div className="flex w-full flex-col items-center gap-[3em] px-[3em] pb-[6em] pt-[3em]">
               <ItemsContainer items={items} />
               {type === "weapon" && (
                 <MaterialsContainer
