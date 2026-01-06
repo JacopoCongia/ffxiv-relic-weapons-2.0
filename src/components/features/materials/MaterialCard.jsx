@@ -1,17 +1,25 @@
 // MaterialCard component for displaying materials with icons, names, and amounts
+import { useState } from "react";
+import { motion } from "motion/react";
 
 function MaterialCard({ name, icon, amount, type = "Material" }) {
+  // State to handle card expansion
+  const [isExpanded, setIsExpanded] = useState(false);
+
   // Calculate if the material is done and display amount
   const isDone = amount <= 0;
   const displayAmount = isDone ? 0 : amount; // Prevents negative amounts
 
   return (
-    <div
-      className={`flex items-center gap-4 rounded-xl border p-3 transition-all duration-300 ${
+    <motion.div
+      whileHover={{ y: -3 }}
+      transition={{ duration: 0.1 }}
+      className={`flex cursor-pointer items-center gap-4 rounded-xl border p-3 transition-all duration-300 ${
         isDone
           ? "border-white/5 bg-black/20 opacity-30 grayscale"
           : "border-white/10 bg-white/5 shadow-lg shadow-black/20"
       } `}
+      onClick={() => setIsExpanded(!isExpanded)}
     >
       {/* Icon with a subtle background glow if active */}
       <div className="relative flex-shrink-0">
@@ -22,7 +30,9 @@ function MaterialCard({ name, icon, amount, type = "Material" }) {
         <span className="text-[10px] font-bold uppercase tracking-tighter text-gray-500">
           {type}
         </span>
-        <span className="truncate text-[0.875rem] font-medium leading-tight text-white">
+        <span
+          className={`${!isExpanded ? "truncate" : ""} text-[0.875rem] font-medium leading-tight text-white`}
+        >
           {name}
         </span>
       </div>
@@ -32,7 +42,7 @@ function MaterialCard({ name, icon, amount, type = "Material" }) {
       >
         {displayAmount}
       </div>
-    </div>
+    </motion.div>
   );
 }
 

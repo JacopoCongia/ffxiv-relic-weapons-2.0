@@ -1,5 +1,8 @@
 import { useState } from "react";
+import Button from "../../common/Button.jsx";
 import useAuth from "../../../hooks/use-auth.js";
+
+import AuthError from "../../../components/common/AuthError.jsx";
 
 function SignInAgain() {
   const [formData, setFormData] = useState({ password: "" });
@@ -43,18 +46,11 @@ function SignInAgain() {
           value={formData.password}
           name="password"
         />
-        <button
-          className="bg-red-700 py-[0.5em] text-center hover:bg-red-600 min-[600px]:rounded"
-          type="submit"
-        >
+        <Button type="submit" warning>
           Delete Account
-        </button>
+        </Button>
       </form>
-      {error && (
-        <h1 className="rounded bg-red-800 px-[1.5em] py-[0.4em] font-semibold text-[#ddd]">
-          Error: {error?.code.replace("auth/", "").replaceAll("-", " ")}
-        </h1>
-      )}
+      <AuthError error={error} />
     </div>
   );
 }

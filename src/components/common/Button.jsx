@@ -3,7 +3,7 @@ import classNames from "classnames";
 
 function Button({ children, primary, secondary, warning, ...rest }) {
   const defaultClassNames = classNames(
-    "select-none min-w-[250px] px-[1.5em] py-[0.7em] flex-1 rounded-[50px] text-[0.9rem] font-medium tracking-wide text-white",
+    "select-none shadow-lg min-w-[250px] px-[1.5em] py-[0.7em] flex-1 rounded-[50px] text-[0.9rem] font-medium tracking-wide text-white",
     {
       "bg-[#4A6D7C]": primary,
       "bg-[#2C3E50]": secondary,

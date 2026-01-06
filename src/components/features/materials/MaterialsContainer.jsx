@@ -19,7 +19,9 @@ function MaterialsContainer({
   return (
     <div className="mx-auto w-full max-w-4xl p-4">
       {/* The Grid Container */}
-      <div className="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3">
+      <div
+        className={`grid grid-cols-1 gap-3 md:grid-cols-2 ${materials.length > 1 ? "lg:grid-cols-3" : ""}`}
+      >
         {/* Tomestone Card only rendered if tomestones are present */}
         {tomestones !== null && (
           <MaterialCard

@@ -54,9 +54,9 @@ function ItemCard({ item }) {
         initial="hidden"
         animate={isHovered ? "visible" : "hidden"}
         variants={tooltipVariants}
-        className={`pointer-events-none absolute bottom-[105%] left-[50%] z-50 ml-[-80px] w-[160px] rounded-[1em] border border-neutral-700/80 bg-neutral-800/50 px-[1em] py-[0.6em] text-[0.8rem] font-bold backdrop-blur-md ${!isVerified && "bg-red-900"} `}
+        className={`pointer-events-none absolute bottom-[105%] left-[50%] z-50 ml-[-80px] w-[160px] rounded-[1em] border border-neutral-700/80 bg-neutral-800/50 px-[1em] py-[0.6em] text-[0.7rem] font-semibold uppercase leading-tight tracking-wider backdrop-blur-md ${!isVerified && "bg-red-900/60"} `}
       >
-        {isVerified ? item.wpnName : "Login and verify your email to select"}
+        {isVerified ? item.wpnName : "Log in and verify your email to select"}
       </motion.span>
       <div
         // If verified, pass the handler. If not, pass undefined (no click event).
