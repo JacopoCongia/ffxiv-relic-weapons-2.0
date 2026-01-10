@@ -1,157 +1,127 @@
-import { createContext, useState, useEffect } from "react";
-import { addUserToDb, auth } from "../../firebase";
+import {createContext, useState, useEffect} from "react";
+import {addUserToDb, auth} from "../../firebase";
 import {
-  createUserWithEmailAndPassword,
-  signInWithEmailAndPassword,
-  GoogleAuthProvider,
-  signInWithPopup,
-  sendEmailVerification,
-  onAuthStateChanged,
-  signOut,
-  deleteUser,
-  EmailAuthProvider,
-  reauthenticateWithCredential,
+    GoogleAuthProvider,
+    GithubAuthProvider,
+    signInWithPopup,
+    sendEmailVerification,
+    onAuthStateChanged,
+    signOut,
+    deleteUser,
+    reauthenticateWithPopup,
 } from "firebase/auth";
 
 const AuthContext = createContext();
-const provider = new GoogleAuthProvider();
 
-function AuthContextProvider({ children }) {
-  const [error, setError] = useState(null);
-  const [currentUser, setCurrentUser] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [emailSent, setEmailSent] = useState(false);
+// Initialize Providers
+const googleProvider = new GoogleAuthProvider();
+const githubProvider = new GithubAuthProvider();
 
-  // Listen for auth changes
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
-      setCurrentUser(user ?? null);
-      setLoading(false);
-    });
-    return unsubscribe;
-  }, []);
+function AuthContextProvider({children}) {
+    const [error, setError] = useState(null);
+    const [currentUser, setCurrentUser] = useState(null);
+    const [loading, setLoading] = useState(true);
 
-  // Auto-clear errors after a certain amount of seconds
-  useEffect(() => {
-    if (error) {
-      const timer = setTimeout(() => {
-        setError(null);
-      }, 5000);
+    // Listen for auth changes
+    useEffect(() => {
+        const unsubscribe = onAuthStateChanged(auth, (user) => {
+            setCurrentUser(user ?? null);
+            setLoading(false);
+        });
+        return unsubscribe;
+    }, []);
 
-      return () => clearTimeout(timer); // Cleanup if error changes or component unmounts
+    // Auto-clear errors after 5 seconds
+    useEffect(() => {
+        if (error) {
+            const timer = setTimeout(() => setError(null), 5000);
+            return () => clearTimeout(timer);
+        }
+    }, [error]);
+
+    // Generic Login Function
+    async function logInWithProvider(providerName) {
+        let provider;
+        switch (providerName) {
+            case "google":
+                provider = googleProvider;
+                break;
+            case "github":
+                provider = githubProvider;
+                break;
+            default:
+                setError({message: "Invalid provider selected"});
+                return;
+        }
+
+        try {
+            const result = await signInWithPopup(auth, provider);
+            // Create user DB entry if it doesn't exist yet
+            await addUserToDb(result.user);
+            console.log(`Signed in with ${providerName}`);
+        } catch (error) {
+            console.error(error);
+            setError(error);
+        }
     }
-  }, [error]);
 
-  async function createAccount(userData) {
-    try {
-      const credential = await createUserWithEmailAndPassword(
-        auth,
-        userData.email,
-        userData.password,
-      );
-
-      setEmailSent(true);
-      sendEmailVerification(credential.user);
-      addUserToDb(credential.user);
-    } catch (error) {
-      setError(error);
-    } finally {
-      setTimeout(() => {
-        setEmailSent(false);
-      }, 10000);
+    async function logOut() {
+        try {
+            await signOut(auth);
+            setError(null);
+        } catch (error) {
+            setError(error);
+        }
     }
-  }
 
-  async function verifyEmail(currentUser) {
-    try {
-      await sendEmailVerification(currentUser);
-      setEmailSent(true);
-    } catch (error) {
-      setError(error);
-    } finally {
-      setTimeout(() => {
-        setEmailSent(false);
-      }, 10000);
+    // Re-auth and Delete with Popup
+    async function deleteAccount() {
+        const user = auth.currentUser;
+        try {
+            await deleteUser(user);
+        } catch (error) {
+            // If Firebase requires recent login, trigger re-auth popup
+            if (error.code === 'auth/requires-recent-login') {
+                try {
+                    // Detect which provider they used (google, github, etc.)
+                    // This is a simplification; for better accuracy, check user.providerData
+                    const providerId = user.providerData[0]?.providerId;
+
+                    let provider;
+                    if (providerId === 'google.com') provider = googleProvider;
+                    else if (providerId === 'github.com') provider = githubProvider;
+                    else {
+                        setError({message: "Could not determine provider for re-authentication"});
+                        return;
+                    }
+
+                    await reauthenticateWithPopup(user, provider);
+                    await deleteUser(user); // Try delete again
+
+                } catch (reAuthError) {
+                    setError(reAuthError);
+                }
+            } else {
+                setError(error);
+            }
+        }
     }
-  }
 
-  async function logIn(userData) {
-    try {
-      await signInWithEmailAndPassword(auth, userData.email, userData.password);
-    } catch (error) {
-      setError(error);
-    }
-  }
-
-  async function logInWithGoogle() {
-    try {
-      const result = signInWithPopup(auth, provider);
-      console.log("Signed in with Google");
-    } catch (error) {
-      console.error(error.message);
-    }
-  }
-
-  async function logInAgain(password) {
-    try {
-      const credential = EmailAuthProvider.credential(
-        auth.currentUser.email,
-        password,
-      );
-      await reauthenticateWithCredential(auth.currentUser, credential);
-    } catch (error) {
-      setError(error);
-    } finally {
-      deleteAccount();
-    }
-  }
-
-  function logOut() {
-    signOut(auth)
-      .then(() => {
-        console.log("Log out successful");
-      })
-      .catch((error) => {
-        setError(error);
-      })
-      .finally(() => {
-        setError(null);
-      });
-  }
-
-  function deleteAccount() {
-    const user = auth.currentUser;
-    deleteUser(user)
-      .then(() => {
-        console.log("Account deleted");
-        setError(null);
-      })
-      .catch((error) => {
-        setError(error);
-      });
-  }
-
-  return (
-    <AuthContext.Provider
-      value={{
-        createAccount,
-        verifyEmail,
-        emailSent,
-        setEmailSent,
-        logIn,
-        logInWithGoogle,
-        logInAgain,
-        logOut,
-        deleteAccount,
-        currentUser,
-        loading,
-        error,
-      }}
-    >
-      {children}
-    </AuthContext.Provider>
-  );
+    return (
+        <AuthContext.Provider
+            value={{
+                logInWithProvider,
+                logOut,
+                deleteAccount,
+                currentUser,
+                loading,
+                error,
+            }}
+        >
+            {children}
+        </AuthContext.Provider>
+    );
 }
 
-export { AuthContextProvider };
+export {AuthContextProvider};
 export default AuthContext;

@@ -1,83 +1,47 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
-import useAuth from "../../../hooks/use-auth.js";
+import {useEffect} from "react";
+import {useNavigate} from "react-router-dom";
+import useAuth from "../../../hooks/use-auth";
+import AuthError from "../../common/AuthError";
+import SignInButton from "../../common/SignInButton";
 
-import AuthError from "../../../components/common/AuthError.jsx";
+import {FaGithub} from "react-icons/fa";
+import {FcGoogle} from "react-icons/fc";
 
 function SignIn() {
-  const [formData, setFormData] = useState({ email: "", password: "" });
-  const { logIn, logInWithGoogle, error } = useAuth();
+    const {logInWithProvider, currentUser, error} = useAuth();
+    const navigate = useNavigate();
 
-  function handleFormChange(e) {
-    e.preventDefault();
-    const { value, name } = e.target;
+    useEffect(() => {
+        if (currentUser) {
+            navigate("/");
+        }
+    }, [currentUser, navigate]);
 
-    setFormData((prevFormData) => {
-      return {
-        ...prevFormData,
-        [name]: value,
-      };
-    });
-  }
+    return (
+        <section
+            className="flex flex-col max-w-[90%] w-full gap-[2em] text-neutral-100 min-[600px]:max-w-[500px] min-[1000px]:ml-[250px] duration-[0.5s]">
+            <div className="flex flex-col gap-[0.5em] text-center">
+                <h2 className="text-[2rem] font-bold">Sign In</h2>
+                <p>Connect with your favorite platform</p>
+            </div>
 
-  function handleFormSubmit(e) {
-    e.preventDefault();
-
-    if (formData.email && formData.password) {
-      logIn(formData);
-      setFormData({ email: "", password: "" });
-    }
-  }
-
-  return (
-    <div className="flex w-[90%] flex-col items-center gap-5 pb-[7em] text-white min-[600px]:w-[66%]">
-      <h1 className="text-[1.7rem] font-[600]">Sign In</h1>
-      <button
-        className="flex w-full items-center justify-between rounded bg-[#4285F4] text-center hover:opacity-90"
-        onClick={() => logInWithGoogle()}
-      >
-        <img src="/google-sign-in.svg" />
-        <p className="m-auto font-medium">Sign in With Google</p>
-      </button>
-      <form
-        onSubmit={handleFormSubmit}
-        className="m-auto flex w-full flex-col gap-3 text-center"
-      >
-        <input
-          className="rounded border py-[0.5em] text-center text-[#272727]"
-          type="email"
-          placeholder="Email"
-          onChange={handleFormChange}
-          value={formData.email}
-          name="email"
-        />
-        <input
-          className="rounded border py-[0.5em] text-center text-[#272727]"
-          type="password"
-          placeholder="Password"
-          onChange={handleFormChange}
-          value={formData.password}
-          name="password"
-        />
-        <button
-          className="rounded border py-[0.5em] text-center hover:bg-[#363636]"
-          type="submit"
-        >
-          Sign In
-        </button>
-        <p>
-          Don&apos;t have an account yet?{" "}
-          <Link
-            to="/register"
-            className="font-[600] text-teal-500 underline-offset-4 hover:cursor-pointer hover:underline"
-          >
-            Create one now.
-          </Link>
-        </p>
-      </form>
-      <AuthError error={error} />
-    </div>
-  );
+            <div className="flex flex-col gap-[1em]">
+                <SignInButton onClick={() => logInWithProvider("google")}
+                              className="bg-white text-gray-700 hover:bg-neutral-200"
+                              icon={FcGoogle}>
+                    Sign in with Google
+                </SignInButton>
+                <SignInButton
+                    onClick={() => logInWithProvider("github")}
+                    className=" bg-[#31373D] text-white  hover:bg-[#2b3137] border border-neutral-600"
+                    icon={FaGithub}
+                >
+                    Sign in with GitHub
+                </SignInButton>
+            </div>
+            <AuthError error={error}/>
+        </section>
+    );
 }
 
 export default SignIn;
