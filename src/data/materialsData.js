@@ -1,19 +1,19 @@
 const materialsData = {
     tomestones: {
         causality: {
-            id: 0,
+            id: "tomestones_causality",
             name: "Allagan Tomestones of Causality",
             icon: "/icons/allagan_tomestone_of_causality.png",
         },
         poetics: {
-            id: 1,
+            id: "tomestones_poetics",
             name: "Allagan Tomestones of Poetics",
             icon: "/icons/allagan_tomestone_of_poetics.png",
         },
         heliometry: {
-            id: 2,
-            name: "Allagan Tomestones of Heliometry",
-            icon: "/icons/allagan_tomestone_of_heliometry.png",
+            id: "tomestones_mathematics",
+            name: "Allagan Tomestones of Mathematics",
+            icon: "/icons/allagan_tomestone_of_mathematics.png",
         },
     },
     materials: {
@@ -22,9 +22,9 @@ const materialsData = {
         stormblood: {
             antiquated: [
                 {
-                    id: "msb0",
+                    id: "gil",
                     name: "Gil",
-                    icon: "/icons/stormblood-icons/materials/gil.png",
+                    icon: "/icons/gil.png",
                     reqTotal: 15000,
                     reqPerWeapon: 1000,
                     category: "antiquated",
@@ -32,7 +32,7 @@ const materialsData = {
             ],
             anemos: [
                 {
-                    id: "msb1",
+                    id: "protean_crystal",
                     name: "Protean Crystal",
                     icon: "/icons/stormblood-icons/materials/protean_crystal.png",
                     reqTotal: 19500,
@@ -40,7 +40,7 @@ const materialsData = {
                     category: "anemos",
                 },
                 {
-                    id: "msb2",
+                    id: "pazuzu_feather",
                     name: "Pazuzu's Feather",
                     icon: "/icons/stormblood-icons/materials/pazuzus_feather.png",
                     reqTotal: 45,
@@ -50,7 +50,7 @@ const materialsData = {
             ],
             elemental: [
                 {
-                    id: "msb3",
+                    id: "pagos_crystal",
                     name: "Pagos Crystal",
                     icon: "/icons/stormblood-icons/materials/pagos_crystal.png",
                     reqTotal: 7500,
@@ -58,7 +58,7 @@ const materialsData = {
                     category: "elemental",
                 },
                 {
-                    id: "msb4",
+                    id: "frosted_protean_crystal",
                     name: "Frosted Protean Crystal",
                     icon: "/icons/stormblood-icons/materials/frosted_protean_crystal.png",
                     reqTotal: 465,
@@ -66,7 +66,7 @@ const materialsData = {
                     category: "elemental",
                 },
                 {
-                    id: "msb5",
+                    id: "louhis_ice",
                     name: "Louhi's Ice",
                     icon: "/icons/stormblood-icons/materials/louhis_ice.png",
                     reqTotal: 75,
@@ -76,7 +76,7 @@ const materialsData = {
             ],
             pyros: [
                 {
-                    id: "msb6",
+                    id: "pyros_crystal",
                     name: "Pyros Crystal",
                     icon: "/icons/stormblood-icons/materials/pyros_crystal.png",
                     reqTotal: 9750,
@@ -84,7 +84,7 @@ const materialsData = {
                     category: "pyros",
                 },
                 {
-                    id: "msb7",
+                    id: "penthesileas_flame",
                     name: "Penthesilea's Flame",
                     icon: "/icons/stormblood-icons/materials/penthesileas_flame.png",
                     reqTotal: 75,
@@ -94,7 +94,7 @@ const materialsData = {
             ],
             eureka: [
                 {
-                    id: "msb8",
+                    id: "hydatos_crystal",
                     name: "Hydatos Crystal",
                     icon: "/icons/stormblood-icons/materials/hydatos_crystal.png",
                     reqTotal: 5250,
@@ -102,7 +102,7 @@ const materialsData = {
                     category: "eureka",
                 },
                 {
-                    id: "msb9",
+                    id: "crystalline_scale",
                     name: "Crystalline Scale",
                     icon: "/icons/stormblood-icons/materials/crystalline_scale.png",
                     reqTotal: 75,
@@ -112,7 +112,7 @@ const materialsData = {
             ],
             physeos: [
                 {
-                    id: "msb10",
+                    id: "eureka_fragment",
                     name: "Eureka Fragment",
                     icon: "/icons/stormblood-icons/materials/eureka_fragment.png",
                     reqTotal: 1500,
@@ -124,7 +124,7 @@ const materialsData = {
         shadowbringers: {
             resistance: [
                 {
-                    id: "mshb0",
+                    id: "thavnairian_scalepowder",
                     name: "Thavnairian Scalepowder",
                     icon: "/icons/shadowbringers-icons/materials/thavnairian_scalepowder.png",
                     reqTotal: 68,
@@ -134,7 +134,7 @@ const materialsData = {
             ],
             augmentedResistance: [
                 {
-                    id: "mshb1",
+                    id: "harrowing_memory_of_the_dying",
                     name: "Harrowing Memory of the Dying",
                     icon: "/icons/shadowbringers-icons/materials/harrowing_memory_of_the_dying.png",
                     reqTotal: 340,
@@ -142,7 +142,7 @@ const materialsData = {
                     category: "augmentedResistance",
                 },
                 {
-                    id: "mshb2",
+                    id: "sorrowful_memory_of_the_dying",
                     name: "Sorrowful Memory of the Dying",
                     icon: "/icons/shadowbringers-icons/materials/sorrowful_memory_of_the_dying.png",
                     reqTotal: 340,
@@ -150,7 +150,7 @@ const materialsData = {
                     category: "augmentedResistance",
                 },
                 {
-                    id: "mshb3",
+                    id: "tortured_memory_of_the_dying",
                     name: "Tortured Memory of the Dying",
                     icon: "/icons/shadowbringers-icons/materials/tortured_memory_of_the_dying.png",
                     reqTotal: 340,
@@ -160,7 +160,7 @@ const materialsData = {
             ],
             recollection: [
                 {
-                    id: "mshb4",
+                    id: "bitter_memory_of_the_dying",
                     name: "Bitter Memory of the Dying",
                     icon: "/icons/shadowbringers-icons/materials/bitter_memory_of_the_dying.png",
                     reqTotal: 102,
@@ -170,7 +170,7 @@ const materialsData = {
             ],
             lawsOrder: [
                 {
-                    id: "mshb5",
+                    id: "loathsome_memory_of_the_dying",
                     name: "Loathsome Memory of the Dying",
                     icon: "/icons/shadowbringers-icons/materials/loathsome_memory_of_the_dying.png",
                     reqTotal: 255,
@@ -180,7 +180,7 @@ const materialsData = {
             ],
             augmentedLawsOrder: [
                 {
-                    id: "mshb6",
+                    id: "timeworn_artifact",
                     name: "Timeworn Artifact",
                     icon: "/icons/shadowbringers-icons/materials/timeworn_artifact.png",
                     reqTotal: 255,
@@ -190,7 +190,7 @@ const materialsData = {
             ],
             blades: [
                 {
-                    id: "mshb7",
+                    id: "raw_emotion",
                     name: "Raw Emotion",
                     icon: "/icons/shadowbringers-icons/materials/raw_emotion.png",
                     reqTotal: 255,
@@ -203,8 +203,8 @@ const materialsData = {
             dow: {
                 manderville: [
                     {
-                        id: "mew0",
-                        name: "Manderium Meteorites",
+                        id: "manderium_meteorite",
+                        name: "Manderium Meteorite",
                         icon: "/icons/endwalker-icons/materials/manderium_meteorite.png",
                         reqTotal: 57,
                         reqPerWeapon: 3,
@@ -213,8 +213,8 @@ const materialsData = {
                 ],
                 amazingManderville: [
                     {
-                        id: "mew1",
-                        name: "Complementary Chondrites",
+                        id: "complementary_chondrite",
+                        name: "Complementary Chondrite",
                         icon: "/icons/endwalker-icons/materials/complementary_chondrite.png",
                         reqTotal: 57,
                         reqPerWeapon: 3,
@@ -223,7 +223,7 @@ const materialsData = {
                 ],
                 majesticManderville: [
                     {
-                        id: "mew2",
+                        id: "amplifying_achondrite",
                         name: "Amplifying Achondrite",
                         icon: "/icons/endwalker-icons/materials/amplifying_achondrite.png",
                         reqTotal: 57,
@@ -233,7 +233,7 @@ const materialsData = {
                 ],
                 mandervillous: [
                     {
-                        id: "mew3",
+                        id: "cosmic_crystallite",
                         name: "Cosmic Crystallite",
                         icon: "/icons/endwalker-icons/materials/cosmic_crystallite.png",
                         reqTotal: 57,
@@ -245,7 +245,7 @@ const materialsData = {
             doL: {
                 splendorous: {
                     whiteGatherersScrip: {
-                        id: 23,
+                        id: "white_gatherers_scrip",
                         name: "White Gatherers' Scrip",
                         icon: "/icons/white_gatherers_scrip.png",
                         reqTotal: 3000,
@@ -255,31 +255,31 @@ const materialsData = {
                 },
                 augmentedSplendorous: {
                     splendorousMinersComponent: {
-                        id: 24,
+                        id: "splendorous_miners_component",
                         name: "Splendorous Miner's Component",
                         icon: "/icons/endwalker-icons/materials/splendorous_crafters_component.png",
                         category: "augmentedSplendorous",
                     },
                     splendorousBotanistsComponent: {
-                        id: 25,
+                        id: "splendorous_botanists_component",
                         name: "Splendorous Botanist's Component",
                         icon: "/icons/endwalker-icons/materials/splendorous_crafters_component.png",
                         category: "augmentedSplendorous",
                     },
                     splendorousFishingRodComponent: {
-                        id: 26,
+                        id: "splendorous_fishing_rod_component",
                         name: "Splendorous Fishing Rod Component",
                         icon: "/icons/endwalker-icons/materials/splendorous_crafters_component.png",
                         category: "augmentedSplendorous",
                     },
                     splendorousFishingReelComponent: {
-                        id: 27,
+                        id: "splendorous_fishing_reel_component",
                         name: "Splendorous Fishing Reel Component",
                         icon: "/icons/endwalker-icons/materials/splendorous_crafters_component.png",
                         category: "augmentedSplendorous",
                     },
                     connoisseursPrismstone: {
-                        id: 28,
+                        id: "connoisseurs_prismstone",
                         name: "Connoisseur's Prismstone",
                         icon: "/icons/endwalker-icons/materials/connoisseurs_prismstone.png",
                         minCollectability: "570-999",
@@ -288,7 +288,7 @@ const materialsData = {
                         wiki: "https://ffxiv.consolegameswiki.com/wiki/Connoisseur%27s_Prismstone",
                     },
                     connoisseursWattlePetribark: {
-                        id: 29,
+                        id: "connoisseurs_wattle_petribark",
                         name: "Connoisseur's Wattle Petribark",
                         icon: "/icons/endwalker-icons/materials/connoisseurs_wattle_petribark.png",
                         minCollectability: "570-999",
@@ -297,21 +297,21 @@ const materialsData = {
                         wiki: "https://ffxiv.consolegameswiki.com/wiki/Connoisseur%27s_Wattle_Petribark",
                     },
                     splendorousWaterShard: {
-                        id: 30,
+                        id: "splendorous_water_shard",
                         name: "Splendorous Water Shard",
                         icon: "/icons/endwalker-icons/materials/splendorous_water_shard.png",
                         category: "augmentedSplendorous",
                         wiki: "https://ffxiv.consolegameswiki.com/wiki/Splendorous_Water_Shard",
                     },
                     splendorousEarthShard: {
-                        id: 31,
+                        id: "splendorous_earth_shard",
                         name: "Splendorous Earth Shard",
                         icon: "/icons/endwalker-icons/materials/splendorous_earth_shard.png",
                         category: "augmentedSplendorous",
                         wiki: "https://ffxiv.consolegameswiki.com/wiki/Splendorous_Earth_Shard",
                     },
                     platinumSeahorse: {
-                        id: 32,
+                        id: "platinum_seahorse",
                         name: "Platinum Seahorse",
                         icon: "/icons/endwalker-icons/materials/platinum_seahorse.png",
                         minCollectability: "47-109",
@@ -320,7 +320,7 @@ const materialsData = {
                         wiki: "https://ffxiv.consolegameswiki.com/wiki/Platinum_Seahorse",
                     },
                     clavekeeper: {
-                        id: 33,
+                        id: "clavekeeper",
                         name: "Clavekeeper",
                         icon: "/icons/endwalker-icons/materials/clavekeeper.png",
                         minCollectability: "283-664",
@@ -331,31 +331,31 @@ const materialsData = {
                 },
                 crystalline: {
                     adaptiveMinersComponent: {
-                        id: 34,
+                        id: "adaptive_miners_component",
                         name: "Adaptive Miner's Component",
                         icon: "/icons/endwalker-icons/materials/adaptive_crafters_component.png",
                         category: "crystalline",
                     },
                     adaptiveBotanistsComponent: {
-                        id: 35,
+                        id: "adaptive_botanists_component",
                         name: "Adaptive Botanist's Component",
                         icon: "/icons/endwalker-icons/materials/adaptive_crafters_component.png",
                         category: "crystalline",
                     },
                     adaptiveFishingRodComponent: {
-                        id: 36,
+                        id: "adaptive_fishing_rod_component",
                         name: "Adaptive Fishing Rod Component",
                         icon: "/icons/endwalker-icons/materials/adaptive_crafters_component.png",
                         category: "crystalline",
                     },
                     adaptiveFishingReelComponent: {
-                        id: 37,
+                        id: "adaptive_fishing_reel_component",
                         name: "Adaptive Fishing Reel Component",
                         icon: "/icons/endwalker-icons/materials/adaptive_crafters_component.png",
                         category: "crystalline",
                     },
                     connoisseursRedMalachite: {
-                        id: 38,
+                        id: "connoisseurs_red_malachite",
                         name: "Connoisseur's Red Malachite",
                         icon: "/icons/endwalker-icons/materials/connoisseurs_red_malachite.png",
                         minCollectability: "570-999",
@@ -364,7 +364,7 @@ const materialsData = {
                         wiki: "https://ffxiv.consolegameswiki.com/wiki/Connoisseur%27s_Red_Malachite",
                     },
                     connoisseursLevinMint: {
-                        id: 39,
+                        id: "connoisseurs_levin_mint",
                         name: "Connoisseur's Levin Mint",
                         icon: "/icons/endwalker-icons/materials/connoisseurs_levin_mint.png",
                         minCollectability: "570-999",
@@ -373,21 +373,21 @@ const materialsData = {
                         wiki: "https://ffxiv.consolegameswiki.com/wiki/Connoisseur%27s_Levin_Mint",
                     },
                     adaptiveFireCrystal: {
-                        id: 40,
+                        id: "adaptive_fire_crystal",
                         name: "Adaptive Fire Crystal",
                         icon: "/icons/endwalker-icons/materials/adaptive_fire_crystal.png",
                         category: "crystalline",
                         wiki: "https://ffxiv.consolegameswiki.com/wiki/Adaptive_Fire_Crystal",
                     },
                     adaptiveLightningCrystal: {
-                        id: 41,
+                        id: "adaptive_lightning_crystal",
                         name: "Adaptive Lightning Crystal",
                         icon: "/icons/endwalker-icons/materials/adaptive_lightning_crystal.png",
                         category: "crystalline",
                         wiki: "https://ffxiv.consolegameswiki.com/wiki/Adaptive_Lightning_Crystal",
                     },
                     mirrorImage: {
-                        id: 42,
+                        id: "mirror_image",
                         name: "Mirror Image",
                         icon: "/icons/endwalker-icons/materials/mirror_image.png",
                         minCollectability: "9-20",
@@ -396,7 +396,7 @@ const materialsData = {
                         wiki: "https://ffxiv.consolegameswiki.com/wiki/Mirror_Image",
                     },
                     spangledPirarucu: {
-                        id: 43,
+                        id: "spangled_pirarucu",
                         name: "Spangled Pirarucu",
                         icon: "/icons/endwalker-icons/materials/spangled_pirarucu.png",
                         minCollectability: "425-997",
@@ -407,31 +407,31 @@ const materialsData = {
                 },
                 choraZoisCrystalline: {
                     customizedMinersComponent: {
-                        id: 44,
+                        id: "customized_miners_component",
                         name: "Customized Miner's Component",
                         icon: "/icons/endwalker-icons/materials/customized_miners_component.png",
                         category: "choraZoisCrystalline",
                     },
                     customizedBotanistsComponent: {
-                        id: 45,
+                        id: "customized_botanists_component",
                         name: "Customized Botanist's Component",
                         icon: "/icons/endwalker-icons/materials/customized_botanists_component.png",
                         category: "choraZoisCrystalline",
                     },
                     customizedFishingRodComponent: {
-                        id: 46,
+                        id: "customized_fishing_rod_component",
                         name: "Customized Fishing Rod Component",
                         icon: "/icons/endwalker-icons/materials/customized_fishing_rod_component.png",
                         category: "choraZoisCrystalline",
                     },
                     customizedFishingReelComponent: {
-                        id: 47,
+                        id: "customized_fishing_reel_component",
                         name: "Customized Fishing Reel Component",
                         icon: "/icons/endwalker-icons/materials/customized_fishing_reel_component.png",
                         category: "choraZoisCrystalline",
                     },
                     connoisseursSoiledFemur: {
-                        id: 48,
+                        id: "connoisseurs_soiled_femur",
                         name: "Connoisseur's Soiled Femur",
                         icon: "/icons/endwalker-icons/materials/connoisseurs_soiled_femur.png",
                         minCollectability: "570-999",
@@ -440,7 +440,7 @@ const materialsData = {
                         wiki: "https://ffxiv.consolegameswiki.com/wiki/Connoisseur%27s_Soiled_Femur",
                     },
                     connoisseursMiracleApple: {
-                        id: 49,
+                        id: "connoisseurs_miracle_apple",
                         name: "Connoisseur's Miracle Apple",
                         icon: "/icons/endwalker-icons/materials/connoisseurs_miracle_apple.png",
                         minCollectability: "570-999",
@@ -449,21 +449,21 @@ const materialsData = {
                         wiki: "https://ffxiv.consolegameswiki.com/wiki/Connoisseur%27s_Miracle_Apple",
                     },
                     customIceCrystal: {
-                        id: 50,
+                        id: "custom_ice_crystal",
                         name: "Custom Ice Crystal",
                         icon: "/icons/endwalker-icons/materials/custom_ice_crystal.png",
                         category: "choraZoisCrystalline",
                         wiki: "https://ffxiv.consolegameswiki.com/wiki/Custom_Ice_Crystal",
                     },
                     customWindCrystal: {
-                        id: 51,
+                        id: "custom_wind_crystal",
                         name: "Custom Wind Crystal",
                         icon: "/icons/endwalker-icons/materials/custom_wind_crystal.png",
                         category: "choraZoisCrystalline",
                         wiki: "https://ffxiv.consolegameswiki.com/wiki/Custom_Wind_Crystal",
                     },
                     goldDustfish: {
-                        id: 52,
+                        id: "gold_dustfish",
                         name: "Gold Dustfish",
                         icon: "/icons/endwalker-icons/materials/gold_dustfish.png",
                         minCollectability: "82-192",
@@ -472,7 +472,7 @@ const materialsData = {
                         wiki: "https://ffxiv.consolegameswiki.com/wiki/Gold_Dustfish",
                     },
                     forgivenMelancholy: {
-                        id: 53,
+                        id: "forgiven_melancholy",
                         name: "Forgiven Melancholy",
                         icon: "/icons/endwalker-icons/materials/forgiven_melancholy.png",
                         minCollectability: "322-757",
@@ -483,31 +483,31 @@ const materialsData = {
                 },
                 brilliant: {
                     brilliantMinersComponent: {
-                        id: 54,
+                        id: "brilliant_miners_component",
                         name: "Brilliant Miner's Component",
                         icon: "/icons/endwalker-icons/materials/brilliant_miners_component.png",
                         category: "brilliant",
                     },
                     brilliantBotanistsComponent: {
-                        id: 55,
+                        id: "brilliant_botanists_component",
                         name: "Brilliant Botanist's Component",
                         icon: "/icons/endwalker-icons/materials/brilliant_botanists_component.png",
                         category: "brilliant",
                     },
                     brilliantFishingRodComponent: {
-                        id: 56,
+                        id: "brilliant_fishing_rod_component",
                         name: "Brilliant Fishing Rod Component",
                         icon: "/icons/endwalker-icons/materials/brilliant_fishing_rod_component.png",
                         category: "brilliant",
                     },
                     brilliantFishingReelComponent: {
-                        id: 57,
+                        id: "brilliant_fishing_reel_component",
                         name: "Brilliant Fishing Reel Component",
                         icon: "/icons/endwalker-icons/materials/brilliant_fishing_reel_component.png",
                         category: "brilliant",
                     },
                     connoisseurAurumRegisOre: {
-                        id: 58,
+                        id: "connoisseur_aurum_regis_ore",
                         name: "Connoisseur's Aurum Regis Ore",
                         icon: "/icons/endwalker-icons/materials/connoisseurs_aurum_regis_ore.png",
                         minCollectability: "570-999",
@@ -516,7 +516,7 @@ const materialsData = {
                         wiki: "https://ffxiv.consolegameswiki.com/wiki/Connoisseur%27s_Aurum_Regis_Ore",
                     },
                     connoisseursCloves: {
-                        id: 59,
+                        id: "connoisseurs_cloves",
                         name: "Connoisseur's Cloves",
                         icon: "/icons/endwalker-icons/materials/connoisseurs_cloves.png",
                         minCollectability: "570-999",
@@ -525,21 +525,21 @@ const materialsData = {
                         wiki: "https://ffxiv.consolegameswiki.com/wiki/Connoisseur%27s_Cloves",
                     },
                     brilliantLightningCluster: {
-                        id: 60,
+                        id: "brilliant_lightning_cluster",
                         name: "Brilliant Lightning Cluster",
                         icon: "/icons/endwalker-icons/materials/brilliant_lightning_cluster.png",
                         category: "brilliant",
                         wiki: "https://ffxiv.consolegameswiki.com/wiki/Brilliant_Lightning_Cluster",
                     },
                     brilliantEarthCluster: {
-                        id: 61,
+                        id: "brilliant_earth_cluster",
                         name: "Brilliant Earth Cluster",
                         icon: "/icons/endwalker-icons/materials/brilliant_earth_cluster.png",
                         category: "brilliant",
                         wiki: "https://ffxiv.consolegameswiki.com/wiki/Brilliant_Earth_Cluster",
                     },
                     oilSlick: {
-                        id: 62,
+                        id: "oil_slick",
                         name: "Oil Slick",
                         icon: "/icons/endwalker-icons/materials/oil_slick.png",
                         minCollectability: "94-219",
@@ -548,7 +548,7 @@ const materialsData = {
                         wiki: "https://ffxiv.consolegameswiki.com/wiki/Oil_Slick",
                     },
                     gonzalosGrace: {
-                        id: 63,
+                        id: "gonzalos_grace",
                         name: "Gonzalo's Grace",
                         icon: "/icons/endwalker-icons/materials/gonzalos_grace.png",
                         minCollectability: "47-109",
@@ -559,7 +559,7 @@ const materialsData = {
                 },
                 vrandticVisionarys: {
                     connoisseursAsphaltum: {
-                        id: 64,
+                        id: "connoisseurs_asphaltum",
                         name: "Connoisseur's Asphaltum",
                         icon: "/icons/endwalker-icons/materials/connoisseurs_asphaltum.png",
                         minCollectability: "570-999",
@@ -568,21 +568,21 @@ const materialsData = {
                         wiki: "https://ffxiv.consolegameswiki.com/wiki/Connoisseur%27s_Asphaltum",
                     },
                     inspirationalMinersComponent: {
-                        id: 65,
+                        id: "inspirational_miners_component",
                         name: "Inspirational Miner's Component",
                         icon: "/icons/endwalker-icons/materials/inspirational_miners_component.png",
                         category: "vrandticVisionarys",
                         wiki: "https://ffxiv.consolegameswiki.com/wiki/Inspirational_Miner%27s_Component",
                     },
                     inspirationalWindCluster: {
-                        id: 66,
+                        id: "inspirational_wind_cluster",
                         name: "Inspirational Wind Cluster",
                         icon: "/icons/endwalker-icons/materials/inspirational_wind_cluster.png",
                         category: "vrandticVisionarys",
                         wiki: "https://ffxiv.consolegameswiki.com/wiki/Inspirational_Wind_Cluster",
                     },
                     connoisseurGianthiveChip: {
-                        id: 67,
+                        id: "connoisseur_gianthive_chip",
                         name: "Connoisseur's Gianthive Chip",
                         icon: "/icons/endwalker-icons/materials/connoisseurs_gianthive_chip.png",
                         minCollectability: "570-999",
@@ -591,21 +591,21 @@ const materialsData = {
                         wiki: "https://ffxiv.consolegameswiki.com/wiki/Connoisseur%27s_Gianthive_Chip",
                     },
                     inspirationalBotanistsComponent: {
-                        id: 68,
+                        id: "inspirational_botanists_component",
                         name: "Inspirational Botanist's Component",
                         icon: "/icons/endwalker-icons/materials/inspirational_botanists_component.png",
                         category: "vrandticVisionarys",
                         wiki: "https://ffxiv.consolegameswiki.com/wiki/Inspirational_Botanist%27s_Component",
                     },
                     inspirationalFireCluster: {
-                        id: 69,
+                        id: "inspirational_fire_cluster",
                         name: "Inspirational Fire Cluster",
                         icon: "/icons/endwalker-icons/materials/inspirational_fire_cluster.png",
                         category: "vrandticVisionarys",
                         wiki: "https://ffxiv.consolegameswiki.com/wiki/Inspirational_Fire_Cluster",
                     },
                     deadwoodShadow: {
-                        id: 70,
+                        id: "deadwood_shadow",
                         name: "Deadwood Shadow",
                         icon: "/icons/endwalker-icons/materials/deadwood_shadow.png",
                         minCollectability: "501-1176",
@@ -614,7 +614,7 @@ const materialsData = {
                         wiki: "https://ffxiv.consolegameswiki.com/wiki/Deadwood_Shadow",
                     },
                     ronkanBullion: {
-                        id: 71,
+                        id: "ronkan_bullion",
                         name: "Ronkan Bullion",
                         icon: "/icons/endwalker-icons/materials/ronkan_bullion.png",
                         minCollectability: "501-1176",
@@ -623,7 +623,7 @@ const materialsData = {
                         wiki: "https://ffxiv.consolegameswiki.com/wiki/Ronkan_Bullion",
                     },
                     inspirationalFishersComponent: {
-                        id: 72,
+                        id: "inspirational_fishers_component",
                         name: "Inspirational Fisher's Component",
                         icon: "/icons/endwalker-icons/materials/inspirational_fishers_component.png",
                         category: "vrandticVisionarys",
@@ -632,7 +632,7 @@ const materialsData = {
                 },
                 lodestar: {
                     connoisseursRawOnyx: {
-                        id: 73,
+                        id: "connoisseurs_raw_onyx",
                         name: "Connoisseur's Raw Onyx",
                         icon: "/icons/endwalker-icons/materials/connoisseurs_raw_onyx.png",
                         minCollectability: "580-999",
@@ -641,21 +641,21 @@ const materialsData = {
                         wiki: "https://ffxiv.consolegameswiki.com/wiki/Connoisseur%27s_Raw_Onyx",
                     },
                     nightforgedMinersComponent: {
-                        id: 74,
+                        id: "nightforged_miners_component",
                         name: "Nightforged Miner's Component",
                         icon: "/icons/endwalker-icons/materials/nightforged_miners_component.png",
                         category: "lodestar",
                         wiki: "https://ffxiv.consolegameswiki.com/wiki/Nightforged_Miner%27s_Component",
                     },
                     nightforgedIceCluster: {
-                        id: 75,
+                        id: "nightforged_ice_cluster",
                         name: "Nightforged Ice Cluster",
                         icon: "/icons/endwalker-icons/materials/nightforged_ice_cluster.png",
                         category: "lodestar",
                         wiki: "https://ffxiv.consolegameswiki.com/wiki/Nightforged_Ice_Cluster",
                     },
                     connoisseursGlimshroom: {
-                        id: 76,
+                        id: "connoisseurs_glimshroom",
                         name: "Connoisseur's Glimshroom",
                         icon: "/icons/endwalker-icons/materials/connoisseurs_glimshroom.png",
                         minCollectability: "570-999",
@@ -664,21 +664,21 @@ const materialsData = {
                         wiki: "https://ffxiv.consolegameswiki.com/wiki/Connoisseur%27s_Glimshroom",
                     },
                     nightforgedBotanistsComponent: {
-                        id: 77,
+                        id: "nightforged_botanists_component",
                         name: "Nightforged Botanist's Component",
                         icon: "/icons/endwalker-icons/materials/nightforged_botanists_component.png",
                         category: "lodestar",
                         wiki: "https://ffxiv.consolegameswiki.com/wiki/Nightforged_Botanist%27s_Component",
                     },
                     nightforgedWaterCluster: {
-                        id: 78,
+                        id: "nightforged_water_cluster",
                         name: "Nightforged Water Cluster",
                         icon: "/icons/endwalker-icons/materials/nightforged_water_cluster.png",
                         category: "lodestar",
                         wiki: "https://ffxiv.consolegameswiki.com/wiki/Nightforged_Water_Cluster",
                     },
                     littleBounty: {
-                        id: 79,
+                        id: "little_bounty",
                         name: "Little Bounty",
                         icon: "/icons/endwalker-icons/materials/little_bounty.png",
                         minCollectability: "9-20",
@@ -687,7 +687,7 @@ const materialsData = {
                         wiki: "https://ffxiv.consolegameswiki.com/wiki/Little_Bounty",
                     },
                     saintFathricsFace: {
-                        id: 80,
+                        id: "saint_fathrics_face",
                         name: "Saint Fathric's Face",
                         icon: "/icons/endwalker-icons/materials/saint_fathrics_face.png",
                         minCollectability: "384-901",
@@ -696,7 +696,7 @@ const materialsData = {
                         wiki: "https://ffxiv.consolegameswiki.com/wiki/Saint_Fathric%27s_Face",
                     },
                     nightforgedFishersComponent: {
-                        id: 81,
+                        id: "nightforged_fishers_component",
                         name: "Nightforged Fisher's Component",
                         icon: "/icons/endwalker-icons/materials/nightforged_fishers_component.png",
                         category: "lodestar",
@@ -707,7 +707,7 @@ const materialsData = {
             doH: {
                 splendorous: {
                     whiteCraftersScrip: {
-                        id: 22,
+                        id: "white_crafters_scrip",
                         name: "White Crafters' Scrip",
                         icon: "/icons/white_crafters_scrip.png",
                         reqTotal: 10500,
@@ -721,7 +721,7 @@ const materialsData = {
             dow: {
                 penumbrae: [
                     {
-                        id: "mdt0",
+                        id: "arcanite",
                         name: "Arcanite",
                         icon: "/icons/dawntrail-icons/materials/arcanite.png",
                         category: "penumbrae",
@@ -730,7 +730,7 @@ const materialsData = {
                         reqPerWeapon: 3,
                     },
                     {
-                        id: "mdt1",
+                        id: "azurite_demiatma",
                         name: "Azurite Demiatma",
                         icon: "/icons/dawntrail-icons/materials/azurite_demiatma.png",
                         category: "penumbrae",
@@ -738,7 +738,7 @@ const materialsData = {
                         reqPerWeapon: 3,
                     },
                     {
-                        id: "mdt2",
+                        id: "caput_mortuum_demiatma",
                         name: "Caput Mortuum Demiatma",
                         icon: "icons/dawntrail-icons/materials/caput_mortuum_demiatma.png",
                         category: "penumbrae",
@@ -746,7 +746,7 @@ const materialsData = {
                         reqPerWeapon: 3,
                     },
                     {
-                        id: "mdt3",
+                        id: "malachite_demiatma",
                         name: "Malachite Demiatma",
                         icon: "icons/dawntrail-icons/materials/malachite_demiatma.png",
                         category: "penumbrae",
@@ -754,7 +754,7 @@ const materialsData = {
                         reqPerWeapon: 3,
                     },
                     {
-                        id: "mdt4",
+                        id: "orpiment_demiatma",
                         name: "Orpiment Demiatma",
                         icon: "icons/dawntrail-icons/materials/orpiment_demiatma.png",
                         category: "penumbrae",
@@ -762,7 +762,7 @@ const materialsData = {
                         reqPerWeapon: 3,
                     },
                     {
-                        id: "mdt5",
+                        id: "realgar_demiatma",
                         name: "Realgar Demiatma",
                         icon: "icons/dawntrail-icons/materials/realgar_demiatma.png",
                         category: "penumbrae",
@@ -770,7 +770,7 @@ const materialsData = {
                         reqPerWeapon: 3,
                     },
                     {
-                        id: "mdt6",
+                        id: "verdigris_demiatma",
                         name: "Verdigris Demiatma",
                         icon: "icons/dawntrail-icons/materials/verdigris_demiatma.png",
                         category: "penumbrae",
@@ -780,7 +780,7 @@ const materialsData = {
                 ],
                 umbrae: [
                     {
-                        id: "mdt7",
+                        id: "waxing_arcanite",
                         name: "Waxing Arcanite",
                         icon: "/icons/dawntrail-icons/materials/waxing_arcanite.png",
                         category: "umbrae",
@@ -789,7 +789,7 @@ const materialsData = {
                         reqPerWeapon: 3,
                     },
                     {
-                        id: "mdt8",
+                        id: "rroneek_glue",
                         name: "Rroneek Glue",
                         icon: "/icons/dawntrail-icons/materials/rroneek_glue.png",
                         category: "umbrae",
@@ -798,7 +798,7 @@ const materialsData = {
                         reqPerWeapon: 1,
                     },
                     {
-                        id: "mdt9",
+                        id: "utohmu_siderite",
                         name: "Ut'ohmu Siderite",
                         icon: "/icons/dawntrail-icons/materials/utohmu_siderite.png",
                         category: "umbrae",
@@ -807,7 +807,7 @@ const materialsData = {
                         reqPerWeapon: 1,
                     },
                     {
-                        id: "mdt10",
+                        id: "synthetic_dark_matter_alpha",
                         name: "Synthetic Dark Matter Alpha",
                         icon: "/icons/dawntrail-icons/materials/synthetic_dark_matter_alpha.png",
                         category: "umbrae",
@@ -816,7 +816,7 @@ const materialsData = {
                         reqPerWeapon: 1,
                     },
                     {
-                        id: "mdt11",
+                        id: "synthetic_dark_matter_beta",
                         name: "Synthetic Dark Matter Beta",
                         icon: "/icons/dawntrail-icons/materials/synthetic_dark_matter_beta.png",
                         category: "umbrae",
@@ -825,7 +825,7 @@ const materialsData = {
                         reqPerWeapon: 1,
                     },
                     {
-                        id: "mdt12",
+                        id: "synthetic_dark_matter_gamma",
                         name: "Synthetic Dark Matter Gamma",
                         icon: "/icons/dawntrail-icons/materials/synthetic_dark_matter_gamma.png",
                         category: "umbrae",
@@ -834,7 +834,7 @@ const materialsData = {
                         reqPerWeapon: 1,
                     },
                     {
-                        id: "mdt13",
+                        id: "aetherwell_array",
                         name: "Aetherwell Array",
                         icon: "/icons/dawntrail-icons/materials/aetherwell_array.png",
                         category: "umbrae",
@@ -843,6 +843,54 @@ const materialsData = {
                         reqPerWeapon: 1,
                     }
                 ],
+                obscurum: [
+                    {
+                        id: "umbral_clay",
+                        name: "Umbral Clay",
+                        icon: "/icons/dawntrail-icons/materials/umbral_clay.png",
+                        category: "obscurum",
+                        wiki: "",
+                        reqTotal: 1,
+                        reqPerWeapon: 1
+                    },
+                    {
+                        id: "aspected_aether_agglomerate",
+                        name: "Aspected Aether Agglomerate",
+                        icon: "/icons/dawntrail-icons/materials/aspected_aether_agglomerate.png",
+                        category: "obscurum",
+                        wiki: "",
+                        reqTotal: 1,
+                        reqPerWeapon: 1
+                    },
+                    {
+                        id: "apsected_aetheroconductor",
+                        name: "Aspected Aetheroconductor",
+                        icon: "/icons/dawntrail-icons/materials/aspected_aetheroconductor.png",
+                        category: "obscurum",
+                        wiki: "",
+                        reqTotal: 1,
+                        reqPerWeapon: 1
+                    },
+                    {
+                        id: "apsected_aetherocatalyst ",
+                        name: "Aspected Aetherocatalyst",
+                        icon: "/icons/dawntrail-icons/materials/aspected_aetherocatalyst.png",
+                        category: "obscurum",
+                        wiki: "",
+                        reqTotal: 1,
+                        reqPerWeapon: 1
+                    },
+                    {
+                        id: "crystal_paste",
+                        name: "Crystal Paste",
+                        icon: "/icons/dawntrail-icons/materials/crystal_paste.png",
+                        category: "obscurum",
+                        wiki: "",
+                        reqTotal: 1200,
+                        reqPerWeapon: 1200,
+                    }
+
+                ]
             },
             doL: {},
             doH: {},

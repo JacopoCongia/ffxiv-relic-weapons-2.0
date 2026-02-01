@@ -2,23 +2,23 @@
 
 import MaterialCard from "./MaterialCard.jsx";
 
-function Materials({ materials, counter }) {
-  return (
-    <>
-      {materials.map((material) => {
-        const remaining =
-          material.reqTotal - material.reqPerWeapon * counter.length;
-        return (
-          <MaterialCard
-            key={material.id}
-            name={material.name}
-            icon={material.icon}
-            amount={remaining}
-          />
-        );
-      })}
-    </>
-  );
+function Materials({materials, counter}) {
+    return (
+        <>
+            {materials.map((material) => {
+                const remaining =
+                    material.reqTotal - material.reqPerWeapon * counter.length;
+                return (
+                    <MaterialCard
+                        key={material.id}
+                        name={material.name}
+                        icon={material.icon}
+                        amount={remaining}
+                    />
+                );
+            })}
+        </>
+    );
 }
 
 export default Materials;
