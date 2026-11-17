@@ -1,0 +1,49 @@
+# Runs the same checks you'd run locally (format, lint, build) on GitHub's
+# servers, so a broken change is caught before it reaches main, which
+# Netlify deploys to the live site.
+name: CI
+
+# When to run: on every pull request, and on every push to main (merging a
+# PR counts as a push), so main's own status is always visible too.
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+# If you push again to the same PR while a run is still going, cancel the
+# old run: only the newest commit matters.
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+# The job only needs to read the code, so don't give it permission to write
+# anything to the repo.
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      # Download the repo's code at the commit being tested.
+      - uses: actions/checkout@v7
+
+      # Install Node (same major version as local development) and cache
+      # npm's downloads between runs so installs are faster.
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+
+      # Install exactly the versions in package-lock.json.
+      - run: npm ci
+
+      # Each step fails the run if it fails, and the rest are skipped.
+      - name: Check formatting
+        run: npm run format:check
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Build
+        run: npm run build
