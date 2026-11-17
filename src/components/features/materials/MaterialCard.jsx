@@ -1,6 +1,7 @@
 // MaterialCard component for displaying materials with icons, names, and amounts
 import { useState } from "react";
 import { motion } from "motion/react";
+import { showFallbackIcon } from "../../../utilities/imageFallback.js";
 
 function MaterialCard({ name, icon, amount, type = "Material" }) {
   // State to handle card expansion
@@ -23,7 +24,12 @@ function MaterialCard({ name, icon, amount, type = "Material" }) {
     >
       {/* Icon with a subtle background glow if active */}
       <div className="relative flex-shrink-0">
-        <img className="h-10 w-10 rounded-full" alt={name} src={icon} />
+        <img
+          className="h-10 w-10 rounded-full"
+          alt={name}
+          src={icon}
+          onError={showFallbackIcon}
+        />
       </div>
 
       <div className="flex min-w-0 flex-col">

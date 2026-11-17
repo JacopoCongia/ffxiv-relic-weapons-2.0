@@ -10,6 +10,22 @@ const WeaponsDataContext = createContext();
 // Wait this long after the last change before writing to Firestore, so rapid clicks become one write
 const SAVE_DEBOUNCE_MS = 500;
 
+// localStorage key for which sections are open ({ [category]: true/false })
+const VISIBILITY_KEY = "visibility";
+
+function readStoredVisibility() {
+  try {
+    const stored = JSON.parse(localStorage.getItem(VISIBILITY_KEY));
+    // Only accept a plain object; anything else (null, a list, a string) is ignored
+    if (stored && typeof stored === "object" && !Array.isArray(stored)) {
+      return stored;
+    }
+  } catch {
+    // Corrupted JSON, or storage blocked: start with all sections closed
+  }
+  return {};
+}
+
 function WeaponsDataProvider({ children }) {
   const [weapons, setWeapons] = useState(data);
   const [ownedWeapons, setOwnedWeapons] = useState([]);
@@ -21,9 +37,9 @@ function WeaponsDataProvider({ children }) {
   const lastSyncedRef = useRef(null);
 
   // SECTION VISIBILITY START
-  const storedVisibility = JSON.parse(localStorage.getItem("visibility"));
-
-  const [visibility, setVisibility] = useState(storedVisibility || {});
+  // Read once on first render (not on every render), falling back to {} if
+  // the stored value is missing or corrupted
+  const [visibility, setVisibility] = useState(readStoredVisibility);
 
   function handleVisibility(category, isOpen) {
     setVisibility((prevVisibility) => ({
@@ -33,7 +49,12 @@ function WeaponsDataProvider({ children }) {
   }
 
   useEffect(() => {
-    localStorage.setItem("visibility", JSON.stringify(visibility));
+    try {
+      localStorage.setItem(VISIBILITY_KEY, JSON.stringify(visibility));
+    } catch {
+      // Storage can be full or blocked (e.g. some private modes); the
+      // open/closed state just won't be remembered
+    }
   }, [visibility]);
 
   // SECTION VISIBILITY END
