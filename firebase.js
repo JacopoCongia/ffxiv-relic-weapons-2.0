@@ -1,12 +1,15 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
+// Firestore Lite: only simple reads and writes (no realtime listeners or
+// offline cache), which is all this app uses, at about a quarter of the size
+// of "firebase/firestore". The rules tests use the full SDK; that's fine.
 import {
   getFirestore,
   getDoc,
   setDoc,
   deleteDoc,
   doc,
-} from "firebase/firestore";
+} from "firebase/firestore/lite";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDarNiKI_oYPbwa8j0hpMu9kitjTNw_hL8",
