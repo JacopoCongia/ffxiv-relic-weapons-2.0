@@ -29,6 +29,15 @@ const sectionsData = {
       tomestones: materialsData.tomestones.heliometry,
       tomestoneAmount: 1500,
     },
+    {
+      id: "eclipticum",
+      name: "Eclipticum",
+      category: "eclipticum",
+      patchInfo: "iLvl 790 (Patch 7.55)",
+      materials: materialsData.materials.dawntrail.dow.eclipticum,
+      tomestones: materialsData.tomestones.heliometry,
+      tomestoneAmount: 1500,
+    },
   ],
   endwalker: [
     {
