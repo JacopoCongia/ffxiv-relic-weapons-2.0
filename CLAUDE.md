@@ -60,6 +60,12 @@ Two React contexts are wrapped around the app in `main.jsx`:
 
 Firestore access lives in the root-level `firebase.js`. A user's progress is a single document, `users/{uid}/data/ownedWeapons`, which is loaded when `currentUser` changes and rewritten (debounced) when `ownedWeapons` changes. Logged-out users can browse but not select items.
 
+`firebase.js` uses **Firestore Lite** (`firebase/firestore/lite`), which is about a quarter of the size of the full SDK. It supports one-off reads and writes (`getDoc`, `setDoc`, `deleteDoc`, queries) but not realtime listeners (`onSnapshot`) or the offline cache and write queue. A feature that needs those must switch the import back to `firebase/firestore`, at the cost of about 50 KB gzipped on every page.
+
+### Build chunks
+
+`vite.config.js` uses `manualChunks` to put React + React Router, Firebase and Motion into their own chunks (`react-…js`, `firebase-…js`, `motion-…js`), so deploys that only change app code leave those cached in returning visitors' browsers. A new large dependency can be added to a group in `vendorChunks` there. Keep each library inside one group: splitting a library across groups makes Rollup warn about "Circular chunk". Pages are split separately, by the lazy routes in `App.jsx`. Check the sizes in the `npm run build` output when adding a dependency.
+
 **Security rules** live in `firestore.rules` and allow only those two documents per user (`users/{uid}` with just `email`, and `users/{uid}/data/ownedWeapons` with just an `ownedWeapons` list of up to 1000 entries); everything else is denied. Any new Firestore path or field needs a rules change plus tests, or it will be rejected in production. The rules aren't deployed automatically: after merging, the owner pastes `firestore.rules` into the Firebase console (Firestore → Rules) or runs `npx firebase deploy --only firestore:rules`.
 
 ### Item IDs are persisted
