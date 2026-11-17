@@ -14,6 +14,10 @@ const AuthContext = createContext();
 
 // Initialize Providers
 const googleProvider = new GoogleAuthProvider();
+// Always show Google's account picker. Without this, Google signs in straight
+// away with the browser's only (or last used) account, so people with several
+// Google accounts can't choose which one holds their progress.
+googleProvider.setCustomParameters({ prompt: "select_account" });
 const githubProvider = new GithubAuthProvider();
 
 function AuthContextProvider({ children }) {
