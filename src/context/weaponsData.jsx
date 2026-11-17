@@ -2,6 +2,11 @@ import { createContext, useState, useEffect, useRef } from "react";
 import { addToDb, getWeapons } from "../../firebase";
 
 import data from "../data/data.js";
+import {
+  addItems,
+  removeItems,
+  toggleItem,
+} from "../utilities/ownedWeapons.js";
 
 import useAuth from "../hooks/use-auth";
 
@@ -59,62 +64,25 @@ function WeaponsDataProvider({ children }) {
 
   // SECTION VISIBILITY END
 
-  // Weapon selection logic
+  // Weapon selection logic (the list changes themselves live in
+  // utilities/ownedWeapons.js, where they're unit tested)
+
+  // Select or deselect one item; a PLD item toggles every PLD item in its
+  // category, so the sword and shield move together
   function selectWeapon(weapon) {
-    const isOwned = ownedWeapons.some((el) => el.id === weapon.id);
-    const isPLD = weapon.wpnJobShort === "PLD";
-
-    // Get weapons to process (all PLD weapons in category, or just this one)
-    const weaponsToProcess = isPLD
-      ? weapons[weapon.category].filter((w) => w.wpnJobShort === "PLD")
-      : [weapon];
-
-    // Helper to create weapon object
-    const toWeaponObj = (w) => ({
-      id: w.id,
-      name: w.wpnName,
-      category: w.category,
-      shield: w.shield || null,
-    });
-
-    if (!isOwned) {
-      // Add weapons
-      setOwnedWeapons((prev) => {
-        const newWeapons = weaponsToProcess
-          .filter((w) => !prev.some((el) => el.id === w.id))
-          .map(toWeaponObj);
-        return [...prev, ...newWeapons];
-      });
-    } else {
-      // Remove weapons
-      const idsToRemove = new Set(weaponsToProcess.map((w) => w.id));
-      setOwnedWeapons((prev) => prev.filter((el) => !idsToRemove.has(el.id)));
-    }
+    setOwnedWeapons((prev) =>
+      toggleItem(prev, weapon, weapons[weapon.category]),
+    );
   }
 
   // Select all items in a category
   function checkAll(items) {
-    setOwnedWeapons((prevOwnedWeapons) => {
-      const existingIds = new Set(prevOwnedWeapons.map((item) => item.id));
-
-      const newItemsToAdd = items
-        .filter((item) => !existingIds.has(item.id))
-        .map((item) => ({
-          id: item.id,
-          name: item.wpnName,
-          category: item.category,
-          shield: item.shield || null,
-        }));
-      return [...prevOwnedWeapons, ...newItemsToAdd];
-    });
+    setOwnedWeapons((prev) => addItems(prev, items));
   }
 
   // Deselect all items in a category
   function uncheckAll(items) {
-    const idsToRemove = new Set(items.map((item) => item.id)); // create a set of ids to remove
-    setOwnedWeapons((prevOwnedWeapons) => {
-      return prevOwnedWeapons.filter((item) => !idsToRemove.has(item.id));
-    });
+    setOwnedWeapons((prev) => removeItems(prev, items));
   }
 
   // Load the user's saved weapons when they log in (or switch accounts)

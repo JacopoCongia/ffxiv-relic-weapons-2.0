@@ -1,4 +1,4 @@
-# Runs the same checks you'd run locally (format, lint, build) on GitHub's
+# Runs the same checks you'd run locally (format, lint, tests, build) on GitHub's
 # servers, so a broken change is caught before it reaches main, which
 # Netlify deploys to the live site.
 name: CI
@@ -44,6 +44,11 @@ jobs:
 
       - name: Lint
         run: npm run lint
+
+      # Unit tests in tests/unit/ (no emulator needed, so they run here
+      # rather than in the `rules` job).
+      - name: Unit tests
+        run: npm test
 
       - name: Build
         run: npm run build

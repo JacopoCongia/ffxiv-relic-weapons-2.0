@@ -1,13 +1,13 @@
 // Materials component for displaying a list of materials with icons, names, and amounts
 
 import MaterialCard from "./MaterialCard.jsx";
+import { remainingMaterial } from "../../../utilities/materials.js";
 
 function Materials({ materials, counter }) {
   return (
     <>
       {materials.map((material) => {
-        const remaining =
-          material.reqTotal - material.reqPerWeapon * counter.length;
+        const remaining = remainingMaterial(material, counter.length);
         return (
           <MaterialCard
             key={material.id}

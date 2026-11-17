@@ -4,13 +4,13 @@ import { GoChevronDown } from "react-icons/go";
 import { BsCheckLg } from "react-icons/bs";
 
 import useWeaponsData from "../../../hooks/use-weapons-data.jsx";
+import { countMainHand } from "../../../utilities/ownedWeapons.js";
 
 function ItemsHeader({ category, counter, name, patchInfo, items = [], type }) {
   const { visibility, handleVisibility } = useWeaponsData();
 
-  // Filter out shields/off-hands from the total count to match the counter logic
-  const mainHandItems = items.filter((item) => !item.shield);
-  const totalItems = mainHandItems.length;
+  // Shields/off-hands are left out of the total, to match the counter logic
+  const totalItems = countMainHand(items);
 
   const check =
     counter?.length === totalItems && totalItems > 0 ? (

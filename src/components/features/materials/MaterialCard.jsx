@@ -2,14 +2,15 @@
 import { useState } from "react";
 import { motion } from "motion/react";
 import { showFallbackIcon } from "../../../utilities/imageFallback.js";
+import { displayAmount, isMaterialDone } from "../../../utilities/materials.js";
 
 function MaterialCard({ name, icon, amount, type = "Material" }) {
   // State to handle card expansion
   const [isExpanded, setIsExpanded] = useState(false);
 
-  // Calculate if the material is done and display amount
-  const isDone = amount <= 0;
-  const displayAmount = isDone ? 0 : amount; // Prevents negative amounts
+  // Done once nothing more is needed; the shown amount never goes below 0
+  const isDone = isMaterialDone(amount);
+  const shownAmount = displayAmount(amount);
 
   return (
     <motion.div
@@ -46,7 +47,7 @@ function MaterialCard({ name, icon, amount, type = "Material" }) {
       <div
         className={`ml-auto font-mono text-[1.125rem] font-bold ${isDone ? "text-gray-500" : "text-cyan-500"}`}
       >
-        {displayAmount}
+        {shownAmount}
       </div>
     </motion.div>
   );
