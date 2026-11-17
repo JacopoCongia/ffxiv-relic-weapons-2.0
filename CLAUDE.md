@@ -12,6 +12,7 @@ npm run build    # production build to dist/
 npm run lint     # ESLint, --max-warnings 0
 npm run preview  # serve the built dist/
 npm run format   # Prettier over the repo (prettier-plugin-tailwindcss sorts class names)
+npm run format:check   # what CI runs: fails if any file isn't formatted
 ```
 
 There is no test suite.
@@ -20,6 +21,7 @@ There is no test suite.
 
 - **`main` is live.** Netlify auto-deploys every merge to `main` (https://finalfantasyxivrelics.netlify.app/), so `main` must always build. `public/_redirects` provides the SPA fallback for client-side routes.
 - **Lint must pass** (`npm run lint`, zero warnings) before committing.
+- **CI** (`.github/workflows/ci.yml`) runs `format:check`, `lint` and `build` on every PR and push to `main`. Run the same three locally before pushing.
 - **Verify UI changes in the browser**: run the dev server and check the affected page before calling the work done.
 - **Formatting**: the whole repo is formatted with Prettier. Run it on every file you touch (`npx prettier --write <files>`, or `npm run format` for everything).
 
