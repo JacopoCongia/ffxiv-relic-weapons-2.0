@@ -10,7 +10,8 @@
     "preview": "vite preview",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "test:rules": "firebase emulators:exec --only firestore --project demo-ffxiv-relics 'vitest run tests/firestore.rules.test.js'"
+    "test:rules": "firebase emulators:exec --only firestore --project demo-ffxiv-relics 'vitest run tests/firestore.rules.test.js'",
+    "test": "vitest run --dir tests/unit"
   },
   "dependencies": {
     "classnames": "^2.3.2",

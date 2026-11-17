@@ -2,6 +2,8 @@
 
 import MaterialCard from "./MaterialCard.jsx";
 import Materials from "./Materials.jsx";
+import { countMainHand } from "../../../utilities/ownedWeapons.js";
+import { remainingTomestones } from "../../../utilities/materials.js";
 
 function MaterialsContainer({
   counter,
@@ -11,10 +13,13 @@ function MaterialsContainer({
   tomestones,
   items,
 }) {
-  // Calculate total items and remaining tomestones
-  const totalItems = items.length - 1;
-  const remainingTomestones =
-    totalItems * tomestoneAmount - counter.length * tomestoneAmount;
+  // Tomestones still needed for the main-hand weapons not owned yet (shields
+  // excluded; every weapon category has exactly one, the PLD shield)
+  const tomestonesLeft = remainingTomestones(
+    countMainHand(items),
+    counter.length,
+    tomestoneAmount,
+  );
 
   return (
     <div className="mx-auto w-full max-w-4xl p-4">
@@ -27,7 +32,7 @@ function MaterialsContainer({
           <MaterialCard
             name={tomestones.name}
             icon={tomestones.icon}
-            amount={remainingTomestones}
+            amount={tomestonesLeft}
             type="Currency"
           />
         )}

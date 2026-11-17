@@ -13,16 +13,20 @@ npm run lint     # ESLint, --max-warnings 0
 npm run preview  # serve the built dist/
 npm run format   # Prettier over the repo (prettier-plugin-tailwindcss sorts class names)
 npm run format:check   # what CI runs: fails if any file isn't formatted
+npm test               # unit tests in tests/unit/ (Vitest, no emulator)
 npm run test:rules     # Firestore rules tests in the emulator (needs Java 21+)
 ```
 
-The only tests are the Firestore rules tests in `tests/firestore.rules.test.js`. They run in the Firestore emulator, which needs Java; Java isn't installed on the owner's machine, so they run in CI.
+There are two kinds of tests, run separately:
+
+- **Unit tests** in `tests/unit/` (`npm test`) cover the pure logic in `src/utilities/`: selection and Paladin sword+shield pairing, the shield-free counters, and the materials math, using the real data. They run anywhere. Keep that logic in pure functions there (components just call them), and add a test when you change it.
+- **Firestore rules tests** in `tests/firestore.rules.test.js` (`npm run test:rules`) run in the Firestore emulator, which needs Java; Java isn't installed on the owner's machine, so they run in CI. `npm test` only scans `tests/unit/`, so it never picks this file up.
 
 ## Workflow rules
 
 - **`main` is live.** Netlify auto-deploys every merge to `main` (https://finalfantasyxivrelics.netlify.app/), so `main` must always build. `public/_redirects` provides the SPA fallback for client-side routes.
 - **Lint must pass** (`npm run lint`, zero warnings) before committing.
-- **CI** (`.github/workflows/ci.yml`) runs `format:check`, `lint` and `build` (job `check`) and the Firestore rules tests (job `rules`) on every PR and push to `main`. Run the first three locally before pushing.
+- **CI** (`.github/workflows/ci.yml`) runs `format:check`, `lint`, `test` and `build` (job `check`) and the Firestore rules tests (job `rules`) on every PR and push to `main`. Run the first four locally before pushing.
 - **Verify UI changes in the browser**: run the dev server and check the affected page before calling the work done.
 - **Formatting**: the whole repo is formatted with Prettier. Run it on every file you touch (`npx prettier --write <files>`, or `npm run format` for everything).
 - **Open work is tracked in GitHub issues** (`gh issue list`). Label `code` means code work; label `owner` means only the owner can do it (game checks, icons, Firebase console, repo settings), so don't attempt those, just point to them. When working on an issue, read it first (`gh issue view <n>`) and put `Closes #<n>` in the PR description so it closes on merge. Work you find but don't do becomes a new issue (ask the owner first), not a note in chat.
@@ -34,7 +38,7 @@ The only tests are the Firestore rules tests in `tests/firestore.rules.test.js`.
 All game content lives in `src/data/` as plain JS objects; there is no CMS or API.
 
 - `data.js`: every item (weapon or tool), keyed by **category** (`penumbrae`, `manderville`, `splendorousCrafters`, …). Each item has `id`, `wpnName`, `wpnJob`, `wpnJobShort`, `icon`, `category`, and optionally `shield: true` for Paladin shields.
-- `materialsData.js`: tomestones plus materials per expansion/step. Each material has `reqTotal` (for all weapons in the step) and `reqPerWeapon`. The "remaining" amount shown is `reqTotal - reqPerWeapon * ownedMainHandCount` (see `components/features/materials/Materials.jsx`).
+- `materialsData.js`: tomestones plus materials per expansion/step. Each material has `reqTotal` (for all weapons in the step) and `reqPerWeapon`. The "remaining" amount shown is `reqTotal - reqPerWeapon * ownedMainHandCount` (see `src/utilities/materials.js`).
 - `sectionData.js` (DoW/DoM weapons) and `toolsSectionData.js` (Endwalker DoH/DoL tools): ordered lists of sections per page. A section's `id` is the key into `data.js`, and it points to its materials/tomestones in `materialsData.js`.
 - Icons are served from `public/icons/<expansion>-icons/...` and referenced by absolute path (`/icons/...`). Item and material cards fall back to `/icons/not_found.png` when an icon is missing (`src/utilities/imageFallback.js`), so data can be added before its icons.
 
@@ -45,7 +49,7 @@ Adding a new relic step means: items in `data.js`, materials in `materialsData.j
 - `App.jsx` defines routes (one lazy-loaded page per expansion, plus `crafters`, `gatherers` and `account`), all inside `components/layout/Layout.jsx` (navbar, sidebar, `Suspense`). Sidebar links are hardcoded in `Sidebar.jsx`.
 - Each expansion page maps its section list to `ItemsSection`, which renders a collapsible header with an owned/total counter (`ItemsHeader`), the item grid (`ItemsContainer` → `ItemCard`), and, for `type="weapon"`, the materials (`MaterialsContainer`).
 - Tool pages (`EndwalkerCrafters`/`EndwalkerGatherers`) use `type="tool"` and pass extra per-section content as children from `hooks/use-tools-content.jsx`, a large `switch` of hardcoded JSX keyed by section id.
-- **Paladin shields** (`shield: true`) are excluded from counters and material math. Selecting a PLD weapon toggles every PLD item in that category, so the sword and shield move together.
+- **Paladin shields** (`shield: true`) are excluded from counters and material math. Selecting a PLD weapon toggles every PLD item in that category, so the sword and shield move together. This logic, and the shield-free counting, lives in `src/utilities/ownedWeapons.js`.
 
 ### State and persistence
 
