@@ -11,7 +11,7 @@ npm run dev      # Vite dev server
 npm run build    # production build to dist/
 npm run lint     # ESLint, --max-warnings 0
 npm run preview  # serve the built dist/
-npx prettier --write <files>   # format (prettier-plugin-tailwindcss sorts class names)
+npm run format   # Prettier over the repo (prettier-plugin-tailwindcss sorts class names)
 ```
 
 There is no test suite.
@@ -21,7 +21,7 @@ There is no test suite.
 - **`main` is live.** Netlify auto-deploys every merge to `main` (https://finalfantasyxivrelics.netlify.app/), so `main` must always build. `public/_redirects` provides the SPA fallback for client-side routes.
 - **Lint must pass** (`npm run lint`, zero warnings) before committing.
 - **Verify UI changes in the browser**: run the dev server and check the affected page before calling the work done.
-- **Formatting**: a one-time Prettier pass over the whole repo is planned in its own PR, because files currently mix 2- and 4-space indentation. Once it has landed, run Prettier on every file you touch. Until then, don't mix reformatting into unrelated changes.
+- **Formatting**: the whole repo is formatted with Prettier. Run it on every file you touch (`npx prettier --write <files>`, or `npm run format` for everything).
 
 ## Architecture
 
