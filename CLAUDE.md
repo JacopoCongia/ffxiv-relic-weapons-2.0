@@ -13,15 +13,16 @@ npm run lint     # ESLint, --max-warnings 0
 npm run preview  # serve the built dist/
 npm run format   # Prettier over the repo (prettier-plugin-tailwindcss sorts class names)
 npm run format:check   # what CI runs: fails if any file isn't formatted
+npm run test:rules     # Firestore rules tests in the emulator (needs Java 21+)
 ```
 
-There is no test suite.
+The only tests are the Firestore rules tests in `tests/firestore.rules.test.js`. They run in the Firestore emulator, which needs Java; Java isn't installed on the owner's machine, so they run in CI.
 
 ## Workflow rules
 
 - **`main` is live.** Netlify auto-deploys every merge to `main` (https://finalfantasyxivrelics.netlify.app/), so `main` must always build. `public/_redirects` provides the SPA fallback for client-side routes.
 - **Lint must pass** (`npm run lint`, zero warnings) before committing.
-- **CI** (`.github/workflows/ci.yml`) runs `format:check`, `lint` and `build` on every PR and push to `main`. Run the same three locally before pushing.
+- **CI** (`.github/workflows/ci.yml`) runs `format:check`, `lint` and `build` (job `check`) and the Firestore rules tests (job `rules`) on every PR and push to `main`. Run the first three locally before pushing.
 - **Verify UI changes in the browser**: run the dev server and check the affected page before calling the work done.
 - **Formatting**: the whole repo is formatted with Prettier. Run it on every file you touch (`npx prettier --write <files>`, or `npm run format` for everything).
 
@@ -52,7 +53,9 @@ Two React contexts are wrapped around the app in `main.jsx`:
 - `context/authContext.jsx` (`useAuth`): Firebase popup sign-in with Google or GitHub, log out, and account deletion with re-auth. Errors auto-clear after 5 s.
 - `context/weaponsData.jsx` (`useWeaponsData`): `ownedWeapons` (an array of `{id, name, category, shield}`), `selectWeapon`/`checkAll`/`uncheckAll`, and per-section open/closed `visibility` (stored in `localStorage`).
 
-Firestore access lives in the root-level `firebase.js`. A user's progress is a single document, `users/{uid}/data/ownedWeapons`, which is loaded when `currentUser` changes and rewritten on every `ownedWeapons` change. Logged-out users can browse but not select items.
+Firestore access lives in the root-level `firebase.js`. A user's progress is a single document, `users/{uid}/data/ownedWeapons`, which is loaded when `currentUser` changes and rewritten (debounced) when `ownedWeapons` changes. Logged-out users can browse but not select items.
+
+**Security rules** live in `firestore.rules` and allow only those two documents per user (`users/{uid}` with just `email`, and `users/{uid}/data/ownedWeapons` with just an `ownedWeapons` list of up to 1000 entries); everything else is denied. Any new Firestore path or field needs a rules change plus tests, or it will be rejected in production. The rules aren't deployed automatically: after merging, the owner pastes `firestore.rules` into the Firebase console (Firestore → Rules) or runs `npx firebase deploy --only firestore:rules`.
 
 ### Item IDs are persisted
 
