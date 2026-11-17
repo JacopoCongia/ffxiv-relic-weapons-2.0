@@ -1,10 +1,9 @@
 import {createContext, useState, useEffect} from "react";
-import {addUserToDb, auth} from "../../firebase";
+import {addUserToDb, auth, deleteUserData} from "../../firebase";
 import {
     GoogleAuthProvider,
     GithubAuthProvider,
     signInWithPopup,
-    sendEmailVerification,
     onAuthStateChanged,
     signOut,
     deleteUser,
@@ -78,6 +77,9 @@ function AuthContextProvider({children}) {
     async function deleteAccount() {
         const user = auth.currentUser;
         try {
+            // Delete the user's Firestore data first, while they're still authenticated
+            // (security rules reject the delete once the Auth user is gone)
+            await deleteUserData(user);
             await deleteUser(user);
         } catch (error) {
             // If Firebase requires recent login, trigger re-auth popup
@@ -96,7 +98,9 @@ function AuthContextProvider({children}) {
                     }
 
                     await reauthenticateWithPopup(user, provider);
-                    await deleteUser(user); // Try delete again
+                    // Try again: data deletion is idempotent, so re-running it is safe
+                    await deleteUserData(user);
+                    await deleteUser(user);
 
                 } catch (reAuthError) {
                     setError(reAuthError);

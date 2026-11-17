@@ -100,7 +100,8 @@ function ItemsSection({
                 />
               )}
               {children && children}
-              {currentUser?.emailVerified && (
+              {/* Same rule as ItemCard: any logged-in user can select items */}
+              {currentUser && (
                 <CheckUncheck category={category} items={items} />
               )}
             </div>

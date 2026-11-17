@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { BiUserCircle } from "react-icons/bi";
 import SidebarLink from "./SidebarLink.jsx";
 

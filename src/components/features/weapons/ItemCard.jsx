@@ -26,7 +26,7 @@ function ItemCard({item}) {
     };
 
     const handleSelection = () => {
-        if (!isLoggedIn) return; // Prevent selection if the user is not verified
+        if (!isLoggedIn) return; // Prevent selection if the user is not logged in
 
         selectWeapon(item);
 
@@ -48,7 +48,7 @@ function ItemCard({item}) {
             onMouseLeave={() => setIsHovered(false)}
             className="relative flex flex-col items-center gap-1 text-center text-[0.9rem] text-white"
         >
-            {/* If the user is verified, allow interaction with the weapon */}
+            {/* If the user is logged in, allow interaction with the weapon */}
             {/* Tooltip */}
             <motion.span
                 initial="hidden"
@@ -59,7 +59,7 @@ function ItemCard({item}) {
                 {isLoggedIn ? item.wpnName : "Log in to select"}
             </motion.span>
             <div
-                // If verified, pass the handler. If not, pass undefined (no click event).
+                // If logged in, pass the handler. If not, pass undefined (no click event).
                 onClick={isLoggedIn ? handleSelection : undefined}
                 style={styles}
                 id={item.id}

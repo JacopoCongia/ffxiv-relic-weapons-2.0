@@ -2,9 +2,9 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import {
   getFirestore,
-  getDocs,
-  collection,
+  getDoc,
   setDoc,
+  deleteDoc,
   doc
 } from "firebase/firestore";
 
@@ -22,10 +22,15 @@ export const db = getFirestore(app);
 export const auth = getAuth(app);
 
 export async function addUserToDb(user) {
-  // adds the user to the db when they sign up for a new account with the uid as the document id
-  await setDoc(doc(db, "users", user.uid), {
-    email: user.email
-  });
+  // adds the user to the db when they sign up for a new account with the uid as the document id.
+  // merge: true so logging in again doesn't wipe other fields on an existing user document
+  await setDoc(
+    doc(db, "users", user.uid),
+    {
+      email: user.email
+    },
+    { merge: true }
+  );
 }
 
 export async function addToDb(weapons, currentUser) {
@@ -35,14 +40,18 @@ export async function addToDb(weapons, currentUser) {
 }
 
 export async function getWeapons(currentUser) {
-  const snapshot = await getDocs(
-    collection(db, "users", currentUser.uid, "data")
+  // Returns the user's saved weapons, or [] if nothing has been saved yet (e.g. a new user)
+  const snapshot = await getDoc(
+    doc(db, "users", currentUser.uid, "data", "ownedWeapons")
   );
 
-  if (snapshot) {
-    const weaponsFromDb = snapshot.docs.map((doc) => {
-      return doc.data();
-    });
-    return weaponsFromDb[0].ownedWeapons;
-  }
+  if (!snapshot.exists()) return [];
+  return snapshot.data().ownedWeapons ?? [];
+}
+
+export async function deleteUserData(user) {
+  // Deleting a document doesn't delete its subcollections, so remove both explicitly.
+  // Must run while the user is still signed in, otherwise security rules reject it.
+  await deleteDoc(doc(db, "users", user.uid, "data", "ownedWeapons"));
+  await deleteDoc(doc(db, "users", user.uid));
 }
