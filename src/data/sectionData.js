@@ -38,6 +38,17 @@ const sectionsData = {
       tomestones: materialsData.tomestones.heliometry,
       tomestoneAmount: 1500,
     },
+    {
+      id: "occultum",
+      name: "Occultum",
+      category: "occultum",
+      patchInfo: "iLvl 795 (Patch 7.55)",
+      materials: materialsData.materials.dawntrail.dow.occultum,
+      tomestones: null,
+      tomestoneAmount: null,
+      notes:
+        "No materials or tomestones needed. For the first weapon, fill the Knowledge Crystal with martial memories (FATEs and enemies in every Dawntrail zone, plus the leveling and level 100 dungeons, normal trials, alliance raids and Arcadion normal raids). Every other weapon is a direct exchange of its Phantom Weapon Eclipticum with Dodokkuli in Phantom Village.",
+    },
   ],
   endwalker: [
     {

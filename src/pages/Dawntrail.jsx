@@ -19,6 +19,7 @@ function Dawntrail() {
           materials={section.materials}
           tomestones={section.tomestones}
           tomestoneAmount={section.tomestoneAmount}
+          notes={section.notes || null}
           type={"weapon"}
         />
       ))}
