@@ -4,9 +4,7 @@ A checklist for Final Fantasy XIV relic weapons and tools. Tick off the ones you
 
 **Live site:** https://finalfantasyxivrelics.netlify.app/
 
-<!-- Screenshot: save it as docs/screenshot.png, then uncomment the next line.
 ![The Dawntrail relic weapons page](docs/screenshot.png)
--->
 
 Built with React, Vite, Tailwind CSS and Firebase, and hosted on Netlify.
 
