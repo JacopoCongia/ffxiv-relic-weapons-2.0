@@ -47,3 +47,33 @@ jobs:
 
       - name: Build
         run: npm run build
+
+  # Runs tests/firestore.rules.test.js against the local Firestore emulator,
+  # checking that firestore.rules allows exactly what the app needs and
+  # denies everything else. A separate job, so it runs alongside `check`.
+  rules:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+
+      # The Firestore emulator is a Java program.
+      - uses: actions/setup-java@v6
+        with:
+          distribution: temurin
+          java-version: 21
+
+      # The emulator is downloaded on first use; keep it between runs.
+      - uses: actions/cache@v6
+        with:
+          path: ~/.cache/firebase/emulators
+          key: firebase-emulators-${{ hashFiles('package-lock.json') }}
+
+      - run: npm ci
+
+      - name: Test Firestore rules
+        run: npm run test:rules

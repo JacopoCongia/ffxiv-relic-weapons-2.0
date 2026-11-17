@@ -1,0 +1,36 @@
+rules_version = '2';
+
+// Firestore security rules. Anything not explicitly allowed below is denied.
+//
+// The app only ever touches two documents per user (see firebase.js):
+//   users/{uid}                     { email }           written on login, deleted with the account
+//   users/{uid}/data/ownedWeapons   { ownedWeapons: [] } read on login, written on every change
+// Tests: tests/firestore.rules.test.js (npm run test:rules).
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function isOwner(userId) {
+      return request.auth != null && request.auth.uid == userId;
+    }
+
+    match /users/{userId} {
+      allow get, delete: if isOwner(userId);
+      allow create, update: if isOwner(userId)
+        && request.resource.data.keys().hasOnly(['email'])
+        // Must be the email the user signed in with. GitHub users can hide
+        // their email, in which case it's missing from the token and null here.
+        && request.resource.data.email == request.auth.token.get('email', null);
+
+      // Only this exact document is allowed under data/
+      match /data/ownedWeapons {
+        allow get, delete: if isOwner(userId);
+        allow create, update: if isOwner(userId)
+          && request.resource.data.keys().hasOnly(['ownedWeapons'])
+          && request.resource.data.ownedWeapons is list
+          // Well above the number of items in src/data/data.js; stops users
+          // from padding their document with junk
+          && request.resource.data.ownedWeapons.size() <= 1000;
+      }
+    }
+  }
+}
