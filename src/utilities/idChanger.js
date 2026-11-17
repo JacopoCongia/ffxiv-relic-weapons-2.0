@@ -1,7 +1,7 @@
-import data from '../data/data.js';
+import data from "../data/data.js";
 
-export const newData = Object.values(data).flatMap(arr => Object.values(arr));
+export const newData = Object.values(data).flatMap((arr) => Object.values(arr));
 
-export const changedIds = newData.map(item => {
-    return {...item, id: item.wpnName.toLowerCase().replace(/ /g, '_')}
-})
+export const changedIds = newData.map((item) => {
+  return { ...item, id: item.wpnName.toLowerCase().replace(/ /g, "_") };
+});

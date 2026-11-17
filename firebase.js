@@ -5,7 +5,7 @@ import {
   getDoc,
   setDoc,
   deleteDoc,
-  doc
+  doc,
 } from "firebase/firestore";
 
 const firebaseConfig = {
@@ -14,7 +14,7 @@ const firebaseConfig = {
   projectId: "ffxiv-relic-weapons",
   storageBucket: "ffxiv-relic-weapons.appspot.com",
   messagingSenderId: "487059897588",
-  appId: "1:487059897588:web:4b29c3a681da1c5af4f2a1"
+  appId: "1:487059897588:web:4b29c3a681da1c5af4f2a1",
 };
 
 export const app = initializeApp(firebaseConfig);
@@ -27,22 +27,22 @@ export async function addUserToDb(user) {
   await setDoc(
     doc(db, "users", user.uid),
     {
-      email: user.email
+      email: user.email,
     },
-    { merge: true }
+    { merge: true },
   );
 }
 
 export async function addToDb(weapons, currentUser) {
   await setDoc(doc(db, "users", currentUser.uid, "data", "ownedWeapons"), {
-    ownedWeapons: weapons
+    ownedWeapons: weapons,
   });
 }
 
 export async function getWeapons(currentUser) {
   // Returns the user's saved weapons, or [] if nothing has been saved yet (e.g. a new user)
   const snapshot = await getDoc(
-    doc(db, "users", currentUser.uid, "data", "ownedWeapons")
+    doc(db, "users", currentUser.uid, "data", "ownedWeapons"),
   );
 
   if (!snapshot.exists()) return [];

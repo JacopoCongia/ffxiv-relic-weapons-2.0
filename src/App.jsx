@@ -1,10 +1,10 @@
 import {
-    Route,
-    RouterProvider,
-    createBrowserRouter,
-    createRoutesFromElements,
+  Route,
+  RouterProvider,
+  createBrowserRouter,
+  createRoutesFromElements,
 } from "react-router-dom";
-import {lazy} from "react";
+import { lazy } from "react";
 
 import Layout from "./components/layout/Layout.jsx";
 
@@ -18,29 +18,29 @@ const EndwalkerGatherers = lazy(() => import("./pages/EndwalkerGatherers"));
 const Account = lazy(() => import("./pages/Account"));
 
 const router = createBrowserRouter(
-    createRoutesFromElements(
-        <Route path="/" element={<Layout/>}>
-            <Route index element={<Home/>}/>
-            <Route path="dawntrail" element={<Dawntrail/>}/>
-            <Route path="endwalker" element={<Endwalker/>}/>
-            <Route path="crafters" element={<EndwalkerCrafters/>}/>
-            <Route path="gatherers" element={<EndwalkerGatherers/>}/>
-            <Route path="shadowbringers" element={<Shadowbringers/>}/>
-            <Route path="stormblood" element={<Stormblood/>}/>
-            <Route path="account" element={<Account/>}/>
-        </Route>,
-    ),
-    // Future proofing for React Router v7
-    {
-        future: {
-            v7_startTransition: true,
-            v7_relativeSplatPath: true,
-        },
-    }
+  createRoutesFromElements(
+    <Route path="/" element={<Layout />}>
+      <Route index element={<Home />} />
+      <Route path="dawntrail" element={<Dawntrail />} />
+      <Route path="endwalker" element={<Endwalker />} />
+      <Route path="crafters" element={<EndwalkerCrafters />} />
+      <Route path="gatherers" element={<EndwalkerGatherers />} />
+      <Route path="shadowbringers" element={<Shadowbringers />} />
+      <Route path="stormblood" element={<Stormblood />} />
+      <Route path="account" element={<Account />} />
+    </Route>,
+  ),
+  // Future proofing for React Router v7
+  {
+    future: {
+      v7_startTransition: true,
+      v7_relativeSplatPath: true,
+    },
+  },
 );
 
 function App() {
-    return <RouterProvider router={router}/>;
+  return <RouterProvider router={router} />;
 }
 
 export default App;
