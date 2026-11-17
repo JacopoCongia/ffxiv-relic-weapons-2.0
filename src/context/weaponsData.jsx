@@ -1,4 +1,4 @@
-import {createContext, useState, useEffect} from "react";
+import {createContext, useState, useEffect, useRef} from "react";
 import {addToDb, getWeapons} from "../../firebase";
 
 import data from "../data/data.js";
@@ -7,10 +7,18 @@ import useAuth from "../hooks/use-auth";
 
 const WeaponsDataContext = createContext();
 
+// Wait this long after the last change before writing to Firestore, so rapid clicks become one write
+const SAVE_DEBOUNCE_MS = 500;
+
 function WeaponsDataProvider({children}) {
     const [weapons, setWeapons] = useState(data);
     const [ownedWeapons, setOwnedWeapons] = useState([]);
     const {currentUser} = useAuth();
+    // uid whose data has finished loading from Firestore; saving is disabled until then
+    // so the empty initial state can never overwrite the user's saved data
+    const [loadedForUid, setLoadedForUid] = useState(null);
+    // The ownedWeapons array last loaded from or written to Firestore
+    const lastSyncedRef = useRef(null);
 
     // SECTION VISIBILITY START
     const storedVisibility = JSON.parse(localStorage.getItem("visibility"));
@@ -88,27 +96,58 @@ function WeaponsDataProvider({children}) {
         });
     }
 
+    // Load the user's saved weapons when they log in (or switch accounts)
     useEffect(() => {
-        async function getWeaponsFromDb() {
-            const weaponsFromDb = await getWeapons(currentUser);
+        setLoadedForUid(null);
 
-            if (weaponsFromDb) {
-                setOwnedWeapons(weaponsFromDb);
-            }
-        }
-
-        if (currentUser) {
-            getWeaponsFromDb();
-        } else {
+        if (!currentUser) {
+            lastSyncedRef.current = null;
             setOwnedWeapons([]);
+            return;
         }
+
+        let cancelled = false;
+        getWeapons(currentUser)
+            .then((weaponsFromDb) => {
+                if (cancelled) return;
+                lastSyncedRef.current = weaponsFromDb;
+                setOwnedWeapons(weaponsFromDb);
+                setLoadedForUid(currentUser.uid);
+            })
+            .catch((error) => console.error("Failed to load owned weapons", error));
+
+        return () => {
+            cancelled = true;
+        };
     }, [currentUser]);
 
+    // Save changes to Firestore (debounced), skipping data that was just loaded from it
     useEffect(() => {
-        if (currentUser) {
-            addToDb(ownedWeapons, currentUser);
-        }
-    }, [ownedWeapons]);
+        if (!currentUser || loadedForUid !== currentUser.uid) return;
+        if (ownedWeapons === lastSyncedRef.current) return;
+
+        const save = () => {
+            lastSyncedRef.current = ownedWeapons;
+            addToDb(ownedWeapons, currentUser).catch((error) =>
+                console.error("Failed to save owned weapons", error)
+            );
+        };
+
+        const timer = setTimeout(save, SAVE_DEBOUNCE_MS);
+        // If the tab is hidden or closed before the timer fires, save right away
+        const saveIfHidden = () => {
+            if (document.visibilityState === "hidden" && ownedWeapons !== lastSyncedRef.current) {
+                clearTimeout(timer);
+                save();
+            }
+        };
+        document.addEventListener("visibilitychange", saveIfHidden);
+
+        return () => {
+            clearTimeout(timer);
+            document.removeEventListener("visibilitychange", saveIfHidden);
+        };
+    }, [ownedWeapons, currentUser, loadedForUid]);
 
     const valuesToShare = {
         weapons,

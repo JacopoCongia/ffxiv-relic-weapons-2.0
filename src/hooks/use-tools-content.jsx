@@ -1,6 +1,5 @@
 import ToolsTable from "../components/features/weapons/ToolsTable.jsx";
 import materialsData from "../data/materialsData.js";
-import data from "../data/data.js";
 
 export function useToolsContent() {
     const getSectionChildren = (sectionCategory) => {

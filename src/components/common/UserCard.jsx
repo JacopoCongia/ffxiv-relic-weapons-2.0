@@ -1,7 +1,5 @@
 import {BiUserCircle} from "react-icons/bi";
 import useAuth from "../../hooks/use-auth.js";
-import {motion} from "motion/react";
-import {reload, getAuth} from "firebase/auth";
 
 function UserCard() {
     const {currentUser} = useAuth();
