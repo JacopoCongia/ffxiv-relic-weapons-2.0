@@ -25,6 +25,7 @@ The only tests are the Firestore rules tests in `tests/firestore.rules.test.js`.
 - **CI** (`.github/workflows/ci.yml`) runs `format:check`, `lint` and `build` (job `check`) and the Firestore rules tests (job `rules`) on every PR and push to `main`. Run the first three locally before pushing.
 - **Verify UI changes in the browser**: run the dev server and check the affected page before calling the work done.
 - **Formatting**: the whole repo is formatted with Prettier. Run it on every file you touch (`npx prettier --write <files>`, or `npm run format` for everything).
+- **Open work is tracked in GitHub issues** (`gh issue list`). Label `code` means code work; label `owner` means only the owner can do it (game checks, icons, Firebase console, repo settings), so don't attempt those, just point to them. When working on an issue, read it first (`gh issue view <n>`) and put `Closes #<n>` in the PR description so it closes on merge. Work you find but don't do becomes a new issue (ask the owner first), not a note in chat.
 
 ## Architecture
 
