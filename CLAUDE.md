@@ -35,7 +35,7 @@ All game content lives in `src/data/` as plain JS objects; there is no CMS or AP
 - `data.js`: every item (weapon or tool), keyed by **category** (`penumbrae`, `manderville`, `splendorousCrafters`, …). Each item has `id`, `wpnName`, `wpnJob`, `wpnJobShort`, `icon`, `category`, and optionally `shield: true` for Paladin shields.
 - `materialsData.js`: tomestones plus materials per expansion/step. Each material has `reqTotal` (for all weapons in the step) and `reqPerWeapon`. The "remaining" amount shown is `reqTotal - reqPerWeapon * ownedMainHandCount` (see `components/features/materials/Materials.jsx`).
 - `sectionData.js` (DoW/DoM weapons) and `toolsSectionData.js` (Endwalker DoH/DoL tools): ordered lists of sections per page. A section's `id` is the key into `data.js`, and it points to its materials/tomestones in `materialsData.js`.
-- Icons are served from `public/icons/<expansion>-icons/...` and referenced by absolute path (`/icons/...`).
+- Icons are served from `public/icons/<expansion>-icons/...` and referenced by absolute path (`/icons/...`). Item and material cards fall back to `/icons/not_found.png` when an icon is missing (`src/utilities/imageFallback.js`), so data can be added before its icons.
 
 Adding a new relic step means: items in `data.js`, materials in `materialsData.js`, a section entry in `sectionData.js`/`toolsSectionData.js`, and the icons in `public/icons/`.
 
@@ -62,7 +62,3 @@ Firestore access lives in the root-level `firebase.js`. A user's progress is a s
 Item `id`s are stored in users' Firestore data, so **changing an existing ID silently drops that item from everyone's saved progress**. IDs currently mix styles (`dt01`, `ew…`, `t…`, `phantom_…`). A migration to unify them is planned. Until it happens, don't rename existing IDs, and keep new IDs unique across all of `data.js`.
 
 **ID standard for all new items** (and the target the planned migration will apply to the old ones): the in-game item name in `snake_case`. Lowercase the name, remove apostrophes, replace every run of other non-alphanumeric characters with a single `_`, and trim leading/trailing `_`. "Phantom Sword Eclipticum" becomes `phantom_sword_eclipticum`. The Obscurum and Eclipticum sets follow this rule.
-
-### Leftovers
-
-`src/data_testing/` and `src/utilities/idChanger.js` are not imported anywhere.

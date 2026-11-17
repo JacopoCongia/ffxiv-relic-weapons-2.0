@@ -3,6 +3,7 @@ import { motion, useAnimation } from "motion/react";
 
 import useWeaponsData from "../../../hooks/use-weapons-data.jsx";
 import useAuth from "../../../hooks/use-auth.js";
+import { showFallbackIcon } from "../../../utilities/imageFallback.js";
 
 // Variants for tooltip animation
 const tooltipVariants = {
@@ -18,12 +19,6 @@ function ItemCard({ item }) {
   const isSelected = ownedWeapons.some((el) => el.id === item.id);
   const isLoggedIn = !!currentUser; // Check if the user is logged in by using a double negation to turn the object into a boolean
   const controls = useAnimation(); // Create animation controls
-
-  // Function to handle image loading errors
-  const handleImageError = (e) => {
-    e.target.onerror = null; // Prevents infinite loop if the image fails to load by setting the onerror to null on the first error
-    e.target.src = "/icons/not_found.png"; //
-  };
 
   const handleSelection = () => {
     if (!isLoggedIn) return; // Prevent selection if the user is not logged in
@@ -70,7 +65,7 @@ function ItemCard({ item }) {
           animate={controls}
           className="h-[70px] w-[70px] object-contain"
           src={item.icon}
-          onError={handleImageError}
+          onError={showFallbackIcon}
         />
         <p>{item.wpnJobShort}</p>
       </div>
