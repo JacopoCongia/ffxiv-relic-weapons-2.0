@@ -46,8 +46,9 @@ Adding a new relic step means: items in `data.js`, materials in `materialsData.j
 
 ### Pages and rendering
 
-- `App.jsx` defines routes (one lazy-loaded page per expansion, plus `crafters`, `gatherers` and `account`), all inside `components/layout/Layout.jsx` (navbar, sidebar, `Suspense`). Sidebar links are hardcoded in `Sidebar.jsx`.
-- Each expansion page maps its section list to `ItemsSection`, which renders a collapsible header with an owned/total counter (`ItemsHeader`), the item grid (`ItemsContainer` → `ItemCard`), and, for `type="weapon"`, the materials (`MaterialsContainer`).
+- `App.jsx` defines the lazy-loaded routes (one per expansion, plus `crafters`, `gatherers` and `account`), all inside `components/layout/Layout.jsx` (navbar, sidebar, `Suspense`). Sidebar links are hardcoded in `Sidebar.jsx`.
+- The DoW/DoM expansion routes (`dawntrail`, `endwalker`, `shadowbringers`, `stormblood`) all render one component, `pages/ExpansionPage.jsx`, with two props: `expansion` (the key into `sectionData.js`) and `title` (the relic name in the header, e.g. "Phantom"). Adding an expansion page means a `sectionData` entry plus a `<Route>` in `App.jsx` with those two props; there is no per-expansion page file.
+- `ExpansionPage` maps its section list to `ItemsSection` (passing each section's optional `notes`, shown under the materials), which renders a collapsible header with an owned/total counter (`ItemsHeader`), the item grid (`ItemsContainer` → `ItemCard`), and, for `type="weapon"`, the materials (`MaterialsContainer`).
 - Tool pages (`EndwalkerCrafters`/`EndwalkerGatherers`) use `type="tool"` and pass extra per-section content as children from `hooks/use-tools-content.jsx`, a large `switch` of hardcoded JSX keyed by section id.
 - **Paladin shields** (`shield: true`) are excluded from counters and material math. Selecting a PLD weapon toggles every PLD item in that category, so the sword and shield move together. This logic, and the shield-free counting, lives in `src/utilities/ownedWeapons.js`.
 

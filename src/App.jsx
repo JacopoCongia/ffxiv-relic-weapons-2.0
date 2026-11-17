@@ -9,10 +9,7 @@ import { lazy } from "react";
 import Layout from "./components/layout/Layout.jsx";
 
 const Home = lazy(() => import("./pages/Home"));
-const Dawntrail = lazy(() => import("./pages/Dawntrail"));
-const Endwalker = lazy(() => import("./pages/Endwalker"));
-const Shadowbringers = lazy(() => import("./pages/Shadowbringers"));
-const Stormblood = lazy(() => import("./pages/Stormblood"));
+const ExpansionPage = lazy(() => import("./pages/ExpansionPage"));
 const EndwalkerCrafters = lazy(() => import("./pages/EndwalkerCrafters"));
 const EndwalkerGatherers = lazy(() => import("./pages/EndwalkerGatherers"));
 const Account = lazy(() => import("./pages/Account"));
@@ -21,12 +18,26 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Layout />}>
       <Route index element={<Home />} />
-      <Route path="dawntrail" element={<Dawntrail />} />
-      <Route path="endwalker" element={<Endwalker />} />
+      <Route
+        path="dawntrail"
+        element={<ExpansionPage expansion="dawntrail" title="Phantom" />}
+      />
+      <Route
+        path="endwalker"
+        element={<ExpansionPage expansion="endwalker" title="Manderville" />}
+      />
       <Route path="crafters" element={<EndwalkerCrafters />} />
       <Route path="gatherers" element={<EndwalkerGatherers />} />
-      <Route path="shadowbringers" element={<Shadowbringers />} />
-      <Route path="stormblood" element={<Stormblood />} />
+      <Route
+        path="shadowbringers"
+        element={
+          <ExpansionPage expansion="shadowbringers" title="Resistance" />
+        }
+      />
+      <Route
+        path="stormblood"
+        element={<ExpansionPage expansion="stormblood" title="Eurekan" />}
+      />
       <Route path="account" element={<Account />} />
     </Route>,
   ),
