@@ -973,6 +973,9 @@ const materialsData = {
             reqPerWeapon: 100,
           },
         ],
+        // Occultum needs no materials or tomestones: the step is a content
+        // checklist, and later weapons are a straight exchange of Eclipticum.
+        occultum: [],
       },
       doL: {},
       doH: {},
