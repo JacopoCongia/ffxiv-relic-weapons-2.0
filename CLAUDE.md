@@ -56,7 +56,7 @@ Firestore access lives in the root-level `firebase.js`. A user's progress is a s
 
 Item `id`s are stored in users' Firestore data, so **changing an existing ID silently drops that item from everyone's saved progress**. IDs currently mix styles (`dt01`, `ew…`, `t…`, `phantom_…`). A migration to unify them is planned. Until it happens, don't rename existing IDs, and keep new IDs unique across all of `data.js`.
 
-**ID standard for all new items** (and the target the planned migration will apply to the old ones): the in-game item name in snake*case. Lowercase the name, remove apostrophes, replace every run of other non-alphanumeric characters with a single `*`, and trim leading/trailing `\_`. "Phantom Sword Eclipticum" becomes `phantom_sword_eclipticum`. The Obscurum and Eclipticum sets follow this rule.
+**ID standard for all new items** (and the target the planned migration will apply to the old ones): the in-game item name in `snake_case`. Lowercase the name, remove apostrophes, replace every run of other non-alphanumeric characters with a single `_`, and trim leading/trailing `_`. "Phantom Sword Eclipticum" becomes `phantom_sword_eclipticum`. The Obscurum and Eclipticum sets follow this rule.
 
 ### Leftovers
 
