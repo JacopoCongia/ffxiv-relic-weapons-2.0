@@ -73,42 +73,50 @@ function AuthContextProvider({ children }) {
     }
   }
 
-  // Re-auth and Delete with Popup
+  // Delete the account: re-authenticate, then delete Firestore data, then the Auth user.
+  // Re-authenticating up front means that if the user cancels the popup, nothing has
+  // been deleted yet (deleting data first and re-authenticating only on
+  // auth/requires-recent-login could leave an account with its progress already gone).
   async function deleteAccount() {
     const user = auth.currentUser;
+    if (!user) return;
+
+    const providerId = user.providerData[0]?.providerId;
+    let provider;
+    if (providerId === "google.com") provider = googleProvider;
+    else if (providerId === "github.com") provider = githubProvider;
+    else {
+      setError({
+        message: "Could not determine provider for re-authentication",
+      });
+      return;
+    }
+
     try {
-      // Delete the user's Firestore data first, while they're still authenticated
+      // Called before any other await so the popup still counts as part of the
+      // user's click and isn't blocked by the browser
+      await reauthenticateWithPopup(user, provider);
+    } catch (error) {
+      if (
+        error.code === "auth/popup-closed-by-user" ||
+        error.code === "auth/cancelled-popup-request"
+      ) {
+        setError({
+          message: "Account deletion cancelled. Nothing was deleted.",
+        });
+      } else {
+        setError(error);
+      }
+      return;
+    }
+
+    try {
+      // Firestore data goes first, while the user is still authenticated
       // (security rules reject the delete once the Auth user is gone)
       await deleteUserData(user);
       await deleteUser(user);
     } catch (error) {
-      // If Firebase requires recent login, trigger re-auth popup
-      if (error.code === "auth/requires-recent-login") {
-        try {
-          // Detect which provider they used (google, github, etc.)
-          // This is a simplification; for better accuracy, check user.providerData
-          const providerId = user.providerData[0]?.providerId;
-
-          let provider;
-          if (providerId === "google.com") provider = googleProvider;
-          else if (providerId === "github.com") provider = githubProvider;
-          else {
-            setError({
-              message: "Could not determine provider for re-authentication",
-            });
-            return;
-          }
-
-          await reauthenticateWithPopup(user, provider);
-          // Try again: data deletion is idempotent, so re-running it is safe
-          await deleteUserData(user);
-          await deleteUser(user);
-        } catch (reAuthError) {
-          setError(reAuthError);
-        }
-      } else {
-        setError(error);
-      }
+      setError(error);
     }
   }
 
