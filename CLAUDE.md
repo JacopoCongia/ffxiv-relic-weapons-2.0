@@ -19,7 +19,7 @@ npm run test:rules     # Firestore rules tests in the emulator (needs Java 21+)
 
 There are two kinds of tests, run separately:
 
-- **Unit tests** in `tests/unit/` (`npm test`) cover the pure logic in `src/utilities/`: selection and Paladin sword+shield pairing, the shield-free counters, and the materials math, using the real data. They run anywhere. `toolsSectionData.test.js` also checks that every tool section has the fields its renderer needs. Keep that logic in pure functions there (components just call them), and add a test when you change it.
+- **Unit tests** in `tests/unit/` (`npm test`) cover the pure logic in `src/utilities/`: selection and Paladin sword+shield pairing, the shield-free counters, and the materials math, using the real data. They run anywhere. `toolsTable.test.js` covers the tool table's row grouping, and `toolsSectionData.test.js` checks that every tool section has the fields its renderer needs. Keep that logic in pure functions there (components just call them), and add a test when you change it.
 - **Firestore rules tests** in `tests/firestore.rules.test.js` (`npm run test:rules`) run in the Firestore emulator, which needs Java; Java isn't installed on the owner's machine, so they run in CI. `npm test` only scans `tests/unit/`, so it never picks this file up.
 
 ## Workflow rules
@@ -48,7 +48,7 @@ A **tool step** is data only too. Its section in `toolsSectionData.js` can have 
 
 - `acquire`: a quest link plus a scrip price (only the first Splendorous step uses it).
 - `requirements`: the "You will need N <icon> X Components per Tool which means M Collectables…" sentences, one per entry, with an optional `lead` ("Fisher needs") and one or more `parts` joined with "and".
-- `toolsTable`: per gatherer job, the rows `ToolsTable.jsx` shows (a table on wide screens, one card per job on phones). Each row is a material from `materialsData.js` (`item`) and, for a trade, the `reward` it's exchanged for and `rewardAtMax` (how many at max collectability). The gatherer materials (with `minCollectability`/`maxCollectability` and `wiki`) go in `materialsData.js` under `endwalker.doL.<step>`.
+- `toolsTable`: per gatherer job, the rows `ToolsTable.jsx` shows (a table on wide screens, one card per job on phones). Each row is a material from `materialsData.js` (`item`) and, for a trade, the `reward` it's exchanged for and `rewardAtMax` (how many at max collectability). Consecutive rows with the same `reward` object show it once (a merged cell on wide screens, one Trade block on phones), via the helpers in `src/utilities/toolsTable.js`. The gatherer materials (with `minCollectability`/`maxCollectability` and `wiki`) go in `materialsData.js` under `endwalker.doL.<step>`.
 
 ### Pages and rendering
 

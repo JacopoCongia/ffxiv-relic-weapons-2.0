@@ -1,8 +1,10 @@
 import { showFallbackIcon } from "../../../utilities/imageFallback.js";
+import { rewardRowSpans, tradeGroups } from "../../../utilities/toolsTable.js";
 
 // What each gatherer job gathers and trades for a tool step (a section's
 // `toolsTable` in toolsSectionData.js). Wide screens get one table; phones get
-// one card per job. Both are built from the same rows.
+// one card per job. Both are built from the same rows. When consecutive rows
+// are traded for the same reward, that reward is shown once for all of them.
 
 function Icon({ src, className }) {
   return <img className={className} src={src} onError={showFallbackIcon} />;
@@ -23,9 +25,14 @@ function WikiLink({ material, className }) {
 }
 
 function JobRows({ job, rows, isLastJob }) {
+  const spans = rewardRowSpans(rows);
+  const cellFor = (lastIndex) =>
+    lastIndex === rows.length - 1 ? "pb-5 pt-5" : "pt-5";
+
   return rows.map((row, index) => {
     const isLastRow = index === rows.length - 1;
-    const cell = isLastRow ? "pb-5 pt-5" : "pt-5";
+    const cell = cellFor(index);
+    const span = spans[index];
 
     return (
       <tr
@@ -45,12 +52,17 @@ function JobRows({ job, rows, isLastJob }) {
         </td>
         {row.reward && (
           <>
-            <td className={cell}>
-              <div className="flex items-center gap-2">
-                <Icon className="w-[24px]" src={row.reward.icon} />
-                {row.reward.name}
-              </div>
-            </td>
+            {span > 0 && (
+              <td
+                className={cellFor(index + span - 1)}
+                rowSpan={span > 1 ? span : undefined}
+              >
+                <div className="flex items-center gap-2">
+                  <Icon className="w-[24px]" src={row.reward.icon} />
+                  {row.reward.name}
+                </div>
+              </td>
+            )}
             <td className={cell}>{row.item.minCollectability}</td>
             <td className={cell}>{row.item.maxCollectability}</td>
           </>
@@ -76,38 +88,69 @@ function JobCard({ job, rows }) {
           className="flex items-center gap-3 hover:underline hover:underline-offset-4"
         />
       ))}
-      {rows
-        .filter((row) => row.reward)
-        .map((row) => (
-          <Trade key={row.item.id} row={row} />
-        ))}
+      {tradeGroups(rows).map((group) => (
+        <Trade
+          key={group.rows[0].item.id}
+          reward={group.reward}
+          rows={group.rows}
+        />
+      ))}
     </div>
   );
 }
 
-function Trade({ row }) {
-  const { item, reward, rewardAtMax } = row;
+// "1x at min collectability, N at max", for one collectable.
+function Amounts({ item, reward, rewardAtMax }) {
+  return (
+    <>
+      <div className="flex items-center gap-1">
+        {item.minCollectability} | 1x
+        <Icon className="inline w-[20px]" src={reward.icon} />
+      </div>
+      <div className="flex items-center gap-1">
+        {item.maxCollectability} | {rewardAtMax}x
+        <Icon className="inline w-[20px]" src={reward.icon} />
+      </div>
+    </>
+  );
+}
+
+// One reward and the collectables traded for it. With one collectable, its
+// icon is in the "Trade ... for" label. With several (e.g. two fish for one
+// Fisher's Component), each gets its own line: its icon, then its amounts.
+function Trade({ reward, rows }) {
+  const [first] = rows;
   return (
     <>
       <p className="mt-2 flex items-center gap-2 rounded bg-[#F3D9B1] px-4 py-[0.3em] text-center text-[1rem] font-bold text-[#4e3727]">
-        Trade
-        <Icon className="w-[20px]" src={item.icon} />
-        for
+        {rows.length === 1 ? (
+          <>
+            Trade
+            <Icon className="w-[20px]" src={first.item.icon} />
+            for
+          </>
+        ) : (
+          "Trade for"
+        )}
       </p>
       <div className="flex items-center gap-3">
         <Icon className="w-[24px]" src={reward.icon} />
         {reward.name}
       </div>
-      <div className="flex gap-6">
-        <div className="flex items-center gap-1">
-          {item.minCollectability} | 1x
-          <Icon className="inline w-[20px]" src={reward.icon} />
+      {rows.length === 1 ? (
+        <div className="flex gap-6">
+          <Amounts {...first} />
         </div>
-        <div className="flex items-center gap-1">
-          {item.maxCollectability} | {rewardAtMax}x
-          <Icon className="inline w-[20px]" src={reward.icon} />
-        </div>
-      </div>
+      ) : (
+        rows.map((row) => (
+          <div key={row.item.id} className="flex items-center gap-3">
+            <Icon className="w-[20px] shrink-0" src={row.item.icon} />
+            <div className="flex flex-col gap-1">
+              <Amounts {...row} />
+            </div>
+          </div>
+        ))
+      )}
     </>
   );
 }

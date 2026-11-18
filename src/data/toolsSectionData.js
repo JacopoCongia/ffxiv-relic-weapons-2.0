@@ -24,7 +24,8 @@ import materialsData from "./materialsData";
 //   reward is a trade: item (a collectable, which has minCollectability and
 //   maxCollectability) is exchanged for 1 reward at min collectability and
 //   rewardAtMax rewards at max. A row without a reward is just an item to
-//   gather, such as a crystal.
+//   gather, such as a crystal. Consecutive rows with the same reward object
+//   (several collectables traded for one component) show that reward once.
 
 const doH = materialsData.materials.endwalker.doH;
 const doL = materialsData.materials.endwalker.doL;
@@ -525,7 +526,8 @@ const toolsSectionData = {
           },
           {
             // From this step on, the rod and reel components are merged into
-            // one Fisher's Component, which both fish are traded for.
+            // one Fisher's Component, which both fish are traded for. The
+            // table shows it once for both.
             job: "Fisher",
             rows: fisherRows([
               [
