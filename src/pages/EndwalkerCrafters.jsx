@@ -1,7 +1,6 @@
 import ItemsSection from "../components/features/weapons/ItemsSection.jsx";
 import Header from "../components/layout/Header.jsx";
 import useWeaponsData from "../hooks/use-weapons-data";
-import ToolContent from "../components/features/weapons/ToolContent.jsx";
 import toolsSectionData from "../data/toolsSectionData.js";
 
 function EndwalkerCrafters() {
@@ -19,9 +18,7 @@ function EndwalkerCrafters() {
           patchInfo={section.patchInfo}
           type={"tool"}
           ownedWeapons={ownedWeapons}
-        >
-          <ToolContent section={section} />
-        </ItemsSection>
+        />
       ))}
     </div>
   );
