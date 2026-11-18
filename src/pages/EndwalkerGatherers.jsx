@@ -8,7 +8,7 @@ function EndwalkerGatherers() {
 
   return (
     <div className="duration-[0.5s] min-[1000px]:pl-[250px]">
-      <Header dol />
+      <Header dol guide={toolsSectionData.endwalker.guide} />
       {toolsSectionData.endwalker.gatherers.map((section) => (
         <ItemsSection
           key={section.id}

@@ -40,12 +40,12 @@ All game content lives in `src/data/` as plain JS objects; there is no CMS or AP
 - `data.js`: every item (weapon or tool), keyed by **category** (`penumbrae`, `manderville`, `splendorousCrafters`, …). Each item has `id`, `wpnName`, `wpnJob`, `wpnJobShort`, `icon`, `category`, and optionally `shield: true` for Paladin shields.
 - `materialsData.js`: tomestones plus materials per expansion/step, for weapons only. Each material has `reqTotal` (for all weapons in the step) and `reqPerWeapon`. The "remaining" amount shown is `reqTotal - reqPerWeapon * ownedMainHandCount` (see `src/utilities/materials.js`).
 - `sectionData.js` (DoW/DoM weapons): ordered lists of sections per page. A section's `id` is the key into `data.js`, and it points to its materials/tomestones in `materialsData.js`.
-- `toolsSectionData.js` (Endwalker DoH/DoL tools): the same kind of list, but each section has only `id`, `name`, `category` and `patchInfo`.
+- `toolsSectionData.js` (Endwalker DoH/DoL tools): the same kind of list, but each section has only `id`, `name`, `category` and `patchInfo`. Each expansion also has a `guide` (`{ label, url }`), a link to an outside guide for the whole tool set, shown under the page title by `Header`.
 - Icons are served from `public/icons/<expansion>-icons/...` and referenced by absolute path (`/icons/...`). Item and material cards fall back to `/icons/not_found.png` when an icon is missing (`src/utilities/imageFallback.js`), so data can be added before its icons.
 
 Adding a new weapon step means: items in `data.js`, materials in `materialsData.js`, a section entry in `sectionData.js`, and the icons in `public/icons/`.
 
-A **tool step** needs only its items in `data.js` (with their icons) and a section entry in `toolsSectionData.js`. Tools deliberately have no materials or guides: the tool pages only track which tools you own.
+A **tool step** needs only its items in `data.js` (with their icons) and a section entry in `toolsSectionData.js`. Tools deliberately have no materials or step-by-step guides: the tool pages only track which tools you own, and link out to one guide (the expansion's `guide`) for how to get them.
 
 ### Pages and rendering
 

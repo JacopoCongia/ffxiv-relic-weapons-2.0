@@ -5,9 +5,18 @@ import { describe, expect, test } from "vitest";
 import data from "../../src/data/data.js";
 import toolsSectionData from "../../src/data/toolsSectionData.js";
 
-const sections = Object.values(toolsSectionData).flatMap((expansion) =>
-  Object.values(expansion).flat(),
-);
+const expansions = Object.values(toolsSectionData);
+const sections = expansions.flatMap((expansion) => [
+  ...expansion.crafters,
+  ...expansion.gatherers,
+]);
+
+test("each expansion's guide has a label and an https link", () => {
+  for (const { guide } of expansions) {
+    expect(guide.label).toBeTruthy();
+    expect(guide.url).toMatch(/^https:\/\//);
+  }
+});
 
 test("section ids are unique", () => {
   const ids = sections.map((section) => section.id);

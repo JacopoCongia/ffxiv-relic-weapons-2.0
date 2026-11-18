@@ -8,7 +8,7 @@ function EndwalkerCrafters() {
 
   return (
     <div className="duration-[0.5s] min-[1000px]:pl-[250px]">
-      <Header doh />
+      <Header doh guide={toolsSectionData.endwalker.guide} />
       {toolsSectionData.endwalker.crafters.map((section) => (
         <ItemsSection
           key={section.id}

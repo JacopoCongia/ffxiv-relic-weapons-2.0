@@ -1,9 +1,14 @@
 // Tool sections for the Crafters and Gatherers pages, in page order. Each
 // section's `id` is the key into data.js; the page shows its tools and an
 // owned/total counter. Tools have no materials: the site only tracks which
-// ones you own.
+// ones you own, and `guide` links to an outside guide for the whole set,
+// shown under the page title.
 const toolsSectionData = {
   endwalker: {
+    guide: {
+      label: "Splendorous Tools on the FFXIV Wiki",
+      url: "https://ffxiv.consolegameswiki.com/wiki/Splendorous_Tools",
+    },
     crafters: [
       {
         id: "splendorousCrafters",
