@@ -23,14 +23,6 @@ const router = createBrowserRouter(
         element={<ExpansionPage expansion="dawntrail" title="Phantom" />}
       />
       <Route
-        path="dawntrail/crafters"
-        element={<ToolsPage expansion="dawntrail" role="crafters" />}
-      />
-      <Route
-        path="dawntrail/gatherers"
-        element={<ToolsPage expansion="dawntrail" role="gatherers" />}
-      />
-      <Route
         path="endwalker"
         element={<ExpansionPage expansion="endwalker" title="Manderville" />}
       />

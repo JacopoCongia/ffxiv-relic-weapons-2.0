@@ -15,12 +15,11 @@ const sections = expansions.flatMap((expansion) => [
 const crafterJobs = ["CRP", "BSM", "ARM", "GSM", "LTW", "WVR", "ALC", "CUL"];
 const gathererJobs = ["MIN", "BTN", "FSH"];
 
-test("both tool pages exist for Endwalker and Dawntrail", () => {
-  // App.jsx has a /<expansion>/crafters and /<expansion>/gatherers route
-  // for each of these
-  for (const expansion of ["endwalker", "dawntrail"]) {
-    expect(toolsSectionData[expansion].crafters.length).toBeGreaterThan(0);
-    expect(toolsSectionData[expansion].gatherers.length).toBeGreaterThan(0);
+test("every expansion has both crafters and gatherers sections", () => {
+  // ToolsPage reads toolsSectionData[expansion][role] for both roles
+  for (const expansion of expansions) {
+    expect(expansion.crafters.length).toBeGreaterThan(0);
+    expect(expansion.gatherers.length).toBeGreaterThan(0);
   }
 });
 
