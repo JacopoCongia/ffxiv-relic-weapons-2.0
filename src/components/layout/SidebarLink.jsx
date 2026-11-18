@@ -2,12 +2,13 @@ import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 
-function SidebarLink({ to, children }) {
+function SidebarLink({ to, end, children }) {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
     <NavLink
       to={to}
+      end={end}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       className="relative block rounded px-2 py-1"

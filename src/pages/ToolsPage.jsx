@@ -3,13 +3,18 @@ import Header from "../components/layout/Header.jsx";
 import useWeaponsData from "../hooks/use-weapons-data";
 import toolsSectionData from "../data/toolsSectionData.js";
 
-function EndwalkerGatherers() {
+// One page for every expansion's tools: `expansion` is the key into
+// toolsSectionData (e.g. "dawntrail"), `role` is "crafters" (DoH) or
+// "gatherers" (DoL) and picks the section list and the header title.
+function ToolsPage({ expansion, role }) {
   const { weapons: items, ownedWeapons } = useWeaponsData();
+  const { guide, [role]: sections } = toolsSectionData[expansion];
+  const isCrafters = role === "crafters";
 
   return (
     <div className="duration-[0.5s] min-[1000px]:pl-[250px]">
-      <Header dol guide={toolsSectionData.endwalker.guide} />
-      {toolsSectionData.endwalker.gatherers.map((section) => (
+      <Header doh={isCrafters} dol={!isCrafters} guide={guide} />
+      {sections.map((section) => (
         <ItemsSection
           key={section.id}
           items={items[section.id]}
@@ -24,4 +29,4 @@ function EndwalkerGatherers() {
   );
 }
 
-export default EndwalkerGatherers;
+export default ToolsPage;

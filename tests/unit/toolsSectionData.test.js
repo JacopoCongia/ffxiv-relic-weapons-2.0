@@ -11,6 +11,37 @@ const sections = expansions.flatMap((expansion) => [
   ...expansion.gatherers,
 ]);
 
+// One tool per job in every step: the 8 crafters (DoH) and the 3 gatherers (DoL)
+const crafterJobs = ["CRP", "BSM", "ARM", "GSM", "LTW", "WVR", "ALC", "CUL"];
+const gathererJobs = ["MIN", "BTN", "FSH"];
+
+test("every expansion has both crafters and gatherers sections", () => {
+  // ToolsPage reads toolsSectionData[expansion][role] for both roles
+  for (const expansion of expansions) {
+    expect(expansion.crafters.length).toBeGreaterThan(0);
+    expect(expansion.gatherers.length).toBeGreaterThan(0);
+  }
+});
+
+test("item ids are unique across all of data.js", () => {
+  // Saved progress stores item ids, so two items sharing one would tick together
+  const ids = Object.values(data)
+    .flat()
+    .map((item) => item.id);
+  expect(new Set(ids).size).toBe(ids.length);
+});
+
+describe.each(
+  expansions.flatMap((expansion) => [
+    ...expansion.crafters.map((section) => [section.id, crafterJobs]),
+    ...expansion.gatherers.map((section) => [section.id, gathererJobs]),
+  ]),
+)("%s", (id, jobs) => {
+  test("has one tool for each job", () => {
+    expect(data[id].map((item) => item.wpnJobShort)).toEqual(jobs);
+  });
+});
+
 test("each expansion's guide has a label and an https link", () => {
   for (const { guide } of expansions) {
     expect(guide.label).toBeTruthy();

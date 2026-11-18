@@ -1,4 +1,5 @@
 import {
+  Navigate,
   Route,
   RouterProvider,
   createBrowserRouter,
@@ -10,8 +11,7 @@ import Layout from "./components/layout/Layout.jsx";
 
 const Home = lazy(() => import("./pages/Home"));
 const ExpansionPage = lazy(() => import("./pages/ExpansionPage"));
-const EndwalkerCrafters = lazy(() => import("./pages/EndwalkerCrafters"));
-const EndwalkerGatherers = lazy(() => import("./pages/EndwalkerGatherers"));
+const ToolsPage = lazy(() => import("./pages/ToolsPage"));
 const Account = lazy(() => import("./pages/Account"));
 
 const router = createBrowserRouter(
@@ -26,8 +26,24 @@ const router = createBrowserRouter(
         path="endwalker"
         element={<ExpansionPage expansion="endwalker" title="Manderville" />}
       />
-      <Route path="crafters" element={<EndwalkerCrafters />} />
-      <Route path="gatherers" element={<EndwalkerGatherers />} />
+      <Route
+        path="endwalker/crafters"
+        element={<ToolsPage expansion="endwalker" role="crafters" />}
+      />
+      <Route
+        path="endwalker/gatherers"
+        element={<ToolsPage expansion="endwalker" role="gatherers" />}
+      />
+      {/* The tool pages used to live at /crafters and /gatherers (Endwalker
+          only). Keep those links working for anyone who bookmarked them. */}
+      <Route
+        path="crafters"
+        element={<Navigate to="/endwalker/crafters" replace />}
+      />
+      <Route
+        path="gatherers"
+        element={<Navigate to="/endwalker/gatherers" replace />}
+      />
       <Route
         path="shadowbringers"
         element={
