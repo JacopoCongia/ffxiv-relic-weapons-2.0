@@ -1,4 +1,3 @@
-import { useRef } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import ItemsHeader from "./ItemsHeader.jsx";
 import ItemsContainer from "./ItemsContainer.jsx";
@@ -23,33 +22,14 @@ function ItemsSection({
 }) {
   const { currentUser } = useAuth();
   const { visibility } = useWeaponsData();
-  const containerRef = useRef(null);
 
   // Counter for owned weapons
   const counter = useCounter(ownedWeapons || [], category);
 
-  // Logic to scroll to the section when the user opens it
-  const handleScrollOnOpen = () => {
-    if (containerRef.current) {
-      setTimeout(() => {
-        const rect = containerRef.current.getBoundingClientRect();
-        const windowHeight = window.innerHeight;
-
-        if (rect.bottom > windowHeight) {
-          containerRef.current.scrollIntoView({
-            behavior: "smooth",
-            block: "start",
-          });
-        }
-      }, 50);
-    }
-  };
-
   return (
-    <div
-      ref={containerRef}
-      className="scroll-mt-[112px] min-[600px]:scroll-mt-[140.8px]"
-    >
+    // The header is sticky inside this wrapper, so it stays pinned while
+    // you scroll through its open section, then moves on with it
+    <div>
       <ItemsHeader
         name={name}
         items={items}
@@ -65,9 +45,6 @@ function ItemsSection({
             initial="collapsed"
             animate="open"
             exit="collapsed"
-            onAnimationComplete={(definition) => {
-              if (definition === "open") handleScrollOnOpen();
-            }}
             variants={{
               open: {
                 height: "auto",
