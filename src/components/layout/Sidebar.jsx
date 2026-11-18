@@ -24,22 +24,22 @@ function Sidebar({ isVisible, setIsVisible }) {
     {
       name: "Dawntrail",
       to: "/dawntrail",
+      craftersTo: "/dawntrail/crafters",
+      gatherersTo: "/dawntrail/gatherers",
     },
     {
       name: "Endwalker",
       to: "/endwalker",
-      craftersTo: "/crafters",
-      gatherersTo: "/gatherers",
+      craftersTo: "/endwalker/crafters",
+      gatherersTo: "/endwalker/gatherers",
     },
     {
       name: "Shadowbringers",
       to: "/shadowbringers",
-      crafterTo: null,
     },
     {
       name: "Stormblood",
       to: "/stormblood",
-      crafterTo: null,
     },
   ];
 
@@ -48,7 +48,9 @@ function Sidebar({ isVisible, setIsVisible }) {
     return (
       <div key={name} className="z-10 ml-2 flex flex-col gap-2 text-[0.8rem]">
         <h1 className="text-[1.2rem] tracking-wider">{name}</h1>
-        <SidebarLink to={to} id={`${name}-dow`}>
+        {/* `end`: the tool pages sit under this path (/dawntrail/crafters),
+            so without it this link would stay highlighted on them too */}
+        <SidebarLink to={to} end id={`${name}-dow`}>
           DoW / DoM
         </SidebarLink>
         {craftersTo && (
