@@ -1,15 +1,118 @@
-function ToolsTable({
-  minerMaterialOne,
-  minerMaterialTwo,
-  minerMaterialThree,
-  botanistMaterialOne,
-  botanistMaterialTwo,
-  botanistMaterialThree,
-  fisherMaterialOne,
-  fisherMaterialTwo,
-  fisherMaterialThree,
-  fisherMaterialFour,
-}) {
+import { showFallbackIcon } from "../../../utilities/imageFallback.js";
+
+// What each gatherer job gathers and trades for a tool step (a section's
+// `toolsTable` in toolsSectionData.js). Wide screens get one table; phones get
+// one card per job. Both are built from the same rows.
+
+function Icon({ src, className }) {
+  return <img className={className} src={src} onError={showFallbackIcon} />;
+}
+
+function WikiLink({ material, className }) {
+  return (
+    <a
+      href={material.wiki}
+      target="_blank"
+      rel="noreferrer"
+      className={className}
+    >
+      <Icon className="w-[24px]" src={material.icon} />
+      {material.name}
+    </a>
+  );
+}
+
+function JobRows({ job, rows, isLastJob }) {
+  return rows.map((row, index) => {
+    const isLastRow = index === rows.length - 1;
+    const cell = isLastRow ? "pb-5 pt-5" : "pt-5";
+
+    return (
+      <tr
+        key={row.item.id}
+        className={isLastRow && !isLastJob ? "border-b" : undefined}
+      >
+        {index === 0 ? (
+          <td className={isLastRow ? "px-5 pb-5 pt-5" : "px-5 pt-5"}>{job}</td>
+        ) : (
+          <td></td>
+        )}
+        <td className={cell}>
+          <WikiLink
+            material={row.item}
+            className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+          />
+        </td>
+        {row.reward && (
+          <>
+            <td className={cell}>
+              <div className="flex items-center gap-2">
+                <Icon className="w-[24px]" src={row.reward.icon} />
+                {row.reward.name}
+              </div>
+            </td>
+            <td className={cell}>{row.item.minCollectability}</td>
+            <td className={cell}>{row.item.maxCollectability}</td>
+          </>
+        )}
+      </tr>
+    );
+  });
+}
+
+function JobCard({ job, rows }) {
+  return (
+    <div className="m-1 flex flex-col items-start gap-3 rounded border px-5 pb-5 pt-5 text-left text-[0.9rem]">
+      <h1 className="rounded bg-[#5f432f] px-5 py-1 text-[1.2rem] font-bold text-[#fcf1e1]">
+        {job}
+      </h1>
+      <p className="rounded bg-[#F3D9B1] px-4 py-[0.3em] text-[1rem] font-bold text-[#4e3727]">
+        Gather
+      </p>
+      {rows.map((row) => (
+        <WikiLink
+          key={row.item.id}
+          material={row.item}
+          className="flex items-center gap-3 hover:underline hover:underline-offset-4"
+        />
+      ))}
+      {rows
+        .filter((row) => row.reward)
+        .map((row) => (
+          <Trade key={row.item.id} row={row} />
+        ))}
+    </div>
+  );
+}
+
+function Trade({ row }) {
+  const { item, reward, rewardAtMax } = row;
+  return (
+    <>
+      <p className="mt-2 flex items-center gap-2 rounded bg-[#F3D9B1] px-4 py-[0.3em] text-center text-[1rem] font-bold text-[#4e3727]">
+        Trade
+        <Icon className="w-[20px]" src={item.icon} />
+        for
+      </p>
+      <div className="flex items-center gap-3">
+        <Icon className="w-[24px]" src={reward.icon} />
+        {reward.name}
+      </div>
+      <div className="flex gap-6">
+        <div className="flex items-center gap-1">
+          {item.minCollectability} | 1x
+          <Icon className="inline w-[20px]" src={reward.icon} />
+        </div>
+        <div className="flex items-center gap-1">
+          {item.maxCollectability} | {rewardAtMax}x
+          <Icon className="inline w-[20px]" src={reward.icon} />
+        </div>
+      </div>
+    </>
+  );
+}
+
+function ToolsTable({ jobs }) {
   return (
     <>
       <table className="m-5 hidden border text-[0.9rem] text-white min-[900px]:table min-[1200px]:text-[1rem]">
@@ -23,288 +126,23 @@ function ToolsTable({
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td className="px-5 pt-5">Miner</td>
-            <td className="pt-5">
-              <a
-                href={minerMaterialOne.wiki}
-                target="_blank"
-                rel="noreferrer"
-                className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-              >
-                <img className="w-[24px]" src={minerMaterialOne.icon} />
-                {minerMaterialOne.name}
-              </a>
-            </td>
-            <td className="pt-5">
-              <a className="flex items-center gap-2">
-                <img className="w-[24px]" src={minerMaterialTwo.icon} />
-                {minerMaterialTwo.name}
-              </a>
-            </td>
-            <td className="pt-5">{minerMaterialOne.minCollectability}</td>
-            <td className="pt-5">{minerMaterialOne.maxCollectability}</td>
-          </tr>
-          <tr className="border-b">
-            <td></td>
-            <td className="pb-5 pt-5">
-              <a
-                href={minerMaterialThree.wiki}
-                target="_blank"
-                rel="noreferrer"
-                className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-              >
-                <img className="w-[24px]" src={minerMaterialThree.icon} />
-                {minerMaterialThree.name}
-              </a>
-            </td>
-          </tr>
-          <tr>
-            <td className="px-5 pt-5">Botanist</td>
-            <td className="pt-5">
-              <a
-                href={botanistMaterialOne.wiki}
-                target="_blank"
-                rel="noreferrer"
-                className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-              >
-                <img className="w-[24px]" src={botanistMaterialOne.icon} />
-                {botanistMaterialOne.name}
-              </a>
-            </td>
-
-            <td className="pt-5">
-              <div className="flex items-center gap-2">
-                <img className="w-[24px]" src={botanistMaterialTwo.icon} />
-                {botanistMaterialTwo.name}
-              </div>
-            </td>
-            <td className="pt-5">{botanistMaterialOne.minCollectability}</td>
-            <td className="pt-5">{botanistMaterialOne.maxCollectability}</td>
-          </tr>
-          <tr className="border-b">
-            <td></td>
-            <td className="pb-5 pt-5">
-              <a
-                href={botanistMaterialThree.wiki}
-                target="_blank"
-                rel="noreferrer"
-                className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-              >
-                <img className="w-[24px]" src={botanistMaterialThree.icon} />
-                {botanistMaterialThree.name}
-              </a>
-            </td>
-          </tr>
-          <tr>
-            <td className="px-5 pt-5">Fisher</td>
-            <td className="pt-5">
-              <a
-                href={fisherMaterialOne.wiki}
-                target="_blank"
-                rel="noreferrer"
-                className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-              >
-                <img className="w-[24px]" src={fisherMaterialOne.icon} />
-                {fisherMaterialOne.name}
-              </a>
-            </td>
-
-            <td className="pt-5">
-              <div className="flex items-center gap-2">
-                <img className="w-[24px]" src={fisherMaterialTwo.icon} />
-                {fisherMaterialTwo.name}
-              </div>
-            </td>
-            <td className="pt-5">{fisherMaterialOne.minCollectability}</td>
-            <td className="pt-5">{fisherMaterialOne.maxCollectability}</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td className="pb-5 pt-5">
-              <a
-                href={fisherMaterialThree.wiki}
-                target="_blank"
-                rel="noreferrer"
-                className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-              >
-                <img className="w-[24px]" src={fisherMaterialThree.icon} />
-                {fisherMaterialThree.name}
-              </a>
-            </td>
-            <td className="pb-5 pt-5">
-              <div className="flex items-center gap-2">
-                <img className="w-[24px]" src={fisherMaterialFour.icon} />
-                {fisherMaterialFour.name}
-              </div>
-            </td>
-            <td className="pb-5 pt-5">
-              {fisherMaterialThree.minCollectability}
-            </td>
-            <td className="pb-5 pt-5">
-              {fisherMaterialThree.maxCollectability}
-            </td>
-          </tr>
+          {jobs.map((job, index) => (
+            <JobRows
+              key={job.job}
+              job={job.job}
+              rows={job.rows}
+              isLastJob={index === jobs.length - 1}
+            />
+          ))}
         </tbody>
       </table>
 
       {/* Small Screens */}
 
       <div className="flex flex-col gap-5 min-[900px]:hidden">
-        <div className="m-1 flex flex-col items-start gap-3 rounded border px-5 pb-5 pt-5 text-left text-[0.9rem]">
-          <h1 className="rounded bg-[#5f432f] px-5 py-1 text-[1.2rem] font-bold text-[#fcf1e1]">
-            Miner
-          </h1>
-          <p className="rounded bg-[#F3D9B1] px-4 py-[0.3em] text-[1rem] font-bold text-[#4e3727]">
-            Gather
-          </p>
-          <a
-            href={minerMaterialOne.wiki}
-            target="_blank"
-            rel="noreferrer"
-            className="flex items-center gap-3 hover:underline hover:underline-offset-4"
-          >
-            <img className="w-[24px]" src={minerMaterialOne.icon} />
-            {minerMaterialOne.name}
-          </a>
-          <a
-            href={minerMaterialThree.wiki}
-            target="_blank"
-            rel="noreferrer"
-            className="flex items-center gap-3 hover:underline hover:underline-offset-4"
-          >
-            <img className="w-[24px]" src={minerMaterialThree.icon} />
-            {minerMaterialThree.name}
-          </a>
-          <p className="mt-2 flex items-center gap-2 rounded bg-[#F3D9B1] px-4 py-[0.3em] text-center text-[1rem] font-bold text-[#4e3727]">
-            Trade
-            <img className="w-[20px]" src={minerMaterialOne.icon} />
-            for
-          </p>
-          <div className="flex items-center gap-3">
-            <img className="w-[24px]" src={minerMaterialTwo.icon} />
-            {minerMaterialTwo.name}
-          </div>
-          <div className="flex gap-6">
-            <div className="flex items-center gap-1">
-              {minerMaterialOne.minCollectability} | 1x
-              <img className="inline w-[20px]" src={minerMaterialTwo.icon} />
-            </div>
-            <div className="flex items-center gap-1">
-              {minerMaterialOne.maxCollectability} | 3x
-              <img className="inline w-[20px]" src={minerMaterialTwo.icon} />
-            </div>
-          </div>
-        </div>
-        <div className="m-1 flex flex-col items-start gap-3 rounded border px-5 pb-5 pt-5 text-left text-[0.9rem]">
-          <h1 className="rounded bg-[#5f432f] px-5 py-1 text-[1.2rem] font-bold text-[#fcf1e1]">
-            Botanist
-          </h1>
-          <p className="rounded bg-[#F3D9B1] px-4 py-[0.3em] text-[1rem] font-bold text-[#4e3727]">
-            Gather
-          </p>
-          <a
-            href={botanistMaterialOne.wiki}
-            target="_blank"
-            rel="noreferrer"
-            className="flex items-center gap-3 hover:underline hover:underline-offset-4"
-          >
-            <img className="w-[24px]" src={botanistMaterialOne.icon} />
-            {botanistMaterialOne.name}
-          </a>
-          <a
-            href={botanistMaterialThree.wiki}
-            target="_blank"
-            rel="noreferrer"
-            className="flex items-center gap-3 hover:underline hover:underline-offset-4"
-          >
-            <img className="w-[24px]" src={botanistMaterialThree.icon} />
-            {botanistMaterialThree.name}
-          </a>
-          <p className="mt-2 flex items-center gap-2 rounded bg-[#F3D9B1] px-4 py-[0.3em] text-center text-[1rem] font-bold text-[#4e3727]">
-            Trade
-            <img className="w-[20px]" src={botanistMaterialOne.icon} />
-            for
-          </p>
-          <div className="flex items-center gap-3">
-            <img className="w-[24px]" src={botanistMaterialTwo.icon} />
-            {botanistMaterialTwo.name}
-          </div>
-          <div className="flex gap-6">
-            <div className="flex items-center gap-1">
-              {botanistMaterialOne.minCollectability} | 1x
-              <img className="inline w-[20px]" src={botanistMaterialTwo.icon} />
-            </div>
-            <div className="flex items-center gap-1">
-              {botanistMaterialOne.maxCollectability} | 3x
-              <img className="inline w-[20px]" src={botanistMaterialTwo.icon} />
-            </div>
-          </div>
-        </div>
-        <div className="m-1 flex flex-col items-start gap-3 rounded border px-5 pb-5 pt-5 text-left text-[0.9rem]">
-          <h1 className="rounded bg-[#5f432f] px-5 py-1 text-[1.2rem] font-bold text-[#fcf1e1]">
-            Fisher
-          </h1>
-          <p className="rounded bg-[#F3D9B1] px-4 py-[0.3em] text-[1rem] font-bold text-[#4e3727]">
-            Gather
-          </p>
-          <a
-            href={fisherMaterialOne.wiki}
-            target="_blank"
-            rel="noreferrer"
-            className="flex items-center gap-3 hover:underline hover:underline-offset-4"
-          >
-            <img className="w-[24px]" src={fisherMaterialOne.icon} />
-            {fisherMaterialOne.name}
-          </a>
-          <a
-            href={fisherMaterialThree.wiki}
-            target="_blank"
-            rel="noreferrer"
-            className="flex items-center gap-3 hover:underline hover:underline-offset-4"
-          >
-            <img className="w-[24px]" src={fisherMaterialThree.icon} />
-            {fisherMaterialThree.name}
-          </a>
-          <p className="mt-2 flex items-center gap-2 rounded bg-[#F3D9B1] px-4 py-[0.3em] text-center text-[1rem] font-bold text-[#4e3727]">
-            Trade
-            <img className="w-[20px]" src={fisherMaterialOne.icon} />
-            for
-          </p>
-          <div className="flex items-center gap-3">
-            <img className="w-[24px]" src={fisherMaterialTwo.icon} />
-            {fisherMaterialTwo.name}
-          </div>
-          <div className="flex gap-6">
-            <div className="flex items-center gap-1">
-              {fisherMaterialOne.minCollectability} | 1x
-              <img className="inline w-[20px]" src={fisherMaterialTwo.icon} />
-            </div>
-            <div className="flex items-center gap-1">
-              {fisherMaterialOne.maxCollectability} | 2x
-              <img className="inline w-[20px]" src={fisherMaterialTwo.icon} />
-            </div>
-          </div>
-          <p className="mt-2 flex items-center gap-2 rounded bg-[#F3D9B1] px-4 py-[0.3em] text-center text-[1rem] font-bold text-[#4e3727]">
-            Trade
-            <img className="w-[20px]" src={fisherMaterialThree.icon} />
-            for
-          </p>
-          <div className="flex items-center gap-3">
-            <img className="w-[24px]" src={fisherMaterialFour.icon} />
-            {fisherMaterialFour.name}
-          </div>
-          <div className="flex gap-6">
-            <div className="flex items-center gap-1">
-              {fisherMaterialThree.minCollectability} | 1x
-              <img className="inline w-[20px]" src={fisherMaterialTwo.icon} />
-            </div>
-            <div className="flex items-center gap-1">
-              {fisherMaterialThree.maxCollectability} | 2x
-              <img className="inline w-[20px]" src={fisherMaterialTwo.icon} />
-            </div>
-          </div>
-        </div>
+        {jobs.map((job) => (
+          <JobCard key={job.job} job={job.job} rows={job.rows} />
+        ))}
       </div>
     </>
   );

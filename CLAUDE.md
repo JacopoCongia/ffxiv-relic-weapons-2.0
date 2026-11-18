@@ -19,7 +19,7 @@ npm run test:rules     # Firestore rules tests in the emulator (needs Java 21+)
 
 There are two kinds of tests, run separately:
 
-- **Unit tests** in `tests/unit/` (`npm test`) cover the pure logic in `src/utilities/`: selection and Paladin sword+shield pairing, the shield-free counters, and the materials math, using the real data. They run anywhere. Keep that logic in pure functions there (components just call them), and add a test when you change it.
+- **Unit tests** in `tests/unit/` (`npm test`) cover the pure logic in `src/utilities/`: selection and Paladin sword+shield pairing, the shield-free counters, and the materials math, using the real data. They run anywhere. `toolsSectionData.test.js` also checks that every tool section has the fields its renderer needs. Keep that logic in pure functions there (components just call them), and add a test when you change it.
 - **Firestore rules tests** in `tests/firestore.rules.test.js` (`npm run test:rules`) run in the Firestore emulator, which needs Java; Java isn't installed on the owner's machine, so they run in CI. `npm test` only scans `tests/unit/`, so it never picks this file up.
 
 ## Workflow rules
@@ -40,16 +40,22 @@ All game content lives in `src/data/` as plain JS objects; there is no CMS or AP
 - `data.js`: every item (weapon or tool), keyed by **category** (`penumbrae`, `manderville`, `splendorousCrafters`, …). Each item has `id`, `wpnName`, `wpnJob`, `wpnJobShort`, `icon`, `category`, and optionally `shield: true` for Paladin shields.
 - `materialsData.js`: tomestones plus materials per expansion/step. Each material has `reqTotal` (for all weapons in the step) and `reqPerWeapon`. The "remaining" amount shown is `reqTotal - reqPerWeapon * ownedMainHandCount` (see `src/utilities/materials.js`).
 - `sectionData.js` (DoW/DoM weapons) and `toolsSectionData.js` (Endwalker DoH/DoL tools): ordered lists of sections per page. A section's `id` is the key into `data.js`, and it points to its materials/tomestones in `materialsData.js`.
-- Icons are served from `public/icons/<expansion>-icons/...` and referenced by absolute path (`/icons/...`). Item and material cards fall back to `/icons/not_found.png` when an icon is missing (`src/utilities/imageFallback.js`), so data can be added before its icons.
+- Icons are served from `public/icons/<expansion>-icons/...` and referenced by absolute path (`/icons/...`). Item and material cards, and the tool pages' icons, fall back to `/icons/not_found.png` when an icon is missing (`src/utilities/imageFallback.js`), so data can be added before its icons.
 
 Adding a new relic step means: items in `data.js`, materials in `materialsData.js`, a section entry in `sectionData.js`/`toolsSectionData.js`, and the icons in `public/icons/`.
+
+A **tool step** is data only too. Its section in `toolsSectionData.js` can have three optional fields, documented at the top of that file and rendered by `components/features/weapons/ToolContent.jsx`:
+
+- `acquire`: a quest link plus a scrip price (only the first Splendorous step uses it).
+- `requirements`: the "You will need N <icon> X Components per Tool which means M Collectables…" sentences, one per entry, with an optional `lead` ("Fisher needs") and one or more `parts` joined with "and".
+- `toolsTable`: per gatherer job, the rows `ToolsTable.jsx` shows (a table on wide screens, one card per job on phones). Each row is a material from `materialsData.js` (`item`) and, for a trade, the `reward` it's exchanged for and `rewardAtMax` (how many at max collectability). The gatherer materials (with `minCollectability`/`maxCollectability` and `wiki`) go in `materialsData.js` under `endwalker.doL.<step>`.
 
 ### Pages and rendering
 
 - `App.jsx` defines the lazy-loaded routes (one per expansion, plus `crafters`, `gatherers` and `account`), all inside `components/layout/Layout.jsx` (navbar, sidebar, `Suspense`). Sidebar links are hardcoded in `Sidebar.jsx`.
 - The DoW/DoM expansion routes (`dawntrail`, `endwalker`, `shadowbringers`, `stormblood`) all render one component, `pages/ExpansionPage.jsx`, with two props: `expansion` (the key into `sectionData.js`) and `title` (the relic name in the header, e.g. "Phantom"). Adding an expansion page means a `sectionData` entry plus a `<Route>` in `App.jsx` with those two props; there is no per-expansion page file.
 - `ExpansionPage` maps its section list to `ItemsSection` (passing each section's optional `notes`, shown under the materials), which renders a collapsible header with an owned/total counter (`ItemsHeader`), the item grid (`ItemsContainer` → `ItemCard`), and, for `type="weapon"`, the materials (`MaterialsContainer`).
-- Tool pages (`EndwalkerCrafters`/`EndwalkerGatherers`) use `type="tool"` and pass extra per-section content as children from `hooks/use-tools-content.jsx`, a large `switch` of hardcoded JSX keyed by section id.
+- Tool pages (`EndwalkerCrafters`/`EndwalkerGatherers`) use `type="tool"` and pass `<ToolContent section={section} />` as children, which renders the section's `acquire`, `requirements` and `toolsTable` data (see above).
 - **Paladin shields** (`shield: true`) are excluded from counters and material math. Selecting a PLD weapon toggles every PLD item in that category, so the sword and shield move together. This logic, and the shield-free counting, lives in `src/utilities/ownedWeapons.js`.
 
 ### State and persistence
