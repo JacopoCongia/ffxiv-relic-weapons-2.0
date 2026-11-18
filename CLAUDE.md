@@ -19,7 +19,7 @@ npm run test:rules     # Firestore rules tests in the emulator (needs Java 21+)
 
 There are two kinds of tests, run separately:
 
-- **Unit tests** in `tests/unit/` (`npm test`) cover the pure logic in `src/utilities/`: selection and Paladin sword+shield pairing, the shield-free counters, and the materials math, using the real data. They run anywhere. `toolsSectionData.test.js` checks that every tool section has what the tool pages need. Keep that logic in pure functions there (components just call them), and add a test when you change it.
+- **Unit tests** in `tests/unit/` (`npm test`) cover the pure logic in `src/utilities/`: selection and Paladin sword+shield pairing, the shield-free counters, the materials math (using the real data), and the item grid's row balancing (`itemRows.js`: `ItemsContainer` narrows the grid so rows split evenly, 8 + 8 instead of 15 + 1). They run anywhere. `toolsSectionData.test.js` checks that every tool section has what the tool pages need. Keep that logic in pure functions there (components just call them), and add a test when you change it.
 - **Firestore rules tests** in `tests/firestore.rules.test.js` (`npm run test:rules`) run in the Firestore emulator, which needs Java; Java isn't installed on the owner's machine, so they run in CI. `npm test` only scans `tests/unit/`, so it never picks this file up.
 
 ## Workflow rules
