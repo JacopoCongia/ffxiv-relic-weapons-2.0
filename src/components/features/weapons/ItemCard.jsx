@@ -3,7 +3,7 @@ import { motion, useAnimation } from "motion/react";
 
 import useWeaponsData from "../../../hooks/use-weapons-data.jsx";
 import useAuth from "../../../hooks/use-auth.js";
-import { showFallbackIcon } from "../../../utilities/imageFallback.js";
+import { useImageLoad } from "../../../hooks/use-image-load.js";
 
 // Variants for tooltip animation
 const tooltipVariants = {
@@ -19,6 +19,7 @@ function ItemCard({ item }) {
   const isSelected = ownedWeapons.some((el) => el.id === item.id);
   const isLoggedIn = !!currentUser; // Check if the user is logged in by using a double negation to turn the object into a boolean
   const controls = useAnimation(); // Create animation controls
+  const { status: iconStatus, imgProps } = useImageLoad();
 
   const handleSelection = () => {
     if (!isLoggedIn) return; // Prevent selection if the user is not logged in
@@ -36,6 +37,14 @@ function ItemCard({ item }) {
   const styles = {
     opacity: isSelected ? "25%" : "100%",
   };
+
+  // Hidden while loading; fades in if it arrived after the card appeared,
+  // shown at once if it was already cached
+  const iconClasses = {
+    loading: "opacity-0",
+    loaded: "opacity-100 transition-opacity duration-[250ms] ease-out",
+    cached: "",
+  }[iconStatus];
 
   return (
     <div
@@ -60,13 +69,25 @@ function ItemCard({ item }) {
         id={item.id}
         className={`relative flex flex-col gap-[0.2em] text-[0.8rem] font-bold text-neutral-400 transition-opacity ${isLoggedIn ? "cursor-pointer" : "cursor-not-allowed"} `}
       >
-        {/* Animated Weapon Icon */}
-        <motion.img
-          animate={controls}
-          className="h-[70px] w-[70px] object-contain"
-          src={item.icon}
-          onError={showFallbackIcon}
-        />
+        {/* Icon box: same 70x70 size as before, so the grid doesn't shift */}
+        <div className="relative h-[70px] w-[70px]">
+          {/* Skeleton: a soft tile with the icon frames' rounded corners,
+              shown until the icon has loaded. It pulses unless the device
+              asks for reduced motion. */}
+          {iconStatus === "loading" && (
+            <div
+              aria-hidden="true"
+              className="absolute inset-0 rounded-md bg-white/[0.07] motion-safe:animate-pulse"
+            />
+          )}
+          {/* Animated Weapon Icon */}
+          <motion.img
+            {...imgProps}
+            animate={controls}
+            className={`block h-full w-full object-contain ${iconClasses}`}
+            src={item.icon}
+          />
+        </div>
         <p>{item.wpnJobShort}</p>
       </div>
     </div>
