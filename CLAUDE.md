@@ -2,7 +2,7 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-A Final Fantasy XIV relic weapon tracker: users tick off the relic weapons/tools they own per expansion and see the materials still needed. React 18 + Vite SPA, Tailwind, Motion (`motion/react`), Firebase Auth + Firestore. Plain JavaScript (JSX), no TypeScript.
+A Final Fantasy XIV relic weapon tracker: users tick off the relic weapons/tools they own per expansion and, for weapons, see the materials still needed. React 18 + Vite SPA, Tailwind, Motion (`motion/react`), Firebase Auth + Firestore. Plain JavaScript (JSX), no TypeScript.
 
 ## Commands
 
@@ -19,7 +19,7 @@ npm run test:rules     # Firestore rules tests in the emulator (needs Java 21+)
 
 There are two kinds of tests, run separately:
 
-- **Unit tests** in `tests/unit/` (`npm test`) cover the pure logic in `src/utilities/`: selection and Paladin sword+shield pairing, the shield-free counters, and the materials math, using the real data. They run anywhere. Keep that logic in pure functions there (components just call them), and add a test when you change it.
+- **Unit tests** in `tests/unit/` (`npm test`) cover the pure logic in `src/utilities/`: selection and Paladin sword+shield pairing, the shield-free counters, and the materials math, using the real data. They run anywhere. `toolsSectionData.test.js` checks that every tool section has what the tool pages need. Keep that logic in pure functions there (components just call them), and add a test when you change it.
 - **Firestore rules tests** in `tests/firestore.rules.test.js` (`npm run test:rules`) run in the Firestore emulator, which needs Java; Java isn't installed on the owner's machine, so they run in CI. `npm test` only scans `tests/unit/`, so it never picks this file up.
 
 ## Workflow rules
@@ -38,18 +38,21 @@ There are two kinds of tests, run separately:
 All game content lives in `src/data/` as plain JS objects; there is no CMS or API.
 
 - `data.js`: every item (weapon or tool), keyed by **category** (`penumbrae`, `manderville`, `splendorousCrafters`, …). Each item has `id`, `wpnName`, `wpnJob`, `wpnJobShort`, `icon`, `category`, and optionally `shield: true` for Paladin shields.
-- `materialsData.js`: tomestones plus materials per expansion/step. Each material has `reqTotal` (for all weapons in the step) and `reqPerWeapon`. The "remaining" amount shown is `reqTotal - reqPerWeapon * ownedMainHandCount` (see `src/utilities/materials.js`).
-- `sectionData.js` (DoW/DoM weapons) and `toolsSectionData.js` (Endwalker DoH/DoL tools): ordered lists of sections per page. A section's `id` is the key into `data.js`, and it points to its materials/tomestones in `materialsData.js`.
+- `materialsData.js`: tomestones plus materials per expansion/step, for weapons only. Each material has `reqTotal` (for all weapons in the step) and `reqPerWeapon`. The "remaining" amount shown is `reqTotal - reqPerWeapon * ownedMainHandCount` (see `src/utilities/materials.js`).
+- `sectionData.js` (DoW/DoM weapons): ordered lists of sections per page. A section's `id` is the key into `data.js`, and it points to its materials/tomestones in `materialsData.js`.
+- `toolsSectionData.js` (Endwalker DoH/DoL tools): the same kind of list, but each section has only `id`, `name`, `category` and `patchInfo`. Each expansion also has a `guide` (`{ label, url }`), a link to an outside guide for the whole tool set, shown under the page title by `Header`.
 - Icons are served from `public/icons/<expansion>-icons/...` and referenced by absolute path (`/icons/...`). Item and material cards fall back to `/icons/not_found.png` when an icon is missing (`src/utilities/imageFallback.js`), so data can be added before its icons.
 
-Adding a new relic step means: items in `data.js`, materials in `materialsData.js`, a section entry in `sectionData.js`/`toolsSectionData.js`, and the icons in `public/icons/`.
+Adding a new weapon step means: items in `data.js`, materials in `materialsData.js`, a section entry in `sectionData.js`, and the icons in `public/icons/`.
+
+A **tool step** needs only its items in `data.js` (with their icons) and a section entry in `toolsSectionData.js`. Tools deliberately have no materials or step-by-step guides: the tool pages only track which tools you own, and link out to one guide (the expansion's `guide`) for how to get them.
 
 ### Pages and rendering
 
 - `App.jsx` defines the lazy-loaded routes (one per expansion, plus `crafters`, `gatherers` and `account`), all inside `components/layout/Layout.jsx` (navbar, sidebar, `Suspense`). Sidebar links are hardcoded in `Sidebar.jsx`.
 - The DoW/DoM expansion routes (`dawntrail`, `endwalker`, `shadowbringers`, `stormblood`) all render one component, `pages/ExpansionPage.jsx`, with two props: `expansion` (the key into `sectionData.js`) and `title` (the relic name in the header, e.g. "Phantom"). Adding an expansion page means a `sectionData` entry plus a `<Route>` in `App.jsx` with those two props; there is no per-expansion page file.
 - `ExpansionPage` maps its section list to `ItemsSection` (passing each section's optional `notes`, shown under the materials), which renders a collapsible header with an owned/total counter (`ItemsHeader`), the item grid (`ItemsContainer` → `ItemCard`), and, for `type="weapon"`, the materials (`MaterialsContainer`).
-- Tool pages (`EndwalkerCrafters`/`EndwalkerGatherers`) use `type="tool"` and pass extra per-section content as children from `hooks/use-tools-content.jsx`, a large `switch` of hardcoded JSX keyed by section id.
+- Tool pages (`EndwalkerCrafters`/`EndwalkerGatherers`) map `toolsSectionData.js` to `ItemsSection` with `type="tool"`, which shows the header, counter and tool grid but no materials.
 - **Paladin shields** (`shield: true`) are excluded from counters and material math. Selecting a PLD weapon toggles every PLD item in that category, so the sword and shield move together. This logic, and the shield-free counting, lives in `src/utilities/ownedWeapons.js`.
 
 ### State and persistence
