@@ -266,7 +266,7 @@ const materialsData = {
           {
             id: "caput_mortuum_demiatma",
             name: "Caput Mortuum Demiatma",
-            icon: "icons/dawntrail-icons/materials/caput_mortuum_demiatma.png",
+            icon: "/icons/dawntrail-icons/materials/caput_mortuum_demiatma.png",
             category: "penumbrae",
             reqTotal: 3,
             reqPerWeapon: 3,
@@ -274,7 +274,7 @@ const materialsData = {
           {
             id: "malachite_demiatma",
             name: "Malachite Demiatma",
-            icon: "icons/dawntrail-icons/materials/malachite_demiatma.png",
+            icon: "/icons/dawntrail-icons/materials/malachite_demiatma.png",
             category: "penumbrae",
             reqTotal: 3,
             reqPerWeapon: 3,
@@ -282,7 +282,7 @@ const materialsData = {
           {
             id: "orpiment_demiatma",
             name: "Orpiment Demiatma",
-            icon: "icons/dawntrail-icons/materials/orpiment_demiatma.png",
+            icon: "/icons/dawntrail-icons/materials/orpiment_demiatma.png",
             category: "penumbrae",
             reqTotal: 3,
             reqPerWeapon: 3,
@@ -290,7 +290,7 @@ const materialsData = {
           {
             id: "realgar_demiatma",
             name: "Realgar Demiatma",
-            icon: "icons/dawntrail-icons/materials/realgar_demiatma.png",
+            icon: "/icons/dawntrail-icons/materials/realgar_demiatma.png",
             category: "penumbrae",
             reqTotal: 3,
             reqPerWeapon: 3,
@@ -298,7 +298,7 @@ const materialsData = {
           {
             id: "verdigris_demiatma",
             name: "Verdigris Demiatma",
-            icon: "icons/dawntrail-icons/materials/verdigris_demiatma.png",
+            icon: "/icons/dawntrail-icons/materials/verdigris_demiatma.png",
             category: "penumbrae",
             reqTotal: 3,
             reqPerWeapon: 3,
