@@ -9,9 +9,10 @@ import materialsData from "../../src/data/materialsData.js";
 
 const publicDir = fileURLToPath(new URL("../../public", import.meta.url));
 
-// Item categories whose icons haven't all been added yet (issue #38). Their
-// missing icons are allowed for now; remove a category once its icons are in.
-const PENDING_ICON_CATEGORIES = ["eclipticum", "occultum"];
+// Item categories whose icons haven't all been added yet, e.g. a new step
+// added before its icons. Their missing icons are allowed for now; remove a
+// category once its icons are in. Empty: every icon is in place.
+const PENDING_ICON_CATEGORIES = [];
 
 const fileExists = (iconPath) => fs.existsSync(publicDir + iconPath);
 
