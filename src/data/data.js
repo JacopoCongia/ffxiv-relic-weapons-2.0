@@ -3858,14 +3858,14 @@ const data = {
       category: "lodestarGatherers",
     },
   ],
-  relic: [
+  zodiacRelic: [
     {
       id: "curtana",
       wpnName: "Curtana",
       wpnJob: "Paladin",
       wpnJobShort: "PLD",
       icon: "/icons/arr-icons/relic/curtana.png",
-      category: "relic",
+      category: "zodiacRelic",
     },
     {
       id: "holy_shield",
@@ -3873,7 +3873,7 @@ const data = {
       wpnJob: "Paladin",
       wpnJobShort: "PLD",
       icon: "/icons/arr-icons/relic/holy_shield.png",
-      category: "relic",
+      category: "zodiacRelic",
       shield: true,
     },
     {
@@ -3882,7 +3882,7 @@ const data = {
       wpnJob: "Warrior",
       wpnJobShort: "WAR",
       icon: "/icons/arr-icons/relic/bravura.png",
-      category: "relic",
+      category: "zodiacRelic",
     },
     {
       id: "gae_bolg",
@@ -3890,7 +3890,7 @@ const data = {
       wpnJob: "Dragoon",
       wpnJobShort: "DRG",
       icon: "/icons/arr-icons/relic/gae_bolg.png",
-      category: "relic",
+      category: "zodiacRelic",
     },
     {
       id: "sphairai",
@@ -3898,7 +3898,7 @@ const data = {
       wpnJob: "Monk",
       wpnJobShort: "MNK",
       icon: "/icons/arr-icons/relic/sphairai.png",
-      category: "relic",
+      category: "zodiacRelic",
     },
     {
       id: "yoshimitsu",
@@ -3906,7 +3906,7 @@ const data = {
       wpnJob: "Ninja",
       wpnJobShort: "NIN",
       icon: "/icons/arr-icons/relic/yoshimitsu.png",
-      category: "relic",
+      category: "zodiacRelic",
     },
     {
       id: "artemis_bow",
@@ -3914,7 +3914,7 @@ const data = {
       wpnJob: "Bard",
       wpnJobShort: "BRD",
       icon: "/icons/arr-icons/relic/artemis_bow.png",
-      category: "relic",
+      category: "zodiacRelic",
     },
     {
       id: "stardust_rod",
@@ -3922,7 +3922,7 @@ const data = {
       wpnJob: "Black Mage",
       wpnJobShort: "BLM",
       icon: "/icons/arr-icons/relic/stardust_rod.png",
-      category: "relic",
+      category: "zodiacRelic",
     },
     {
       id: "the_veil_of_wiyu",
@@ -3930,7 +3930,7 @@ const data = {
       wpnJob: "Summoner",
       wpnJobShort: "SMN",
       icon: "/icons/arr-icons/relic/the_veil_of_wiyu.png",
-      category: "relic",
+      category: "zodiacRelic",
     },
     {
       id: "thyrus",
@@ -3938,7 +3938,7 @@ const data = {
       wpnJob: "White Mage",
       wpnJobShort: "WHM",
       icon: "/icons/arr-icons/relic/thyrus.png",
-      category: "relic",
+      category: "zodiacRelic",
     },
     {
       id: "omnilex",
@@ -3946,7 +3946,7 @@ const data = {
       wpnJob: "Scholar",
       wpnJobShort: "SCH",
       icon: "/icons/arr-icons/relic/omnilex.png",
-      category: "relic",
+      category: "zodiacRelic",
     },
   ],
   zenith: [

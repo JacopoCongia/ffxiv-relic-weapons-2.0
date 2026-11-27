@@ -205,11 +205,11 @@ const sectionsData = {
   ],
   arr: [
     {
-      id: "relic",
+      id: "zodiacRelic",
       name: "Relic Weapons",
-      category: "relic",
+      category: "zodiacRelic",
       patchInfo: "iLvl 80 (Patch 2.0)",
-      materials: materialsData.materials.arr.relic,
+      materials: materialsData.materials.arr.zodiacRelic,
       tomestones: materialsData.tomestones.poetics,
       tomestoneAmount: 15,
       notes:

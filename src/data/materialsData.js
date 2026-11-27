@@ -18,14 +18,14 @@ const materialsData = {
   },
   materials: {
     arr: {
-      relic: [
+      zodiacRelic: [
         {
           id: "radz_at_han_quenching_oil",
           name: "Radz-at-Han Quenching Oil",
           icon: "/icons/arr-icons/materials/radz_at_han_quenching_oil.png",
           reqTotal: 10,
           reqPerWeapon: 1,
-          category: "relic",
+          category: "zodiacRelic",
         },
       ],
       zenith: [
