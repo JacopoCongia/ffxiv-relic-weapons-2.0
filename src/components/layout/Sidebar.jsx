@@ -39,10 +39,29 @@ function Sidebar({ isVisible, setIsVisible }) {
       name: "Stormblood",
       to: "/stormblood",
     },
+    // No page yet: shown greyed out, without a link
+    {
+      name: "Heavensward",
+      disabled: true,
+    },
+    {
+      name: "A Realm Reborn",
+      to: "/a-realm-reborn",
+    },
   ];
 
   const linksEl = links.map((link) => {
-    const { name, to, craftersTo, gatherersTo } = link;
+    const { name, to, craftersTo, gatherersTo, disabled } = link;
+    if (disabled) {
+      return (
+        <h1
+          key={name}
+          className="cursor-not-allowed text-[1.2rem] tracking-wider opacity-50"
+        >
+          {name}
+        </h1>
+      );
+    }
     return (
       <div key={name} className="z-10 ml-2 flex flex-col gap-2 text-[0.8rem]">
         <h1 className="text-[1.2rem] tracking-wider">{name}</h1>
@@ -73,12 +92,6 @@ function Sidebar({ isVisible, setIsVisible }) {
     >
       <div className="flex flex-col gap-4">
         {linksEl}
-        <h1 className="cursor-not-allowed text-[1.2rem] tracking-wider opacity-50">
-          Heavensward
-        </h1>
-        <h1 className="cursor-not-allowed text-[1.2rem] tracking-wider opacity-50">
-          A Realm Reborn
-        </h1>
         <div className="my-[0.5em] border"></div>
         <NavLink
           to="/account"
