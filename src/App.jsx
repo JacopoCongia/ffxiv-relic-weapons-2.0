@@ -54,6 +54,10 @@ const router = createBrowserRouter(
         path="stormblood"
         element={<ExpansionPage expansion="stormblood" title="Eurekan" />}
       />
+      <Route
+        path="a-realm-reborn"
+        element={<ExpansionPage expansion="arr" title="Zodiac" />}
+      />
       <Route path="account" element={<Account />} />
     </Route>,
   ),

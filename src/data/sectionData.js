@@ -203,6 +203,96 @@ const sectionsData = {
       notes: "You can get Eureka Fragments from The Baldesion Arsenal",
     },
   ],
+  arr: [
+    {
+      id: "zodiacRelic",
+      name: "Relic Weapons",
+      category: "zodiacRelic",
+      patchInfo: "iLvl 80 (Patch 2.0)",
+      materials: materialsData.materials.arr.zodiacRelic,
+      tomestones: materialsData.tomestones.poetics,
+      tomestoneAmount: 15,
+      notes:
+        "The base weapon is crafted from a recipe for your job that needs two materia. Buy the Radz-at-Han Quenching Oil from Auriana in Mor Dhona.",
+    },
+    {
+      id: "zenith",
+      name: "Zenith Weapons",
+      category: "zenith",
+      patchInfo: "iLvl 90 (Patch 2.0)",
+      materials: materialsData.materials.arr.zenith,
+      tomestones: materialsData.tomestones.poetics,
+      tomestoneAmount: 60,
+      notes:
+        "Buy the Thavnairian Mist from Auriana in Mor Dhona, then trade it with your weapon at the Furnace in North Shroud.",
+    },
+    {
+      id: "atma",
+      name: "Atma Weapons",
+      category: "atma",
+      patchInfo: "iLvl 100 (Patch 2.2)",
+      materials: materialsData.materials.arr.atma,
+      tomestones: null,
+      tomestoneAmount: null,
+      notes:
+        "You need one of each of the 12 Atmas per weapon. Each Atma has a 20% chance to drop from a FATE in its zone while your Zenith weapon is equipped.",
+    },
+    {
+      id: "animus",
+      name: "Animus Weapons",
+      category: "animus",
+      patchInfo: "iLvl 100 (Patch 2.2)",
+      materials: materialsData.materials.arr.animus,
+      tomestones: materialsData.tomestones.poetics,
+      tomestoneAmount: 900,
+      notes:
+        "No materials. Buy the 9 Trials of the Braves books for your weapon from G'jusana (100 tomestones each), one at a time, and finish each book's dungeons, FATEs, leves and enemies with your Atma weapon equipped.",
+    },
+    {
+      id: "novus",
+      name: "Novus Weapons",
+      category: "novus",
+      patchInfo: "iLvl 110 (Patch 2.28)",
+      materials: materialsData.materials.arr.novus,
+      tomestones: materialsData.tomestones.poetics,
+      tomestoneAmount: 1200,
+      notes:
+        "Each Mysterious Map (75 tomestones) gives 5 Alexandrite, so you need 15 maps per weapon; the daily quest Morbid Motivation gives one map for free. You also need 75 successful materia infusions, from grade I to IV.",
+    },
+    {
+      id: "nexus",
+      name: "Nexus Weapons",
+      category: "nexus",
+      patchInfo: "iLvl 115 (Patch 2.38)",
+      materials: materialsData.materials.arr.nexus,
+      tomestones: null,
+      tomestoneAmount: null,
+      notes:
+        "No materials or tomestones. Soulglaze your weapon, then fill it with light by running duties with it equipped. The Final Coil of Bahamut - Turn 4, The Bowl of Embers (Extreme) and Thornmarch (Extreme) give the most. Paladins soulglaze both the sword and the shield.",
+    },
+    {
+      id: "zodiacBraves",
+      name: "Zodiac Braves Weapons",
+      category: "zodiacBraves",
+      patchInfo: "iLvl 125 (Patch 2.45)",
+      materials: materialsData.materials.arr.zodiacBraves,
+      tomestones: materialsData.tomestones.poetics,
+      tomestoneAmount: 800,
+      notes:
+        "Each Bombard Core costs 20,000 Grand Company seals, and the Furite Sand, Allagan Resin, Bronze Lake Crystal and Brass Kettle cost 100,000 gil each. You also craft eight High Quality items, two for each of the four quests.",
+    },
+    {
+      id: "zeta",
+      name: "Zeta Weapons",
+      category: "zeta",
+      patchInfo: "iLvl 135 (Patch 2.51)",
+      materials: materialsData.materials.arr.zeta,
+      tomestones: materialsData.tomestones.poetics,
+      tomestoneAmount: 600,
+      notes:
+        "No materials. Buy the 12 mahatmas from Remon in Western La Noscea (50 tomestones each) and fill them one at a time by running duties with your weapon equipped.",
+    },
+  ],
 };
 
 export default sectionsData;
